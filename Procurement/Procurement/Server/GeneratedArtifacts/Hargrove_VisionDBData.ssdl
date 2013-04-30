@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Hargrove_VisionDBDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="Hargrove_VisionDBDataStore">
+    <EntitySet Name="CLs" EntityType="Hargrove_VisionDBDataStore.CL" store:Type="Tables" Schema="dbo" Table="CL" />
+  </EntityContainer>
+  <EntityType Name="CL">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="Client" Type="varchar" MaxLength="20" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Type" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="varchar" MaxLength="30" />
+    <Property Name="ExportInd" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="WebSite" Type="varchar" MaxLength="255" />
+    <Property Name="Memo" Type="varchar(max)" />
+    <Property Name="CurrentStatus" Type="varchar" MaxLength="50" />
+    <Property Name="CustomCurrencyCode" Type="varchar" MaxLength="3" />
+    <Property Name="ClientInd" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="VendorInd" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="LinkedVendor" Type="varchar" MaxLength="20" />
+    <Property Name="PriorWork" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="Recommend" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="DisadvBusiness" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="DisabledVetOwnedSmallBusiness" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="HBCU" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="MinorityBusiness" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="SmallBusiness" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="VetOwnedSmallBusiness" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="WomanOwned" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="AlaskaNative" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="SpecialtyType" Type="varchar" MaxLength="10" />
+    <Property Name="Specialty" Type="varchar(max)" />
+    <Property Name="CreateUser" Type="varchar" MaxLength="20" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ModUser" Type="varchar" MaxLength="20" />
+    <Property Name="ModDate" Type="datetime" />
+    <Property Name="ParentID" Type="varchar" MaxLength="32" />
+    <Property Name="ParentLevel1" Type="varchar" MaxLength="32" />
+    <Property Name="ParentLevel2" Type="varchar" MaxLength="32" />
+    <Property Name="ParentLevel3" Type="varchar" MaxLength="32" />
+    <Property Name="ParentLevel4" Type="varchar" MaxLength="32" />
+  </EntityType>
+</Schema>

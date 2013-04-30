@@ -1,0 +1,3977 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModelFragment xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <Application
+    Name="LightSwitchApplication.Web"
+    TargetPlatform="RichClient"
+    Version="1.0.0.0"
+    DefaultNavigationItem="!module/NavigationItems[Tasks]"
+    Shell="Microsoft.LightSwitch.RichClient:Standard"
+    Theme="Microsoft.LightSwitch.RichClient:Blue">
+    <Application.Attributes>
+      <ModuleNamespace
+        Namespace="LightSwitchApplication" />
+    </Application.Attributes>
+    <ApplicationCommand
+      Name="ScreenCommandShowNewProject"
+      Target="!module/Methods[ShowNewProject]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowPhaseLookup"
+      Target="!module/Methods[ShowPhaseLookup]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowProjects"
+      Target="!module/Methods[ShowProjects]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowStakeholdertypeLookup"
+      Target="!module/Methods[ShowStakeholdertypeLookup]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAddProjectStakeholder"
+      Target="!module/Methods[ShowAddProjectStakeholder]" />
+    <ApplicationCommand
+      Name="ScreenCommandShowAddStakeholder"
+      Target="!module/Methods[ShowAddStakeholder]" />
+    <Application.Methods>
+      <ApplicationMethod
+        Name="ShowNewProject">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="NewProject" />
+        </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="ShowPhaseLookup">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="PhaseLookup" />
+        </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="ShowProjectDetails">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="ProjectDetails" />
+        </ApplicationMethod.Attributes>
+        <ApplicationMethodParameter
+          Name="ProjectID"
+          ParameterType=":Int32" />
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="ShowProjects">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="Projects" />
+        </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="ShowStakeholdertypeLookup">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="StakeholdertypeLookup" />
+        </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="ShowAddProjectStakeholder">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="AddProjectStakeholder" />
+        </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+      <ApplicationMethod
+        Name="ShowAddStakeholder">
+        <ApplicationMethod.Attributes>
+          <ShowScreenMethod
+            TargetScreen="AddStakeholder" />
+        </ApplicationMethod.Attributes>
+      </ApplicationMethod>
+    </Application.Methods>
+    <Application.NavigationItems>
+      <ApplicationNavigationGroup
+        Name="Tasks"
+        DefaultItem="!module/NavigationItems[Tasks]/Children[Projects]">
+        <ApplicationNavigationGroup.Attributes>
+          <DisplayName
+            Value="Tasks" />
+        </ApplicationNavigationGroup.Attributes>
+        <ApplicationNavigationLink
+          Name="Projects"
+          Command="!module/Commands[ScreenCommandShowProjects]" />
+        <ApplicationNavigationLink
+          Name="NewProject"
+          Command="!module/Commands[ScreenCommandShowNewProject]" />
+      </ApplicationNavigationGroup>
+      <ApplicationNavigationGroup
+        Name="Administration">
+        <ApplicationNavigationGroup.Attributes>
+          <DisplayName
+            Value="Administration" />
+        </ApplicationNavigationGroup.Attributes>
+        <ApplicationNavigationLink
+          Name="RolesScreen"
+          Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowRolesScreen]" />
+        <ApplicationNavigationLink
+          Name="UsersScreen"
+          Command="Microsoft.LightSwitch.Security:!module/Commands[ScreenCommandShowUsersScreen]" />
+      </ApplicationNavigationGroup>
+      <ApplicationNavigationGroup
+        Name="group">
+        <ApplicationNavigationGroup.Attributes>
+          <DisplayName
+            Value="Lookup Tables" />
+        </ApplicationNavigationGroup.Attributes>
+        <ApplicationNavigationLink
+          Name="link"
+          Command="!module/Commands[ScreenCommandShowPhaseLookup]" />
+        <ApplicationNavigationLink
+          Name="link2"
+          Command="!module/Commands[ScreenCommandShowStakeholdertypeLookup]" />
+      </ApplicationNavigationGroup>
+    </Application.NavigationItems>
+  </Application>
+  <EntityContainerGroup
+    Name="DataWorkspace">
+    <EntityContainerGroupProperty
+      Name="SecurityData"
+      EntityContainer="Microsoft.LightSwitch.Security:SecurityData">
+      <EntityContainerGroupProperty.Attributes>
+        <Generated />
+        <DisplayName
+          Value="Security Data" />
+        <Description
+          Value="Service that provides access to security-related data." />
+      </EntityContainerGroupProperty.Attributes>
+    </EntityContainerGroupProperty>
+    <EntityContainerGroupProperty
+      Name="ProcurementData"
+      EntityContainer="ProcurementData" />
+    <EntityContainerGroupProperty
+      Name="Hargrove_VisionDBData"
+      EntityContainer="Hargrove_VisionDBData" />
+  </EntityContainerGroup>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Award_Selected" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:BidList" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Business_Class" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:ChangeOrder" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Client_Approved" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Client" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Expediting" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:LineChangeOrder" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Manufacturer" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Material_Status" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Phase" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:PO" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:PO_Line" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Preference" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Project" />
+      <DefaultScreen
+        Value="ProjectDetails">
+        <DefaultScreen.Attributes>
+          <ScreenParameterMapping
+            KeyProperty="Project/Properties[ID]"
+            ScreenParameter="ProjectDetails/Properties[ProjectID]" />
+        </DefaultScreen.Attributes>
+      </DefaultScreen>
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Project_Stakeholder" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Proposal" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Proposal_Line" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:RFQ_Line" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:RFQ_PItem" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Safety_Record" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Safety_Status" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Shipment" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Stakeholder_Type" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Stakeholder" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Submittal" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Supplier_Contact" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Supplier_Specialty" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:SupplierManufacture" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Supplier" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Transport_Type" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Award_Selected_PO_Line" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Award_Selected_PO_Line1" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Award_Selected_RFQ_P" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_BidList_RFQ_P1" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_BidList_Suppliers" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_ChangeOrder_PO" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_ChangeOrder_PO_Line" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Client_Approved_Preference" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Client_Approved_Suppliers" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Expediting_Material_Status" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Expediting_PO_Line" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Expediting_Shipment" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_LineChangeOrder_ChangeOrder" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_LineChangeOrder_PO_Line" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_PO_Line_PO" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Project_Stakeholders_Project" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Project_Stakeholders_Stakeholder_Types" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Project_Stakeholders_Stakeholders" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Proposal_Award_Selected" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Proposal_Line_RFQ_Line" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Proposal_RFQ_P" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_RFQ_Line_RFQ_P" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_RFQ_P_Project" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Safety_Records_Safety_Status" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Safety_Records_Suppliers" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Shipment_Proposal_Line" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Shipment_Transport_Type" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Supplier_Contact_Supplier_Specialty" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Supplier_Specialty_Suppliers" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_SupplierManufactures_Manufacturers" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_SupplierManufactures_Suppliers" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Suppliers_Business_Classes" />
+    </Association.Attributes>
+  </Association>
+  <EntityContainer>
+    <EntityContainer.Attributes>
+      <Proxy
+        Target="ServiceInterface:ProcurementData" />
+    </EntityContainer.Attributes>
+  </EntityContainer>
+  <GlobalAttributeGroup>
+    <GlobalAttributeGroup.Attributes>
+      <Proxy
+        Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
+    </GlobalAttributeGroup.Attributes>
+  </GlobalAttributeGroup>
+  <Screen
+    Name="NewProject"
+    LaunchMode="Multiple">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="ProcurementData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group">
+          <ContentItem
+            Name="details"
+            Kind="Details"
+            DataType="Project"
+            View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="NewProject/Properties[ProjectProperty]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem
+              Name="left"
+              Kind="Group">
+              <ContentItem
+                Name="ProjectNo"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[ProjectNo]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Name"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Name]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Client1"
+                Kind="Details"
+                DataType="Client">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Client" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Client1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Client"
+                  Kind="Details"
+                  DataType="Client">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="Phase1"
+                Kind="Details"
+                DataType="Phase">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Phase" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Phase1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Phase"
+                  Kind="Details"
+                  DataType="Phase">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="Year"
+                Kind="Value"
+                DataType=":Date?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Year]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Top"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.RichClient:ScrollableControl/Properties[IsVerticalScrollBarEnabled]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    Value="True"
+                    ResultType=":Boolean" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Save"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="NewProject/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="Refresh"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="NewProject/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="AddPhase" />
+      <ScreenMethod
+        Name="AddStakeholderType" />
+      <ScreenMethod
+        Name="AddStakeholder" />
+      <ScreenMethod
+        Name="Project_StakeholdersAddAndEditNew">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="AddAndEditNew" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Project_StakeholdersAddAndEditNew1">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="AddAndEditNew" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenProperty
+        Name="ProjectProperty"
+        PropertyType="Project" />
+      <ScreenCollectionProperty
+        Name="Project_Stakeholders"
+        DisablePaging="True"
+        DisableSearch="True"
+        DisableSorting="True"
+        PageSize="15"
+        PropertyType="CollectionView$Project_Stakeholder">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="Project_StakeholdersQuery"
+            ReturnType="Project_Stakeholder*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="NewProject/Properties[ProjectProperty]" />
+                  <MemberExpression
+                    Member="Project_Stakeholders" />
+                </ChainExpression>
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="NewProject/Properties[Project_Stakeholders]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="RFQ_P"
+        DisablePaging="True"
+        DisableSearch="True"
+        DisableSorting="True"
+        PageSize="15"
+        PropertyType="CollectionView$RFQ_PItem">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="RFQ_PQuery"
+            ReturnType="RFQ_PItem*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="NewProject/Properties[ProjectProperty]" />
+                  <MemberExpression
+                    Member="RFQ_P" />
+                </ChainExpression>
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="NewProject/Properties[RFQ_P]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="Stakeholder"
+        PropertyType="Stakeholder">
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="ProcurementData/Members[Stakeholders_SingleOrDefault]">
+              <ArgumentExpression
+                Parameter="ID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="NewProject/Properties[ID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenProperty>
+      <ScreenCollectionProperty
+        Name="Project_Stakeholders1"
+        PageSize="45"
+        PropertyType="CollectionView$Project_Stakeholder">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="Project_Stakeholders1Query"
+            ReturnType="Project_Stakeholder*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="NewProject/Properties[Stakeholder]" />
+                  <MemberExpression
+                    Member="Project_Stakeholders" />
+                </ChainExpression>
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="NewProject/Properties[Project_Stakeholders1]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenProperty
+        Name="ID"
+        PropertyType=":Int32">
+        <ScreenProperty.Attributes>
+          <Required />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+    </Screen.Properties>
+  </Screen>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Submittal_RFQ_Line" />
+    </Association.Attributes>
+  </Association>
+  <Screen
+    Name="PhaseLookup">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="ProcurementData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group">
+          <ContentItem
+            Name="grid"
+            Kind="Collection"
+            DataType="CollectionView$Phase">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="PhaseLookup/Properties[Phases]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem
+              Name="RowTemplate"
+              Kind="Details"
+              DataType="Phase">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression />
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="Phase1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Phase" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Phase/Properties[Phase1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="Phases_AddAndEditNew"
+                Kind="Command">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="PhaseLookup/Properties[Phases]" />
+                      <CallExpression
+                        Target="AddAndEditNew" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Phases_EditSelected"
+                Kind="Command">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="PhaseLookup/Properties[Phases]" />
+                      <CallExpression
+                        Target="EditSelected" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Phases_DeleteSelected"
+                Kind="Command">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="PhaseLookup/Properties[Phases]" />
+                      <CallExpression
+                        Target="DeleteSelected" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem.CommandItems>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Stretch"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[AttachedLabelPosition]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Collapsed"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Save"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="PhaseLookup/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="Refresh"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="PhaseLookup/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="Phases"
+        PageSize="45"
+        PropertyType="CollectionView$Phase">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="PhasesQuery"
+            ReturnType="Phase*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="ProcurementData/Members[Phases]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="PhaseLookup/Properties[Phases]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:SubmittalType" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:UOM" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_RFQ_Line_UOM" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Submittal_SubmittalTypes" />
+    </Association.Attributes>
+  </Association>
+  <Screen
+    Name="ProjectDetails">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="ProcurementData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group">
+          <ContentItem
+            Name="details"
+            Kind="Details"
+            DataType="Project"
+            View="Microsoft.LightSwitch.RichClient:RowsLayout">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ProjectDetails/Properties[Project]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem
+              Name="left"
+              Kind="Group">
+              <ContentItem
+                Name="ProjectNo"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[ProjectNo]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Name"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Name]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Client1"
+                Kind="Details"
+                DataType="Client">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Client" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Client1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Client"
+                  Kind="Details"
+                  DataType="Client">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="Phase1"
+                Kind="Details"
+                DataType="Phase">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Phase" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Phase1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Phase"
+                  Kind="Details"
+                  DataType="Phase">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="Year"
+                Kind="Value"
+                DataType=":Date?"
+                View="Microsoft.LightSwitch.RichClient:TextBox">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Year]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Top"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem
+            Name="children"
+            Kind="Group"
+            View="Microsoft.LightSwitch.RichClient:TabsLayout">
+            <ContentItem
+              Name="Group"
+              Kind="Group"
+              View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+              <ContentItem
+                Name="Project_Stakeholders"
+                Kind="Collection"
+                DataType="CollectionView$Project_Stakeholder"
+                View="Microsoft.LightSwitch.RichClient:DataGrid">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="ProjectDetails/Properties[Project_Stakeholders]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Project_StakeholdersTemplate"
+                  Kind="Details"
+                  DataType="Project_Stakeholder"
+                  View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Stakeholder_Type"
+                    Kind="Details"
+                    DataType="Stakeholder_Type"
+                    View="Microsoft.LightSwitch.RichClient:DetailsAutoCompleteBox">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Project_Stakeholder/Properties[Stakeholder_Type]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Stakeholder_TypeTemplate"
+                      Kind="Details"
+                      DataType="Stakeholder_Type"
+                      View="Microsoft.LightSwitch.RichClient:Summary">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                      <ContentItem
+                        Name="Stakeholder_Type1"
+                        Kind="Details"
+                        DataType="Stakeholder_Type">
+                        <ContentItem.DataSource>
+                          <ScreenExpressionTree>
+                            <ChainExpression />
+                          </ScreenExpressionTree>
+                        </ContentItem.DataSource>
+                      </ContentItem>
+                    </ContentItem>
+                    <ContentItem.PropertySources>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.RichClient:ColumnsLayout/Properties[IsColumnResizable]">
+                        <ScreenExpressionTree>
+                          <ConstantExpression
+                            Value="True"
+                            ResultType=":Boolean" />
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                        <ScreenExpressionTree>
+                          <ConstantExpression
+                            Value="150"
+                            ResultType=":Double" />
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                      <ControlPropertySource
+                        Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinHeight]">
+                        <ScreenExpressionTree>
+                          <ConstantExpression
+                            Value="0"
+                            ResultType=":Double" />
+                        </ScreenExpressionTree>
+                      </ControlPropertySource>
+                    </ContentItem.PropertySources>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Stakeholder1"
+                    Kind="Details"
+                    DataType="Stakeholder"
+                    View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Stakeholder" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Project_Stakeholder/Properties[Stakeholder1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="FirstName"
+                      Kind="Value"
+                      DataType=":String?">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Stakeholder/Properties[FirstName]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                      <ContentItem.PropertySources>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[WidthSizingMode]">
+                          <ScreenExpressionTree>
+                            <ConstantExpression
+                              Value="Auto"
+                              ResultType=":String" />
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                          <ScreenExpressionTree>
+                            <ConstantExpression
+                              Value="100"
+                              ResultType=":Double" />
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                      </ContentItem.PropertySources>
+                    </ContentItem>
+                    <ContentItem
+                      Name="LastName"
+                      Kind="Value"
+                      DataType=":String?">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Stakeholder/Properties[LastName]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                      <ContentItem.PropertySources>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[WidthSizingMode]">
+                          <ScreenExpressionTree>
+                            <ConstantExpression
+                              Value="Auto"
+                              ResultType=":String" />
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                          <ScreenExpressionTree>
+                            <ConstantExpression
+                              Value="100"
+                              ResultType=":Double" />
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                      </ContentItem.PropertySources>
+                    </ContentItem>
+                    <ContentItem
+                      Name="Phone"
+                      Kind="Value"
+                      DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Stakeholder/Properties[Phone]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                      <ContentItem.PropertySources>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[WidthSizingMode]">
+                          <ScreenExpressionTree>
+                            <ConstantExpression
+                              Value="Auto"
+                              ResultType=":String" />
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                          <ScreenExpressionTree>
+                            <ConstantExpression
+                              Value="100"
+                              ResultType=":Double" />
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                      </ContentItem.PropertySources>
+                    </ContentItem>
+                    <ContentItem
+                      Name="Email"
+                      Kind="Value"
+                      DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="Stakeholder/Properties[Email]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                      <ContentItem.PropertySources>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                          <ScreenExpressionTree>
+                            <ConstantExpression
+                              Value="250"
+                              ResultType=":Double" />
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                      </ContentItem.PropertySources>
+                    </ContentItem>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem.CommandItems>
+                  <ContentItem
+                    Name="Project_StakeholdersAddAndEditNew1"
+                    Kind="Command">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Add..." />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <CallExpression
+                            Target="ProjectDetails/Methods[Project_StakeholdersAddAndEditNew1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Project_Stakeholders_EditSelected"
+                    Kind="Command">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="ProjectDetails/Properties[Project_Stakeholders]" />
+                          <CallExpression
+                            Target="EditSelected" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Project_Stakeholders_DeleteSelected"
+                    Kind="Command">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="ProjectDetails/Properties[Project_Stakeholders]" />
+                          <CallExpression
+                            Target="DeleteSelected" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem.CommandItems>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[HeightSizingMode]">
+                    <ScreenExpressionTree>
+                      <ConstantExpression
+                        Value="Auto"
+                        ResultType=":String" />
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinHeight]">
+                    <ScreenExpressionTree>
+                      <ConstantExpression
+                        Value="0"
+                        ResultType=":Double" />
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:DataGrid/Properties[ShowVirtualRow]">
+                    <ScreenExpressionTree>
+                      <ConstantExpression
+                        Value="False"
+                        ResultType=":Boolean" />
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="modalPSH"
+                IsHidden="True"
+                Kind="Group"
+                View="Microsoft.LightSwitch.RichClient:ModalWindow">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Add New Project Stakeholder" />
+                </ContentItem.Attributes>
+                <ContentItem
+                  Name="Project_Stakeholders_SelectedItem"
+                  Kind="Details"
+                  DataType="Project_Stakeholder">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ProjectDetails/Properties[Project_Stakeholders]" />
+                        <MemberExpression
+                          Member="SelectedItem" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="Stakeholder_Type2"
+                    Kind="Details"
+                    DataType="Stakeholder_Type">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Project_Stakeholder/Properties[Stakeholder_Type]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Stakeholder_Type3"
+                      Kind="Details"
+                      DataType="Stakeholder_Type">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                    <ContentItem.CommandItems>
+                      <ContentItem
+                        Name="AddStakeholderType"
+                        Kind="Command"
+                        View="Microsoft.LightSwitch.RichClient:Link">
+                        <ContentItem.Attributes>
+                          <DisplayName
+                            Value="Add Stakeholder Type..." />
+                        </ContentItem.Attributes>
+                        <ContentItem.DataSource>
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <CallExpression
+                                Target="ProjectDetails/Methods[AddStakeholderType]" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ContentItem.DataSource>
+                      </ContentItem>
+                    </ContentItem.CommandItems>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Stakeholder11"
+                    Kind="Details"
+                    DataType="Stakeholder"
+                    View="Microsoft.LightSwitch.RichClient:DetailsAutoCompleteBox">
+                    <ContentItem.Attributes>
+                      <DisplayName
+                        Value="Stakeholder" />
+                    </ContentItem.Attributes>
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="Project_Stakeholder/Properties[Stakeholder1]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="Stakeholder11Template"
+                      Kind="Details"
+                      DataType="Stakeholder"
+                      View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                      <ContentItem
+                        Name="FirstName1"
+                        Kind="Value"
+                        DataType=":String?">
+                        <ContentItem.DataSource>
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="Stakeholder/Properties[FirstName]" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ContentItem.DataSource>
+                        <ContentItem.PropertySources>
+                          <ControlPropertySource
+                            Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[WidthSizingMode]">
+                            <ScreenExpressionTree>
+                              <ConstantExpression
+                                Value="Auto"
+                                ResultType=":String" />
+                            </ScreenExpressionTree>
+                          </ControlPropertySource>
+                          <ControlPropertySource
+                            Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                            <ScreenExpressionTree>
+                              <ConstantExpression
+                                Value="100"
+                                ResultType=":Double" />
+                            </ScreenExpressionTree>
+                          </ControlPropertySource>
+                        </ContentItem.PropertySources>
+                      </ContentItem>
+                      <ContentItem
+                        Name="LastName1"
+                        Kind="Value"
+                        DataType=":String?">
+                        <ContentItem.DataSource>
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="Stakeholder/Properties[LastName]" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ContentItem.DataSource>
+                        <ContentItem.PropertySources>
+                          <ControlPropertySource
+                            Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[WidthSizingMode]">
+                            <ScreenExpressionTree>
+                              <ConstantExpression
+                                Value="Auto"
+                                ResultType=":String" />
+                            </ScreenExpressionTree>
+                          </ControlPropertySource>
+                          <ControlPropertySource
+                            Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                            <ScreenExpressionTree>
+                              <ConstantExpression
+                                Value="100"
+                                ResultType=":Double" />
+                            </ScreenExpressionTree>
+                          </ControlPropertySource>
+                        </ContentItem.PropertySources>
+                      </ContentItem>
+                      <ContentItem
+                        Name="Phone1"
+                        Kind="Value"
+                        DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+                        <ContentItem.DataSource>
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="Stakeholder/Properties[Phone]" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ContentItem.DataSource>
+                        <ContentItem.PropertySources>
+                          <ControlPropertySource
+                            Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[WidthSizingMode]">
+                            <ScreenExpressionTree>
+                              <ConstantExpression
+                                Value="Auto"
+                                ResultType=":String" />
+                            </ScreenExpressionTree>
+                          </ControlPropertySource>
+                          <ControlPropertySource
+                            Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                            <ScreenExpressionTree>
+                              <ConstantExpression
+                                Value="100"
+                                ResultType=":Double" />
+                            </ScreenExpressionTree>
+                          </ControlPropertySource>
+                        </ContentItem.PropertySources>
+                      </ContentItem>
+                      <ContentItem
+                        Name="Email1"
+                        Kind="Value"
+                        DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                        <ContentItem.DataSource>
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="Stakeholder/Properties[Email]" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ContentItem.DataSource>
+                        <ContentItem.PropertySources>
+                          <ControlPropertySource
+                            Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                            <ScreenExpressionTree>
+                              <ConstantExpression
+                                Value="250"
+                                ResultType=":Double" />
+                            </ScreenExpressionTree>
+                          </ControlPropertySource>
+                        </ContentItem.PropertySources>
+                      </ContentItem>
+                    </ContentItem>
+                    <ContentItem.CommandItems>
+                      <ContentItem
+                        Name="AddStakeholder"
+                        Kind="Command">
+                        <ContentItem.Attributes>
+                          <DisplayName
+                            Value="Add a new Stakeholder..." />
+                        </ContentItem.Attributes>
+                        <ContentItem.DataSource>
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <CallExpression
+                                Target="ProjectDetails/Methods[AddStakeholder]" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ContentItem.DataSource>
+                      </ContentItem>
+                    </ContentItem.CommandItems>
+                  </ContentItem>
+                  <ContentItem.CommandItems>
+                    <ContentItem
+                      Name="AddPSH"
+                      Kind="Command">
+                      <ContentItem.Attributes>
+                        <DisplayName
+                          Value="Add" />
+                      </ContentItem.Attributes>
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <CallExpression
+                              Target="ProjectDetails/Methods[AddPSH]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                  </ContentItem.CommandItems>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinHeight]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          Value="150"
+                          ResultType=":Double" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[MinWidth]">
+                      <ScreenExpressionTree>
+                        <ConstantExpression
+                          Value="350"
+                          ResultType=":Double" />
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[HorizontalAlignment]">
+                    <ScreenExpressionTree>
+                      <ConstantExpression
+                        Value="Left"
+                        ResultType=":String" />
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:ModalWindow/Properties[ShowButton]">
+                    <ScreenExpressionTree>
+                      <ConstantExpression
+                        Value="False"
+                        ResultType=":Boolean" />
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem
+              Name="RFQ_P"
+              Kind="Collection"
+              DataType="CollectionView$RFQ_PItem">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ProjectDetails/Properties[RFQ_P]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="RowTemplate8"
+                Kind="Details"
+                DataType="RFQ_PItem">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="summary1"
+                  Kind="Details"
+                  DataType="RFQ_PItem"
+                  View="Microsoft.LightSwitch.RichClient:Summary">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="PkgNo1"
+                    Kind="Value"
+                    DataType=":String">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[PkgNo]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PkgName1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[PkgName]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PkgDescription1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[PkgDescription]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PkgWBS1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[PkgWBS]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="BudgetValue1"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[BudgetValue]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="SourceStrategy1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[SourceStrategy]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="ReqdOnSite1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[ReqdOnSite]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="EstTransportDays1"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[EstTransportDays]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="EstMfgDays1"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[EstMfgDays]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="EstAwdProcessDays1"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[EstAwdProcessDays]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="EstProposalDays1"
+                    Kind="Value"
+                    DataType=":Decimal?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[EstProposalDays]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="ERW1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[ERW]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="ERWNumber1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[ERWNumber]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="ERW_Rev1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[ERW_Rev]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="ERWContact1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[ERWContact]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="SpecifiedBidDue1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[SpecifiedBidDue]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="RevisedBidDue1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[RevisedBidDue]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="BidsReceived1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[BidsReceived]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PreBidRequired1"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[PreBidRequired]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PreAwardRequired1"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[PreAwardRequired]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="BidOpening1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[BidOpening]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="ToEng1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[ToEng]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="EngApproval1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[EngApproval]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="TechComplaint1"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[TechComplaint]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Regret1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[Regret]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="CommercialDone1"
+                    Kind="Value"
+                    DataType=":Date?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[CommercialDone]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="CommercialComplaint1"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[CommercialComplaint]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Comments1"
+                    Kind="Value"
+                    DataType=":String?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[Comments]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="PreBid_Req1"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[PreBid_Req]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="CriticalPath1"
+                    Kind="Value"
+                    DataType=":Boolean?">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[CriticalPath]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                  <ContentItem
+                    Name="Project1"
+                    Kind="Details"
+                    DataType="Project">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <MemberExpression
+                            Member="RFQ_PItem/Properties[Project]" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                    <ContentItem
+                      Name="RowTemplate9"
+                      Kind="Details"
+                      DataType="Project">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression />
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                    </ContentItem>
+                  </ContentItem>
+                  <ContentItem.PropertySources>
+                    <ControlPropertySource
+                      Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[ShowAsLink]">
+                      <ScreenExpressionTree>
+                        <ChainExpression>
+                          <ConstantExpression
+                            Value="True"
+                            ResultType=":Boolean" />
+                        </ChainExpression>
+                      </ScreenExpressionTree>
+                    </ControlPropertySource>
+                  </ContentItem.PropertySources>
+                </ContentItem>
+                <ContentItem
+                  Name="PkgNo"
+                  Kind="Value"
+                  DataType=":String">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[PkgNo]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="PkgName"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[PkgName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="PkgDescription"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[PkgDescription]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="PkgWBS"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[PkgWBS]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="BudgetValue"
+                  Kind="Value"
+                  DataType=":Decimal?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[BudgetValue]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="SourceStrategy"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[SourceStrategy]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ReqdOnSite"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[ReqdOnSite]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="EstTransportDays"
+                  Kind="Value"
+                  DataType=":Decimal?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[EstTransportDays]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="EstMfgDays"
+                  Kind="Value"
+                  DataType=":Decimal?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[EstMfgDays]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="EstAwdProcessDays"
+                  Kind="Value"
+                  DataType=":Decimal?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[EstAwdProcessDays]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="EstProposalDays"
+                  Kind="Value"
+                  DataType=":Decimal?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[EstProposalDays]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ERW"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[ERW]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ERWNumber"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[ERWNumber]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ERW_Rev"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[ERW_Rev]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ERWContact"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[ERWContact]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="SpecifiedBidDue"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[SpecifiedBidDue]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="RevisedBidDue"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[RevisedBidDue]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="BidsReceived"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[BidsReceived]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="PreBidRequired"
+                  Kind="Value"
+                  DataType=":Boolean?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[PreBidRequired]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="PreAwardRequired"
+                  Kind="Value"
+                  DataType=":Boolean?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[PreAwardRequired]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="BidOpening"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[BidOpening]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ToEng"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[ToEng]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="EngApproval"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[EngApproval]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="TechComplaint"
+                  Kind="Value"
+                  DataType=":Boolean?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[TechComplaint]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Regret"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[Regret]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="CommercialDone"
+                  Kind="Value"
+                  DataType=":Date?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[CommercialDone]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="CommercialComplaint"
+                  Kind="Value"
+                  DataType=":Boolean?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[CommercialComplaint]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Comments"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[Comments]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="PreBid_Req"
+                  Kind="Value"
+                  DataType=":Boolean?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[PreBid_Req]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="CriticalPath"
+                  Kind="Value"
+                  DataType=":Boolean?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RFQ_PItem/Properties[CriticalPath]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem.CommandItems>
+                <ContentItem
+                  Name="RFQ_P_AddAndEditNew"
+                  Kind="Command">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ProjectDetails/Properties[RFQ_P]" />
+                        <CallExpression
+                          Target="AddAndEditNew" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="RFQ_P_EditSelected"
+                  Kind="Command">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ProjectDetails/Properties[RFQ_P]" />
+                        <CallExpression
+                          Target="EditSelected" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="RFQ_P_DeleteSelected"
+                  Kind="Command">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ProjectDetails/Properties[RFQ_P]" />
+                        <CallExpression
+                          Target="DeleteSelected" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem.CommandItems>
+            </ContentItem>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Stretch"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.RichClient:ScrollableControl/Properties[IsVerticalScrollBarEnabled]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    Value="True"
+                    ResultType=":Boolean" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Save"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="ProjectDetails/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="Refresh"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="ProjectDetails/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Project_Stakeholders1AddAndEditNew">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="AddAndEditNew" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Project_StakeholdersAddAndEditNew">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="AddAndEditNew" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Project_StakeholdersAddAndEditNew1">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="AddAndEditNew" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="AddPSH" />
+      <ScreenMethod
+        Name="AddStakeholderType" />
+      <ScreenMethod
+        Name="AddStakeholder" />
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenProperty
+        Name="Project"
+        PropertyType="Project">
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="LightSwitchApplication.Web:ProcurementData/Members[Projects_SingleOrDefault]">
+              <ArgumentExpression
+                Parameter="ID">
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ProjectDetails/Properties[ProjectID]" />
+                </ChainExpression>
+              </ArgumentExpression>
+            </CallExpression>
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenProperty>
+      <ScreenProperty
+        Name="ProjectID"
+        PropertyType=":Int32">
+        <ScreenProperty.Attributes>
+          <IsParameter />
+        </ScreenProperty.Attributes>
+      </ScreenProperty>
+      <ScreenCollectionProperty
+        Name="RFQ_P"
+        PageSize="15"
+        PropertyType="CollectionView$RFQ_PItem">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="RFQ_PQuery"
+            ReturnType="RFQ_PItem*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ProjectDetails/Properties[Project]" />
+                  <MemberExpression
+                    Member="RFQ_P" />
+                </ChainExpression>
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="ProjectDetails/Properties[RFQ_P]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+      <ScreenCollectionProperty
+        Name="Project_Stakeholders"
+        PageSize="45"
+        PropertyType="CollectionView$Project_Stakeholder">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="Project_StakeholdersQuery"
+            ReturnType="Project_Stakeholder*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="ProjectDetails/Properties[Project]" />
+                  <MemberExpression
+                    Member="Project_Stakeholders" />
+                </ChainExpression>
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="ProjectDetails/Properties[Project_Stakeholders]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
+  <Screen
+    Name="Projects">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="ProcurementData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group">
+          <ContentItem
+            Name="grid"
+            Kind="Collection"
+            DataType="CollectionView$Project">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Projects/Properties[Projects1]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem
+              Name="RowTemplate"
+              Kind="Details"
+              DataType="Project">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression />
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="ProjectNo"
+                Kind="Value"
+                DataType=":String">
+                <ContentItem.Attributes>
+                  <ShowAsLinkSettings
+                    Value="ProjectDetails">
+                    <ShowAsLinkSettings.Attributes>
+                      <ScreenParameterMapping
+                        KeyProperty="Project/Properties[ID]"
+                        ScreenParameter="ProjectDetails/Properties[ProjectID]" />
+                    </ShowAsLinkSettings.Attributes>
+                  </ShowAsLinkSettings>
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[ProjectNo]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[ShowAsLink]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="True"
+                          ResultType=":Boolean" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Name"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Name]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Client1"
+                Kind="Details"
+                DataType="Client"
+                View="Microsoft.LightSwitch.RichClient:DetailsAutoCompleteBox">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Client" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Client1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="Client1Template"
+                  Kind="Details"
+                  DataType="Client">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression />
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem
+                Name="Phase1"
+                Kind="Details"
+                DataType="Phase">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Phase" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Phase1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Year"
+                Kind="Value"
+                DataType=":Date?"
+                View="Microsoft.LightSwitch.RichClient:TextBox">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Project/Properties[Year]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem.PropertySources>
+                <ControlPropertySource
+                  Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[BrowseOnly]">
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <ConstantExpression
+                        Value="True"
+                        ResultType=":Boolean" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ControlPropertySource>
+              </ContentItem.PropertySources>
+            </ContentItem>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:DataGrid/Properties[ShowVirtualRow]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="False"
+                      ResultType=":Boolean" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[AttachedLabelPosition]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Collapsed"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Stretch"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Save"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Projects/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="Refresh"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="Projects/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="DeleteProject"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="Projects/Properties[Projects1]" />
+                  <CallExpression
+                    Target="DeleteSelected" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="Projects1"
+        PageSize="45"
+        PropertyType="CollectionView$Project">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="Projects1Query"
+            ReturnType="Project*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="ProcurementData/Members[Projects]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="Projects/Properties[Projects1]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
+  <Screen
+    Name="StakeholdertypeLookup">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="ProcurementData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group">
+          <ContentItem
+            Name="grid"
+            Kind="Collection"
+            DataType="CollectionView$Stakeholder_Type">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="StakeholdertypeLookup/Properties[Stakeholder_Types]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem
+              Name="RowTemplate"
+              Kind="Details"
+              DataType="Stakeholder_Type">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression />
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="Stakeholder_Type1"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Stakeholder Type" />
+                </ContentItem.Attributes>
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Stakeholder_Type/Properties[Stakeholder_Type1]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="Stakeholder_Types_AddAndEditNew"
+                Kind="Command">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="StakeholdertypeLookup/Properties[Stakeholder_Types]" />
+                      <CallExpression
+                        Target="AddAndEditNew" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Stakeholder_Types_EditSelected"
+                Kind="Command">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="StakeholdertypeLookup/Properties[Stakeholder_Types]" />
+                      <CallExpression
+                        Target="EditSelected" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Stakeholder_Types_DeleteSelected"
+                Kind="Command">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="StakeholdertypeLookup/Properties[Stakeholder_Types]" />
+                      <CallExpression
+                        Target="DeleteSelected" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem.CommandItems>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Stretch"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[AttachedLabelPosition]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Collapsed"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Save"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="StakeholdertypeLookup/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="Refresh"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="StakeholdertypeLookup/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="Stakeholder_Types"
+        PageSize="45"
+        PropertyType="CollectionView$Stakeholder_Type">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="Stakeholder_TypesQuery"
+            ReturnType="Stakeholder_Type*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="ProcurementData/Members[Stakeholder_Types]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="StakeholdertypeLookup/Properties[Stakeholder_Types]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
+  <Screen
+    Name="AddProjectStakeholder"
+    LaunchMode="Multiple">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="ProcurementData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group">
+          <ContentItem
+            Name="details"
+            Kind="Details"
+            DataType="Project_Stakeholder"
+            View="Microsoft.LightSwitch.RichClient:RowsLayout">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddProjectStakeholder/Properties[Project_StakeholderProperty]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem
+              Name="Stakeholder_Type"
+              Kind="Details"
+              DataType="Stakeholder_Type">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Project_Stakeholder/Properties[Stakeholder_Type]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="RowTemplate1"
+                Kind="Details"
+                DataType="Stakeholder_Type">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem.CommandItems>
+                <ContentItem
+                  Name="AddStakeholderType"
+                  Kind="Command"
+                  View="Microsoft.LightSwitch.RichClient:Link">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddProjectStakeholder/Methods[AddStakeholderType]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem.CommandItems>
+            </ContentItem>
+            <ContentItem
+              Name="Stakeholder1"
+              Kind="Details"
+              DataType="Stakeholder"
+              View="Microsoft.LightSwitch.RichClient:DetailsAutoCompleteBox">
+              <ContentItem.Attributes>
+                <DisplayName
+                  Value="Stakeholder" />
+              </ContentItem.Attributes>
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="Project_Stakeholder/Properties[Stakeholder1]" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="Stakeholder1Template"
+                Kind="Details"
+                DataType="Stakeholder"
+                View="Microsoft.LightSwitch.RichClient:ColumnsLayout">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression />
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+                <ContentItem
+                  Name="FirstName"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Stakeholder/Properties[FirstName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="LastName"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Stakeholder/Properties[LastName]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Phone"
+                  Kind="Value"
+                  DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Stakeholder/Properties[Phone]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Email"
+                  Kind="Value"
+                  DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Stakeholder/Properties[Email]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem>
+              <ContentItem.CommandItems>
+                <ContentItem
+                  Name="AddStakeholder"
+                  Kind="Command"
+                  View="Microsoft.LightSwitch.RichClient:Link">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="AddProjectStakeholder/Methods[AddStakeholder]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+              </ContentItem.CommandItems>
+            </ContentItem>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Top"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+          <ContentItem.PropertySources>
+            <ControlPropertySource
+              Property="Microsoft.LightSwitch.RichClient:ScrollableControl/Properties[IsVerticalScrollBarEnabled]">
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <ConstantExpression
+                    Value="True"
+                    ResultType=":Boolean" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ControlPropertySource>
+          </ContentItem.PropertySources>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Save"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="AddProjectStakeholder/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="Refresh"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="AddProjectStakeholder/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="AddStakeholderType" />
+      <ScreenMethod
+        Name="AddStakeholder" />
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenProperty
+        Name="Project_StakeholderProperty"
+        PropertyType="Project_Stakeholder" />
+    </Screen.Properties>
+  </Screen>
+  <Screen
+    Name="AddStakeholder">
+    <Screen.Attributes>
+      <SaveChangesTo
+        EntityContainer="ProcurementData" />
+    </Screen.Attributes>
+    <Screen.RootContentItem>
+      <ContentItem
+        Name="RootContentItem"
+        Kind="Screen"
+        View="Microsoft.LightSwitch.RichClient:Screen">
+        <ContentItem
+          Name="ScreenLayout"
+          Kind="Group">
+          <ContentItem
+            Name="grid"
+            Kind="Collection"
+            DataType="CollectionView$Stakeholder">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <MemberExpression
+                    Member="AddStakeholder/Properties[Stakeholders]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+            <ContentItem
+              Name="RowTemplate"
+              Kind="Details"
+              DataType="Stakeholder">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression />
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+              <ContentItem
+                Name="FirstName"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Stakeholder/Properties[FirstName]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="LastName"
+                Kind="Value"
+                DataType=":String?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Stakeholder/Properties[LastName]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Phone"
+                Kind="Value"
+                DataType="Microsoft.LightSwitch.Extensions:PhoneNumber?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Stakeholder/Properties[Phone]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Email"
+                Kind="Value"
+                DataType="Microsoft.LightSwitch.Extensions:EmailAddress?">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="Stakeholder/Properties[Email]" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem>
+            <ContentItem.CommandItems>
+              <ContentItem
+                Name="Stakeholders_AddAndEditNew"
+                Kind="Command">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddStakeholder/Properties[Stakeholders]" />
+                      <CallExpression
+                        Target="AddAndEditNew" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Stakeholders_EditSelected"
+                Kind="Command">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddStakeholder/Properties[Stakeholders]" />
+                      <CallExpression
+                        Target="EditSelected" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+              <ContentItem
+                Name="Stakeholders_DeleteSelected"
+                Kind="Command">
+                <ContentItem.DataSource>
+                  <ScreenExpressionTree>
+                    <ChainExpression>
+                      <MemberExpression
+                        Member="AddStakeholder/Properties[Stakeholders]" />
+                      <CallExpression
+                        Target="DeleteSelected" />
+                    </ChainExpression>
+                  </ScreenExpressionTree>
+                </ContentItem.DataSource>
+              </ContentItem>
+            </ContentItem.CommandItems>
+            <ContentItem.PropertySources>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[VerticalAlignment]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Stretch"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+              <ControlPropertySource
+                Property="Microsoft.LightSwitch.RichClient:RootControl/Properties[AttachedLabelPosition]">
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <ConstantExpression
+                      Value="Collapsed"
+                      ResultType=":String" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ControlPropertySource>
+            </ContentItem.PropertySources>
+          </ContentItem>
+        </ContentItem>
+        <ContentItem.CommandItems>
+          <ContentItem
+            Name="Save"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="AddStakeholder/Methods[Save]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+          <ContentItem
+            Name="Refresh"
+            Kind="Command">
+            <ContentItem.DataSource>
+              <ScreenExpressionTree>
+                <ChainExpression>
+                  <CallExpression
+                    Target="AddStakeholder/Methods[Refresh]" />
+                </ChainExpression>
+              </ScreenExpressionTree>
+            </ContentItem.DataSource>
+          </ContentItem>
+        </ContentItem.CommandItems>
+      </ContentItem>
+    </Screen.RootContentItem>
+    <Screen.Methods>
+      <ScreenMethod
+        Name="Save">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Save.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Refresh">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+          <ImageResource
+            ResourceId="Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/Refresh.png" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+      <ScreenMethod
+        Name="Close">
+        <ScreenMethod.Attributes>
+          <DisplayMethodByDefault
+            Display="True" />
+          <Generated />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
+    </Screen.Methods>
+    <Screen.Properties>
+      <ScreenCollectionProperty
+        Name="Stakeholders"
+        PageSize="45"
+        PropertyType="CollectionView$Stakeholder">
+        <ScreenCollectionProperty.Query>
+          <ScreenQueryDefinition
+            Name="StakeholdersQuery"
+            ReturnType="Stakeholder*">
+            <ScreenQueryDefinition.FilterExpression>
+              <QueryFilterExpressionTree />
+            </ScreenQueryDefinition.FilterExpression>
+            <ScreenQueryDefinition.Source>
+              <QuerySourceExpressionTree>
+                <MemberExpression
+                  Member="ProcurementData/Members[Stakeholders]" />
+              </QuerySourceExpressionTree>
+            </ScreenQueryDefinition.Source>
+          </ScreenQueryDefinition>
+        </ScreenCollectionProperty.Query>
+        <ScreenExpressionTree>
+          <ChainExpression>
+            <CallExpression
+              Target="AddStakeholder/Properties[Stakeholders]/Query" />
+          </ChainExpression>
+        </ScreenExpressionTree>
+      </ScreenCollectionProperty>
+    </Screen.Properties>
+  </Screen>
+  <EntityContainer>
+    <EntityContainer.Attributes>
+      <Proxy
+        Target="ServiceInterface:Hargrove_VisionDBData" />
+    </EntityContainer.Attributes>
+  </EntityContainer>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:CL" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Project_Clients" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Project_Phase" />
+    </Association.Attributes>
+  </Association>
+</ModelFragment>

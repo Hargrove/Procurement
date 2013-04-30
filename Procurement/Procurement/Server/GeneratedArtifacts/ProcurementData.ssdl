@@ -1,0 +1,1043 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ProcurementDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ProcurementDataStore">
+    <EntitySet Name="Award_Selecteds" EntityType="ProcurementDataStore.Award_Selected" store:Type="Tables" Schema="dbo" Table="Award_Selected" />
+    <EntitySet Name="BidLists" EntityType="ProcurementDataStore.BidList" store:Type="Tables" Schema="dbo" Table="BidList" />
+    <EntitySet Name="Business_Classes" EntityType="ProcurementDataStore.Business_Class" store:Type="Tables" Schema="dbo" Table="Business_Classes" />
+    <EntitySet Name="ChangeOrders" EntityType="ProcurementDataStore.ChangeOrder" store:Type="Tables" Schema="dbo" Table="ChangeOrder" />
+    <EntitySet Name="Client_Approveds" EntityType="ProcurementDataStore.Client_Approved" store:Type="Tables" Schema="dbo" Table="Client_Approved" />
+    <EntitySet Name="Clients" EntityType="ProcurementDataStore.Client" store:Type="Tables" Schema="dbo" Table="Clients" />
+    <EntitySet Name="Expeditings" EntityType="ProcurementDataStore.Expediting" store:Type="Tables" Schema="dbo" Table="Expediting" />
+    <EntitySet Name="LineChangeOrders" EntityType="ProcurementDataStore.LineChangeOrder" store:Type="Tables" Schema="dbo" Table="LineChangeOrder" />
+    <EntitySet Name="Manufacturers" EntityType="ProcurementDataStore.Manufacturer" store:Type="Tables" Schema="dbo" Table="Manufacturers" />
+    <EntitySet Name="Material_Status" EntityType="ProcurementDataStore.Material_Status" store:Type="Tables" Schema="dbo" Table="Material_Status" />
+    <EntitySet Name="Phases" EntityType="ProcurementDataStore.Phase" store:Type="Tables" Schema="dbo" Table="Phase" />
+    <EntitySet Name="POes" EntityType="ProcurementDataStore.PO" store:Type="Tables" Schema="dbo" Table="PO" />
+    <EntitySet Name="PO_Lines" EntityType="ProcurementDataStore.PO_Line" store:Type="Tables" Schema="dbo" Table="PO_Line" />
+    <EntitySet Name="Preferences" EntityType="ProcurementDataStore.Preference" store:Type="Tables" Schema="dbo" Table="Preference" />
+    <EntitySet Name="Projects" EntityType="ProcurementDataStore.Project" store:Type="Tables" Schema="dbo" Table="Project" />
+    <EntitySet Name="Project_Stakeholders" EntityType="ProcurementDataStore.Project_Stakeholder" store:Type="Tables" Schema="dbo" Table="Project_Stakeholders" />
+    <EntitySet Name="Proposals" EntityType="ProcurementDataStore.Proposal" store:Type="Tables" Schema="dbo" Table="Proposal" />
+    <EntitySet Name="Proposal_Lines" EntityType="ProcurementDataStore.Proposal_Line" store:Type="Tables" Schema="dbo" Table="Proposal_Line" />
+    <EntitySet Name="RFQ_Lines" EntityType="ProcurementDataStore.RFQ_Line" store:Type="Tables" Schema="dbo" Table="RFQ_Line" />
+    <EntitySet Name="RFQ_P" EntityType="ProcurementDataStore.RFQ_PItem" store:Type="Tables" Schema="dbo" Table="RFQ_P" />
+    <EntitySet Name="Safety_Records" EntityType="ProcurementDataStore.Safety_Record" store:Type="Tables" Schema="dbo" Table="Safety_Records" />
+    <EntitySet Name="Safety_Status" EntityType="ProcurementDataStore.Safety_Status" store:Type="Tables" Schema="dbo" Table="Safety_Status" />
+    <EntitySet Name="Shipments" EntityType="ProcurementDataStore.Shipment" store:Type="Tables" Schema="dbo" Table="Shipment" />
+    <EntitySet Name="Stakeholder_Types" EntityType="ProcurementDataStore.Stakeholder_Type" store:Type="Tables" Schema="dbo" Table="Stakeholder_Types" />
+    <EntitySet Name="Stakeholders" EntityType="ProcurementDataStore.Stakeholder" store:Type="Tables" Schema="dbo" Table="Stakeholders" />
+    <EntitySet Name="Submittals" EntityType="ProcurementDataStore.Submittal" store:Type="Tables" Schema="dbo" Table="Submittal" />
+    <EntitySet Name="Supplier_Contacts" EntityType="ProcurementDataStore.Supplier_Contact" store:Type="Tables" Schema="dbo" Table="Supplier_Contact" />
+    <EntitySet Name="Supplier_Specialties" EntityType="ProcurementDataStore.Supplier_Specialty" store:Type="Tables" Schema="dbo" Table="Supplier_Specialty" />
+    <EntitySet Name="SupplierManufactures" EntityType="ProcurementDataStore.SupplierManufacture" store:Type="Tables" Schema="dbo" Table="SupplierManufactures" />
+    <EntitySet Name="Suppliers" EntityType="ProcurementDataStore.Supplier" store:Type="Tables" Schema="dbo" Table="Suppliers" />
+    <EntitySet Name="Transport_Types" EntityType="ProcurementDataStore.Transport_Type" store:Type="Tables" Schema="dbo" Table="Transport_Type" />
+    <EntitySet Name="SubmittalTypes" EntityType="ProcurementDataStore.SubmittalType" store:Type="Tables" Schema="dbo" Table="SubmittalTypes" />
+    <EntitySet Name="UOMs" EntityType="ProcurementDataStore.UOM" store:Type="Tables" Schema="dbo" Table="UOM" />
+    <AssociationSet Name="FK_Award_Selected_PO_Line" Association="ProcurementDataStore.FK_Award_Selected_PO_Line">
+      <End Role="PO_Line" EntitySet="PO_Lines" />
+      <End Role="Award_Selected" EntitySet="Award_Selecteds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Award_Selected_PO_Line1" Association="ProcurementDataStore.FK_Award_Selected_PO_Line1">
+      <End Role="PO_Line" EntitySet="PO_Lines" />
+      <End Role="Award_Selected" EntitySet="Award_Selecteds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Award_Selected_RFQ_P" Association="ProcurementDataStore.FK_Award_Selected_RFQ_P">
+      <End Role="RFQ_P" EntitySet="RFQ_P" />
+      <End Role="Award_Selected" EntitySet="Award_Selecteds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BidList_RFQ_P1" Association="ProcurementDataStore.FK_BidList_RFQ_P1">
+      <End Role="RFQ_P" EntitySet="RFQ_P" />
+      <End Role="BidList" EntitySet="BidLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BidList_Suppliers" Association="ProcurementDataStore.FK_BidList_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="BidList" EntitySet="BidLists" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangeOrder_PO" Association="ProcurementDataStore.FK_ChangeOrder_PO">
+      <End Role="PO" EntitySet="POes" />
+      <End Role="ChangeOrder" EntitySet="ChangeOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangeOrder_PO_Line" Association="ProcurementDataStore.FK_ChangeOrder_PO_Line">
+      <End Role="PO_Line" EntitySet="PO_Lines" />
+      <End Role="ChangeOrder" EntitySet="ChangeOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_Approved_Preference" Association="ProcurementDataStore.FK_Client_Approved_Preference">
+      <End Role="Preference" EntitySet="Preferences" />
+      <End Role="Client_Approved" EntitySet="Client_Approveds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Client_Approved_Suppliers" Association="ProcurementDataStore.FK_Client_Approved_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Client_Approved" EntitySet="Client_Approveds" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expediting_Material_Status" Association="ProcurementDataStore.FK_Expediting_Material_Status">
+      <End Role="Material_Status" EntitySet="Material_Status" />
+      <End Role="Expediting" EntitySet="Expeditings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expediting_PO_Line" Association="ProcurementDataStore.FK_Expediting_PO_Line">
+      <End Role="PO_Line" EntitySet="PO_Lines" />
+      <End Role="Expediting" EntitySet="Expeditings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expediting_Shipment" Association="ProcurementDataStore.FK_Expediting_Shipment">
+      <End Role="Shipment" EntitySet="Shipments" />
+      <End Role="Expediting" EntitySet="Expeditings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LineChangeOrder_ChangeOrder" Association="ProcurementDataStore.FK_LineChangeOrder_ChangeOrder">
+      <End Role="ChangeOrder" EntitySet="ChangeOrders" />
+      <End Role="LineChangeOrder" EntitySet="LineChangeOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LineChangeOrder_PO_Line" Association="ProcurementDataStore.FK_LineChangeOrder_PO_Line">
+      <End Role="PO_Line" EntitySet="PO_Lines" />
+      <End Role="LineChangeOrder" EntitySet="LineChangeOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PO_Line_PO" Association="ProcurementDataStore.FK_PO_Line_PO">
+      <End Role="PO" EntitySet="POes" />
+      <End Role="PO_Line" EntitySet="PO_Lines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Stakeholders_Project" Association="ProcurementDataStore.FK_Project_Stakeholders_Project">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="Project_Stakeholders" EntitySet="Project_Stakeholders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Stakeholders_Stakeholder_Types" Association="ProcurementDataStore.FK_Project_Stakeholders_Stakeholder_Types">
+      <End Role="Stakeholder_Types" EntitySet="Stakeholder_Types" />
+      <End Role="Project_Stakeholders" EntitySet="Project_Stakeholders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Stakeholders_Stakeholders" Association="ProcurementDataStore.FK_Project_Stakeholders_Stakeholders">
+      <End Role="Stakeholders" EntitySet="Stakeholders" />
+      <End Role="Project_Stakeholders" EntitySet="Project_Stakeholders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proposal_Award_Selected" Association="ProcurementDataStore.FK_Proposal_Award_Selected">
+      <End Role="Award_Selected" EntitySet="Award_Selecteds" />
+      <End Role="Proposal" EntitySet="Proposals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proposal_Line_RFQ_Line" Association="ProcurementDataStore.FK_Proposal_Line_RFQ_Line">
+      <End Role="RFQ_Line" EntitySet="RFQ_Lines" />
+      <End Role="Proposal_Line" EntitySet="Proposal_Lines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Proposal_RFQ_P" Association="ProcurementDataStore.FK_Proposal_RFQ_P">
+      <End Role="RFQ_P" EntitySet="RFQ_P" />
+      <End Role="Proposal" EntitySet="Proposals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RFQ_Line_RFQ_P" Association="ProcurementDataStore.FK_RFQ_Line_RFQ_P">
+      <End Role="RFQ_P" EntitySet="RFQ_P" />
+      <End Role="RFQ_Line" EntitySet="RFQ_Lines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RFQ_P_Project" Association="ProcurementDataStore.FK_RFQ_P_Project">
+      <End Role="Project" EntitySet="Projects" />
+      <End Role="RFQ_P" EntitySet="RFQ_P" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Safety_Records_Safety_Status" Association="ProcurementDataStore.FK_Safety_Records_Safety_Status">
+      <End Role="Safety_Status" EntitySet="Safety_Status" />
+      <End Role="Safety_Records" EntitySet="Safety_Records" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Safety_Records_Suppliers" Association="ProcurementDataStore.FK_Safety_Records_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Safety_Records" EntitySet="Safety_Records" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shipment_Proposal_Line" Association="ProcurementDataStore.FK_Shipment_Proposal_Line">
+      <End Role="Proposal_Line" EntitySet="Proposal_Lines" />
+      <End Role="Shipment" EntitySet="Shipments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shipment_Transport_Type" Association="ProcurementDataStore.FK_Shipment_Transport_Type">
+      <End Role="Transport_Type" EntitySet="Transport_Types" />
+      <End Role="Shipment" EntitySet="Shipments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplier_Contact_Supplier_Specialty" Association="ProcurementDataStore.FK_Supplier_Contact_Supplier_Specialty">
+      <End Role="Supplier_Specialty" EntitySet="Supplier_Specialties" />
+      <End Role="Supplier_Contact" EntitySet="Supplier_Contacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplier_Specialty_Suppliers" Association="ProcurementDataStore.FK_Supplier_Specialty_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Supplier_Specialty" EntitySet="Supplier_Specialties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierManufactures_Manufacturers" Association="ProcurementDataStore.FK_SupplierManufactures_Manufacturers">
+      <End Role="Manufacturers" EntitySet="Manufacturers" />
+      <End Role="SupplierManufactures" EntitySet="SupplierManufactures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SupplierManufactures_Suppliers" Association="ProcurementDataStore.FK_SupplierManufactures_Suppliers">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="SupplierManufactures" EntitySet="SupplierManufactures" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Suppliers_Business_Classes" Association="ProcurementDataStore.FK_Suppliers_Business_Classes">
+      <End Role="Business_Classes" EntitySet="Business_Classes" />
+      <End Role="Suppliers" EntitySet="Suppliers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Submittal_RFQ_Line" Association="ProcurementDataStore.FK_Submittal_RFQ_Line">
+      <End Role="RFQ_Line" EntitySet="RFQ_Lines" />
+      <End Role="Submittal" EntitySet="Submittals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RFQ_Line_UOM" Association="ProcurementDataStore.FK_RFQ_Line_UOM">
+      <End Role="UOM" EntitySet="UOMs" />
+      <End Role="RFQ_Line" EntitySet="RFQ_Lines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Submittal_SubmittalTypes" Association="ProcurementDataStore.FK_Submittal_SubmittalTypes">
+      <End Role="SubmittalTypes" EntitySet="SubmittalTypes" />
+      <End Role="Submittal" EntitySet="Submittals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Clients" Association="ProcurementDataStore.FK_Project_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Phase" Association="ProcurementDataStore.FK_Project_Phase">
+      <End Role="Phase" EntitySet="Phases" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Award_Selected">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RFQItem" Type="numeric" />
+    <Property Name="SourceReason" Type="nvarchar" MaxLength="50" />
+    <Property Name="AwdReqstd" Type="date" />
+    <Property Name="AwdApp" Type="date" />
+    <Property Name="RequisitionNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="RequisitionSub" Type="date" />
+    <Property Name="RequisitionApp" Type="date" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="ProposalSelected" Type="int" />
+    <Property Name="PropLineSlctd" Type="int" />
+    <Property Name="PkgNoID" Type="int" />
+  </EntityType>
+  <EntityType Name="BidList">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PkgNoID" Type="int" />
+    <Property Name="SupplierID" Type="int" />
+  </EntityType>
+  <EntityType Name="Business_Class">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessClass" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ChangeOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ChangeOrderNum" Type="numeric" />
+    <Property Name="PCN" Type="nvarchar" MaxLength="50" />
+    <Property Name="COAward" Type="date" />
+    <Property Name="CO_Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CO_WBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CO_Qty" Type="numeric" />
+    <Property Name="CO_UOM" Type="nvarchar" MaxLength="50" />
+    <Property Name="CO_CostPerUnit" Type="money" />
+    <Property Name="PONum" Type="int" />
+    <Property Name="POLineID" Type="int" />
+  </EntityType>
+  <EntityType Name="Client_Approved">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Client" Type="nvarchar" MaxLength="50" />
+    <Property Name="ServiceAgreement" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierID_No" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteApproved" Type="bit" />
+    <Property Name="Preference" Type="int" />
+    <Property Name="SupplierID" Type="int" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Expediting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ExpeditingLevel" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastContacted" Type="date" />
+    <Property Name="LastResponse" Type="date" />
+    <Property Name="Results" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShipmentRefNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="ETS" Type="date" />
+    <Property Name="ETA" Type="date" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="MaterialStatus" Type="int" />
+    <Property Name="POLineID" Type="int" />
+    <Property Name="ShippmentRefId" Type="int" />
+  </EntityType>
+  <EntityType Name="LineChangeOrder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CO_Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="CO_WBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="CO_Qty" Type="numeric" />
+    <Property Name="CO_UOM" Type="nvarchar" MaxLength="50" />
+    <Property Name="CO_CostPerUnit" Type="money" />
+    <Property Name="ChangeOrderID" Type="int" />
+    <Property Name="POLineID" Type="int" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Mfg_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Specialty" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Material_Status">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="MaterialStatus" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Phase">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Phase" Type="nvarchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="PO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PONumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="AwardDate" Type="date" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="Closed" Type="bit" />
+  </EntityType>
+  <EntityType Name="PO_Line">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="POLineRef" Type="numeric" />
+    <Property Name="PropLineSlctd" Type="int" />
+    <Property Name="ProposalSelected" Type="int" />
+    <Property Name="POid" Type="int" />
+  </EntityType>
+  <EntityType Name="Preference">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PreferenceType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectNo" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Year" Type="date" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Client" Type="int" />
+    <Property Name="PhaseID" Type="int" />
+  </EntityType>
+  <EntityType Name="Project_Stakeholder">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectID" Type="int" Nullable="false" />
+    <Property Name="StakeholderType" Type="int" Nullable="false" />
+    <Property Name="StakeHolder" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Proposal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="ShippingRefNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="BidRecieved" Type="date" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="PkgNoID" Type="int" />
+  </EntityType>
+  <EntityType Name="Proposal_Line">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProposalID" Type="int" />
+    <Property Name="CostPerUnit" Type="money" />
+    <Property Name="MeetSpecs" Type="bit" />
+    <Property Name="CountryOfOrigin" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShippingARO" Type="numeric" />
+    <Property Name="SubmittalsARO" Type="numeric" />
+    <Property Name="NegotiatedFinalCost" Type="money" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="RFQLineID" Type="int" />
+  </EntityType>
+  <EntityType Name="RFQ_Line">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RFQLineNo" Type="numeric" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Qty" Type="numeric" />
+    <Property Name="TestingReq" Type="bit" />
+    <Property Name="TestingLevel" Type="nvarchar" MaxLength="50" />
+    <Property Name="Inspection" Type="bit" />
+    <Property Name="ShippingRefNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="TagNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="RecievedQty" Type="numeric" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="PkgNoID" Type="int" />
+    <Property Name="UOM" Type="int" />
+  </EntityType>
+  <EntityType Name="RFQ_PItem">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PkgNo" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PkgName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PkgDescription" Type="nvarchar(max)" />
+    <Property Name="PkgWBS" Type="nvarchar" MaxLength="50" />
+    <Property Name="BudgetValue" Type="money" />
+    <Property Name="SourceStrategy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReqdOnSite" Type="date" />
+    <Property Name="EstTransportDays" Type="numeric" />
+    <Property Name="EstMfgDays" Type="numeric" />
+    <Property Name="EstAwdProcessDays" Type="numeric" />
+    <Property Name="EstProposalDays" Type="numeric" />
+    <Property Name="ERW" Type="date" />
+    <Property Name="ERWNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="ERW_Rev" Type="nvarchar" MaxLength="50" />
+    <Property Name="ERWContact" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpecifiedBidDue" Type="date" />
+    <Property Name="RevisedBidDue" Type="date" />
+    <Property Name="BidsReceived" Type="date" />
+    <Property Name="PreBidRequired" Type="bit" />
+    <Property Name="PreAwardRequired" Type="bit" />
+    <Property Name="BidOpening" Type="date" />
+    <Property Name="ToEng" Type="date" />
+    <Property Name="EngApproval" Type="date" />
+    <Property Name="TechComplaint" Type="bit" />
+    <Property Name="Regret" Type="date" />
+    <Property Name="CommercialDone" Type="date" />
+    <Property Name="CommercialComplaint" Type="bit" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="PreBid_Req" Type="bit" />
+    <Property Name="CriticalPath" Type="bit" />
+    <Property Name="ProjectNoID" Type="int" />
+  </EntityType>
+  <EntityType Name="Safety_Record">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Year" Type="numeric" Precision="4" />
+    <Property Name="EMR" Type="numeric" />
+    <Property Name="TIFR" Type="numeric" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="StatusID" Type="int" />
+    <Property Name="SupplierID" Type="int" />
+  </EntityType>
+  <EntityType Name="Safety_Status">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Shipment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Origin" Type="nvarchar" MaxLength="50" />
+    <Property Name="QtyShipments" Type="numeric" />
+    <Property Name="Containers_Shipment" Type="nvarchar" MaxLength="50" />
+    <Property Name="Mode" Type="nvarchar" MaxLength="50" />
+    <Property Name="Carrier" Type="nvarchar" MaxLength="50" />
+    <Property Name="CarrierContact" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpecialLift_handling" Type="nvarchar" MaxLength="50" />
+    <Property Name="IncoTerm" Type="nvarchar" MaxLength="50" />
+    <Property Name="TitleTransfer" Type="nvarchar" MaxLength="50" />
+    <Property Name="StorageReqts" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShipReq" Type="date" />
+    <Property Name="ShipDate" Type="date" />
+    <Property Name="RevisedShipDate" Type="date" />
+    <Property Name="ReasonForRev" Type="nvarchar" MaxLength="50" />
+    <Property Name="Delivery" Type="date" />
+    <Property Name="BOL_Shipper" Type="nvarchar" MaxLength="50" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="ProposalLineID" Type="int" />
+    <Property Name="TransportType" Type="int" />
+  </EntityType>
+  <EntityType Name="Stakeholder_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Stakeholder_Type" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Stakeholder">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Submittal">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Submittal" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubmittalName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubmittalNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubmittalRevision" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubmittalDate" Type="date" />
+    <Property Name="SubmittalRequired" Type="date" />
+    <Property Name="SubmitaalReviewed" Type="date" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="Transmittal" Type="nvarchar" MaxLength="50" />
+    <Property Name="RFQLineID" Type="int" />
+    <Property Name="SubmittalType" Type="int" />
+  </EntityType>
+  <EntityType Name="Supplier_Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="First" Type="nvarchar" MaxLength="50" />
+    <Property Name="Middle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Last" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title_Position" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Cell" Type="nvarchar" MaxLength="50" />
+    <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+    <Property Name="OtherInfo" Type="nvarchar(max)" />
+    <Property Name="SpecialtyID" Type="int" />
+  </EntityType>
+  <EntityType Name="Supplier_Specialty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Specialty" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpecialtyWeight" Type="numeric" />
+    <Property Name="PerformanceArea" Type="nvarchar" MaxLength="50" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="SupplierID" Type="int" />
+  </EntityType>
+  <EntityType Name="SupplierManufacture">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ManufatureID" Type="int" />
+    <Property Name="SupplierID" Type="int" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierFax" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierAddress1" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierAddress2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierState" Type="nvarchar" MaxLength="2" />
+    <Property Name="SupplierPostalCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierCountry" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierWebsite" Type="nvarchar" MaxLength="50" />
+    <Property Name="NoOfEmployees" Type="nvarchar" MaxLength="50" />
+    <Property Name="VendorNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="FederalID" Type="nvarchar" MaxLength="50" />
+    <Property Name="W9OnFile" Type="bit" />
+    <Property Name="LicenseExpires" Type="date" />
+    <Property Name="WCExpires" Type="date" />
+    <Property Name="GLExpires" Type="date" />
+    <Property Name="AutoInsExpires" Type="date" />
+    <Property Name="PLExpires" Type="date" />
+    <Property Name="USLHExpires" Type="date" />
+    <Property Name="OtherInsExpires" Type="date" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+    <Property Name="BusinessClass" Type="int" />
+  </EntityType>
+  <EntityType Name="Transport_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TransportType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SubmittalType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SubmittalType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UOM">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UOM" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Award_Selected_PO_Line">
+    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="0..1" />
+    <End Role="Award_Selected" Type="ProcurementDataStore.Award_Selected" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO_Line">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Award_Selected">
+        <PropertyRef Name="ProposalSelected" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Award_Selected_PO_Line1">
+    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="0..1" />
+    <End Role="Award_Selected" Type="ProcurementDataStore.Award_Selected" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO_Line">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Award_Selected">
+        <PropertyRef Name="PropLineSlctd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Award_Selected_RFQ_P">
+    <End Role="RFQ_P" Type="ProcurementDataStore.RFQ_PItem" Multiplicity="0..1" />
+    <End Role="Award_Selected" Type="ProcurementDataStore.Award_Selected" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ_P">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Award_Selected">
+        <PropertyRef Name="PkgNoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BidList_RFQ_P1">
+    <End Role="RFQ_P" Type="ProcurementDataStore.RFQ_PItem" Multiplicity="0..1" />
+    <End Role="BidList" Type="ProcurementDataStore.BidList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ_P">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="BidList">
+        <PropertyRef Name="PkgNoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BidList_Suppliers">
+    <End Role="Suppliers" Type="ProcurementDataStore.Supplier" Multiplicity="0..1" />
+    <End Role="BidList" Type="ProcurementDataStore.BidList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="BidList">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangeOrder_PO">
+    <End Role="PO" Type="ProcurementDataStore.PO" Multiplicity="0..1" />
+    <End Role="ChangeOrder" Type="ProcurementDataStore.ChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChangeOrder">
+        <PropertyRef Name="PONum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangeOrder_PO_Line">
+    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="0..1" />
+    <End Role="ChangeOrder" Type="ProcurementDataStore.ChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO_Line">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangeOrder">
+        <PropertyRef Name="POLineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_Approved_Preference">
+    <End Role="Preference" Type="ProcurementDataStore.Preference" Multiplicity="0..1" />
+    <End Role="Client_Approved" Type="ProcurementDataStore.Client_Approved" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preference">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Client_Approved">
+        <PropertyRef Name="Preference" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Client_Approved_Suppliers">
+    <End Role="Suppliers" Type="ProcurementDataStore.Supplier" Multiplicity="0..1" />
+    <End Role="Client_Approved" Type="ProcurementDataStore.Client_Approved" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Client_Approved">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expediting_Material_Status">
+    <End Role="Material_Status" Type="ProcurementDataStore.Material_Status" Multiplicity="0..1" />
+    <End Role="Expediting" Type="ProcurementDataStore.Expediting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material_Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Expediting">
+        <PropertyRef Name="MaterialStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expediting_PO_Line">
+    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="0..1" />
+    <End Role="Expediting" Type="ProcurementDataStore.Expediting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO_Line">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Expediting">
+        <PropertyRef Name="POLineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expediting_Shipment">
+    <End Role="Shipment" Type="ProcurementDataStore.Shipment" Multiplicity="0..1" />
+    <End Role="Expediting" Type="ProcurementDataStore.Expediting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shipment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Expediting">
+        <PropertyRef Name="ShippmentRefId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LineChangeOrder_ChangeOrder">
+    <End Role="ChangeOrder" Type="ProcurementDataStore.ChangeOrder" Multiplicity="0..1" />
+    <End Role="LineChangeOrder" Type="ProcurementDataStore.LineChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChangeOrder">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LineChangeOrder">
+        <PropertyRef Name="ChangeOrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LineChangeOrder_PO_Line">
+    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="0..1" />
+    <End Role="LineChangeOrder" Type="ProcurementDataStore.LineChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO_Line">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="LineChangeOrder">
+        <PropertyRef Name="POLineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PO_Line_PO">
+    <End Role="PO" Type="ProcurementDataStore.PO" Multiplicity="0..1" />
+    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PO_Line">
+        <PropertyRef Name="POid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Stakeholders_Project">
+    <End Role="Project" Type="ProcurementDataStore.Project" Multiplicity="1" />
+    <End Role="Project_Stakeholders" Type="ProcurementDataStore.Project_Stakeholder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Project_Stakeholders">
+        <PropertyRef Name="ProjectID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Stakeholders_Stakeholder_Types">
+    <End Role="Stakeholder_Types" Type="ProcurementDataStore.Stakeholder_Type" Multiplicity="1" />
+    <End Role="Project_Stakeholders" Type="ProcurementDataStore.Project_Stakeholder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stakeholder_Types">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Project_Stakeholders">
+        <PropertyRef Name="StakeholderType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Stakeholders_Stakeholders">
+    <End Role="Stakeholders" Type="ProcurementDataStore.Stakeholder" Multiplicity="1" />
+    <End Role="Project_Stakeholders" Type="ProcurementDataStore.Project_Stakeholder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stakeholders">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Project_Stakeholders">
+        <PropertyRef Name="StakeHolder" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proposal_Award_Selected">
+    <End Role="Award_Selected" Type="ProcurementDataStore.Award_Selected" Multiplicity="1" />
+    <End Role="Proposal" Type="ProcurementDataStore.Proposal" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Award_Selected">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Proposal">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proposal_Line_RFQ_Line">
+    <End Role="RFQ_Line" Type="ProcurementDataStore.RFQ_Line" Multiplicity="0..1" />
+    <End Role="Proposal_Line" Type="ProcurementDataStore.Proposal_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ_Line">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Proposal_Line">
+        <PropertyRef Name="RFQLineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proposal_RFQ_P">
+    <End Role="RFQ_P" Type="ProcurementDataStore.RFQ_PItem" Multiplicity="0..1" />
+    <End Role="Proposal" Type="ProcurementDataStore.Proposal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ_P">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Proposal">
+        <PropertyRef Name="PkgNoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RFQ_Line_RFQ_P">
+    <End Role="RFQ_P" Type="ProcurementDataStore.RFQ_PItem" Multiplicity="0..1" />
+    <End Role="RFQ_Line" Type="ProcurementDataStore.RFQ_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ_P">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RFQ_Line">
+        <PropertyRef Name="PkgNoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RFQ_P_Project">
+    <End Role="Project" Type="ProcurementDataStore.Project" Multiplicity="0..1" />
+    <End Role="RFQ_P" Type="ProcurementDataStore.RFQ_PItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Project">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RFQ_P">
+        <PropertyRef Name="ProjectNoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Safety_Records_Safety_Status">
+    <End Role="Safety_Status" Type="ProcurementDataStore.Safety_Status" Multiplicity="0..1" />
+    <End Role="Safety_Records" Type="ProcurementDataStore.Safety_Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Safety_Status">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Safety_Records">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Safety_Records_Suppliers">
+    <End Role="Suppliers" Type="ProcurementDataStore.Supplier" Multiplicity="0..1" />
+    <End Role="Safety_Records" Type="ProcurementDataStore.Safety_Record" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Safety_Records">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shipment_Proposal_Line">
+    <End Role="Proposal_Line" Type="ProcurementDataStore.Proposal_Line" Multiplicity="0..1" />
+    <End Role="Shipment" Type="ProcurementDataStore.Shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proposal_Line">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Shipment">
+        <PropertyRef Name="ProposalLineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shipment_Transport_Type">
+    <End Role="Transport_Type" Type="ProcurementDataStore.Transport_Type" Multiplicity="0..1" />
+    <End Role="Shipment" Type="ProcurementDataStore.Shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Transport_Type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Shipment">
+        <PropertyRef Name="TransportType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplier_Contact_Supplier_Specialty">
+    <End Role="Supplier_Specialty" Type="ProcurementDataStore.Supplier_Specialty" Multiplicity="0..1" />
+    <End Role="Supplier_Contact" Type="ProcurementDataStore.Supplier_Contact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier_Specialty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Supplier_Contact">
+        <PropertyRef Name="SpecialtyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplier_Specialty_Suppliers">
+    <End Role="Suppliers" Type="ProcurementDataStore.Supplier" Multiplicity="0..1" />
+    <End Role="Supplier_Specialty" Type="ProcurementDataStore.Supplier_Specialty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Supplier_Specialty">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierManufactures_Manufacturers">
+    <End Role="Manufacturers" Type="ProcurementDataStore.Manufacturer" Multiplicity="0..1" />
+    <End Role="SupplierManufactures" Type="ProcurementDataStore.SupplierManufacture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturers">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SupplierManufactures">
+        <PropertyRef Name="ManufatureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SupplierManufactures_Suppliers">
+    <End Role="Suppliers" Type="ProcurementDataStore.Supplier" Multiplicity="0..1" />
+    <End Role="SupplierManufactures" Type="ProcurementDataStore.SupplierManufacture" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="SupplierManufactures">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Suppliers_Business_Classes">
+    <End Role="Business_Classes" Type="ProcurementDataStore.Business_Class" Multiplicity="0..1" />
+    <End Role="Suppliers" Type="ProcurementDataStore.Supplier" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Business_Classes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Suppliers">
+        <PropertyRef Name="BusinessClass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Submittal_RFQ_Line">
+    <End Role="RFQ_Line" Type="ProcurementDataStore.RFQ_Line" Multiplicity="0..1" />
+    <End Role="Submittal" Type="ProcurementDataStore.Submittal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ_Line">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Submittal">
+        <PropertyRef Name="RFQLineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RFQ_Line_UOM">
+    <End Role="UOM" Type="ProcurementDataStore.UOM" Multiplicity="0..1" />
+    <End Role="RFQ_Line" Type="ProcurementDataStore.RFQ_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UOM">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="RFQ_Line">
+        <PropertyRef Name="UOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Submittal_SubmittalTypes">
+    <End Role="SubmittalTypes" Type="ProcurementDataStore.SubmittalType" Multiplicity="0..1" />
+    <End Role="Submittal" Type="ProcurementDataStore.Submittal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubmittalTypes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Submittal">
+        <PropertyRef Name="SubmittalType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Clients">
+    <End Role="Clients" Type="ProcurementDataStore.Client" Multiplicity="0..1" />
+    <End Role="Project" Type="ProcurementDataStore.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="Client" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Phase">
+    <End Role="Phase" Type="ProcurementDataStore.Phase" Multiplicity="0..1" />
+    <End Role="Project" Type="ProcurementDataStore.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phase">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="PhaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

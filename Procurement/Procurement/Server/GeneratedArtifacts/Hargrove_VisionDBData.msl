@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="Hargrove_VisionDBDataObjectContext" StorageEntityContainer="Hargrove_VisionDBDataStore">
+    <EntitySetMapping Name="CLs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.CL)">
+        <MappingFragment StoreEntitySet="CLs">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ExportInd" ColumnName="ExportInd" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="Memo" ColumnName="Memo" />
+          <ScalarProperty Name="CurrentStatus" ColumnName="CurrentStatus" />
+          <ScalarProperty Name="CustomCurrencyCode" ColumnName="CustomCurrencyCode" />
+          <ScalarProperty Name="ClientInd" ColumnName="ClientInd" />
+          <ScalarProperty Name="VendorInd" ColumnName="VendorInd" />
+          <ScalarProperty Name="LinkedVendor" ColumnName="LinkedVendor" />
+          <ScalarProperty Name="PriorWork" ColumnName="PriorWork" />
+          <ScalarProperty Name="Recommend" ColumnName="Recommend" />
+          <ScalarProperty Name="DisadvBusiness" ColumnName="DisadvBusiness" />
+          <ScalarProperty Name="DisabledVetOwnedSmallBusiness" ColumnName="DisabledVetOwnedSmallBusiness" />
+          <ScalarProperty Name="HBCU" ColumnName="HBCU" />
+          <ScalarProperty Name="MinorityBusiness" ColumnName="MinorityBusiness" />
+          <ScalarProperty Name="SmallBusiness" ColumnName="SmallBusiness" />
+          <ScalarProperty Name="VetOwnedSmallBusiness" ColumnName="VetOwnedSmallBusiness" />
+          <ScalarProperty Name="WomanOwned" ColumnName="WomanOwned" />
+          <ScalarProperty Name="AlaskaNative" ColumnName="AlaskaNative" />
+          <ScalarProperty Name="SpecialtyType" ColumnName="SpecialtyType" />
+          <ScalarProperty Name="Specialty" ColumnName="Specialty" />
+          <ScalarProperty Name="CreateUser" ColumnName="CreateUser" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="ModUser" ColumnName="ModUser" />
+          <ScalarProperty Name="ModDate" ColumnName="ModDate" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="ParentLevel1" ColumnName="ParentLevel1" />
+          <ScalarProperty Name="ParentLevel2" ColumnName="ParentLevel2" />
+          <ScalarProperty Name="ParentLevel3" ColumnName="ParentLevel3" />
+          <ScalarProperty Name="ParentLevel4" ColumnName="ParentLevel4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

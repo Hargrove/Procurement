@@ -1,0 +1,10 @@
+﻿<OutOfBrowserSettings ShortName="Procurement" EnableGPUAcceleration="False" ShowInstallMenuItem="False">
+  <OutOfBrowserSettings.Blurb>Procurement</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="Procurement" Top="0" Left="0" WindowStartupLocation="Manual" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.SecuritySettings>
+    <SecuritySettings ElevatedPermissions="Required" />
+  </OutOfBrowserSettings.SecuritySettings>
+  <OutOfBrowserSettings.Icons />
+</OutOfBrowserSettings>
