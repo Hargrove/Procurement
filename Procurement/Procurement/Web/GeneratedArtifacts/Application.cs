@@ -141,6 +141,36 @@ namespace LightSwitchApplication
             ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowAddStakeholder);
         }
         
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BusinessClassesLookup_CanRun(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void BusinessClassesLookup_Run(ref bool handled);
+    
+        /// <summary>
+        /// Opens the ShowBusinessClassesLookup screen.  If the screen is already opened, it is activated and shown.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowBusinessClassesLookup()
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowBusinessClassesLookup);
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RFQ_PItemDetail_CanRun(ref bool result, int RFQ_PItemID);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RFQ_PItemDetail_Run(ref bool handled, int RFQ_PItemID);
+    
+        /// <summary>
+        /// Opens the ShowRFQ_PItemDetail screen.  If the screen is already opened, it is activated and shown.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void ShowRFQ_PItemDetail(int RFQ_PItemID)
+        {
+            ((global::Microsoft.LightSwitch.Details.Client.IClientApplicationDetails)this.Details).InvokeMethod(this.Details.Methods.ShowRFQ_PItemDetail, RFQ_PItemID);
+        }
+        
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -214,6 +244,10 @@ namespace LightSwitchApplication
                         return global::LightSwitchApplication.AddProjectStakeholder.CreateInstance();
                     case "AddStakeholder":
                         return global::LightSwitchApplication.AddStakeholder.CreateInstance();
+                    case "BusinessClassesLookup":
+                        return global::LightSwitchApplication.BusinessClassesLookup.CreateInstance();
+                    case "RFQ_PItemDetail":
+                        return global::LightSwitchApplication.RFQ_PItemDetail.CreateInstance((int)args[0]);
                 }
             
                 return base.CreateScreen(screenName, args);
@@ -289,6 +323,15 @@ namespace LightSwitchApplication
                     }
                 }
 
+                public global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowBusinessClassesLookup
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties.ShowBusinessClassesLookup);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -358,6 +401,24 @@ namespace LightSwitchApplication
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
                                base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowAddStakeholder);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowBusinessClassesLookup
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowBusinessClassesLookup);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass> ShowRFQ_PItemDetail
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>)
+                               base.GetItem(global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties.ShowRFQ_PItemDetail);
                     }
                 }
 
@@ -459,6 +520,20 @@ namespace LightSwitchApplication
                 private static global::Microsoft.LightSwitch.IExecutable _ShowAddStakeholder_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
                 {
                     return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowAddStakeholder.CreateInvocation(new object[0]);
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowBusinessClassesLookup = new global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowBusinessClassesLookup",
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowBusinessClassesLookup_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.CommandSetProperties._ShowBusinessClassesLookup_CreateExecutableObject);
+                private static void _ShowBusinessClassesLookup_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowBusinessClassesLookupCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _ShowBusinessClassesLookup_CreateExecutableObject(global::LightSwitchApplication.Application.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.Application.DetailsClass)d).Methods.ShowBusinessClassesLookup.CreateInvocation(new object[0]);
                 }
 
             }
@@ -651,6 +726,58 @@ namespace LightSwitchApplication
                     }
                 }
  
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowBusinessClassesLookup = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowBusinessClassesLookup",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowBusinessClassesLookup_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowBusinessClassesLookup_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowBusinessClassesLookup_InvokeMethod);
+                private static void _ShowBusinessClassesLookup_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowBusinessClassesLookupMethod, sf);
+                }
+                private static global::System.Exception _ShowBusinessClassesLookup_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.BusinessClassesLookup_CanRun(ref result);
+                    return result ? null : ex;
+                }
+                private static void _ShowBusinessClassesLookup_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.BusinessClassesLookup_Run(ref handled);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication.Web:BusinessClassesLookup", () => global::LightSwitchApplication.BusinessClassesLookup.CreateInstance(), args);
+                    }
+                }
+ 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry
+                    ShowRFQ_PItemDetail = new global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Entry(
+                        "ShowRFQ_PItemDetail",
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowRFQ_PItemDetail_Stub,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowRFQ_PItemDetail_CanInvoke,
+                        global::LightSwitchApplication.Application.DetailsClass.MethodSetProperties._ShowRFQ_PItemDetail_InvokeMethod);
+                private static void _ShowRFQ_PItemDetail_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Application.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data> c, global::LightSwitchApplication.Application.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ShowRFQ_PItemDetailMethod, sf);
+                }
+                private static global::System.Exception _ShowRFQ_PItemDetail_CanInvoke(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Application.RFQ_PItemDetail_CanRun(ref result, (int)args[0]);
+                    return result ? null : ex;
+                }
+                private static void _ShowRFQ_PItemDetail_InvokeMethod(global::LightSwitchApplication.Application.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    bool handled = false;
+                    d.Application.RFQ_PItemDetail_Run(ref handled, (int)args[0]);
+                    if (!handled)
+                    {
+                        d.ShowScreen("LightSwitchApplication.Web:RFQ_PItemDetail", () => global::LightSwitchApplication.RFQ_PItemDetail.CreateInstance((int)args[0]), args);
+                    }
+                }
+ 
             }
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowNewProjectMethod;
@@ -667,6 +794,10 @@ namespace LightSwitchApplication
 
             private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowAddStakeholderMethod;
 
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowBusinessClassesLookupMethod;
+
+            private global::Microsoft.LightSwitch.Details.Framework.ApplicationMethod<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowRFQ_PItemDetailMethod;
+
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowNewProjectCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowPhaseLookupCommand;
@@ -678,6 +809,8 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowAddProjectStakeholderCommand;
 
             private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowAddStakeholderCommand;
+
+            private global::Microsoft.LightSwitch.Details.Framework.Base.ApplicationCommand<global::LightSwitchApplication.Application, global::LightSwitchApplication.Application.DetailsClass>.Data _ShowBusinessClassesLookupCommand;
 
         }
     }

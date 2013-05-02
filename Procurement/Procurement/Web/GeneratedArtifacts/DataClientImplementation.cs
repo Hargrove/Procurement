@@ -2284,11 +2284,6 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Comments");
         }
         
-        partial void OnPreBid_ReqChanged()
-        {
-            this.___OnPropertyChanged("PreBid_Req");
-        }
-        
         partial void OnCriticalPathChanged()
         {
             this.___OnPropertyChanged("CriticalPath");

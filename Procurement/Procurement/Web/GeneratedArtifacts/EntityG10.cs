@@ -2015,30 +2015,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> PreBid_Req
-        {
-            get
-            {
-                return global::LightSwitchApplication.RFQ_PItem.DetailsClass.GetValue(this, global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.PreBid_Req);
-            }
-            set
-            {
-                global::LightSwitchApplication.RFQ_PItem.DetailsClass.SetValue(this, global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.PreBid_Req, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PreBid_Req_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PreBid_Req_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PreBid_Req_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.Nullable<bool> CriticalPath
         {
             get
@@ -2488,14 +2464,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>> PreBid_Req
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.PreBid_Req) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>> CriticalPath
                 {
                     get
@@ -2579,7 +2547,6 @@ namespace LightSwitchApplication
                 new global::System.Nullable<global::System.DateTime> CommercialDone { get; set; }
                 new global::System.Nullable<bool> CommercialComplaint { get; set; }
                 new string Comments { get; set; }
-                new global::System.Nullable<bool> PreBid_Req { get; set; }
                 new global::System.Nullable<bool> CriticalPath { get; set; }
                 new global::System.Collections.IEnumerable Award_Selecteds { get; }
                 new global::System.Collections.IEnumerable BidLists { get; }
@@ -3666,43 +3633,6 @@ namespace LightSwitchApplication
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry
-                    PreBid_Req = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry(
-                        "PreBid_Req",
-                        global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBid_Req_Stub,
-                        global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBid_Req_ComputeIsReadOnly,
-                        global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBid_Req_Validate,
-                        global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBid_Req_GetImplementationValue,
-                        global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBid_Req_SetImplementationValue,
-                        global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBid_Req_OnValueChanged);
-                private static void _PreBid_Req_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
-                {
-                    c(d, ref d._PreBid_Req, sf);
-                }
-                private static bool _PreBid_Req_ComputeIsReadOnly(global::LightSwitchApplication.RFQ_PItem e)
-                {
-                    bool result = false;
-                    e.PreBid_Req_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _PreBid_Req_Validate(global::LightSwitchApplication.RFQ_PItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.PreBid_Req_Validate(r);
-                }
-                private static global::System.Nullable<bool> _PreBid_Req_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
-                {
-                    return d.ImplementationEntity.PreBid_Req;
-                }
-                private static void _PreBid_Req_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, global::System.Nullable<bool> v)
-                {
-                    d.ImplementationEntity.PreBid_Req = v;
-                }
-                private static void _PreBid_Req_OnValueChanged(global::LightSwitchApplication.RFQ_PItem e)
-                {
-                    e.PreBid_Req_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry
                     CriticalPath = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry(
                         "CriticalPath",
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CriticalPath_Stub,
@@ -3953,9 +3883,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, string>.Data _Comments;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data _PreBid_Req;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data _CriticalPath;

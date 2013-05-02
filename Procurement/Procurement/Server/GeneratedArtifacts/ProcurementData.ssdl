@@ -426,7 +426,6 @@
     <Property Name="CommercialDone" Type="date" />
     <Property Name="CommercialComplaint" Type="bit" />
     <Property Name="Comments" Type="nvarchar(max)" />
-    <Property Name="PreBid_Req" Type="bit" />
     <Property Name="CriticalPath" Type="bit" />
     <Property Name="ProjectNoID" Type="int" />
   </EntityType>

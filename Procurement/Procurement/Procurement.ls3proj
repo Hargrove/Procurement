@@ -22,10 +22,35 @@
     <ApplicationServerType>IIS</ApplicationServerType>
     <AuthenticationType>None</AuthenticationType>
     <ApplicationName>Procurement</ApplicationName>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
+    <AdministratorFullName />
+    <AdministratorUserName />
+    <AllowUntrustedCertificate>False</AllowUntrustedCertificate>
+    <DeployDatabase>True</DeployDatabase>
+    <AddAdministrator>True</AddAdministrator>
+    <BootstrapperComponentsUrl />
+    <DefaultInstallLocation>Procurement</DefaultInstallLocation>
+    <DeploySchema>True</DeploySchema>
+    <PublishNewDatabase>True</PublishNewDatabase>
+    <PublishUrl>http://haimobsql005</PublishUrl>
+    <PublishSite>DEVAPPS/Procurement</PublishSite>
+    <RemotePublish>True</RemotePublish>
+    <UseLightSwitchWebDeploymentProvider>True</UseLightSwitchWebDeploymentProvider>
+    <AzureAllowUpgrade>True</AzureAllowUpgrade>
+    <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
+    <AzureDeploymentLabel>Procurement</AzureDeploymentLabel>
+    <AzureWebSite />
+    <AzureWebSpace />
+    <AzureHostedService />
+    <AzureHostedServiceLabel>Production</AzureHostedServiceLabel>
+    <AzureStorageService />
+    <SslCertificateThumbprint />
+    <PublishServiceOnly>False</PublishServiceOnly>
+    <AzureCredentials />
+    <RequireSecureConnection>False</RequireSecureConnection>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -153,12 +178,26 @@
     <LightSwitchExtension Include="Microsoft.LightSwitch.Extensions">
       <Server>MICROSOFT.LIGHTSWITCH.EXTENSIONS.SERVER</Server>
     </LightSwitchExtension>
+    <LightSwitchExtension Include="PixataCustomControls">
+      <Client>PIXATACUSTOMCONTROLS.CLIENT;PIXATACUSTOMCONTROLS.COMMON;PIXATACUSTOMCONTROLS.CLIENT.DESIGN</Client>
+      <Server>PIXATACUSTOMCONTROLS.COMMON;PIXATACUSTOMCONTROLS.SERVER</Server>
+    </LightSwitchExtension>
   </ItemGroup>
   <ItemGroup>
     <SubProject Include="Web\Web.csproj">
       <InstanceGuid>{9376e0ce-f420-4fd5-958a-a3401f691110}</InstanceGuid>
       <Name>Client</Name>
     </SubProject>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Install>True</Install>
+      <Name>.NETFramework,Version=v4.0</Name>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Install>True</Install>
+      <Name>Microsoft.Windows.Installer.4.5</Name>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\LightSwitch\v3.0\Microsoft.LightSwitch.targets" />
 </Project>

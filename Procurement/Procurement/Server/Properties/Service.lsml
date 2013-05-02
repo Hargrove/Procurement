@@ -1582,13 +1582,6 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="PreBid_Req"
-        PropertyType=":Boolean?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
         Name="CriticalPath"
         PropertyType=":Boolean?">
         <EntityProperty.Attributes>
@@ -8034,11 +8027,6 @@
           Nullable="True"
           Type="nvarchar(max)"
           Property="RFQ_PItem/Properties[Comments]" />
-        <SsdlProperty
-          Name="PreBid_Req"
-          Nullable="True"
-          Type="bit"
-          Property="RFQ_PItem/Properties[PreBid_Req]" />
         <SsdlProperty
           Name="CriticalPath"
           Nullable="True"

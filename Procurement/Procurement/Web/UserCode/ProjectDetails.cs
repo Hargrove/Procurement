@@ -85,5 +85,21 @@ namespace LightSwitchApplication
             this.Application.ShowAddStakeholder();
 
         }
+
+        partial void RFQ_PAddAndEditNew_CanExecute(ref bool result)
+        {
+            result = this.RFQ_P.CanAddNew;
+
+        }
+
+        partial void RFQ_PAddAndEditNew_Execute()
+        {
+            RFQ_PItem rfq = this.RFQ_P.AddNew();
+            this.RFQ_P.SelectedItem = rfq;
+            this.OpenModalWindow("modalRFQ");
+
+        }
+
+        
     }
 }

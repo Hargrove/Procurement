@@ -288,7 +288,6 @@
     <Property Name="CommercialDone" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="CommercialComplaint" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="Comments" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
-    <Property Name="PreBid_Req" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="CriticalPath" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
     <Property Name="ProjectNoID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Award_Selecteds" Relationship="LightSwitchApplication.FK_Award_Selected_RFQ_P" ToRole="Award_Selected" FromRole="RFQ_P" />

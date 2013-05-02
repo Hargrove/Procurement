@@ -1893,12 +1893,6 @@
               }
             },
             {
-              "id": "RFQ_PItem/Properties[PreBid_Req]",
-              "name": "PreBid_Req",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
-            },
-            {
               "id": "RFQ_PItem/Properties[CriticalPath]",
               "name": "CriticalPath",
               "propertyType": { "__id": ":Boolean?" },

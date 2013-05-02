@@ -762,9 +762,6 @@ window.myapp = msls.application;
         /// <field name="Comments" type="String">
         /// Gets or sets the comments for this rFQ_PItem.
         /// </field>
-        /// <field name="PreBid_Req" type="Boolean">
-        /// Gets or sets the preBid_Req for this rFQ_PItem.
-        /// </field>
         /// <field name="CriticalPath" type="Boolean">
         /// Gets or sets the criticalPath for this rFQ_PItem.
         /// </field>
@@ -1783,7 +1780,6 @@ window.myapp = msls.application;
             { name: "CommercialDone", type: Date },
             { name: "CommercialComplaint", type: Boolean },
             { name: "Comments", type: String },
-            { name: "PreBid_Req", type: Boolean },
             { name: "CriticalPath", type: Boolean },
             { name: "Award_Selecteds", kind: "collection", elementType: Award_Selected },
             { name: "BidLists", kind: "collection", elementType: BidList },

@@ -6520,30 +6520,6 @@ namespace ProcurementData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> PreBid_Req
-        {
-            get
-            {
-                return _PreBid_Req;
-            }
-            set
-            {
-                OnPreBid_ReqChanging(value);
-                ReportPropertyChanging("PreBid_Req");
-                _PreBid_Req = value;
-                ReportPropertyChanged("PreBid_Req");
-                OnPreBid_ReqChanged();
-            }
-        }
-        private Nullable<global::System.Boolean> _PreBid_Req;
-        partial void OnPreBid_ReqChanging(Nullable<global::System.Boolean> value);
-        partial void OnPreBid_ReqChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
         public Nullable<global::System.Boolean> CriticalPath
         {
             get

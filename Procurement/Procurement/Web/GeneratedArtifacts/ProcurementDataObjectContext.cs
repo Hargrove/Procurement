@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 4/30/2013 4:56:49 PM
+// Generation date: 5/1/2013 4:57:35 PM
 namespace LightSwitchApplication.Implementation
 {
     
@@ -6843,32 +6843,6 @@ namespace LightSwitchApplication.Implementation
         private string _Comments;
         partial void OnCommentsChanging(string value);
         partial void OnCommentsChanged();
-        /// <summary>
-        /// There are no comments for Property PreBid_Req in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> PreBid_Req
-        {
-            get
-            {
-                return this._PreBid_Req;
-            }
-            set
-            {
-                this.OnPreBid_ReqChanging(value);
-                if (object.Equals(this.PreBid_Req, value))
-                {
-                    return;
-                }
-                this._PreBid_Req = value;
-                this.OnPreBid_ReqChanged();
-                this.OnPropertyChanged("PreBid_Req");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _PreBid_Req;
-        partial void OnPreBid_ReqChanging(global::System.Nullable<bool> value);
-        partial void OnPreBid_ReqChanged();
         /// <summary>
         /// There are no comments for Property CriticalPath in the schema.
         /// </summary>

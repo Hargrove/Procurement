@@ -262,7 +262,6 @@
           <ScalarProperty Name="CommercialDone" ColumnName="CommercialDone" />
           <ScalarProperty Name="CommercialComplaint" ColumnName="CommercialComplaint" />
           <ScalarProperty Name="Comments" ColumnName="Comments" />
-          <ScalarProperty Name="PreBid_Req" ColumnName="PreBid_Req" />
           <ScalarProperty Name="CriticalPath" ColumnName="CriticalPath" />
           <ScalarProperty Name="ProjectNoID" ColumnName="ProjectNoID" />
         </MappingFragment>

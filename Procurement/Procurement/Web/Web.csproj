@@ -42,6 +42,9 @@
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
     <WCFDATASERVICESInstallPath Condition=" '$(WCFDATASERVICESInstallPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft WCF Data Services\5.0@InstallLocation)</WCFDATASERVICESInstallPath>
     <WCFDATASERVICESInstallPath Condition=" '$(WCFDATASERVICESInstallPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft WCF Data Services\5.0@InstallLocation)</WCFDATASERVICESInstallPath>
+    <SignManifests>False</SignManifests>
+    <ManifestCertificateThumbprint />
+    <ManifestKeyFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -125,6 +128,16 @@
       <HintPath>$(WCFDATASERVICESInstallPath)\bin\Silverlight\Microsoft.Data.Services.Client.SL.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PixataCustomControls.Client">
+      <HintPath>..\_Pvt_Extensions\PixataCustomControls\Client\Reference\PixataCustomControls.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="PixataCustomControls.Client.Design">
+      <HintPath>..\_Pvt_Extensions\PixataCustomControls\Client\DebugOnlyRef\PixataCustomControls.Client.Design.dll</HintPath>
+      <ExtensionReferenceType>DebugOnly</ExtensionReferenceType>
+    </Reference>
+    <Reference Include="PixataCustomControls.Common">
+      <HintPath>..\_Pvt_Extensions\PixataCustomControls\Client\Reference\PixataCustomControls.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.Composition">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -178,6 +191,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="UserCode\ProjectDetails.cs" />
+    <Compile Include="UserCode\RFQ_PItemDetail.cs" />
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Client.lsml">
