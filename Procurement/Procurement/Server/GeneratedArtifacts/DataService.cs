@@ -456,40 +456,40 @@ namespace LightSwitchApplication
         partial void Phases_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Phase, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_CanInsert(ref bool result);
+        partial void PO_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_CanUpdate(ref bool result);
+        partial void PO_CanUpdate(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_CanDelete(ref bool result);
+        partial void PO_CanDelete(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_CanRead(ref bool result);
+        partial void PO_CanRead(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_Inserting(global::LightSwitchApplication.PO entity);
+        partial void PO_Inserting(global::LightSwitchApplication.PO entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_Inserted(global::LightSwitchApplication.PO entity);
+        partial void PO_Inserted(global::LightSwitchApplication.PO entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_Updating(global::LightSwitchApplication.PO entity);
+        partial void PO_Updating(global::LightSwitchApplication.PO entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_Updated(global::LightSwitchApplication.PO entity);
+        partial void PO_Updated(global::LightSwitchApplication.PO entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_Deleting(global::LightSwitchApplication.PO entity);
+        partial void PO_Deleting(global::LightSwitchApplication.PO entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_Deleted(global::LightSwitchApplication.PO entity);
+        partial void PO_Deleted(global::LightSwitchApplication.PO entity);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_Validate(global::LightSwitchApplication.PO entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+        partial void PO_Validate(global::LightSwitchApplication.PO entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void POes_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PO, bool>> filter);
+        partial void PO_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PO, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void PO_Lines_CanInsert(ref bool result);
@@ -1219,6 +1219,42 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void UOMs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.UOM, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_Inserting(global::LightSwitchApplication.Specialty entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_Inserted(global::LightSwitchApplication.Specialty entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_Updating(global::LightSwitchApplication.Specialty entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_Updated(global::LightSwitchApplication.Specialty entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_Deleting(global::LightSwitchApplication.Specialty entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_Deleted(global::LightSwitchApplication.Specialty entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_Validate(global::LightSwitchApplication.Specialty entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialties_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Specialty, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
@@ -2082,76 +2118,76 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.PO>
-                __POesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.PO>(
-                    "POes",
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_CanInsert,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_CanUpdate,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_CanDelete,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_CanRead,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_Inserting,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_Inserted,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_Updating,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_Updated,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_Deleting,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_Deleted,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_Validate,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__POes_Filter);
-            private static bool __POes_CanInsert(global::LightSwitchApplication.ProcurementDataService d)
+                __POEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.PO>(
+                    "PO",
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_CanInsert,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_CanUpdate,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_CanDelete,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_CanRead,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_Inserting,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_Inserted,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_Updating,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_Updated,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_Deleting,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_Deleted,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_Validate,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__PO_Filter);
+            private static bool __PO_CanInsert(global::LightSwitchApplication.ProcurementDataService d)
             {
                 bool result = true;
-                d.POes_CanInsert(ref result);
+                d.PO_CanInsert(ref result);
                 return result;
             }
-            private static bool __POes_CanUpdate(global::LightSwitchApplication.ProcurementDataService d)
+            private static bool __PO_CanUpdate(global::LightSwitchApplication.ProcurementDataService d)
             {
                 bool result = true;
-                d.POes_CanUpdate(ref result);
+                d.PO_CanUpdate(ref result);
                 return result;
             }
-            private static bool __POes_CanDelete(global::LightSwitchApplication.ProcurementDataService d)
+            private static bool __PO_CanDelete(global::LightSwitchApplication.ProcurementDataService d)
             {
                 bool result = true;
-                d.POes_CanDelete(ref result);
+                d.PO_CanDelete(ref result);
                 return result;
             }
-            private static bool __POes_CanRead(global::LightSwitchApplication.ProcurementDataService d)
+            private static bool __PO_CanRead(global::LightSwitchApplication.ProcurementDataService d)
             {
                 bool result = true;
-                d.POes_CanRead(ref result);
+                d.PO_CanRead(ref result);
                 return result;
             }
-            private static void __POes_Inserting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
+            private static void __PO_Inserting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
             {
-                d.POes_Inserting(e);
+                d.PO_Inserting(e);
             }
-            private static void __POes_Inserted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
+            private static void __PO_Inserted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
             {
-                d.POes_Inserted(e);
+                d.PO_Inserted(e);
             }
-            private static void __POes_Updating(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
+            private static void __PO_Updating(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
             {
-                d.POes_Updating(e);
+                d.PO_Updating(e);
             }
-            private static void __POes_Updated(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
+            private static void __PO_Updated(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
             {
-                d.POes_Updated(e);
+                d.PO_Updated(e);
             }
-            private static void __POes_Deleting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
+            private static void __PO_Deleting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
             {
-                d.POes_Deleting(e);
+                d.PO_Deleting(e);
             }
-            private static void __POes_Deleted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
+            private static void __PO_Deleted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e)
             {
-                d.POes_Deleted(e);
+                d.PO_Deleted(e);
             }
-            private static void __POes_Validate(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            private static void __PO_Validate(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.PO e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
             {
-                d.POes_Validate(e, r);
+                d.PO_Validate(e, r);
             }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PO, bool>> __POes_Filter(global::LightSwitchApplication.ProcurementDataService d)
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PO, bool>> __PO_Filter(global::LightSwitchApplication.ProcurementDataService d)
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.PO, bool>> filter = null;
-                d.POes_Filter(ref filter);
+                d.PO_Filter(ref filter);
                 return filter;
             }
             
@@ -3685,6 +3721,81 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.UOM, bool>> filter = null;
                 d.UOMs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Specialty>
+                __SpecialtiesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Specialty>(
+                    "Specialties",
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_CanInsert,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_CanUpdate,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_CanDelete,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_CanRead,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_Inserting,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_Inserted,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_Updating,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_Updated,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_Deleting,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_Deleted,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_Validate,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__Specialties_Filter);
+            private static bool __Specialties_CanInsert(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                bool result = true;
+                d.Specialties_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Specialties_CanUpdate(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                bool result = true;
+                d.Specialties_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Specialties_CanDelete(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                bool result = true;
+                d.Specialties_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Specialties_CanRead(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                bool result = true;
+                d.Specialties_CanRead(ref result);
+                return result;
+            }
+            private static void __Specialties_Inserting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.Specialty e)
+            {
+                d.Specialties_Inserting(e);
+            }
+            private static void __Specialties_Inserted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.Specialty e)
+            {
+                d.Specialties_Inserted(e);
+            }
+            private static void __Specialties_Updating(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.Specialty e)
+            {
+                d.Specialties_Updating(e);
+            }
+            private static void __Specialties_Updated(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.Specialty e)
+            {
+                d.Specialties_Updated(e);
+            }
+            private static void __Specialties_Deleting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.Specialty e)
+            {
+                d.Specialties_Deleting(e);
+            }
+            private static void __Specialties_Deleted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.Specialty e)
+            {
+                d.Specialties_Deleted(e);
+            }
+            private static void __Specialties_Validate(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.Specialty e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Specialties_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Specialty, bool>> __Specialties_Filter(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Specialty, bool>> filter = null;
+                d.Specialties_Filter(ref filter);
                 return filter;
             }
             

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 5/1/2013 4:57:35 PM
+// Generation date: 5/6/2013 4:31:10 PM
 namespace LightSwitchApplication.Implementation
 {
     
@@ -246,22 +246,22 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<Phase> _Phases;
         /// <summary>
-        /// There are no comments for POes in the schema.
+        /// There are no comments for PO in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Data.Services.Client.DataServiceQuery<PO> POes
+        public global::System.Data.Services.Client.DataServiceQuery<PO> PO
         {
             get
             {
-                if ((this._POes == null))
+                if ((this._PO == null))
                 {
-                    this._POes = base.CreateQuery<PO>("POes");
+                    this._PO = base.CreateQuery<PO>("PO");
                 }
-                return this._POes;
+                return this._PO;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Data.Services.Client.DataServiceQuery<PO> _POes;
+        private global::System.Data.Services.Client.DataServiceQuery<PO> _PO;
         /// <summary>
         /// There are no comments for PO_Lines in the schema.
         /// </summary>
@@ -620,6 +620,23 @@ namespace LightSwitchApplication.Implementation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceQuery<UOM> _UOMs;
         /// <summary>
+        /// There are no comments for Specialties in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceQuery<Specialty> Specialties
+        {
+            get
+            {
+                if ((this._Specialties == null))
+                {
+                    this._Specialties = base.CreateQuery<Specialty>("Specialties");
+                }
+                return this._Specialties;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceQuery<Specialty> _Specialties;
+        /// <summary>
         /// There are no comments for Award_Selecteds in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -708,12 +725,12 @@ namespace LightSwitchApplication.Implementation
             base.AddObject("Phases", phase);
         }
         /// <summary>
-        /// There are no comments for POes in the schema.
+        /// There are no comments for PO in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public void AddToPOes(PO pO)
+        public void AddToPO(PO pO)
         {
-            base.AddObject("POes", pO);
+            base.AddObject("PO", pO);
         }
         /// <summary>
         /// There are no comments for PO_Lines in the schema.
@@ -882,6 +899,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToUOMs(UOM uOM)
         {
             base.AddObject("UOMs", uOM);
+        }
+        /// <summary>
+        /// There are no comments for Specialties in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public void AddToSpecialties(Specialty specialty)
+        {
+            base.AddObject("Specialties", specialty);
         }
     }
     /// <summary>
@@ -1918,32 +1943,6 @@ namespace LightSwitchApplication.Implementation
         partial void OnCO_QtyChanging(global::System.Nullable<decimal> value);
         partial void OnCO_QtyChanged();
         /// <summary>
-        /// There are no comments for Property CO_UOM in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string CO_UOM
-        {
-            get
-            {
-                return this._CO_UOM;
-            }
-            set
-            {
-                this.OnCO_UOMChanging(value);
-                if (object.Equals(this.CO_UOM, value))
-                {
-                    return;
-                }
-                this._CO_UOM = value;
-                this.OnCO_UOMChanged();
-                this.OnPropertyChanged("CO_UOM");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _CO_UOM;
-        partial void OnCO_UOMChanging(string value);
-        partial void OnCO_UOMChanged();
-        /// <summary>
         /// There are no comments for Property CO_CostPerUnit in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -2021,6 +2020,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<int> _POLineID;
         partial void OnPOLineIDChanging(global::System.Nullable<int> value);
         partial void OnPOLineIDChanged();
+        /// <summary>
+        /// There are no comments for Property CO_UOM in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> CO_UOM
+        {
+            get
+            {
+                return this._CO_UOM;
+            }
+            set
+            {
+                this.OnCO_UOMChanging(value);
+                if (object.Equals(this.CO_UOM, value))
+                {
+                    return;
+                }
+                this._CO_UOM = value;
+                this.OnCO_UOMChanged();
+                this.OnPropertyChanged("CO_UOM");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _CO_UOM;
+        partial void OnCO_UOMChanging(global::System.Nullable<int> value);
+        partial void OnCO_UOMChanged();
         /// <summary>
         /// There are no comments for PO in the schema.
         /// </summary>
@@ -2134,6 +2159,53 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceCollection<LineChangeOrder> _LineChangeOrders = new global::System.Data.Services.Client.DataServiceCollection<LineChangeOrder>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for UOM1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public UOM UOM1
+        {
+            get
+            {
+                this.@__UOM1.EnsureValueInitialized();
+                return this._UOM1;
+            }
+            set
+            {
+                UOM previous = this.UOM1;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._UOM1 = null;
+                    this.@__UOM1.OnValueSet();
+                    previous.ChangeOrders.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.CO_UOM = value.id;
+                    }
+                    else
+                    {
+                        this.CO_UOM = default(global::System.Nullable<int>);
+                    }
+                }
+                this._UOM1 = value;
+                this.@__UOM1.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__ChangeOrders.Add(this);
+                }
+                this.___OnPropertyChanged("UOM1");
+                this.OnPropertyChanged("UOM1");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private UOM _UOM1;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -2159,11 +2231,13 @@ namespace LightSwitchApplication.Implementation
         /// Create a new Client_Approved object.
         /// </summary>
         /// <param name="ID">Initial value of ID.</param>
+        /// <param name="siteApproved">Initial value of SiteApproved.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Client_Approved CreateClient_Approved(int ID)
+        public static Client_Approved CreateClient_Approved(int ID, bool siteApproved)
         {
             Client_Approved client_Approved = new Client_Approved();
             client_Approved.ID = ID;
+            client_Approved.SiteApproved = siteApproved;
             return client_Approved;
         }
         /// <summary>
@@ -2274,7 +2348,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property SiteApproved in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> SiteApproved
+        public bool SiteApproved
         {
             get
             {
@@ -2293,8 +2367,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _SiteApproved;
-        partial void OnSiteApprovedChanging(global::System.Nullable<bool> value);
+        private bool _SiteApproved;
+        partial void OnSiteApprovedChanging(bool value);
         partial void OnSiteApprovedChanged();
         /// <summary>
         /// There are no comments for Property Preference in the schema.
@@ -3169,32 +3243,6 @@ namespace LightSwitchApplication.Implementation
         partial void OnCO_QtyChanging(global::System.Nullable<decimal> value);
         partial void OnCO_QtyChanged();
         /// <summary>
-        /// There are no comments for Property CO_UOM in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string CO_UOM
-        {
-            get
-            {
-                return this._CO_UOM;
-            }
-            set
-            {
-                this.OnCO_UOMChanging(value);
-                if (object.Equals(this.CO_UOM, value))
-                {
-                    return;
-                }
-                this._CO_UOM = value;
-                this.OnCO_UOMChanged();
-                this.OnPropertyChanged("CO_UOM");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _CO_UOM;
-        partial void OnCO_UOMChanging(string value);
-        partial void OnCO_UOMChanged();
-        /// <summary>
         /// There are no comments for Property CO_CostPerUnit in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3272,6 +3320,32 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<int> _POLineID;
         partial void OnPOLineIDChanging(global::System.Nullable<int> value);
         partial void OnPOLineIDChanged();
+        /// <summary>
+        /// There are no comments for Property CO_UOM in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> CO_UOM
+        {
+            get
+            {
+                return this._CO_UOM;
+            }
+            set
+            {
+                this.OnCO_UOMChanging(value);
+                if (object.Equals(this.CO_UOM, value))
+                {
+                    return;
+                }
+                this._CO_UOM = value;
+                this.OnCO_UOMChanged();
+                this.OnPropertyChanged("CO_UOM");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _CO_UOM;
+        partial void OnCO_UOMChanging(global::System.Nullable<int> value);
+        partial void OnCO_UOMChanged();
         /// <summary>
         /// There are no comments for ChangeOrder in the schema.
         /// </summary>
@@ -3366,6 +3440,53 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private PO_Line _PO_Line;
+        /// <summary>
+        /// There are no comments for UOM1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public UOM UOM1
+        {
+            get
+            {
+                this.@__UOM1.EnsureValueInitialized();
+                return this._UOM1;
+            }
+            set
+            {
+                UOM previous = this.UOM1;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._UOM1 = null;
+                    this.@__UOM1.OnValueSet();
+                    previous.LineChangeOrders.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.CO_UOM = value.id;
+                    }
+                    else
+                    {
+                        this.CO_UOM = default(global::System.Nullable<int>);
+                    }
+                }
+                this._UOM1 = value;
+                this.@__UOM1.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__LineChangeOrders.Add(this);
+                }
+                this.___OnPropertyChanged("UOM1");
+                this.OnPropertyChanged("UOM1");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private UOM _UOM1;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3454,7 +3575,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property Specialty in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Specialty
+        public global::System.Nullable<int> Specialty
         {
             get
             {
@@ -3473,8 +3594,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Specialty;
-        partial void OnSpecialtyChanging(string value);
+        private global::System.Nullable<int> _Specialty;
+        partial void OnSpecialtyChanging(global::System.Nullable<int> value);
         partial void OnSpecialtyChanged();
         /// <summary>
         /// There are no comments for SupplierManufactures in the schema.
@@ -3495,6 +3616,53 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceCollection<SupplierManufacture> _SupplierManufactures = new global::System.Data.Services.Client.DataServiceCollection<SupplierManufacture>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for Specialty1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Specialty Specialty1
+        {
+            get
+            {
+                this.@__Specialty1.EnsureValueInitialized();
+                return this._Specialty1;
+            }
+            set
+            {
+                Specialty previous = this.Specialty1;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._Specialty1 = null;
+                    this.@__Specialty1.OnValueSet();
+                    previous.Manufacturers.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.Specialty = value.ID;
+                    }
+                    else
+                    {
+                        this.Specialty = default(global::System.Nullable<int>);
+                    }
+                }
+                this._Specialty1 = value;
+                this.@__Specialty1.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__Manufacturers.Add(this);
+                }
+                this.___OnPropertyChanged("Specialty1");
+                this.OnPropertyChanged("Specialty1");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Specialty _Specialty1;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3718,7 +3886,7 @@ namespace LightSwitchApplication.Implementation
     /// <KeyProperties>
     /// ID
     /// </KeyProperties>
-    [global::System.Data.Services.Common.EntitySetAttribute("POes")]
+    [global::System.Data.Services.Common.EntitySetAttribute("PO")]
     [global::System.Data.Services.Common.DataServiceKeyAttribute("ID")]
     public partial class PO : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
     {
@@ -5220,11 +5388,13 @@ namespace LightSwitchApplication.Implementation
         /// Create a new Proposal_Line object.
         /// </summary>
         /// <param name="ID">Initial value of ID.</param>
+        /// <param name="meetSpecs">Initial value of MeetSpecs.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Proposal_Line CreateProposal_Line(int ID)
+        public static Proposal_Line CreateProposal_Line(int ID, bool meetSpecs)
         {
             Proposal_Line proposal_Line = new Proposal_Line();
             proposal_Line.ID = ID;
+            proposal_Line.MeetSpecs = meetSpecs;
             return proposal_Line;
         }
         /// <summary>
@@ -5309,7 +5479,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property MeetSpecs in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> MeetSpecs
+        public bool MeetSpecs
         {
             get
             {
@@ -5328,8 +5498,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _MeetSpecs;
-        partial void OnMeetSpecsChanging(global::System.Nullable<bool> value);
+        private bool _MeetSpecs;
+        partial void OnMeetSpecsChanging(bool value);
         partial void OnMeetSpecsChanged();
         /// <summary>
         /// There are no comments for Property CountryOfOrigin in the schema.
@@ -5578,11 +5748,15 @@ namespace LightSwitchApplication.Implementation
         /// Create a new RFQ_Line object.
         /// </summary>
         /// <param name="ID">Initial value of id.</param>
+        /// <param name="testingReq">Initial value of TestingReq.</param>
+        /// <param name="inspection">Initial value of Inspection.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static RFQ_Line CreateRFQ_Line(int ID)
+        public static RFQ_Line CreateRFQ_Line(int ID, bool testingReq, bool inspection)
         {
             RFQ_Line rFQ_Line = new RFQ_Line();
             rFQ_Line.id = ID;
+            rFQ_Line.TestingReq = testingReq;
+            rFQ_Line.Inspection = inspection;
             return rFQ_Line;
         }
         /// <summary>
@@ -5693,7 +5867,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property TestingReq in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> TestingReq
+        public bool TestingReq
         {
             get
             {
@@ -5712,8 +5886,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _TestingReq;
-        partial void OnTestingReqChanging(global::System.Nullable<bool> value);
+        private bool _TestingReq;
+        partial void OnTestingReqChanging(bool value);
         partial void OnTestingReqChanged();
         /// <summary>
         /// There are no comments for Property TestingLevel in the schema.
@@ -5745,7 +5919,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property Inspection in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> Inspection
+        public bool Inspection
         {
             get
             {
@@ -5764,8 +5938,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _Inspection;
-        partial void OnInspectionChanging(global::System.Nullable<bool> value);
+        private bool _Inspection;
+        partial void OnInspectionChanging(bool value);
         partial void OnInspectionChanged();
         /// <summary>
         /// There are no comments for Property ShippingRefNo in the schema.
@@ -6081,12 +6255,22 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         /// <param name="ID">Initial value of ID.</param>
         /// <param name="pkgNo">Initial value of PkgNo.</param>
+        /// <param name="preBidRequired">Initial value of PreBidRequired.</param>
+        /// <param name="preAwardRequired">Initial value of PreAwardRequired.</param>
+        /// <param name="techComplaint">Initial value of TechComplaint.</param>
+        /// <param name="commercialComplaint">Initial value of CommercialComplaint.</param>
+        /// <param name="criticalPath">Initial value of CriticalPath.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static RFQ_PItem CreateRFQ_PItem(int ID, string pkgNo)
+        public static RFQ_PItem CreateRFQ_PItem(int ID, string pkgNo, bool preBidRequired, bool preAwardRequired, bool techComplaint, bool commercialComplaint, bool criticalPath)
         {
             RFQ_PItem rFQ_PItem = new RFQ_PItem();
             rFQ_PItem.ID = ID;
             rFQ_PItem.PkgNo = pkgNo;
+            rFQ_PItem.PreBidRequired = preBidRequired;
+            rFQ_PItem.PreAwardRequired = preAwardRequired;
+            rFQ_PItem.TechComplaint = techComplaint;
+            rFQ_PItem.CommercialComplaint = commercialComplaint;
+            rFQ_PItem.CriticalPath = criticalPath;
             return rFQ_PItem;
         }
         /// <summary>
@@ -6587,7 +6771,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property PreBidRequired in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> PreBidRequired
+        public bool PreBidRequired
         {
             get
             {
@@ -6606,14 +6790,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _PreBidRequired;
-        partial void OnPreBidRequiredChanging(global::System.Nullable<bool> value);
+        private bool _PreBidRequired;
+        partial void OnPreBidRequiredChanging(bool value);
         partial void OnPreBidRequiredChanged();
         /// <summary>
         /// There are no comments for Property PreAwardRequired in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> PreAwardRequired
+        public bool PreAwardRequired
         {
             get
             {
@@ -6632,8 +6816,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _PreAwardRequired;
-        partial void OnPreAwardRequiredChanging(global::System.Nullable<bool> value);
+        private bool _PreAwardRequired;
+        partial void OnPreAwardRequiredChanging(bool value);
         partial void OnPreAwardRequiredChanged();
         /// <summary>
         /// There are no comments for Property BidOpening in the schema.
@@ -6717,7 +6901,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property TechComplaint in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> TechComplaint
+        public bool TechComplaint
         {
             get
             {
@@ -6736,8 +6920,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _TechComplaint;
-        partial void OnTechComplaintChanging(global::System.Nullable<bool> value);
+        private bool _TechComplaint;
+        partial void OnTechComplaintChanging(bool value);
         partial void OnTechComplaintChanged();
         /// <summary>
         /// There are no comments for Property Regret in the schema.
@@ -6795,7 +6979,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property CommercialComplaint in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> CommercialComplaint
+        public bool CommercialComplaint
         {
             get
             {
@@ -6814,8 +6998,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _CommercialComplaint;
-        partial void OnCommercialComplaintChanging(global::System.Nullable<bool> value);
+        private bool _CommercialComplaint;
+        partial void OnCommercialComplaintChanging(bool value);
         partial void OnCommercialComplaintChanged();
         /// <summary>
         /// There are no comments for Property Comments in the schema.
@@ -6847,7 +7031,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property CriticalPath in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> CriticalPath
+        public bool CriticalPath
         {
             get
             {
@@ -6866,8 +7050,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _CriticalPath;
-        partial void OnCriticalPathChanging(global::System.Nullable<bool> value);
+        private bool _CriticalPath;
+        partial void OnCriticalPathChanging(bool value);
         partial void OnCriticalPathChanged();
         /// <summary>
         /// There are no comments for Property ProjectNoID in the schema.
@@ -9240,31 +9424,31 @@ namespace LightSwitchApplication.Implementation
         partial void OnIDChanging(int value);
         partial void OnIDChanged();
         /// <summary>
-        /// There are no comments for Property Specialty in the schema.
+        /// There are no comments for Property PerformanceArea in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string Specialty
+        public string PerformanceArea
         {
             get
             {
-                return this._Specialty;
+                return this._PerformanceArea;
             }
             set
             {
-                this.OnSpecialtyChanging(value);
-                if (object.Equals(this.Specialty, value))
+                this.OnPerformanceAreaChanging(value);
+                if (object.Equals(this.PerformanceArea, value))
                 {
                     return;
                 }
-                this._Specialty = value;
-                this.OnSpecialtyChanged();
-                this.OnPropertyChanged("Specialty");
+                this._PerformanceArea = value;
+                this.OnPerformanceAreaChanged();
+                this.OnPropertyChanged("PerformanceArea");
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _Specialty;
-        partial void OnSpecialtyChanging(string value);
-        partial void OnSpecialtyChanged();
+        private string _PerformanceArea;
+        partial void OnPerformanceAreaChanging(string value);
+        partial void OnPerformanceAreaChanged();
         /// <summary>
         /// There are no comments for Property SpecialtyWeight in the schema.
         /// </summary>
@@ -9291,32 +9475,6 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<decimal> _SpecialtyWeight;
         partial void OnSpecialtyWeightChanging(global::System.Nullable<decimal> value);
         partial void OnSpecialtyWeightChanged();
-        /// <summary>
-        /// There are no comments for Property PerformanceArea in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public string PerformanceArea
-        {
-            get
-            {
-                return this._PerformanceArea;
-            }
-            set
-            {
-                this.OnPerformanceAreaChanging(value);
-                if (object.Equals(this.PerformanceArea, value))
-                {
-                    return;
-                }
-                this._PerformanceArea = value;
-                this.OnPerformanceAreaChanged();
-                this.OnPropertyChanged("PerformanceArea");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private string _PerformanceArea;
-        partial void OnPerformanceAreaChanging(string value);
-        partial void OnPerformanceAreaChanged();
         /// <summary>
         /// There are no comments for Property Comment in the schema.
         /// </summary>
@@ -9369,6 +9527,79 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<int> _SupplierID;
         partial void OnSupplierIDChanging(global::System.Nullable<int> value);
         partial void OnSupplierIDChanged();
+        /// <summary>
+        /// There are no comments for Property Specialty in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Nullable<int> Specialty
+        {
+            get
+            {
+                return this._Specialty;
+            }
+            set
+            {
+                this.OnSpecialtyChanging(value);
+                if (object.Equals(this.Specialty, value))
+                {
+                    return;
+                }
+                this._Specialty = value;
+                this.OnSpecialtyChanged();
+                this.OnPropertyChanged("Specialty");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Nullable<int> _Specialty;
+        partial void OnSpecialtyChanging(global::System.Nullable<int> value);
+        partial void OnSpecialtyChanged();
+        /// <summary>
+        /// There are no comments for Specialty1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public Specialty Specialty1
+        {
+            get
+            {
+                this.@__Specialty1.EnsureValueInitialized();
+                return this._Specialty1;
+            }
+            set
+            {
+                Specialty previous = this.Specialty1;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._Specialty1 = null;
+                    this.@__Specialty1.OnValueSet();
+                    previous.Supplier_Specialties.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.Specialty = value.ID;
+                    }
+                    else
+                    {
+                        this.Specialty = default(global::System.Nullable<int>);
+                    }
+                }
+                this._Specialty1 = value;
+                this.@__Specialty1.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__Supplier_Specialties.Add(this);
+                }
+                this.___OnPropertyChanged("Specialty1");
+                this.OnPropertyChanged("Specialty1");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private Specialty _Specialty1;
         /// <summary>
         /// There are no comments for Supplier_Contacts in the schema.
         /// </summary>
@@ -9664,11 +9895,15 @@ namespace LightSwitchApplication.Implementation
         /// Create a new Supplier object.
         /// </summary>
         /// <param name="ID">Initial value of id.</param>
+        /// <param name="active">Initial value of Active.</param>
+        /// <param name="w9OnFile">Initial value of W9OnFile.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Supplier CreateSupplier(int ID)
+        public static Supplier CreateSupplier(int ID, bool active, bool w9OnFile)
         {
             Supplier supplier = new Supplier();
             supplier.id = ID;
+            supplier.Active = active;
+            supplier.W9OnFile = w9OnFile;
             return supplier;
         }
         /// <summary>
@@ -10065,7 +10300,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property Active in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> Active
+        public bool Active
         {
             get
             {
@@ -10084,8 +10319,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _Active;
-        partial void OnActiveChanging(global::System.Nullable<bool> value);
+        private bool _Active;
+        partial void OnActiveChanging(bool value);
         partial void OnActiveChanged();
         /// <summary>
         /// There are no comments for Property FederalID in the schema.
@@ -10117,7 +10352,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property W9OnFile in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<bool> W9OnFile
+        public bool W9OnFile
         {
             get
             {
@@ -10136,8 +10371,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<bool> _W9OnFile;
-        partial void OnW9OnFileChanging(global::System.Nullable<bool> value);
+        private bool _W9OnFile;
+        partial void OnW9OnFileChanging(bool value);
         partial void OnW9OnFileChanged();
         /// <summary>
         /// There are no comments for Property LicenseExpires in the schema.
@@ -10824,6 +11059,166 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private global::System.Data.Services.Client.DataServiceCollection<RFQ_Line> _RFQ_Lines = new global::System.Data.Services.Client.DataServiceCollection<RFQ_Line>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for ChangeOrders in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<ChangeOrder> ChangeOrders
+        {
+            get
+            {
+                this.@__ChangeOrders.EnsureValueInitialized();
+                return this._ChangeOrders;
+            }
+            set
+            {
+                this._ChangeOrders = value;
+                this.OnPropertyChanged("ChangeOrders");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<ChangeOrder> _ChangeOrders = new global::System.Data.Services.Client.DataServiceCollection<ChangeOrder>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for LineChangeOrders in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<LineChangeOrder> LineChangeOrders
+        {
+            get
+            {
+                this.@__LineChangeOrders.EnsureValueInitialized();
+                return this._LineChangeOrders;
+            }
+            set
+            {
+                this._LineChangeOrders = value;
+                this.OnPropertyChanged("LineChangeOrders");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<LineChangeOrder> _LineChangeOrders = new global::System.Data.Services.Client.DataServiceCollection<LineChangeOrder>(null, global::System.Data.Services.Client.TrackingMode.None);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        protected virtual void OnPropertyChanged(string property)
+        {
+            if ((this.PropertyChanged != null))
+            {
+                this.PropertyChanged(this, new global::System.ComponentModel.PropertyChangedEventArgs(property));
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for LightSwitchApplication.Specialty in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// ID
+    /// </KeyProperties>
+    [global::System.Data.Services.Common.EntitySetAttribute("Specialties")]
+    [global::System.Data.Services.Common.DataServiceKeyAttribute("ID")]
+    public partial class Specialty : global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityBase, global::System.ComponentModel.INotifyPropertyChanged
+    {
+        /// <summary>
+        /// Create a new Specialty object.
+        /// </summary>
+        /// <param name="ID">Initial value of ID.</param>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public static Specialty CreateSpecialty(int ID)
+        {
+            Specialty specialty = new Specialty();
+            specialty.ID = ID;
+            return specialty;
+        }
+        /// <summary>
+        /// There are no comments for Property ID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int ID
+        {
+            get
+            {
+                return this._ID;
+            }
+            set
+            {
+                this.OnIDChanging(value);
+                if (object.Equals(this.ID, value))
+                {
+                    return;
+                }
+                this._ID = value;
+                this.OnIDChanged();
+                this.OnPropertyChanged("ID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _ID;
+        partial void OnIDChanging(int value);
+        partial void OnIDChanged();
+        /// <summary>
+        /// There are no comments for Property Specialty1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public string Specialty1
+        {
+            get
+            {
+                return this._Specialty1;
+            }
+            set
+            {
+                this.OnSpecialty1Changing(value);
+                if (object.Equals(this.Specialty1, value))
+                {
+                    return;
+                }
+                this._Specialty1 = value;
+                this.OnSpecialty1Changed();
+                this.OnPropertyChanged("Specialty1");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private string _Specialty1;
+        partial void OnSpecialty1Changing(string value);
+        partial void OnSpecialty1Changed();
+        /// <summary>
+        /// There are no comments for Supplier_Specialties in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<Supplier_Specialty> Supplier_Specialties
+        {
+            get
+            {
+                this.@__Supplier_Specialties.EnsureValueInitialized();
+                return this._Supplier_Specialties;
+            }
+            set
+            {
+                this._Supplier_Specialties = value;
+                this.OnPropertyChanged("Supplier_Specialties");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<Supplier_Specialty> _Supplier_Specialties = new global::System.Data.Services.Client.DataServiceCollection<Supplier_Specialty>(null, global::System.Data.Services.Client.TrackingMode.None);
+        /// <summary>
+        /// There are no comments for Manufacturers in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<Manufacturer> Manufacturers
+        {
+            get
+            {
+                this.@__Manufacturers.EnsureValueInitialized();
+                return this._Manufacturers;
+            }
+            set
+            {
+                this._Manufacturers = value;
+                this.OnPropertyChanged("Manufacturers");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<Manufacturer> _Manufacturers = new global::System.Data.Services.Client.DataServiceCollection<Manufacturer>(null, global::System.Data.Services.Client.TrackingMode.None);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]

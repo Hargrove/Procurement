@@ -56,6 +56,10 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Submittal_SubmittalTypes", "SubmittalTypes", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ProcurementData.Implementation.SubmittalType), "Submittal", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ProcurementData.Implementation.Submittal), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_Clients", "Clients", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ProcurementData.Implementation.Client), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ProcurementData.Implementation.Project), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Project_Phase", "Phase", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ProcurementData.Implementation.Phase), "Project", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ProcurementData.Implementation.Project), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Supplier_Specialty_Specialty", "Specialty", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ProcurementData.Implementation.Specialty), "Supplier_Specialty", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ProcurementData.Implementation.Supplier_Specialty), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_Manufacturers_Specialty", "Specialty", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ProcurementData.Implementation.Specialty), "Manufacturers", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ProcurementData.Implementation.Manufacturer), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_ChangeOrder_UOM", "UOM", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ProcurementData.Implementation.UOM), "ChangeOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ProcurementData.Implementation.ChangeOrder), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_LineChangeOrder_UOM", "UOM", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(ProcurementData.Implementation.UOM), "LineChangeOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ProcurementData.Implementation.LineChangeOrder), true)]
 
 #endregion
 
@@ -283,18 +287,18 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<PO> POes
+        public ObjectSet<PO> PO
         {
             get
             {
-                if ((_POes == null))
+                if ((_PO == null))
                 {
-                    _POes = base.CreateObjectSet<PO>("POes");
+                    _PO = base.CreateObjectSet<PO>("PO");
                 }
-                return _POes;
+                return _PO;
             }
         }
-        private ObjectSet<PO> _POes;
+        private ObjectSet<PO> _PO;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -631,6 +635,22 @@ namespace ProcurementData.Implementation
             }
         }
         private ObjectSet<UOM> _UOMs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Specialty> Specialties
+        {
+            get
+            {
+                if ((_Specialties == null))
+                {
+                    _Specialties = base.CreateObjectSet<Specialty>("Specialties");
+                }
+                return _Specialties;
+            }
+        }
+        private ObjectSet<Specialty> _Specialties;
 
         #endregion
 
@@ -725,11 +745,11 @@ namespace ProcurementData.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the POes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the PO EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToPOes(PO pO)
+        public void AddToPO(PO pO)
         {
-            base.AddObject("POes", pO);
+            base.AddObject("PO", pO);
         }
     
         /// <summary>
@@ -898,6 +918,14 @@ namespace ProcurementData.Implementation
         public void AddToUOMs(UOM uOM)
         {
             base.AddObject("UOMs", uOM);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Specialties EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToSpecialties(Specialty specialty)
+        {
+            base.AddObject("Specialties", specialty);
         }
 
         #endregion
@@ -1880,30 +1908,6 @@ namespace ProcurementData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String CO_UOM
-        {
-            get
-            {
-                return _CO_UOM;
-            }
-            set
-            {
-                OnCO_UOMChanging(value);
-                ReportPropertyChanging("CO_UOM");
-                _CO_UOM = value;
-                ReportPropertyChanged("CO_UOM");
-                OnCO_UOMChanged();
-            }
-        }
-        private global::System.String _CO_UOM;
-        partial void OnCO_UOMChanging(global::System.String value);
-        partial void OnCO_UOMChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
         public Nullable<global::System.Decimal> CO_CostPerUnit
         {
             get
@@ -1970,6 +1974,30 @@ namespace ProcurementData.Implementation
         private Nullable<global::System.Int32> _POLineID;
         partial void OnPOLineIDChanging(Nullable<global::System.Int32> value);
         partial void OnPOLineIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CO_UOM
+        {
+            get
+            {
+                return _CO_UOM;
+            }
+            set
+            {
+                OnCO_UOMChanging(value);
+                ReportPropertyChanging("CO_UOM");
+                _CO_UOM = value;
+                ReportPropertyChanged("CO_UOM");
+                OnCO_UOMChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CO_UOM;
+        partial void OnCO_UOMChanging(Nullable<global::System.Int32> value);
+        partial void OnCO_UOMChanged();
 
         #endregion
 
@@ -2070,6 +2098,44 @@ namespace ProcurementData.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<LineChangeOrder>("LightSwitchApplication.FK_LineChangeOrder_ChangeOrder", "LineChangeOrder", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_ChangeOrder_UOM", "UOM")]
+        public UOM UOM1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UOM>("LightSwitchApplication.FK_ChangeOrder_UOM", "UOM").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UOM>("LightSwitchApplication.FK_ChangeOrder_UOM", "UOM").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<UOM> UOM1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UOM>("LightSwitchApplication.FK_ChangeOrder_UOM", "UOM");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UOM>("LightSwitchApplication.FK_ChangeOrder_UOM", "UOM", value);
                 }
             }
         }
@@ -2201,10 +2267,12 @@ namespace ProcurementData.Implementation
         /// Create a new Client_Approved object.
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
-        public static Client_Approved CreateClient_Approved(global::System.Int32 id)
+        /// <param name="siteApproved">Initial value of the SiteApproved property.</param>
+        public static Client_Approved CreateClient_Approved(global::System.Int32 id, global::System.Boolean siteApproved)
         {
             Client_Approved client_Approved = new Client_Approved();
             client_Approved.ID = id;
+            client_Approved.SiteApproved = siteApproved;
             return client_Approved;
         }
 
@@ -2314,9 +2382,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> SiteApproved
+        public global::System.Boolean SiteApproved
         {
             get
             {
@@ -2331,8 +2399,8 @@ namespace ProcurementData.Implementation
                 OnSiteApprovedChanged();
             }
         }
-        private Nullable<global::System.Boolean> _SiteApproved;
-        partial void OnSiteApprovedChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _SiteApproved;
+        partial void OnSiteApprovedChanging(global::System.Boolean value);
         partial void OnSiteApprovedChanged();
     
         /// <summary>
@@ -3036,30 +3104,6 @@ namespace ProcurementData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String CO_UOM
-        {
-            get
-            {
-                return _CO_UOM;
-            }
-            set
-            {
-                OnCO_UOMChanging(value);
-                ReportPropertyChanging("CO_UOM");
-                _CO_UOM = value;
-                ReportPropertyChanged("CO_UOM");
-                OnCO_UOMChanged();
-            }
-        }
-        private global::System.String _CO_UOM;
-        partial void OnCO_UOMChanging(global::System.String value);
-        partial void OnCO_UOMChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
         public Nullable<global::System.Decimal> CO_CostPerUnit
         {
             get
@@ -3126,6 +3170,30 @@ namespace ProcurementData.Implementation
         private Nullable<global::System.Int32> _POLineID;
         partial void OnPOLineIDChanging(Nullable<global::System.Int32> value);
         partial void OnPOLineIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> CO_UOM
+        {
+            get
+            {
+                return _CO_UOM;
+            }
+            set
+            {
+                OnCO_UOMChanging(value);
+                ReportPropertyChanging("CO_UOM");
+                _CO_UOM = value;
+                ReportPropertyChanged("CO_UOM");
+                OnCO_UOMChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _CO_UOM;
+        partial void OnCO_UOMChanging(Nullable<global::System.Int32> value);
+        partial void OnCO_UOMChanged();
 
         #endregion
 
@@ -3204,6 +3272,44 @@ namespace ProcurementData.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<PO_Line>("LightSwitchApplication.FK_LineChangeOrder_PO_Line", "PO_Line", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_LineChangeOrder_UOM", "UOM")]
+        public UOM UOM1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UOM>("LightSwitchApplication.FK_LineChangeOrder_UOM", "UOM").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UOM>("LightSwitchApplication.FK_LineChangeOrder_UOM", "UOM").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<UOM> UOM1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<UOM>("LightSwitchApplication.FK_LineChangeOrder_UOM", "UOM");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<UOM>("LightSwitchApplication.FK_LineChangeOrder_UOM", "UOM", value);
                 }
             }
         }
@@ -3293,7 +3399,7 @@ namespace ProcurementData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Specialty
+        public Nullable<global::System.Int32> Specialty
         {
             get
             {
@@ -3308,8 +3414,8 @@ namespace ProcurementData.Implementation
                 OnSpecialtyChanged();
             }
         }
-        private global::System.String _Specialty;
-        partial void OnSpecialtyChanging(global::System.String value);
+        private Nullable<global::System.Int32> _Specialty;
+        partial void OnSpecialtyChanging(Nullable<global::System.Int32> value);
         partial void OnSpecialtyChanged();
 
         #endregion
@@ -3335,6 +3441,44 @@ namespace ProcurementData.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SupplierManufacture>("LightSwitchApplication.FK_SupplierManufactures_Manufacturers", "SupplierManufactures", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Manufacturers_Specialty", "Specialty")]
+        public Specialty Specialty1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Specialty>("LightSwitchApplication.FK_Manufacturers_Specialty", "Specialty").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Specialty>("LightSwitchApplication.FK_Manufacturers_Specialty", "Specialty").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Specialty> Specialty1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Specialty>("LightSwitchApplication.FK_Manufacturers_Specialty", "Specialty");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Specialty>("LightSwitchApplication.FK_Manufacturers_Specialty", "Specialty", value);
                 }
             }
         }
@@ -4997,10 +5141,12 @@ namespace ProcurementData.Implementation
         /// Create a new Proposal_Line object.
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
-        public static Proposal_Line CreateProposal_Line(global::System.Int32 id)
+        /// <param name="meetSpecs">Initial value of the MeetSpecs property.</param>
+        public static Proposal_Line CreateProposal_Line(global::System.Int32 id, global::System.Boolean meetSpecs)
         {
             Proposal_Line proposal_Line = new Proposal_Line();
             proposal_Line.ID = id;
+            proposal_Line.MeetSpecs = meetSpecs;
             return proposal_Line;
         }
 
@@ -5086,9 +5232,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> MeetSpecs
+        public global::System.Boolean MeetSpecs
         {
             get
             {
@@ -5103,8 +5249,8 @@ namespace ProcurementData.Implementation
                 OnMeetSpecsChanged();
             }
         }
-        private Nullable<global::System.Boolean> _MeetSpecs;
-        partial void OnMeetSpecsChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _MeetSpecs;
+        partial void OnMeetSpecsChanging(global::System.Boolean value);
         partial void OnMeetSpecsChanged();
     
         /// <summary>
@@ -5334,10 +5480,14 @@ namespace ProcurementData.Implementation
         /// Create a new RFQ_Line object.
         /// </summary>
         /// <param name="id">Initial value of the id property.</param>
-        public static RFQ_Line CreateRFQ_Line(global::System.Int32 id)
+        /// <param name="testingReq">Initial value of the TestingReq property.</param>
+        /// <param name="inspection">Initial value of the Inspection property.</param>
+        public static RFQ_Line CreateRFQ_Line(global::System.Int32 id, global::System.Boolean testingReq, global::System.Boolean inspection)
         {
             RFQ_Line rFQ_Line = new RFQ_Line();
             rFQ_Line.id = id;
+            rFQ_Line.TestingReq = testingReq;
+            rFQ_Line.Inspection = inspection;
             return rFQ_Line;
         }
 
@@ -5447,9 +5597,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> TestingReq
+        public global::System.Boolean TestingReq
         {
             get
             {
@@ -5464,8 +5614,8 @@ namespace ProcurementData.Implementation
                 OnTestingReqChanged();
             }
         }
-        private Nullable<global::System.Boolean> _TestingReq;
-        partial void OnTestingReqChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _TestingReq;
+        partial void OnTestingReqChanging(global::System.Boolean value);
         partial void OnTestingReqChanged();
     
         /// <summary>
@@ -5495,9 +5645,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> Inspection
+        public global::System.Boolean Inspection
         {
             get
             {
@@ -5512,8 +5662,8 @@ namespace ProcurementData.Implementation
                 OnInspectionChanged();
             }
         }
-        private Nullable<global::System.Boolean> _Inspection;
-        partial void OnInspectionChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _Inspection;
+        partial void OnInspectionChanging(global::System.Boolean value);
         partial void OnInspectionChanged();
     
         /// <summary>
@@ -5804,11 +5954,21 @@ namespace ProcurementData.Implementation
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
         /// <param name="pkgNo">Initial value of the PkgNo property.</param>
-        public static RFQ_PItem CreateRFQ_PItem(global::System.Int32 id, global::System.String pkgNo)
+        /// <param name="preBidRequired">Initial value of the PreBidRequired property.</param>
+        /// <param name="preAwardRequired">Initial value of the PreAwardRequired property.</param>
+        /// <param name="techComplaint">Initial value of the TechComplaint property.</param>
+        /// <param name="commercialComplaint">Initial value of the CommercialComplaint property.</param>
+        /// <param name="criticalPath">Initial value of the CriticalPath property.</param>
+        public static RFQ_PItem CreateRFQ_PItem(global::System.Int32 id, global::System.String pkgNo, global::System.Boolean preBidRequired, global::System.Boolean preAwardRequired, global::System.Boolean techComplaint, global::System.Boolean commercialComplaint, global::System.Boolean criticalPath)
         {
             RFQ_PItem rFQ_PItem = new RFQ_PItem();
             rFQ_PItem.ID = id;
             rFQ_PItem.PkgNo = pkgNo;
+            rFQ_PItem.PreBidRequired = preBidRequired;
+            rFQ_PItem.PreAwardRequired = preAwardRequired;
+            rFQ_PItem.TechComplaint = techComplaint;
+            rFQ_PItem.CommercialComplaint = commercialComplaint;
+            rFQ_PItem.CriticalPath = criticalPath;
             return rFQ_PItem;
         }
 
@@ -6278,9 +6438,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> PreBidRequired
+        public global::System.Boolean PreBidRequired
         {
             get
             {
@@ -6295,16 +6455,16 @@ namespace ProcurementData.Implementation
                 OnPreBidRequiredChanged();
             }
         }
-        private Nullable<global::System.Boolean> _PreBidRequired;
-        partial void OnPreBidRequiredChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _PreBidRequired;
+        partial void OnPreBidRequiredChanging(global::System.Boolean value);
         partial void OnPreBidRequiredChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> PreAwardRequired
+        public global::System.Boolean PreAwardRequired
         {
             get
             {
@@ -6319,8 +6479,8 @@ namespace ProcurementData.Implementation
                 OnPreAwardRequiredChanged();
             }
         }
-        private Nullable<global::System.Boolean> _PreAwardRequired;
-        partial void OnPreAwardRequiredChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _PreAwardRequired;
+        partial void OnPreAwardRequiredChanging(global::System.Boolean value);
         partial void OnPreAwardRequiredChanged();
     
         /// <summary>
@@ -6398,9 +6558,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> TechComplaint
+        public global::System.Boolean TechComplaint
         {
             get
             {
@@ -6415,8 +6575,8 @@ namespace ProcurementData.Implementation
                 OnTechComplaintChanged();
             }
         }
-        private Nullable<global::System.Boolean> _TechComplaint;
-        partial void OnTechComplaintChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _TechComplaint;
+        partial void OnTechComplaintChanging(global::System.Boolean value);
         partial void OnTechComplaintChanged();
     
         /// <summary>
@@ -6470,9 +6630,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> CommercialComplaint
+        public global::System.Boolean CommercialComplaint
         {
             get
             {
@@ -6487,8 +6647,8 @@ namespace ProcurementData.Implementation
                 OnCommercialComplaintChanged();
             }
         }
-        private Nullable<global::System.Boolean> _CommercialComplaint;
-        partial void OnCommercialComplaintChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _CommercialComplaint;
+        partial void OnCommercialComplaintChanging(global::System.Boolean value);
         partial void OnCommercialComplaintChanged();
     
         /// <summary>
@@ -6518,9 +6678,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> CriticalPath
+        public global::System.Boolean CriticalPath
         {
             get
             {
@@ -6535,8 +6695,8 @@ namespace ProcurementData.Implementation
                 OnCriticalPathChanged();
             }
         }
-        private Nullable<global::System.Boolean> _CriticalPath;
-        partial void OnCriticalPathChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _CriticalPath;
+        partial void OnCriticalPathChanging(global::System.Boolean value);
         partial void OnCriticalPathChanged();
     
         /// <summary>
@@ -7704,6 +7864,135 @@ namespace ProcurementData.Implementation
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Specialty")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Specialty : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Specialty object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        public static Specialty CreateSpecialty(global::System.Int32 id)
+        {
+            Specialty specialty = new Specialty();
+            specialty.ID = id;
+            return specialty;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = value;
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Specialty1
+        {
+            get
+            {
+                return _Specialty1;
+            }
+            set
+            {
+                OnSpecialty1Changing(value);
+                ReportPropertyChanging("Specialty1");
+                _Specialty1 = value;
+                ReportPropertyChanged("Specialty1");
+                OnSpecialty1Changed();
+            }
+        }
+        private global::System.String _Specialty1;
+        partial void OnSpecialty1Changing(global::System.String value);
+        partial void OnSpecialty1Changed();
+
+        #endregion
+
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Supplier_Specialty_Specialty", "Supplier_Specialty")]
+        public EntityCollection<Supplier_Specialty> Supplier_Specialties
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Supplier_Specialty>("LightSwitchApplication.FK_Supplier_Specialty_Specialty", "Supplier_Specialty");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Supplier_Specialty>("LightSwitchApplication.FK_Supplier_Specialty_Specialty", "Supplier_Specialty", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Manufacturers_Specialty", "Manufacturers")]
+        public EntityCollection<Manufacturer> Manufacturers
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Manufacturer>("LightSwitchApplication.FK_Manufacturers_Specialty", "Manufacturers");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Manufacturer>("LightSwitchApplication.FK_Manufacturers_Specialty", "Manufacturers", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Stakeholder")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -8509,10 +8798,14 @@ namespace ProcurementData.Implementation
         /// Create a new Supplier object.
         /// </summary>
         /// <param name="id">Initial value of the id property.</param>
-        public static Supplier CreateSupplier(global::System.Int32 id)
+        /// <param name="active">Initial value of the Active property.</param>
+        /// <param name="w9OnFile">Initial value of the W9OnFile property.</param>
+        public static Supplier CreateSupplier(global::System.Int32 id, global::System.Boolean active, global::System.Boolean w9OnFile)
         {
             Supplier supplier = new Supplier();
             supplier.id = id;
+            supplier.Active = active;
+            supplier.W9OnFile = w9OnFile;
             return supplier;
         }
 
@@ -8886,9 +9179,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> Active
+        public global::System.Boolean Active
         {
             get
             {
@@ -8903,8 +9196,8 @@ namespace ProcurementData.Implementation
                 OnActiveChanged();
             }
         }
-        private Nullable<global::System.Boolean> _Active;
-        partial void OnActiveChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _Active;
+        partial void OnActiveChanging(global::System.Boolean value);
         partial void OnActiveChanged();
     
         /// <summary>
@@ -8934,9 +9227,9 @@ namespace ProcurementData.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public Nullable<global::System.Boolean> W9OnFile
+        public global::System.Boolean W9OnFile
         {
             get
             {
@@ -8951,8 +9244,8 @@ namespace ProcurementData.Implementation
                 OnW9OnFileChanged();
             }
         }
-        private Nullable<global::System.Boolean> _W9OnFile;
-        partial void OnW9OnFileChanging(Nullable<global::System.Boolean> value);
+        private global::System.Boolean _W9OnFile;
+        partial void OnW9OnFileChanging(global::System.Boolean value);
         partial void OnW9OnFileChanged();
     
         /// <summary>
@@ -9724,24 +10017,24 @@ namespace ProcurementData.Implementation
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.String Specialty
+        public global::System.String PerformanceArea
         {
             get
             {
-                return _Specialty;
+                return _PerformanceArea;
             }
             set
             {
-                OnSpecialtyChanging(value);
-                ReportPropertyChanging("Specialty");
-                _Specialty = value;
-                ReportPropertyChanged("Specialty");
-                OnSpecialtyChanged();
+                OnPerformanceAreaChanging(value);
+                ReportPropertyChanging("PerformanceArea");
+                _PerformanceArea = value;
+                ReportPropertyChanged("PerformanceArea");
+                OnPerformanceAreaChanged();
             }
         }
-        private global::System.String _Specialty;
-        partial void OnSpecialtyChanging(global::System.String value);
-        partial void OnSpecialtyChanged();
+        private global::System.String _PerformanceArea;
+        partial void OnPerformanceAreaChanging(global::System.String value);
+        partial void OnPerformanceAreaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9766,30 +10059,6 @@ namespace ProcurementData.Implementation
         private Nullable<global::System.Decimal> _SpecialtyWeight;
         partial void OnSpecialtyWeightChanging(Nullable<global::System.Decimal> value);
         partial void OnSpecialtyWeightChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String PerformanceArea
-        {
-            get
-            {
-                return _PerformanceArea;
-            }
-            set
-            {
-                OnPerformanceAreaChanging(value);
-                ReportPropertyChanging("PerformanceArea");
-                _PerformanceArea = value;
-                ReportPropertyChanged("PerformanceArea");
-                OnPerformanceAreaChanged();
-            }
-        }
-        private global::System.String _PerformanceArea;
-        partial void OnPerformanceAreaChanging(global::System.String value);
-        partial void OnPerformanceAreaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9838,11 +10107,73 @@ namespace ProcurementData.Implementation
         private Nullable<global::System.Int32> _SupplierID;
         partial void OnSupplierIDChanging(Nullable<global::System.Int32> value);
         partial void OnSupplierIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> Specialty
+        {
+            get
+            {
+                return _Specialty;
+            }
+            set
+            {
+                OnSpecialtyChanging(value);
+                ReportPropertyChanging("Specialty");
+                _Specialty = value;
+                ReportPropertyChanged("Specialty");
+                OnSpecialtyChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _Specialty;
+        partial void OnSpecialtyChanging(Nullable<global::System.Int32> value);
+        partial void OnSpecialtyChanged();
 
         #endregion
 
     
         #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_Supplier_Specialty_Specialty", "Specialty")]
+        public Specialty Specialty1
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Specialty>("LightSwitchApplication.FK_Supplier_Specialty_Specialty", "Specialty").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Specialty>("LightSwitchApplication.FK_Supplier_Specialty_Specialty", "Specialty").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Specialty> Specialty1Reference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Specialty>("LightSwitchApplication.FK_Supplier_Specialty_Specialty", "Specialty");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Specialty>("LightSwitchApplication.FK_Supplier_Specialty_Specialty", "Specialty", value);
+                }
+            }
+        }
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10299,6 +10630,50 @@ namespace ProcurementData.Implementation
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<RFQ_Line>("LightSwitchApplication.FK_RFQ_Line_UOM", "RFQ_Line", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_ChangeOrder_UOM", "ChangeOrder")]
+        public EntityCollection<ChangeOrder> ChangeOrders
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ChangeOrder>("LightSwitchApplication.FK_ChangeOrder_UOM", "ChangeOrder");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ChangeOrder>("LightSwitchApplication.FK_ChangeOrder_UOM", "ChangeOrder", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "FK_LineChangeOrder_UOM", "LineChangeOrder")]
+        public EntityCollection<LineChangeOrder> LineChangeOrders
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<LineChangeOrder>("LightSwitchApplication.FK_LineChangeOrder_UOM", "LineChangeOrder");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<LineChangeOrder>("LightSwitchApplication.FK_LineChangeOrder_UOM", "LineChangeOrder", value);
                 }
             }
         }

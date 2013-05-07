@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No Modeled Description Available
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-    public sealed partial class Transport_Type : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass>
+    public sealed partial class SubmittalType : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new instance of the Transport_Type entity.
+        /// Initializes a new instance of the SubmittalType entity.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Transport_Type()
+        public SubmittalType()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Transport_Type(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Transport_Type> entitySet)
+        public SubmittalType(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.SubmittalType> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.Transport_Type.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.SubmittalType.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Transport_Type_Created();
+        partial void SubmittalType_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Transport_Type_AllowSaveWithErrors(ref bool result);
+        partial void SubmittalType_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -87,7 +87,7 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.Transport_Type.DetailsClass.GetValue(this, global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.ID);
+                return global::LightSwitchApplication.SubmittalType.DetailsClass.GetValue(this, global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.ID);
             }
         }
         
@@ -103,45 +103,45 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string TransportType
+        public string SubmittalType1
         {
             get
             {
-                return global::LightSwitchApplication.Transport_Type.DetailsClass.GetValue(this, global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.TransportType);
+                return global::LightSwitchApplication.SubmittalType.DetailsClass.GetValue(this, global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.SubmittalType1);
             }
             set
             {
-                global::LightSwitchApplication.Transport_Type.DetailsClass.SetValue(this, global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.TransportType, value);
+                global::LightSwitchApplication.SubmittalType.DetailsClass.SetValue(this, global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.SubmittalType1, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TransportType_IsReadOnly(ref bool result);
+        partial void SubmittalType1_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TransportType_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void SubmittalType1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TransportType_Changed();
+        partial void SubmittalType1_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Shipment> Shipments
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Submittal> Submittals
         {
             get
             {
-                return global::LightSwitchApplication.Transport_Type.DetailsClass.GetValue(this, global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.Shipments);
+                return global::LightSwitchApplication.SubmittalType.DetailsClass.GetValue(this, global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.Submittals);
             }
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Shipment> ShipmentsQuery
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Submittal> SubmittalsQuery
         {
             get
             {
-                return global::LightSwitchApplication.Transport_Type.DetailsClass.GetQuery(this, global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.Shipments);
+                return global::LightSwitchApplication.SubmittalType.DetailsClass.GetQuery(this, global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.Submittals);
             }
         }
 
@@ -154,37 +154,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.Transport_Type,
-                global::LightSwitchApplication.Transport_Type.DetailsClass,
-                global::LightSwitchApplication.Transport_Type.DetailsClass.IImplementation,
-                global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass>>
+                global::LightSwitchApplication.SubmittalType,
+                global::LightSwitchApplication.SubmittalType.DetailsClass,
+                global::LightSwitchApplication.SubmittalType.DetailsClass.IImplementation,
+                global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.ID;
+                var initializeEntry = global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.ID;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass>.Entry
-                __Transport_TypeEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass>.Entry(
-                    global::LightSwitchApplication.Transport_Type.DetailsClass.__Transport_Type_CreateNew,
-                    global::LightSwitchApplication.Transport_Type.DetailsClass.__Transport_Type_Created,
-                    global::LightSwitchApplication.Transport_Type.DetailsClass.__Transport_Type_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.Transport_Type __Transport_Type_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Transport_Type> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass>.Entry
+                __SubmittalTypeEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass>.Entry(
+                    global::LightSwitchApplication.SubmittalType.DetailsClass.__SubmittalType_CreateNew,
+                    global::LightSwitchApplication.SubmittalType.DetailsClass.__SubmittalType_Created,
+                    global::LightSwitchApplication.SubmittalType.DetailsClass.__SubmittalType_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.SubmittalType __SubmittalType_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.SubmittalType> es)
             {
-                return new global::LightSwitchApplication.Transport_Type(es);
+                return new global::LightSwitchApplication.SubmittalType(es);
             }
-            private static void __Transport_Type_Created(global::LightSwitchApplication.Transport_Type e)
+            private static void __SubmittalType_Created(global::LightSwitchApplication.SubmittalType e)
             {
-                e.Transport_Type_Created();
+                e.SubmittalType_Created();
             }
-            private static bool __Transport_Type_AllowSaveWithErrors(global::LightSwitchApplication.Transport_Type e)
+            private static bool __SubmittalType_AllowSaveWithErrors(global::LightSwitchApplication.SubmittalType e)
             {
                 bool result = false;
-                e.Transport_Type_AllowSaveWithErrors(ref result);
+                e.SubmittalType_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -192,7 +192,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass> Commands
             {
                 get
                 {
@@ -200,7 +200,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass> Methods
             {
                 get
                 {
@@ -208,7 +208,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -220,34 +220,34 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, int> ID
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, int> ID
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.ID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.ID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, string> TransportType
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, string> SubmittalType1
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.TransportType) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.SubmittalType1) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, global::LightSwitchApplication.Shipment> Shipments
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, global::LightSwitchApplication.Submittal> Submittals
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.Shipments) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, global::LightSwitchApplication.Shipment>;
+                        return base.GetItem(global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.Submittals) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, global::LightSwitchApplication.Submittal>;
                     }
                 }
                 
@@ -258,8 +258,8 @@ namespace LightSwitchApplication
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
                 new int ID { get; }
-                new string TransportType { get; set; }
-                new global::System.Collections.IEnumerable Shipments { get; }
+                new string SubmittalType1 { get; set; }
+                new global::System.Collections.IEnumerable Submittals { get; }
             }
             #pragma warning restore 109
     
@@ -270,105 +270,105 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, int>.Entry
-                    ID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, int>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, int>.Entry
+                    ID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, int>.Entry(
                         "ID",
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._ID_Stub,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._ID_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._ID_Validate,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._ID_GetImplementationValue,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._ID_Stub,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._ID_ComputeIsReadOnly,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._ID_Validate,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._ID_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._ID_OnValueChanged);
-                private static void _ID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Transport_Type.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, int>.Data> c, global::LightSwitchApplication.Transport_Type.DetailsClass d, object sf)
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._ID_OnValueChanged);
+                private static void _ID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SubmittalType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, int>.Data> c, global::LightSwitchApplication.SubmittalType.DetailsClass d, object sf)
                 {
                     c(d, ref d._ID, sf);
                 }
-                private static bool _ID_ComputeIsReadOnly(global::LightSwitchApplication.Transport_Type e)
+                private static bool _ID_ComputeIsReadOnly(global::LightSwitchApplication.SubmittalType e)
                 {
                     bool result = false;
                     e.ID_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _ID_Validate(global::LightSwitchApplication.Transport_Type e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ID_Validate(global::LightSwitchApplication.SubmittalType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.ID_Validate(r);
                 }
-                private static int _ID_GetImplementationValue(global::LightSwitchApplication.Transport_Type.DetailsClass d)
+                private static int _ID_GetImplementationValue(global::LightSwitchApplication.SubmittalType.DetailsClass d)
                 {
                     return d.ImplementationEntity.ID;
                 }
-                private static void _ID_OnValueChanged(global::LightSwitchApplication.Transport_Type e)
+                private static void _ID_OnValueChanged(global::LightSwitchApplication.SubmittalType e)
                 {
                     e.ID_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, string>.Entry
-                    TransportType = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, string>.Entry(
-                        "TransportType",
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._TransportType_Stub,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._TransportType_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._TransportType_Validate,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._TransportType_GetImplementationValue,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._TransportType_SetImplementationValue,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._TransportType_OnValueChanged);
-                private static void _TransportType_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Transport_Type.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, string>.Data> c, global::LightSwitchApplication.Transport_Type.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, string>.Entry
+                    SubmittalType1 = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, string>.Entry(
+                        "SubmittalType1",
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._SubmittalType1_Stub,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._SubmittalType1_ComputeIsReadOnly,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._SubmittalType1_Validate,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._SubmittalType1_GetImplementationValue,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._SubmittalType1_SetImplementationValue,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._SubmittalType1_OnValueChanged);
+                private static void _SubmittalType1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SubmittalType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, string>.Data> c, global::LightSwitchApplication.SubmittalType.DetailsClass d, object sf)
                 {
-                    c(d, ref d._TransportType, sf);
+                    c(d, ref d._SubmittalType1, sf);
                 }
-                private static bool _TransportType_ComputeIsReadOnly(global::LightSwitchApplication.Transport_Type e)
+                private static bool _SubmittalType1_ComputeIsReadOnly(global::LightSwitchApplication.SubmittalType e)
                 {
                     bool result = false;
-                    e.TransportType_IsReadOnly(ref result);
+                    e.SubmittalType1_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _TransportType_Validate(global::LightSwitchApplication.Transport_Type e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _SubmittalType1_Validate(global::LightSwitchApplication.SubmittalType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.TransportType_Validate(r);
+                    e.SubmittalType1_Validate(r);
                 }
-                private static string _TransportType_GetImplementationValue(global::LightSwitchApplication.Transport_Type.DetailsClass d)
+                private static string _SubmittalType1_GetImplementationValue(global::LightSwitchApplication.SubmittalType.DetailsClass d)
                 {
-                    return d.ImplementationEntity.TransportType;
+                    return d.ImplementationEntity.SubmittalType1;
                 }
-                private static void _TransportType_SetImplementationValue(global::LightSwitchApplication.Transport_Type.DetailsClass d, string v)
+                private static void _SubmittalType1_SetImplementationValue(global::LightSwitchApplication.SubmittalType.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.TransportType = v;
+                    d.ImplementationEntity.SubmittalType1 = v;
                 }
-                private static void _TransportType_OnValueChanged(global::LightSwitchApplication.Transport_Type e)
+                private static void _SubmittalType1_OnValueChanged(global::LightSwitchApplication.SubmittalType e)
                 {
-                    e.TransportType_Changed();
+                    e.SubmittalType1_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, global::LightSwitchApplication.Shipment>.Entry
-                    Shipments = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, global::LightSwitchApplication.Shipment>.Entry(
-                        "Shipments",
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._Shipments_Stub,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._Shipments_GetReferencedEntities,
-                        global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties._Shipments_GetEntityCollection);
-                private static void _Shipments_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Transport_Type.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, global::LightSwitchApplication.Shipment>.Data> c, global::LightSwitchApplication.Transport_Type.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, global::LightSwitchApplication.Submittal>.Entry
+                    Submittals = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, global::LightSwitchApplication.Submittal>.Entry(
+                        "Submittals",
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._Submittals_Stub,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._Submittals_GetReferencedEntities,
+                        global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties._Submittals_GetEntityCollection);
+                private static void _Submittals_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.SubmittalType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, global::LightSwitchApplication.Submittal>.Data> c, global::LightSwitchApplication.SubmittalType.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Shipments, sf);
+                    c(d, ref d._Submittals, sf);
                 }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Shipment> _Shipments_GetReferencedEntities(global::LightSwitchApplication.Transport_Type.DetailsClass d)
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Submittal> _Submittals_GetReferencedEntities(global::LightSwitchApplication.SubmittalType.DetailsClass d)
                 {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Shipment, global::LightSwitchApplication.Shipment.DetailsClass>(global::LightSwitchApplication.Transport_Type.DetailsClass.PropertySetProperties.Shipments, ref d._Shipments);
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Submittal, global::LightSwitchApplication.Submittal.DetailsClass>(global::LightSwitchApplication.SubmittalType.DetailsClass.PropertySetProperties.Submittals, ref d._Submittals);
                 }
-                private static global::System.Collections.IEnumerable _Shipments_GetEntityCollection(global::LightSwitchApplication.Transport_Type.DetailsClass d)
+                private static global::System.Collections.IEnumerable _Submittals_GetEntityCollection(global::LightSwitchApplication.SubmittalType.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Shipments;
+                    return d.ImplementationEntity.Submittals;
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, int>.Data _ID;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, int>.Data _ID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, string>.Data _TransportType;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, string>.Data _SubmittalType1;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Transport_Type, global::LightSwitchApplication.Transport_Type.DetailsClass, global::LightSwitchApplication.Shipment>.Data _Shipments;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.SubmittalType, global::LightSwitchApplication.SubmittalType.DetailsClass, global::LightSwitchApplication.Submittal>.Data _Submittals;
             
         }
     

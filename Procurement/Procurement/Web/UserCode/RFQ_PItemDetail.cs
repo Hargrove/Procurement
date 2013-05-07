@@ -29,5 +29,40 @@ namespace LightSwitchApplication
             // Write your code here.
             this.SetDisplayNameFromEntity(this.RFQ_PItem);
         }
+
+        partial void AddSupplier_Execute()
+        {
+            if (Suppliers.SelectedItem != null)
+            {
+                BidList blExist = new BidList();
+                foreach (BidList blSearch in this.BidLists)
+                {
+                    if (blSearch.Supplier == this.Suppliers.SelectedItem)
+                    {
+                        blExist = blSearch;
+                        blSearch.Delete();
+                        this.DataWorkspace.ProcurementData.Details.DiscardChanges();
+                        this.BidLists.Refresh();
+                    }
+                }
+
+                if (blExist == null || blExist.Supplier == null)
+                {
+                    blExist.Delete();
+                    BidList bl = BidLists.AddNew();
+                    bl.Supplier = Suppliers.SelectedItem;
+                    bl.RFQ_PItem = this.RFQ_PItem;
+                    this.Save();
+                    this.BidLists.Refresh();
+                }
+            }
+
+        }
+
+        partial void RemoveSupplier_Execute()
+        {
+            BidLists.DeleteSelected();// Write your code here.
+
+        }
     }
 }

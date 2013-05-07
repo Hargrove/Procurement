@@ -777,15 +777,6 @@
               }
             },
             {
-              "id": "Manufacturer/Properties[Specialty]",
-              "name": "Specialty",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              }
-            },
-            {
               "id": "Manufacturer/Properties[SupplierManufactures]",
               "name": "SupplierManufactures",
               "association": { "__id": "FK_SupplierManufactures_Manufacturers" },
@@ -793,6 +784,15 @@
               "fromEnd": { "__id": "FK_SupplierManufactures_Manufacturers/Ends[Manufacturers]" },
               "propertyType": { "__id": "SupplierManufacture*" },
               "toEnd": { "__id": "FK_SupplierManufactures_Manufacturers/Ends[SupplierManufactures]" }
+            },
+            {
+              "id": "Manufacturer/Properties[Specialty1]",
+              "name": "Specialty1",
+              "association": { "__id": "FK_Manufacturers_Specialty" },
+              "elementType": { "__id": "Specialty" },
+              "fromEnd": { "__id": "FK_Manufacturers_Specialty/Ends[Manufacturers]" },
+              "propertyType": { "__id": "Specialty" },
+              "toEnd": { "__id": "FK_Manufacturers_Specialty/Ends[Specialty]" }
             }
           ]
         },
@@ -1986,7 +1986,7 @@
               ":@DecimalConstraint":
               {
                 "precision": 18,
-                "scale": 0
+                "scale": 2
               },
               ":@NotSearchable": { }
             },
@@ -2673,8 +2673,17 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Supplier_Specialty/Properties[Specialty]",
-              "name": "Specialty",
+              "id": "Supplier_Specialty/Properties[Specialty1]",
+              "name": "Specialty1",
+              "association": { "__id": "FK_Supplier_Specialty_Specialty" },
+              "elementType": { "__id": "Specialty" },
+              "fromEnd": { "__id": "FK_Supplier_Specialty_Specialty/Ends[Supplier_Specialty]" },
+              "propertyType": { "__id": "Specialty" },
+              "toEnd": { "__id": "FK_Supplier_Specialty_Specialty/Ends[Specialty]" }
+            },
+            {
+              "id": "Supplier_Specialty/Properties[PerformanceArea]",
+              "name": "PerformanceArea",
               "propertyType": { "__id": ":String?" },
               ":@MaxLength":
               {
@@ -2691,15 +2700,6 @@
                 "scale": 0
               },
               ":@NotSearchable": { }
-            },
-            {
-              "id": "Supplier_Specialty/Properties[PerformanceArea]",
-              "name": "PerformanceArea",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              }
             },
             {
               "id": "Supplier_Specialty/Properties[Comment]",
@@ -3877,7 +3877,7 @@
                 {
                   "id": "ProcurementData/Members[FK_ChangeOrder_PO]/Members[PO]",
                   "name": "PO",
-                  "entitySet": { "__id": "ProcurementData/Members[POes]" }
+                  "entitySet": { "__id": "ProcurementData/Members[PO]" }
                 },
                 {
                   "id": "ProcurementData/Members[FK_ChangeOrder_PO]/Members[ChangeOrder]",
@@ -4039,7 +4039,7 @@
                 {
                   "id": "ProcurementData/Members[FK_PO_Line_PO]/Members[PO]",
                   "name": "PO",
-                  "entitySet": { "__id": "ProcurementData/Members[POes]" }
+                  "entitySet": { "__id": "ProcurementData/Members[PO]" }
                 },
                 {
                   "id": "ProcurementData/Members[FK_PO_Line_PO]/Members[PO_Line]",
@@ -4443,6 +4443,42 @@
                   "entitySet": { "__id": "ProcurementData/Members[Projects]" }
                 }
               ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Supplier_Specialty_Specialty]",
+              "name": "FK_Supplier_Specialty_Specialty",
+              "association": { "__id": "FK_Supplier_Specialty_Specialty" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Supplier_Specialty_Specialty]/Members[Specialty]",
+                  "name": "Specialty",
+                  "entitySet": { "__id": "ProcurementData/Members[Specialties]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Supplier_Specialty_Specialty]/Members[Supplier_Specialty]",
+                  "name": "Supplier_Specialty",
+                  "entitySet": { "__id": "ProcurementData/Members[Supplier_Specialties]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Manufacturers_Specialty]",
+              "name": "FK_Manufacturers_Specialty",
+              "association": { "__id": "FK_Manufacturers_Specialty" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Manufacturers_Specialty]/Members[Specialty]",
+                  "name": "Specialty",
+                  "entitySet": { "__id": "ProcurementData/Members[Specialties]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Manufacturers_Specialty]/Members[Manufacturers]",
+                  "name": "Manufacturers",
+                  "entitySet": { "__id": "ProcurementData/Members[Manufacturers]" }
+                }
+              ]
             }
           ],
           "entitySets":
@@ -4547,8 +4583,8 @@
               "entityType": { "__id": "Phase" }
             },
             {
-              "id": "ProcurementData/Members[POes]",
-              "name": "POes",
+              "id": "ProcurementData/Members[PO]",
+              "name": "PO",
               "canDelete": true,
               "canInsert": true,
               "canUpdate": true,
@@ -4740,6 +4776,15 @@
               "canUpdate": true,
               "elementType": { "__id": "UOM" },
               "entityType": { "__id": "UOM" }
+            },
+            {
+              "id": "ProcurementData/Members[Specialties]",
+              "name": "Specialties",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Specialty" },
+              "entityType": { "__id": "Specialty" }
             }
           ],
           "queryOperations":
@@ -5163,38 +5208,38 @@
               ]
             },
             {
-              "id": "ProcurementData/Members[POes_Single]",
-              "name": "POes_Single",
+              "id": "ProcurementData/Members[PO_Single]",
+              "name": "PO_Single",
               "elementType": { "__id": "PO" },
-              "query": { "__id": "ProcurementData/Members[POes_Single]" },
+              "query": { "__id": "ProcurementData/Members[PO_Single]" },
               "returnType": { "__id": "PO" },
               "source":
               {
-                "member": { "__id": "ProcurementData/Members[POes]" }
+                "member": { "__id": "ProcurementData/Members[PO]" }
               },
               "parameters":
               [
                 {
-                  "id": "ProcurementData/Members[POes_Single]/Parameters[ID]",
+                  "id": "ProcurementData/Members[PO_Single]/Parameters[ID]",
                   "name": "ID",
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
             },
             {
-              "id": "ProcurementData/Members[POes_SingleOrDefault]",
-              "name": "POes_SingleOrDefault",
+              "id": "ProcurementData/Members[PO_SingleOrDefault]",
+              "name": "PO_SingleOrDefault",
               "elementType": { "__id": "PO" },
-              "query": { "__id": "ProcurementData/Members[POes_SingleOrDefault]" },
+              "query": { "__id": "ProcurementData/Members[PO_SingleOrDefault]" },
               "returnType": { "__id": "PO" },
               "source":
               {
-                "member": { "__id": "ProcurementData/Members[POes]" }
+                "member": { "__id": "ProcurementData/Members[PO]" }
               },
               "parameters":
               [
                 {
-                  "id": "ProcurementData/Members[POes_SingleOrDefault]/Parameters[ID]",
+                  "id": "ProcurementData/Members[PO_SingleOrDefault]/Parameters[ID]",
                   "name": "ID",
                   "parameterType": { "__id": ":Int32?" }
                 }
@@ -5997,6 +6042,44 @@
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
+            },
+            {
+              "id": "ProcurementData/Members[Specialties_Single]",
+              "name": "Specialties_Single",
+              "elementType": { "__id": "Specialty" },
+              "query": { "__id": "ProcurementData/Members[Specialties_Single]" },
+              "returnType": { "__id": "Specialty" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[Specialties]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[Specialties_Single]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[Specialties_SingleOrDefault]",
+              "name": "Specialties_SingleOrDefault",
+              "elementType": { "__id": "Specialty" },
+              "query": { "__id": "ProcurementData/Members[Specialties_SingleOrDefault]" },
+              "returnType": { "__id": "Specialty" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[Specialties]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[Specialties_SingleOrDefault]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
             }
           ]
         },
@@ -6616,6 +6699,159 @@
               "name": "Project",
               "multiplicity": "Many",
               "entityType": { "__id": "Project" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          "id": "Specialty",
+          "name": "Specialty",
+          "methods":
+          [
+            {
+              "id": "Specialty/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Specialty/Properties[ID]",
+              "name": "ID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Specialty/Properties[Specialty1]",
+              "name": "Specialty1",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 250
+              }
+            },
+            {
+              "id": "Specialty/Properties[Supplier_Specialties]",
+              "name": "Supplier_Specialties",
+              "association": { "__id": "FK_Supplier_Specialty_Specialty" },
+              "elementType": { "__id": "Supplier_Specialty" },
+              "fromEnd": { "__id": "FK_Supplier_Specialty_Specialty/Ends[Specialty]" },
+              "propertyType": { "__id": "Supplier_Specialty*" },
+              "toEnd": { "__id": "FK_Supplier_Specialty_Specialty/Ends[Supplier_Specialty]" }
+            },
+            {
+              "id": "Specialty/Properties[Manufacturers]",
+              "name": "Manufacturers",
+              "association": { "__id": "FK_Manufacturers_Specialty" },
+              "elementType": { "__id": "Manufacturer" },
+              "fromEnd": { "__id": "FK_Manufacturers_Specialty/Ends[Specialty]" },
+              "propertyType": { "__id": "Manufacturer*" },
+              "toEnd": { "__id": "FK_Manufacturers_Specialty/Ends[Manufacturers]" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Supplier_Specialty_Specialty",
+          "name": "FK_Supplier_Specialty_Specialty",
+          "ends":
+          [
+            {
+              "id": "FK_Supplier_Specialty_Specialty/Ends[Specialty]",
+              "name": "Specialty",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Specialty" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Supplier_Specialty_Specialty/Ends[Supplier_Specialty]",
+              "name": "Supplier_Specialty",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Supplier_Specialty" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Manufacturers_Specialty",
+          "name": "FK_Manufacturers_Specialty",
+          "ends":
+          [
+            {
+              "id": "FK_Manufacturers_Specialty/Ends[Specialty]",
+              "name": "Specialty",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Specialty" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Manufacturers_Specialty/Ends[Manufacturers]",
+              "name": "Manufacturers",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Manufacturer" }
+            }
+          ]
+        },
+        {
+          "id": "Specialty*",
+          "name": "Specialty*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Specialty" }
+        },
+        {
+          "id": "CollectionView$Specialty",
+          "name": "CollectionView$Specialty",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Specialty" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Specialty/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Specialty" },
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_add.png" }
+            },
+            {
+              "id": "CollectionView$Specialty/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Specialty" },
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_addandedit.png" }
+            },
+            {
+              "id": "CollectionView$Specialty/Methods[editSelected]",
+              "name": "editSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_edit.png" }
+            },
+            {
+              "id": "CollectionView$Specialty/Methods[deleteSelected]",
+              "name": "deleteSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_delete.png" }
+            },
+            {
+              "id": "CollectionView$Specialty/Methods[removeSelected]",
+              "name": "removeSelected",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_remove.png" }
+            },
+            {
+              "id": "CollectionView$Specialty/Methods[refresh]",
+              "name": "refresh",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_refresh.png" }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Specialty/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Specialty" }
             }
           ]
         },

@@ -12,7 +12,7 @@
     <EntitySet Name="Manufacturers" EntityType="ProcurementDataStore.Manufacturer" store:Type="Tables" Schema="dbo" Table="Manufacturers" />
     <EntitySet Name="Material_Status" EntityType="ProcurementDataStore.Material_Status" store:Type="Tables" Schema="dbo" Table="Material_Status" />
     <EntitySet Name="Phases" EntityType="ProcurementDataStore.Phase" store:Type="Tables" Schema="dbo" Table="Phase" />
-    <EntitySet Name="POes" EntityType="ProcurementDataStore.PO" store:Type="Tables" Schema="dbo" Table="PO" />
+    <EntitySet Name="PO" EntityType="ProcurementDataStore.PO" store:Type="Tables" Schema="dbo" Table="PO" />
     <EntitySet Name="PO_Lines" EntityType="ProcurementDataStore.PO_Line" store:Type="Tables" Schema="dbo" Table="PO_Line" />
     <EntitySet Name="Preferences" EntityType="ProcurementDataStore.Preference" store:Type="Tables" Schema="dbo" Table="Preference" />
     <EntitySet Name="Projects" EntityType="ProcurementDataStore.Project" store:Type="Tables" Schema="dbo" Table="Project" />
@@ -34,6 +34,7 @@
     <EntitySet Name="Transport_Types" EntityType="ProcurementDataStore.Transport_Type" store:Type="Tables" Schema="dbo" Table="Transport_Type" />
     <EntitySet Name="SubmittalTypes" EntityType="ProcurementDataStore.SubmittalType" store:Type="Tables" Schema="dbo" Table="SubmittalTypes" />
     <EntitySet Name="UOMs" EntityType="ProcurementDataStore.UOM" store:Type="Tables" Schema="dbo" Table="UOM" />
+    <EntitySet Name="Specialties" EntityType="ProcurementDataStore.Specialty" store:Type="Tables" Schema="dbo" Table="Specialty" />
     <AssociationSet Name="FK_Award_Selected_PO_Line" Association="ProcurementDataStore.FK_Award_Selected_PO_Line">
       <End Role="PO_Line" EntitySet="PO_Lines" />
       <End Role="Award_Selected" EntitySet="Award_Selecteds" />
@@ -55,7 +56,7 @@
       <End Role="BidList" EntitySet="BidLists" />
     </AssociationSet>
     <AssociationSet Name="FK_ChangeOrder_PO" Association="ProcurementDataStore.FK_ChangeOrder_PO">
-      <End Role="PO" EntitySet="POes" />
+      <End Role="PO" EntitySet="PO" />
       <End Role="ChangeOrder" EntitySet="ChangeOrders" />
     </AssociationSet>
     <AssociationSet Name="FK_ChangeOrder_PO_Line" Association="ProcurementDataStore.FK_ChangeOrder_PO_Line">
@@ -91,7 +92,7 @@
       <End Role="LineChangeOrder" EntitySet="LineChangeOrders" />
     </AssociationSet>
     <AssociationSet Name="FK_PO_Line_PO" Association="ProcurementDataStore.FK_PO_Line_PO">
-      <End Role="PO" EntitySet="POes" />
+      <End Role="PO" EntitySet="PO" />
       <End Role="PO_Line" EntitySet="PO_Lines" />
     </AssociationSet>
     <AssociationSet Name="FK_Project_Stakeholders_Project" Association="ProcurementDataStore.FK_Project_Stakeholders_Project">
@@ -182,6 +183,22 @@
       <End Role="Phase" EntitySet="Phases" />
       <End Role="Project" EntitySet="Projects" />
     </AssociationSet>
+    <AssociationSet Name="FK_Supplier_Specialty_Specialty" Association="ProcurementDataStore.FK_Supplier_Specialty_Specialty">
+      <End Role="Specialty" EntitySet="Specialties" />
+      <End Role="Supplier_Specialty" EntitySet="Supplier_Specialties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Manufacturers_Specialty" Association="ProcurementDataStore.FK_Manufacturers_Specialty">
+      <End Role="Specialty" EntitySet="Specialties" />
+      <End Role="Manufacturers" EntitySet="Manufacturers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangeOrder_UOM" Association="ProcurementDataStore.FK_ChangeOrder_UOM">
+      <End Role="UOM" EntitySet="UOMs" />
+      <End Role="ChangeOrder" EntitySet="ChangeOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LineChangeOrder_UOM" Association="ProcurementDataStore.FK_LineChangeOrder_UOM">
+      <End Role="UOM" EntitySet="UOMs" />
+      <End Role="LineChangeOrder" EntitySet="LineChangeOrders" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Award_Selected">
     <Key>
@@ -226,10 +243,10 @@
     <Property Name="CO_Description" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CO_WBS" Type="nvarchar" MaxLength="50" />
     <Property Name="CO_Qty" Type="numeric" />
-    <Property Name="CO_UOM" Type="nvarchar" MaxLength="50" />
     <Property Name="CO_CostPerUnit" Type="money" />
     <Property Name="PONum" Type="int" />
     <Property Name="POLineID" Type="int" />
+    <Property Name="CO_UOM" Type="int" />
   </EntityType>
   <EntityType Name="Client_Approved">
     <Key>
@@ -239,7 +256,7 @@
     <Property Name="Client" Type="nvarchar" MaxLength="50" />
     <Property Name="ServiceAgreement" Type="nvarchar" MaxLength="50" />
     <Property Name="SupplierID_No" Type="nvarchar" MaxLength="50" />
-    <Property Name="SiteApproved" Type="bit" />
+    <Property Name="SiteApproved" Type="bit" Nullable="false" />
     <Property Name="Preference" Type="int" />
     <Property Name="SupplierID" Type="int" />
   </EntityType>
@@ -275,10 +292,10 @@
     <Property Name="CO_Description" Type="nvarchar" MaxLength="50" />
     <Property Name="CO_WBS" Type="nvarchar" MaxLength="50" />
     <Property Name="CO_Qty" Type="numeric" />
-    <Property Name="CO_UOM" Type="nvarchar" MaxLength="50" />
     <Property Name="CO_CostPerUnit" Type="money" />
     <Property Name="ChangeOrderID" Type="int" />
     <Property Name="POLineID" Type="int" />
+    <Property Name="CO_UOM" Type="int" />
   </EntityType>
   <EntityType Name="Manufacturer">
     <Key>
@@ -286,7 +303,7 @@
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Mfg_Name" Type="nvarchar" MaxLength="50" />
-    <Property Name="Specialty" Type="nvarchar" MaxLength="50" />
+    <Property Name="Specialty" Type="int" />
   </EntityType>
   <EntityType Name="Material_Status">
     <Key>
@@ -367,7 +384,7 @@
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ProposalID" Type="int" />
     <Property Name="CostPerUnit" Type="money" />
-    <Property Name="MeetSpecs" Type="bit" />
+    <Property Name="MeetSpecs" Type="bit" Nullable="false" />
     <Property Name="CountryOfOrigin" Type="nvarchar" MaxLength="50" />
     <Property Name="ShippingARO" Type="numeric" />
     <Property Name="SubmittalsARO" Type="numeric" />
@@ -383,9 +400,9 @@
     <Property Name="RFQLineNo" Type="numeric" />
     <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="Qty" Type="numeric" />
-    <Property Name="TestingReq" Type="bit" />
+    <Property Name="TestingReq" Type="bit" Nullable="false" />
     <Property Name="TestingLevel" Type="nvarchar" MaxLength="50" />
-    <Property Name="Inspection" Type="bit" />
+    <Property Name="Inspection" Type="bit" Nullable="false" />
     <Property Name="ShippingRefNo" Type="nvarchar" MaxLength="50" />
     <Property Name="TagNo" Type="nvarchar" MaxLength="50" />
     <Property Name="RecievedQty" Type="numeric" />
@@ -416,17 +433,17 @@
     <Property Name="SpecifiedBidDue" Type="date" />
     <Property Name="RevisedBidDue" Type="date" />
     <Property Name="BidsReceived" Type="date" />
-    <Property Name="PreBidRequired" Type="bit" />
-    <Property Name="PreAwardRequired" Type="bit" />
+    <Property Name="PreBidRequired" Type="bit" Nullable="false" />
+    <Property Name="PreAwardRequired" Type="bit" Nullable="false" />
     <Property Name="BidOpening" Type="date" />
     <Property Name="ToEng" Type="date" />
     <Property Name="EngApproval" Type="date" />
-    <Property Name="TechComplaint" Type="bit" />
+    <Property Name="TechComplaint" Type="bit" Nullable="false" />
     <Property Name="Regret" Type="date" />
     <Property Name="CommercialDone" Type="date" />
-    <Property Name="CommercialComplaint" Type="bit" />
+    <Property Name="CommercialComplaint" Type="bit" Nullable="false" />
     <Property Name="Comments" Type="nvarchar(max)" />
-    <Property Name="CriticalPath" Type="bit" />
+    <Property Name="CriticalPath" Type="bit" Nullable="false" />
     <Property Name="ProjectNoID" Type="int" />
   </EntityType>
   <EntityType Name="Safety_Record">
@@ -435,7 +452,7 @@
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Year" Type="numeric" Precision="4" />
-    <Property Name="EMR" Type="numeric" />
+    <Property Name="EMR" Type="numeric" Scale="2" />
     <Property Name="TIFR" Type="numeric" />
     <Property Name="Comments" Type="nvarchar(max)" />
     <Property Name="StatusID" Type="int" />
@@ -528,11 +545,11 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Specialty" Type="nvarchar" MaxLength="50" />
-    <Property Name="SpecialtyWeight" Type="numeric" />
     <Property Name="PerformanceArea" Type="nvarchar" MaxLength="50" />
+    <Property Name="SpecialtyWeight" Type="numeric" />
     <Property Name="Comment" Type="nvarchar(max)" />
     <Property Name="SupplierID" Type="int" />
+    <Property Name="Specialty" Type="int" />
   </EntityType>
   <EntityType Name="SupplierManufacture">
     <Key>
@@ -561,9 +578,9 @@
     <Property Name="NoOfEmployees" Type="nvarchar" MaxLength="50" />
     <Property Name="VendorNumber" Type="nvarchar" MaxLength="50" />
     <Property Name="AccountNumber" Type="nvarchar" MaxLength="50" />
-    <Property Name="Active" Type="bit" />
+    <Property Name="Active" Type="bit" Nullable="false" />
     <Property Name="FederalID" Type="nvarchar" MaxLength="50" />
-    <Property Name="W9OnFile" Type="bit" />
+    <Property Name="W9OnFile" Type="bit" Nullable="false" />
     <Property Name="LicenseExpires" Type="date" />
     <Property Name="WCExpires" Type="date" />
     <Property Name="GLExpires" Type="date" />
@@ -594,6 +611,13 @@
     </Key>
     <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="UOM" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Specialty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Specialty" Type="nvarchar" MaxLength="250" />
   </EntityType>
   <Association Name="FK_Award_Selected_PO_Line">
     <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="0..1" />
@@ -1036,6 +1060,54 @@
       </Principal>
       <Dependent Role="Project">
         <PropertyRef Name="PhaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplier_Specialty_Specialty">
+    <End Role="Specialty" Type="ProcurementDataStore.Specialty" Multiplicity="0..1" />
+    <End Role="Supplier_Specialty" Type="ProcurementDataStore.Supplier_Specialty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specialty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Supplier_Specialty">
+        <PropertyRef Name="Specialty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Manufacturers_Specialty">
+    <End Role="Specialty" Type="ProcurementDataStore.Specialty" Multiplicity="0..1" />
+    <End Role="Manufacturers" Type="ProcurementDataStore.Manufacturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specialty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Manufacturers">
+        <PropertyRef Name="Specialty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangeOrder_UOM">
+    <End Role="UOM" Type="ProcurementDataStore.UOM" Multiplicity="0..1" />
+    <End Role="ChangeOrder" Type="ProcurementDataStore.ChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UOM">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangeOrder">
+        <PropertyRef Name="CO_UOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LineChangeOrder_UOM">
+    <End Role="UOM" Type="ProcurementDataStore.UOM" Multiplicity="0..1" />
+    <End Role="LineChangeOrder" Type="ProcurementDataStore.LineChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UOM">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="LineChangeOrder">
+        <PropertyRef Name="CO_UOM" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

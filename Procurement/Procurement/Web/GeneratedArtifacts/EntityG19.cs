@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No Modeled Description Available
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-    public sealed partial class UOM : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass>
+    public sealed partial class Specialty : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new instance of the UOM entity.
+        /// Initializes a new instance of the Specialty entity.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public UOM()
+        public Specialty()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public UOM(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.UOM> entitySet)
+        public Specialty(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Specialty> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.UOM.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.Specialty.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void UOM_Created();
+        partial void Specialty_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void UOM_AllowSaveWithErrors(ref bool result);
+        partial void Specialty_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,65 +83,88 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int id
+        public int ID
         {
             get
             {
-                return global::LightSwitchApplication.UOM.DetailsClass.GetValue(this, global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.id);
+                return global::LightSwitchApplication.Specialty.DetailsClass.GetValue(this, global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.ID);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void id_IsReadOnly(ref bool result);
+        partial void ID_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void id_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void ID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void id_Changed();
+        partial void ID_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string UOM1
+        public string Specialty1
         {
             get
             {
-                return global::LightSwitchApplication.UOM.DetailsClass.GetValue(this, global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.UOM1);
+                return global::LightSwitchApplication.Specialty.DetailsClass.GetValue(this, global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Specialty1);
             }
             set
             {
-                global::LightSwitchApplication.UOM.DetailsClass.SetValue(this, global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.UOM1, value);
+                global::LightSwitchApplication.Specialty.DetailsClass.SetValue(this, global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Specialty1, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void UOM1_IsReadOnly(ref bool result);
+        partial void Specialty1_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void UOM1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Specialty1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void UOM1_Changed();
+        partial void Specialty1_Changed();
 
         /// <summary>
         /// No Modeled Description Available
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.RFQ_Line> RFQ_Lines
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Supplier_Specialty> Supplier_Specialties
         {
             get
             {
-                return global::LightSwitchApplication.UOM.DetailsClass.GetValue(this, global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.RFQ_Lines);
+                return global::LightSwitchApplication.Specialty.DetailsClass.GetValue(this, global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Supplier_Specialties);
             }
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.RFQ_Line> RFQ_LinesQuery
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Supplier_Specialty> Supplier_SpecialtiesQuery
         {
             get
             {
-                return global::LightSwitchApplication.UOM.DetailsClass.GetQuery(this, global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.RFQ_Lines);
+                return global::LightSwitchApplication.Specialty.DetailsClass.GetQuery(this, global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Supplier_Specialties);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Manufacturer> Manufacturers
+        {
+            get
+            {
+                return global::LightSwitchApplication.Specialty.DetailsClass.GetValue(this, global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Manufacturers);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Manufacturer> ManufacturersQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Specialty.DetailsClass.GetQuery(this, global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Manufacturers);
             }
         }
 
@@ -154,37 +177,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.UOM,
-                global::LightSwitchApplication.UOM.DetailsClass,
-                global::LightSwitchApplication.UOM.DetailsClass.IImplementation,
-                global::LightSwitchApplication.UOM.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass>>
+                global::LightSwitchApplication.Specialty,
+                global::LightSwitchApplication.Specialty.DetailsClass,
+                global::LightSwitchApplication.Specialty.DetailsClass.IImplementation,
+                global::LightSwitchApplication.Specialty.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.id;
+                var initializeEntry = global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.ID;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass>.Entry
-                __UOMEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass>.Entry(
-                    global::LightSwitchApplication.UOM.DetailsClass.__UOM_CreateNew,
-                    global::LightSwitchApplication.UOM.DetailsClass.__UOM_Created,
-                    global::LightSwitchApplication.UOM.DetailsClass.__UOM_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.UOM __UOM_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.UOM> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass>.Entry
+                __SpecialtyEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass>.Entry(
+                    global::LightSwitchApplication.Specialty.DetailsClass.__Specialty_CreateNew,
+                    global::LightSwitchApplication.Specialty.DetailsClass.__Specialty_Created,
+                    global::LightSwitchApplication.Specialty.DetailsClass.__Specialty_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.Specialty __Specialty_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Specialty> es)
             {
-                return new global::LightSwitchApplication.UOM(es);
+                return new global::LightSwitchApplication.Specialty(es);
             }
-            private static void __UOM_Created(global::LightSwitchApplication.UOM e)
+            private static void __Specialty_Created(global::LightSwitchApplication.Specialty e)
             {
-                e.UOM_Created();
+                e.Specialty_Created();
             }
-            private static bool __UOM_AllowSaveWithErrors(global::LightSwitchApplication.UOM e)
+            private static bool __Specialty_AllowSaveWithErrors(global::LightSwitchApplication.Specialty e)
             {
                 bool result = false;
-                e.UOM_AllowSaveWithErrors(ref result);
+                e.Specialty_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -192,7 +215,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass> Commands
             {
                 get
                 {
@@ -200,7 +223,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass> Methods
             {
                 get
                 {
@@ -208,7 +231,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.UOM.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.Specialty.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -220,34 +243,42 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, int> id
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, int> ID
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.ID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, string> UOM1
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, string> Specialty1
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.UOM1) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Specialty1) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, global::LightSwitchApplication.RFQ_Line> RFQ_Lines
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Supplier_Specialty> Supplier_Specialties
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.RFQ_Lines) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, global::LightSwitchApplication.RFQ_Line>;
+                        return base.GetItem(global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Supplier_Specialties) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Supplier_Specialty>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Manufacturer> Manufacturers
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Manufacturers) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Manufacturer>;
                     }
                 }
                 
@@ -257,9 +288,10 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int id { get; }
-                new string UOM1 { get; set; }
-                new global::System.Collections.IEnumerable RFQ_Lines { get; }
+                new int ID { get; }
+                new string Specialty1 { get; set; }
+                new global::System.Collections.IEnumerable Supplier_Specialties { get; }
+                new global::System.Collections.IEnumerable Manufacturers { get; }
             }
             #pragma warning restore 109
     
@@ -270,105 +302,128 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, int>.Entry
-                    id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, int>.Entry(
-                        "id",
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._id_Stub,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._id_ComputeIsReadOnly,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._id_Validate,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._id_GetImplementationValue,
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, int>.Entry
+                    ID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, int>.Entry(
+                        "ID",
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._ID_Stub,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._ID_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._ID_Validate,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._ID_GetImplementationValue,
                         null,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._id_OnValueChanged);
-                private static void _id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.UOM.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, int>.Data> c, global::LightSwitchApplication.UOM.DetailsClass d, object sf)
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._ID_OnValueChanged);
+                private static void _ID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Specialty.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, int>.Data> c, global::LightSwitchApplication.Specialty.DetailsClass d, object sf)
                 {
-                    c(d, ref d._id, sf);
+                    c(d, ref d._ID, sf);
                 }
-                private static bool _id_ComputeIsReadOnly(global::LightSwitchApplication.UOM e)
+                private static bool _ID_ComputeIsReadOnly(global::LightSwitchApplication.Specialty e)
                 {
                     bool result = false;
-                    e.id_IsReadOnly(ref result);
+                    e.ID_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _id_Validate(global::LightSwitchApplication.UOM e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ID_Validate(global::LightSwitchApplication.Specialty e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.id_Validate(r);
+                    e.ID_Validate(r);
                 }
-                private static int _id_GetImplementationValue(global::LightSwitchApplication.UOM.DetailsClass d)
+                private static int _ID_GetImplementationValue(global::LightSwitchApplication.Specialty.DetailsClass d)
                 {
-                    return d.ImplementationEntity.id;
+                    return d.ImplementationEntity.ID;
                 }
-                private static void _id_OnValueChanged(global::LightSwitchApplication.UOM e)
+                private static void _ID_OnValueChanged(global::LightSwitchApplication.Specialty e)
                 {
-                    e.id_Changed();
+                    e.ID_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, string>.Entry
-                    UOM1 = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, string>.Entry(
-                        "UOM1",
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._UOM1_Stub,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._UOM1_ComputeIsReadOnly,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._UOM1_Validate,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._UOM1_GetImplementationValue,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._UOM1_SetImplementationValue,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._UOM1_OnValueChanged);
-                private static void _UOM1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.UOM.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, string>.Data> c, global::LightSwitchApplication.UOM.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, string>.Entry
+                    Specialty1 = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, string>.Entry(
+                        "Specialty1",
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Specialty1_Stub,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Specialty1_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Specialty1_Validate,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Specialty1_GetImplementationValue,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Specialty1_SetImplementationValue,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Specialty1_OnValueChanged);
+                private static void _Specialty1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Specialty.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, string>.Data> c, global::LightSwitchApplication.Specialty.DetailsClass d, object sf)
                 {
-                    c(d, ref d._UOM1, sf);
+                    c(d, ref d._Specialty1, sf);
                 }
-                private static bool _UOM1_ComputeIsReadOnly(global::LightSwitchApplication.UOM e)
+                private static bool _Specialty1_ComputeIsReadOnly(global::LightSwitchApplication.Specialty e)
                 {
                     bool result = false;
-                    e.UOM1_IsReadOnly(ref result);
+                    e.Specialty1_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _UOM1_Validate(global::LightSwitchApplication.UOM e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Specialty1_Validate(global::LightSwitchApplication.Specialty e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.UOM1_Validate(r);
+                    e.Specialty1_Validate(r);
                 }
-                private static string _UOM1_GetImplementationValue(global::LightSwitchApplication.UOM.DetailsClass d)
+                private static string _Specialty1_GetImplementationValue(global::LightSwitchApplication.Specialty.DetailsClass d)
                 {
-                    return d.ImplementationEntity.UOM1;
+                    return d.ImplementationEntity.Specialty1;
                 }
-                private static void _UOM1_SetImplementationValue(global::LightSwitchApplication.UOM.DetailsClass d, string v)
+                private static void _Specialty1_SetImplementationValue(global::LightSwitchApplication.Specialty.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.UOM1 = v;
+                    d.ImplementationEntity.Specialty1 = v;
                 }
-                private static void _UOM1_OnValueChanged(global::LightSwitchApplication.UOM e)
+                private static void _Specialty1_OnValueChanged(global::LightSwitchApplication.Specialty e)
                 {
-                    e.UOM1_Changed();
+                    e.Specialty1_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, global::LightSwitchApplication.RFQ_Line>.Entry
-                    RFQ_Lines = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, global::LightSwitchApplication.RFQ_Line>.Entry(
-                        "RFQ_Lines",
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._RFQ_Lines_Stub,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._RFQ_Lines_GetReferencedEntities,
-                        global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties._RFQ_Lines_GetEntityCollection);
-                private static void _RFQ_Lines_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.UOM.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, global::LightSwitchApplication.RFQ_Line>.Data> c, global::LightSwitchApplication.UOM.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Supplier_Specialty>.Entry
+                    Supplier_Specialties = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Supplier_Specialty>.Entry(
+                        "Supplier_Specialties",
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Supplier_Specialties_Stub,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Supplier_Specialties_GetReferencedEntities,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Supplier_Specialties_GetEntityCollection);
+                private static void _Supplier_Specialties_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Specialty.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Supplier_Specialty>.Data> c, global::LightSwitchApplication.Specialty.DetailsClass d, object sf)
                 {
-                    c(d, ref d._RFQ_Lines, sf);
+                    c(d, ref d._Supplier_Specialties, sf);
                 }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.RFQ_Line> _RFQ_Lines_GetReferencedEntities(global::LightSwitchApplication.UOM.DetailsClass d)
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Supplier_Specialty> _Supplier_Specialties_GetReferencedEntities(global::LightSwitchApplication.Specialty.DetailsClass d)
                 {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass>(global::LightSwitchApplication.UOM.DetailsClass.PropertySetProperties.RFQ_Lines, ref d._RFQ_Lines);
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass>(global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Supplier_Specialties, ref d._Supplier_Specialties);
                 }
-                private static global::System.Collections.IEnumerable _RFQ_Lines_GetEntityCollection(global::LightSwitchApplication.UOM.DetailsClass d)
+                private static global::System.Collections.IEnumerable _Supplier_Specialties_GetEntityCollection(global::LightSwitchApplication.Specialty.DetailsClass d)
                 {
-                    return d.ImplementationEntity.RFQ_Lines;
+                    return d.ImplementationEntity.Supplier_Specialties;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Manufacturer>.Entry
+                    Manufacturers = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Manufacturer>.Entry(
+                        "Manufacturers",
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Manufacturers_Stub,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Manufacturers_GetReferencedEntities,
+                        global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties._Manufacturers_GetEntityCollection);
+                private static void _Manufacturers_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Specialty.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Manufacturer>.Data> c, global::LightSwitchApplication.Specialty.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Manufacturers, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Manufacturer> _Manufacturers_GetReferencedEntities(global::LightSwitchApplication.Specialty.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Manufacturer, global::LightSwitchApplication.Manufacturer.DetailsClass>(global::LightSwitchApplication.Specialty.DetailsClass.PropertySetProperties.Manufacturers, ref d._Manufacturers);
+                }
+                private static global::System.Collections.IEnumerable _Manufacturers_GetEntityCollection(global::LightSwitchApplication.Specialty.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Manufacturers;
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, int>.Data _id;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, int>.Data _ID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, string>.Data _UOM1;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, string>.Data _Specialty1;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass, global::LightSwitchApplication.RFQ_Line>.Data _RFQ_Lines;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Supplier_Specialty>.Data _Supplier_Specialties;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass, global::LightSwitchApplication.Manufacturer>.Data _Manufacturers;
             
         }
     

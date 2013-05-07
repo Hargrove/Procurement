@@ -609,30 +609,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string CO_UOM
-        {
-            get
-            {
-                return global::LightSwitchApplication.ChangeOrder.DetailsClass.GetValue(this, global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.CO_UOM);
-            }
-            set
-            {
-                global::LightSwitchApplication.ChangeOrder.DetailsClass.SetValue(this, global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.CO_UOM, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CO_UOM_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CO_UOM_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CO_UOM_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.Nullable<decimal> CO_CostPerUnit
         {
             get
@@ -722,6 +698,30 @@ namespace LightSwitchApplication
                 return global::LightSwitchApplication.ChangeOrder.DetailsClass.GetQuery(this, global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.LineChangeOrders);
             }
         }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.UOM UOM1
+        {
+            get
+            {
+                return global::LightSwitchApplication.ChangeOrder.DetailsClass.GetValue(this, global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.UOM1);
+            }
+            set
+            {
+                global::LightSwitchApplication.ChangeOrder.DetailsClass.SetValue(this, global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.UOM1, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void UOM1_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void UOM1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void UOM1_Changed();
 
         #endregion
     
@@ -861,14 +861,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, string> CO_UOM
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.CO_UOM) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, string>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::System.Nullable<decimal>> CO_CostPerUnit
                 {
                     get
@@ -901,6 +893,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::LightSwitchApplication.UOM> UOM1
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.UOM1) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::LightSwitchApplication.UOM>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -914,11 +914,11 @@ namespace LightSwitchApplication
                 new string CO_Description { get; set; }
                 new string CO_WBS { get; set; }
                 new global::System.Nullable<decimal> CO_Qty { get; set; }
-                new string CO_UOM { get; set; }
                 new global::System.Nullable<decimal> CO_CostPerUnit { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation PO { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation PO_Line { get; set; }
                 new global::System.Collections.IEnumerable LineChangeOrders { get; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation UOM1 { get; set; }
             }
             #pragma warning restore 109
     
@@ -1184,43 +1184,6 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, string>.Entry
-                    CO_UOM = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, string>.Entry(
-                        "CO_UOM",
-                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._CO_UOM_Stub,
-                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._CO_UOM_ComputeIsReadOnly,
-                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._CO_UOM_Validate,
-                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._CO_UOM_GetImplementationValue,
-                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._CO_UOM_SetImplementationValue,
-                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._CO_UOM_OnValueChanged);
-                private static void _CO_UOM_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ChangeOrder.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, string>.Data> c, global::LightSwitchApplication.ChangeOrder.DetailsClass d, object sf)
-                {
-                    c(d, ref d._CO_UOM, sf);
-                }
-                private static bool _CO_UOM_ComputeIsReadOnly(global::LightSwitchApplication.ChangeOrder e)
-                {
-                    bool result = false;
-                    e.CO_UOM_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _CO_UOM_Validate(global::LightSwitchApplication.ChangeOrder e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.CO_UOM_Validate(r);
-                }
-                private static string _CO_UOM_GetImplementationValue(global::LightSwitchApplication.ChangeOrder.DetailsClass d)
-                {
-                    return d.ImplementationEntity.CO_UOM;
-                }
-                private static void _CO_UOM_SetImplementationValue(global::LightSwitchApplication.ChangeOrder.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.CO_UOM = v;
-                }
-                private static void _CO_UOM_OnValueChanged(global::LightSwitchApplication.ChangeOrder e)
-                {
-                    e.CO_UOM_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::System.Nullable<decimal>>.Entry
                     CO_CostPerUnit = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::System.Nullable<decimal>>.Entry(
                         "CO_CostPerUnit",
@@ -1371,6 +1334,53 @@ namespace LightSwitchApplication
                     return d.ImplementationEntity.LineChangeOrders;
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::LightSwitchApplication.UOM>.Entry
+                    UOM1 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::LightSwitchApplication.UOM>.Entry(
+                        "UOM1",
+                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._UOM1_Stub,
+                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._UOM1_ComputeIsReadOnly,
+                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._UOM1_Validate,
+                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._UOM1_GetCoreImplementationValue,
+                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._UOM1_GetImplementationValue,
+                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._UOM1_SetImplementationValue,
+                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._UOM1_Refresh,
+                        global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties._UOM1_OnValueChanged);
+                private static void _UOM1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ChangeOrder.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::LightSwitchApplication.UOM>.Data> c, global::LightSwitchApplication.ChangeOrder.DetailsClass d, object sf)
+                {
+                    c(d, ref d._UOM1, sf);
+                }
+                private static bool _UOM1_ComputeIsReadOnly(global::LightSwitchApplication.ChangeOrder e)
+                {
+                    bool result = false;
+                    e.UOM1_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _UOM1_Validate(global::LightSwitchApplication.ChangeOrder e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.UOM1_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _UOM1_GetCoreImplementationValue(global::LightSwitchApplication.ChangeOrder.DetailsClass d)
+                {
+                    return d.ImplementationEntity.UOM1;
+                }
+                private static global::LightSwitchApplication.UOM _UOM1_GetImplementationValue(global::LightSwitchApplication.ChangeOrder.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.UOM, global::LightSwitchApplication.UOM.DetailsClass>(global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.UOM1, ref d._UOM1);
+                }
+                private static void _UOM1_SetImplementationValue(global::LightSwitchApplication.ChangeOrder.DetailsClass d, global::LightSwitchApplication.UOM v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.UOM1, ref d._UOM1, (i, ev) => i.UOM1 = ev, v);
+                }
+                private static void _UOM1_Refresh(global::LightSwitchApplication.ChangeOrder.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.ChangeOrder.DetailsClass.PropertySetProperties.UOM1, ref d._UOM1);
+                }
+                private static void _UOM1_OnValueChanged(global::LightSwitchApplication.ChangeOrder e)
+                {
+                    e.UOM1_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1395,9 +1405,6 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::System.Nullable<decimal>>.Data _CO_Qty;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, string>.Data _CO_UOM;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::System.Nullable<decimal>>.Data _CO_CostPerUnit;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1408,6 +1415,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Data _LineChangeOrders;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass, global::LightSwitchApplication.UOM>.Data _UOM1;
             
         }
     

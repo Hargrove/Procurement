@@ -175,7 +175,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> TestingReq
+        public bool TestingReq
         {
             get
             {
@@ -223,7 +223,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> Inspection
+        public bool Inspection
         {
             get
             {
@@ -546,11 +546,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>> TestingReq
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool> TestingReq
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties.TestingReq) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties.TestingReq) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>;
                     }
                 }
                 
@@ -562,11 +562,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>> Inspection
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool> Inspection
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties.Inspection) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties.Inspection) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>;
                     }
                 }
                 
@@ -644,9 +644,9 @@ namespace LightSwitchApplication
                 new global::System.Nullable<decimal> RFQLineNo { get; set; }
                 new string Description { get; set; }
                 new global::System.Nullable<decimal> Qty { get; set; }
-                new global::System.Nullable<bool> TestingReq { get; set; }
+                new bool TestingReq { get; set; }
                 new string TestingLevel { get; set; }
-                new global::System.Nullable<bool> Inspection { get; set; }
+                new bool Inspection { get; set; }
                 new string ShippingRefNo { get; set; }
                 new string TagNo { get; set; }
                 new global::System.Nullable<decimal> RecievedQty { get; set; }
@@ -809,8 +809,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>.Entry
-                    TestingReq = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>.Entry
+                    TestingReq = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>.Entry(
                         "TestingReq",
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._TestingReq_Stub,
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._TestingReq_ComputeIsReadOnly,
@@ -818,7 +818,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._TestingReq_GetImplementationValue,
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._TestingReq_SetImplementationValue,
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._TestingReq_OnValueChanged);
-                private static void _TestingReq_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.RFQ_Line.DetailsClass d, object sf)
+                private static void _TestingReq_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>.Data> c, global::LightSwitchApplication.RFQ_Line.DetailsClass d, object sf)
                 {
                     c(d, ref d._TestingReq, sf);
                 }
@@ -832,11 +832,11 @@ namespace LightSwitchApplication
                 {
                     e.TestingReq_Validate(r);
                 }
-                private static global::System.Nullable<bool> _TestingReq_GetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d)
+                private static bool _TestingReq_GetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d)
                 {
                     return d.ImplementationEntity.TestingReq;
                 }
-                private static void _TestingReq_SetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d, global::System.Nullable<bool> v)
+                private static void _TestingReq_SetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d, bool v)
                 {
                     d.ImplementationEntity.TestingReq = v;
                 }
@@ -883,8 +883,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>.Entry
-                    Inspection = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>.Entry
+                    Inspection = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>.Entry(
                         "Inspection",
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._Inspection_Stub,
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._Inspection_ComputeIsReadOnly,
@@ -892,7 +892,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._Inspection_GetImplementationValue,
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._Inspection_SetImplementationValue,
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._Inspection_OnValueChanged);
-                private static void _Inspection_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.RFQ_Line.DetailsClass d, object sf)
+                private static void _Inspection_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>.Data> c, global::LightSwitchApplication.RFQ_Line.DetailsClass d, object sf)
                 {
                     c(d, ref d._Inspection, sf);
                 }
@@ -906,11 +906,11 @@ namespace LightSwitchApplication
                 {
                     e.Inspection_Validate(r);
                 }
-                private static global::System.Nullable<bool> _Inspection_GetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d)
+                private static bool _Inspection_GetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d)
                 {
                     return d.ImplementationEntity.Inspection;
                 }
-                private static void _Inspection_SetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d, global::System.Nullable<bool> v)
+                private static void _Inspection_SetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d, bool v)
                 {
                     d.ImplementationEntity.Inspection = v;
                 }
@@ -1216,13 +1216,13 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<decimal>>.Data _Qty;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>.Data _TestingReq;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>.Data _TestingReq;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, string>.Data _TestingLevel;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<bool>>.Data _Inspection;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, bool>.Data _Inspection;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, string>.Data _ShippingRefNo;
@@ -1775,7 +1775,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> PreBidRequired
+        public bool PreBidRequired
         {
             get
             {
@@ -1799,7 +1799,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> PreAwardRequired
+        public bool PreAwardRequired
         {
             get
             {
@@ -1895,7 +1895,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> TechComplaint
+        public bool TechComplaint
         {
             get
             {
@@ -1967,7 +1967,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> CommercialComplaint
+        public bool CommercialComplaint
         {
             get
             {
@@ -2015,7 +2015,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> CriticalPath
+        public bool CriticalPath
         {
             get
             {
@@ -2384,19 +2384,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>> PreBidRequired
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool> PreBidRequired
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.PreBidRequired) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.PreBidRequired) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>> PreAwardRequired
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool> PreAwardRequired
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.PreAwardRequired) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.PreAwardRequired) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>;
                     }
                 }
                 
@@ -2424,11 +2424,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>> TechComplaint
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool> TechComplaint
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.TechComplaint) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.TechComplaint) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>;
                     }
                 }
                 
@@ -2448,11 +2448,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>> CommercialComplaint
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool> CommercialComplaint
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.CommercialComplaint) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.CommercialComplaint) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>;
                     }
                 }
                 
@@ -2464,11 +2464,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>> CriticalPath
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool> CriticalPath
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.CriticalPath) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties.CriticalPath) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>;
                     }
                 }
                 
@@ -2537,17 +2537,17 @@ namespace LightSwitchApplication
                 new global::System.Nullable<global::System.DateTime> SpecifiedBidDue { get; set; }
                 new global::System.Nullable<global::System.DateTime> RevisedBidDue { get; set; }
                 new global::System.Nullable<global::System.DateTime> BidsReceived { get; set; }
-                new global::System.Nullable<bool> PreBidRequired { get; set; }
-                new global::System.Nullable<bool> PreAwardRequired { get; set; }
+                new bool PreBidRequired { get; set; }
+                new bool PreAwardRequired { get; set; }
                 new global::System.Nullable<global::System.DateTime> BidOpening { get; set; }
                 new global::System.Nullable<global::System.DateTime> ToEng { get; set; }
                 new global::System.Nullable<global::System.DateTime> EngApproval { get; set; }
-                new global::System.Nullable<bool> TechComplaint { get; set; }
+                new bool TechComplaint { get; set; }
                 new global::System.Nullable<global::System.DateTime> Regret { get; set; }
                 new global::System.Nullable<global::System.DateTime> CommercialDone { get; set; }
-                new global::System.Nullable<bool> CommercialComplaint { get; set; }
+                new bool CommercialComplaint { get; set; }
                 new string Comments { get; set; }
-                new global::System.Nullable<bool> CriticalPath { get; set; }
+                new bool CriticalPath { get; set; }
                 new global::System.Collections.IEnumerable Award_Selecteds { get; }
                 new global::System.Collections.IEnumerable BidLists { get; }
                 new global::System.Collections.IEnumerable Proposals { get; }
@@ -3262,8 +3262,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry
-                    PreBidRequired = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry
+                    PreBidRequired = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry(
                         "PreBidRequired",
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBidRequired_Stub,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBidRequired_ComputeIsReadOnly,
@@ -3271,7 +3271,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBidRequired_GetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBidRequired_SetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreBidRequired_OnValueChanged);
-                private static void _PreBidRequired_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
+                private static void _PreBidRequired_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._PreBidRequired, sf);
                 }
@@ -3285,11 +3285,11 @@ namespace LightSwitchApplication
                 {
                     e.PreBidRequired_Validate(r);
                 }
-                private static global::System.Nullable<bool> _PreBidRequired_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
+                private static bool _PreBidRequired_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.PreBidRequired;
                 }
-                private static void _PreBidRequired_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, global::System.Nullable<bool> v)
+                private static void _PreBidRequired_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, bool v)
                 {
                     d.ImplementationEntity.PreBidRequired = v;
                 }
@@ -3299,8 +3299,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry
-                    PreAwardRequired = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry
+                    PreAwardRequired = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry(
                         "PreAwardRequired",
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreAwardRequired_Stub,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreAwardRequired_ComputeIsReadOnly,
@@ -3308,7 +3308,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreAwardRequired_GetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreAwardRequired_SetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._PreAwardRequired_OnValueChanged);
-                private static void _PreAwardRequired_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
+                private static void _PreAwardRequired_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._PreAwardRequired, sf);
                 }
@@ -3322,11 +3322,11 @@ namespace LightSwitchApplication
                 {
                     e.PreAwardRequired_Validate(r);
                 }
-                private static global::System.Nullable<bool> _PreAwardRequired_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
+                private static bool _PreAwardRequired_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.PreAwardRequired;
                 }
-                private static void _PreAwardRequired_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, global::System.Nullable<bool> v)
+                private static void _PreAwardRequired_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, bool v)
                 {
                     d.ImplementationEntity.PreAwardRequired = v;
                 }
@@ -3447,8 +3447,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry
-                    TechComplaint = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry
+                    TechComplaint = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry(
                         "TechComplaint",
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._TechComplaint_Stub,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._TechComplaint_ComputeIsReadOnly,
@@ -3456,7 +3456,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._TechComplaint_GetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._TechComplaint_SetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._TechComplaint_OnValueChanged);
-                private static void _TechComplaint_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
+                private static void _TechComplaint_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._TechComplaint, sf);
                 }
@@ -3470,11 +3470,11 @@ namespace LightSwitchApplication
                 {
                     e.TechComplaint_Validate(r);
                 }
-                private static global::System.Nullable<bool> _TechComplaint_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
+                private static bool _TechComplaint_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.TechComplaint;
                 }
-                private static void _TechComplaint_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, global::System.Nullable<bool> v)
+                private static void _TechComplaint_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, bool v)
                 {
                     d.ImplementationEntity.TechComplaint = v;
                 }
@@ -3558,8 +3558,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry
-                    CommercialComplaint = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry
+                    CommercialComplaint = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry(
                         "CommercialComplaint",
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CommercialComplaint_Stub,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CommercialComplaint_ComputeIsReadOnly,
@@ -3567,7 +3567,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CommercialComplaint_GetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CommercialComplaint_SetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CommercialComplaint_OnValueChanged);
-                private static void _CommercialComplaint_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
+                private static void _CommercialComplaint_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._CommercialComplaint, sf);
                 }
@@ -3581,11 +3581,11 @@ namespace LightSwitchApplication
                 {
                     e.CommercialComplaint_Validate(r);
                 }
-                private static global::System.Nullable<bool> _CommercialComplaint_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
+                private static bool _CommercialComplaint_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.CommercialComplaint;
                 }
-                private static void _CommercialComplaint_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, global::System.Nullable<bool> v)
+                private static void _CommercialComplaint_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, bool v)
                 {
                     d.ImplementationEntity.CommercialComplaint = v;
                 }
@@ -3632,8 +3632,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry
-                    CriticalPath = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry
+                    CriticalPath = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Entry(
                         "CriticalPath",
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CriticalPath_Stub,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CriticalPath_ComputeIsReadOnly,
@@ -3641,7 +3641,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CriticalPath_GetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CriticalPath_SetImplementationValue,
                         global::LightSwitchApplication.RFQ_PItem.DetailsClass.PropertySetProperties._CriticalPath_OnValueChanged);
-                private static void _CriticalPath_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
+                private static void _CriticalPath_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data> c, global::LightSwitchApplication.RFQ_PItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._CriticalPath, sf);
                 }
@@ -3655,11 +3655,11 @@ namespace LightSwitchApplication
                 {
                     e.CriticalPath_Validate(r);
                 }
-                private static global::System.Nullable<bool> _CriticalPath_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
+                private static bool _CriticalPath_GetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.CriticalPath;
                 }
-                private static void _CriticalPath_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, global::System.Nullable<bool> v)
+                private static void _CriticalPath_SetImplementationValue(global::LightSwitchApplication.RFQ_PItem.DetailsClass d, bool v)
                 {
                     d.ImplementationEntity.CriticalPath = v;
                 }
@@ -3855,10 +3855,10 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _BidsReceived;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data _PreBidRequired;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data _PreBidRequired;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data _PreAwardRequired;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data _PreAwardRequired;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _BidOpening;
@@ -3870,7 +3870,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _EngApproval;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data _TechComplaint;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data _TechComplaint;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _Regret;
@@ -3879,13 +3879,13 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _CommercialDone;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data _CommercialComplaint;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data _CommercialComplaint;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, string>.Data _Comments;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::System.Nullable<bool>>.Data _CriticalPath;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, bool>.Data _CriticalPath;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.RFQ_PItem, global::LightSwitchApplication.RFQ_PItem.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _Award_Selecteds;

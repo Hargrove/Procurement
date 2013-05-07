@@ -266,6 +266,14 @@
         created: [lightSwitchApplication.UOM]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.Specialty, {
+        /// <field>
+        /// Called when a new specialty is created.
+        /// <br/>created(msls.application.Specialty entity)
+        /// </field>
+        created: [lightSwitchApplication.Specialty]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.CL, {
         /// <field>
         /// Called when a new cL is created.

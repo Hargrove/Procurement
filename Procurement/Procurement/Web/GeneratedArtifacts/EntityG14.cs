@@ -1077,24 +1077,24 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Specialty
+        public string PerformanceArea
         {
             get
             {
-                return global::LightSwitchApplication.Supplier_Specialty.DetailsClass.GetValue(this, global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Specialty);
+                return global::LightSwitchApplication.Supplier_Specialty.DetailsClass.GetValue(this, global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.PerformanceArea);
             }
             set
             {
-                global::LightSwitchApplication.Supplier_Specialty.DetailsClass.SetValue(this, global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Specialty, value);
+                global::LightSwitchApplication.Supplier_Specialty.DetailsClass.SetValue(this, global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.PerformanceArea, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Specialty_IsReadOnly(ref bool result);
+        partial void PerformanceArea_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Specialty_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void PerformanceArea_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Specialty_Changed();
+        partial void PerformanceArea_Changed();
 
         /// <summary>
         /// No Modeled Description Available
@@ -1125,30 +1125,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string PerformanceArea
-        {
-            get
-            {
-                return global::LightSwitchApplication.Supplier_Specialty.DetailsClass.GetValue(this, global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.PerformanceArea);
-            }
-            set
-            {
-                global::LightSwitchApplication.Supplier_Specialty.DetailsClass.SetValue(this, global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.PerformanceArea, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PerformanceArea_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PerformanceArea_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void PerformanceArea_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string Comment
         {
             get
@@ -1167,6 +1143,30 @@ namespace LightSwitchApplication
         partial void Comment_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Comment_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Specialty Specialty1
+        {
+            get
+            {
+                return global::LightSwitchApplication.Supplier_Specialty.DetailsClass.GetValue(this, global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Specialty1);
+            }
+            set
+            {
+                global::LightSwitchApplication.Supplier_Specialty.DetailsClass.SetValue(this, global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Specialty1, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialty1_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialty1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Specialty1_Changed();
 
         /// <summary>
         /// No Modeled Description Available
@@ -1305,11 +1305,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string> Specialty
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string> PerformanceArea
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Specialty) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.PerformanceArea) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>;
                     }
                 }
                 
@@ -1321,19 +1321,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string> PerformanceArea
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.PerformanceArea) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string> Comment
                 {
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Comment) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::LightSwitchApplication.Specialty> Specialty1
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Specialty1) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::LightSwitchApplication.Specialty>;
                     }
                 }
                 
@@ -1360,10 +1360,10 @@ namespace LightSwitchApplication
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
                 new int ID { get; }
-                new string Specialty { get; set; }
-                new global::System.Nullable<decimal> SpecialtyWeight { get; set; }
                 new string PerformanceArea { get; set; }
+                new global::System.Nullable<decimal> SpecialtyWeight { get; set; }
                 new string Comment { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Specialty1 { get; set; }
                 new global::System.Collections.IEnumerable Supplier_Contacts { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Supplier { get; set; }
             }
@@ -1410,39 +1410,39 @@ namespace LightSwitchApplication
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Entry
-                    Specialty = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Entry(
-                        "Specialty",
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty_Stub,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty_Validate,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty_GetImplementationValue,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty_SetImplementationValue,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty_OnValueChanged);
-                private static void _Specialty_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Data> c, global::LightSwitchApplication.Supplier_Specialty.DetailsClass d, object sf)
+                    PerformanceArea = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Entry(
+                        "PerformanceArea",
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_Stub,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_Validate,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_GetImplementationValue,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_SetImplementationValue,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_OnValueChanged);
+                private static void _PerformanceArea_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Data> c, global::LightSwitchApplication.Supplier_Specialty.DetailsClass d, object sf)
                 {
-                    c(d, ref d._Specialty, sf);
+                    c(d, ref d._PerformanceArea, sf);
                 }
-                private static bool _Specialty_ComputeIsReadOnly(global::LightSwitchApplication.Supplier_Specialty e)
+                private static bool _PerformanceArea_ComputeIsReadOnly(global::LightSwitchApplication.Supplier_Specialty e)
                 {
                     bool result = false;
-                    e.Specialty_IsReadOnly(ref result);
+                    e.PerformanceArea_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Specialty_Validate(global::LightSwitchApplication.Supplier_Specialty e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _PerformanceArea_Validate(global::LightSwitchApplication.Supplier_Specialty e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.Specialty_Validate(r);
+                    e.PerformanceArea_Validate(r);
                 }
-                private static string _Specialty_GetImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d)
+                private static string _PerformanceArea_GetImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d)
                 {
-                    return d.ImplementationEntity.Specialty;
+                    return d.ImplementationEntity.PerformanceArea;
                 }
-                private static void _Specialty_SetImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d, string v)
+                private static void _PerformanceArea_SetImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.Specialty = v;
+                    d.ImplementationEntity.PerformanceArea = v;
                 }
-                private static void _Specialty_OnValueChanged(global::LightSwitchApplication.Supplier_Specialty e)
+                private static void _PerformanceArea_OnValueChanged(global::LightSwitchApplication.Supplier_Specialty e)
                 {
-                    e.Specialty_Changed();
+                    e.PerformanceArea_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1484,43 +1484,6 @@ namespace LightSwitchApplication
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Entry
-                    PerformanceArea = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Entry(
-                        "PerformanceArea",
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_Stub,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_Validate,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_GetImplementationValue,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_SetImplementationValue,
-                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._PerformanceArea_OnValueChanged);
-                private static void _PerformanceArea_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Data> c, global::LightSwitchApplication.Supplier_Specialty.DetailsClass d, object sf)
-                {
-                    c(d, ref d._PerformanceArea, sf);
-                }
-                private static bool _PerformanceArea_ComputeIsReadOnly(global::LightSwitchApplication.Supplier_Specialty e)
-                {
-                    bool result = false;
-                    e.PerformanceArea_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _PerformanceArea_Validate(global::LightSwitchApplication.Supplier_Specialty e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.PerformanceArea_Validate(r);
-                }
-                private static string _PerformanceArea_GetImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d)
-                {
-                    return d.ImplementationEntity.PerformanceArea;
-                }
-                private static void _PerformanceArea_SetImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.PerformanceArea = v;
-                }
-                private static void _PerformanceArea_OnValueChanged(global::LightSwitchApplication.Supplier_Specialty e)
-                {
-                    e.PerformanceArea_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Entry
                     Comment = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Entry(
                         "Comment",
                         global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Comment_Stub,
@@ -1554,6 +1517,53 @@ namespace LightSwitchApplication
                 private static void _Comment_OnValueChanged(global::LightSwitchApplication.Supplier_Specialty e)
                 {
                     e.Comment_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::LightSwitchApplication.Specialty>.Entry
+                    Specialty1 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::LightSwitchApplication.Specialty>.Entry(
+                        "Specialty1",
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty1_Stub,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty1_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty1_Validate,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty1_GetCoreImplementationValue,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty1_GetImplementationValue,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty1_SetImplementationValue,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty1_Refresh,
+                        global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties._Specialty1_OnValueChanged);
+                private static void _Specialty1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::LightSwitchApplication.Specialty>.Data> c, global::LightSwitchApplication.Supplier_Specialty.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Specialty1, sf);
+                }
+                private static bool _Specialty1_ComputeIsReadOnly(global::LightSwitchApplication.Supplier_Specialty e)
+                {
+                    bool result = false;
+                    e.Specialty1_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Specialty1_Validate(global::LightSwitchApplication.Supplier_Specialty e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Specialty1_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Specialty1_GetCoreImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Specialty1;
+                }
+                private static global::LightSwitchApplication.Specialty _Specialty1_GetImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.Specialty, global::LightSwitchApplication.Specialty.DetailsClass>(global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Specialty1, ref d._Specialty1);
+                }
+                private static void _Specialty1_SetImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d, global::LightSwitchApplication.Specialty v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Specialty1, ref d._Specialty1, (i, ev) => i.Specialty1 = ev, v);
+                }
+                private static void _Specialty1_Refresh(global::LightSwitchApplication.Supplier_Specialty.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.Supplier_Specialty.DetailsClass.PropertySetProperties.Specialty1, ref d._Specialty1);
+                }
+                private static void _Specialty1_OnValueChanged(global::LightSwitchApplication.Supplier_Specialty e)
+                {
+                    e.Specialty1_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1629,16 +1639,16 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, int>.Data _ID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Data _Specialty;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Data _PerformanceArea;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::System.Nullable<decimal>>.Data _SpecialtyWeight;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Data _PerformanceArea;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Data _Comment;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, string>.Data _Comment;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::LightSwitchApplication.Specialty>.Data _Specialty1;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier_Specialty, global::LightSwitchApplication.Supplier_Specialty.DetailsClass, global::LightSwitchApplication.Supplier_Contact>.Data _Supplier_Contacts;

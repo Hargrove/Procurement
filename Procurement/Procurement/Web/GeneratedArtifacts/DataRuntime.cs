@@ -320,15 +320,15 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Gets the POes entity set.  The entity set provides members to access entities of a specific type.
+        /// Gets the PO entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.PO> POes
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.PO> PO
         {
             get
             {
-                return global::LightSwitchApplication.ProcurementData.DetailsClass.GetValue(this, global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.POes);
+                return global::LightSwitchApplication.ProcurementData.DetailsClass.GetValue(this, global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.PO);
             }
         }
         
@@ -605,6 +605,19 @@ namespace LightSwitchApplication
             }
         }
         
+        /// <summary>
+        /// Gets the Specialties entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Specialty> Specialties
+        {
+            get
+            {
+                return global::LightSwitchApplication.ProcurementData.DetailsClass.GetValue(this, global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.Specialties);
+            }
+        }
+        
         #endregion
     
         #region Queries
@@ -857,9 +870,9 @@ namespace LightSwitchApplication
         /// <param name="ID">
         /// The value of the 'ID' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.PO POes_Single(global::System.Nullable<int> ID)
+        public global::LightSwitchApplication.PO PO_Single(global::System.Nullable<int> ID)
         {
-            return this.Details.Methods.POes_Single.CreateInvocation(ID).Execute();
+            return this.Details.Methods.PO_Single.CreateInvocation(ID).Execute();
         }
         
         /// <summary>
@@ -868,9 +881,9 @@ namespace LightSwitchApplication
         /// <param name="ID">
         /// The value of the 'ID' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.PO POes_SingleOrDefault(global::System.Nullable<int> ID)
+        public global::LightSwitchApplication.PO PO_SingleOrDefault(global::System.Nullable<int> ID)
         {
-            return this.Details.Methods.POes_SingleOrDefault.CreateInvocation(ID).Execute();
+            return this.Details.Methods.PO_SingleOrDefault.CreateInvocation(ID).Execute();
         }
         
         /// <summary>
@@ -1335,6 +1348,28 @@ namespace LightSwitchApplication
             return this.Details.Methods.UOMs_SingleOrDefault.CreateInvocation(id).Execute();
         }
         
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="ID">
+        /// The value of the 'ID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Specialty Specialties_Single(global::System.Nullable<int> ID)
+        {
+            return this.Details.Methods.Specialties_Single.CreateInvocation(ID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="ID">
+        /// The value of the 'ID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Specialty Specialties_SingleOrDefault(global::System.Nullable<int> ID)
+        {
+            return this.Details.Methods.Specialties_SingleOrDefault.CreateInvocation(ID).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -1559,19 +1594,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO> POes_Single
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO> PO_Single
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.POes_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>;
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.PO_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO> POes_SingleOrDefault
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO> PO_SingleOrDefault
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.POes_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>;
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.PO_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>;
                     }
                 }
                 
@@ -1911,6 +1946,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty> Specialties_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.Specialties_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty> Specialties_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.Specialties_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2012,11 +2063,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO> POes
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO> PO
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.POes) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>;
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.PO) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>;
                     }
                 }
                 
@@ -2185,6 +2236,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.UOMs) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.UOM>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty> Specialties
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.Specialties) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>;
                     }
                 }
                 
@@ -2418,22 +2477,22 @@ namespace LightSwitchApplication
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Entry
-                    POes_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Entry(
-                        "POes_Single",
-                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._POes_Single_Stub);
-                private static void _POes_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                    PO_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Entry(
+                        "PO_Single",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._PO_Single_Stub);
+                private static void _PO_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._POes_Single, sf);
+                    c(d, ref d._PO_Single, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Entry
-                    POes_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Entry(
-                        "POes_SingleOrDefault",
-                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._POes_SingleOrDefault_Stub);
-                private static void _POes_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                    PO_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Entry(
+                        "PO_SingleOrDefault",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._PO_SingleOrDefault_Stub);
+                private static void _PO_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._POes_SingleOrDefault, sf);
+                    c(d, ref d._PO_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2856,6 +2915,26 @@ namespace LightSwitchApplication
                     c(d, ref d._UOMs_SingleOrDefault, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Entry
+                    Specialties_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Entry(
+                        "Specialties_Single",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._Specialties_Single_Stub);
+                private static void _Specialties_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Specialties_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Entry
+                    Specialties_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Entry(
+                        "Specialties_SingleOrDefault",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._Specialties_SingleOrDefault_Stub);
+                private static void _Specialties_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Specialties_SingleOrDefault, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2976,12 +3055,12 @@ namespace LightSwitchApplication
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Entry
-                    POes = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Entry(
-                        "POes",
-                        global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties._POes_Stub);
-                private static void _POes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                    PO = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Entry(
+                        "PO",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties._PO_Stub);
+                private static void _PO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
                 {
-                    c(d, ref d._POes, sf);
+                    c(d, ref d._PO, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -3194,6 +3273,16 @@ namespace LightSwitchApplication
                     c(d, ref d._UOMs, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Entry
+                    Specialties = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Entry(
+                        "Specialties",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties._Specialties_Stub);
+                private static void _Specialties_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Specialties, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -3230,7 +3319,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Phase>.Data _Phases;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data _POes;
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data _PO;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO_Line>.Data _PO_Lines;
@@ -3294,6 +3383,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.UOM>.Data _UOMs;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Data _Specialties;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _Award_Selecteds_Single;
@@ -3362,10 +3454,10 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Phase>.Data _Phases_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data _POes_Single;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data _PO_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data _POes_SingleOrDefault;
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO>.Data _PO_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO_Line>.Data _PO_Lines_Single;
@@ -3492,6 +3584,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.UOM>.Data _UOMs_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Data _Specialties_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Specialty>.Data _Specialties_SingleOrDefault;
             
         }
     

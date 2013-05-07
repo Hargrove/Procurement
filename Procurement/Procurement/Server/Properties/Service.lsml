@@ -131,7 +131,12 @@
         Name="PO_Line1"
         Association="FK_Award_Selected_PO_Line1"
         FromEnd="Award_Selected"
-        ToEnd="PO_Line" />
+        ToEnd="PO_Line">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="PO Line" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <NavigationProperty
         Name="RFQ_PItem"
         Association="FK_Award_Selected_RFQ_P"
@@ -379,7 +384,12 @@
         Name="Preference1"
         Association="FK_Client_Approved_Preference"
         FromEnd="Client_Approved"
-        ToEnd="Preference" />
+        ToEnd="Preference">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Preference" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <NavigationProperty
         Name="Supplier"
         Association="FK_Client_Approved_Suppliers"
@@ -640,19 +650,21 @@
             Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="Specialty"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="50" />
-        </EntityProperty.Attributes>
-      </EntityProperty>
       <NavigationProperty
         Name="SupplierManufactures"
         Association="FK_SupplierManufactures_Manufacturers"
         FromEnd="Manufacturers"
         ToEnd="SupplierManufactures" />
+      <NavigationProperty
+        Name="Specialty1"
+        Association="FK_Manufacturers_Specialty"
+        FromEnd="Manufacturers"
+        ToEnd="Specialty">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Specialty" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -718,6 +730,8 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="4" />
+          <DisplayName
+            Value="Phase" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -846,7 +860,12 @@
         Name="Award_Selecteds1"
         Association="FK_Award_Selected_PO_Line1"
         FromEnd="PO_Line"
-        ToEnd="Award_Selected" />
+        ToEnd="Award_Selected">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Award Selecteds" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <NavigationProperty
         Name="ChangeOrders"
         Association="FK_ChangeOrder_PO_Line"
@@ -968,12 +987,22 @@
         Name="Client1"
         Association="FK_Project_Clients"
         FromEnd="Project"
-        ToEnd="Clients" />
+        ToEnd="Clients">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Client" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <NavigationProperty
         Name="Phase1"
         Association="FK_Project_Phase"
         FromEnd="Project"
-        ToEnd="Phase" />
+        ToEnd="Phase">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Phase" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1308,7 +1337,12 @@
         Name="UOM1"
         Association="FK_RFQ_Line_UOM"
         FromEnd="RFQ_Line"
-        ToEnd="UOM" />
+        ToEnd="UOM">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="UOM" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1652,7 +1686,7 @@
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="0" />
+            Scale="2" />
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -1931,6 +1965,8 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+          <DisplayName
+            Value="Stakeholder Type" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -2027,6 +2063,8 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+          <DisplayName
+            Value="Submittal" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -2102,12 +2140,22 @@
         Name="RFQ_Line1"
         Association="FK_Submittal_RFQ_Line"
         FromEnd="Submittal"
-        ToEnd="RFQ_Line" />
+        ToEnd="RFQ_Line">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="RFQ Line" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <NavigationProperty
         Name="SubmittalType1"
         Association="FK_Submittal_SubmittalTypes"
         FromEnd="Submittal"
-        ToEnd="SubmittalTypes" />
+        ToEnd="SubmittalTypes">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Submittal Type" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -2230,8 +2278,18 @@
           <NotSearchable />
         </KeyProperty.Attributes>
       </KeyProperty>
+      <NavigationProperty
+        Name="Specialty1"
+        Association="FK_Supplier_Specialty_Specialty"
+        FromEnd="Supplier_Specialty"
+        ToEnd="Specialty">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Specialty" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
       <EntityProperty
-        Name="Specialty"
+        Name="PerformanceArea"
         PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
@@ -2246,14 +2304,6 @@
             Precision="18"
             Scale="0" />
           <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="PerformanceArea"
-        PropertyType=":String?">
-        <EntityProperty.Attributes>
-          <MaxLength
-            Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -3128,7 +3178,7 @@
       CanUpdate="True"
       EntityType="Phase" />
     <EntitySet
-      Name="POes"
+      Name="PO"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
@@ -3299,7 +3349,7 @@
       Association="FK_ChangeOrder_PO">
       <AssociationSetEnd
         Name="PO"
-        EntitySet="POes" />
+        EntitySet="PO" />
       <AssociationSetEnd
         Name="ChangeOrder"
         EntitySet="ChangeOrders" />
@@ -3389,7 +3439,7 @@
       Association="FK_PO_Line_PO">
       <AssociationSetEnd
         Name="PO"
-        EntitySet="POes" />
+        EntitySet="PO" />
       <AssociationSetEnd
         Name="PO_Line"
         EntitySet="PO_Lines" />
@@ -4447,7 +4497,7 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="POes_Single"
+      Name="PO_Single"
       ReturnType="PO">
       <QueryOperation.Attributes>
         <Generated />
@@ -4474,7 +4524,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="POes" />
+            Member="PO" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -4487,7 +4537,7 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="POes_SingleOrDefault"
+      Name="PO_SingleOrDefault"
       ReturnType="PO">
       <QueryOperation.Attributes>
         <Generated />
@@ -4514,7 +4564,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="POes" />
+            Member="PO" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -6268,6 +6318,112 @@
         Name="Project"
         EntitySet="Projects" />
     </AssociationSet>
+    <EntitySet
+      Name="Specialties"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Specialty" />
+    <AssociationSet
+      Name="FK_Supplier_Specialty_Specialty"
+      Association="FK_Supplier_Specialty_Specialty">
+      <AssociationSetEnd
+        Name="Specialty"
+        EntitySet="Specialties" />
+      <AssociationSetEnd
+        Name="Supplier_Specialty"
+        EntitySet="Supplier_Specialties" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Specialties_Single"
+      ReturnType="Specialty">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Specialties" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Specialties_SingleOrDefault"
+      ReturnType="Specialty">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Specialties" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="FK_Manufacturers_Specialty"
+      Association="FK_Manufacturers_Specialty">
+      <AssociationSetEnd
+        Name="Specialty"
+        EntitySet="Specialties" />
+      <AssociationSetEnd
+        Name="Manufacturers"
+        EntitySet="Manufacturers" />
+    </AssociationSet>
   </EntityContainer>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">
@@ -6318,6 +6474,8 @@
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+          <DisplayName
+            Value="Submittal Type" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -7073,6 +7231,77 @@
       Multiplicity="Many"
       EntityType="Project" />
   </Association>
+  <EntityType
+    Name="Specialty">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Specialty1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="250" />
+          <DisplayName
+            Value="Specialty" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Supplier_Specialties"
+        Association="FK_Supplier_Specialty_Specialty"
+        FromEnd="Specialty"
+        ToEnd="Supplier_Specialty" />
+      <NavigationProperty
+        Name="Manufacturers"
+        Association="FK_Manufacturers_Specialty"
+        FromEnd="Specialty"
+        ToEnd="Manufacturers" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_Supplier_Specialty_Specialty">
+    <AssociationEnd
+      Name="Specialty"
+      EntityType="Specialty">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Supplier_Specialty"
+      Multiplicity="Many"
+      EntityType="Supplier_Specialty" />
+  </Association>
+  <Association
+    Name="FK_Manufacturers_Specialty">
+    <AssociationEnd
+      Name="Specialty"
+      EntityType="Specialty">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Manufacturers"
+      Multiplicity="Many"
+      EntityType="Manufacturer" />
+  </Association>
   <DataService
     Name="ProcurementDataDataService"
     DataProvider="EntityFrameworkDataProvider"
@@ -7485,12 +7714,11 @@
           Nullable="True"
           Type="nvarchar"
           Property="Manufacturer/Properties[Mfg_Name]" />
-        <SsdlProperty
-          MaxLength="50"
+        <SsdlForeignKeyProperty
           Name="Specialty"
           Nullable="True"
-          Type="nvarchar"
-          Property="Manufacturer/Properties[Specialty]" />
+          Type="int"
+          PropertyName="Specialty" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -7534,7 +7762,7 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
-      EntitySet="POes">
+      EntitySet="PO">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
           Schema="dbo"
@@ -8060,6 +8288,7 @@
         <SsdlProperty
           Name="EMR"
           Nullable="True"
+          Scale="2"
           Type="numeric"
           Property="Safety_Record/Properties[EMR]" />
         <SsdlProperty
@@ -8222,6 +8451,26 @@
           Nullable="True"
           Type="int"
           PropertyName="TransportType" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Specialties">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Specialty" />
+        <SsdlProperty
+          Name="ID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Specialty/Properties[ID]" />
+        <SsdlProperty
+          MaxLength="250"
+          Name="Specialty"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Specialty/Properties[Specialty1]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -8461,12 +8710,6 @@
           Type="int"
           Property="Supplier_Specialty/Properties[ID]" />
         <SsdlProperty
-          MaxLength="50"
-          Name="Specialty"
-          Nullable="True"
-          Type="nvarchar"
-          Property="Supplier_Specialty/Properties[Specialty]" />
-        <SsdlProperty
           Name="SpecialtyWeight"
           Nullable="True"
           Type="numeric"
@@ -8482,6 +8725,11 @@
           Nullable="True"
           Type="nvarchar(max)"
           Property="Supplier_Specialty/Properties[Comment]" />
+        <SsdlForeignKeyProperty
+          Name="Specialty"
+          Nullable="True"
+          Type="int"
+          PropertyName="Specialty" />
         <SsdlForeignKeyProperty
           Name="SupplierID"
           Nullable="True"
@@ -9007,6 +9255,27 @@
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
+      AssociationSet="FK_Manufacturers_Specialty">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Manufacturers_Specialty" />
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Manufacturers_Specialty]/Members[Specialty]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Manufacturers_Specialty]/Members[Manufacturers]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Specialty" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
       AssociationSet="FK_PO_Line_PO">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
@@ -9401,6 +9670,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="SpecialtyID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Supplier_Specialty_Specialty">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Supplier_Specialty_Specialty" />
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Supplier_Specialty_Specialty]/Members[Specialty]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Supplier_Specialty_Specialty]/Members[Supplier_Specialty]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Specialty" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

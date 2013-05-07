@@ -137,9 +137,6 @@ window.myapp = msls.application;
         /// <field name="CO_Qty" type="Number">
         /// Gets or sets the cO_Qty for this changeOrder.
         /// </field>
-        /// <field name="CO_UOM" type="String">
-        /// Gets or sets the cO_UOM for this changeOrder.
-        /// </field>
         /// <field name="CO_CostPerUnit" type="Number">
         /// Gets or sets the cO_CostPerUnit for this changeOrder.
         /// </field>
@@ -151,6 +148,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="LineChangeOrders" type="msls.EntityCollection">
         /// Gets the lineChangeOrders for this changeOrder.
+        /// </field>
+        /// <field name="UOM1" type="msls.application.UOM">
+        /// Gets or sets the uOM1 for this changeOrder.
         /// </field>
         /// <field name="details" type="msls.application.ChangeOrder.Details">
         /// Gets the details for this changeOrder.
@@ -282,9 +282,6 @@ window.myapp = msls.application;
         /// <field name="CO_Qty" type="Number">
         /// Gets or sets the cO_Qty for this lineChangeOrder.
         /// </field>
-        /// <field name="CO_UOM" type="String">
-        /// Gets or sets the cO_UOM for this lineChangeOrder.
-        /// </field>
         /// <field name="CO_CostPerUnit" type="Number">
         /// Gets or sets the cO_CostPerUnit for this lineChangeOrder.
         /// </field>
@@ -293,6 +290,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="PO_Line" type="msls.application.PO_Line">
         /// Gets or sets the pO_Line for this lineChangeOrder.
+        /// </field>
+        /// <field name="UOM1" type="msls.application.UOM">
+        /// Gets or sets the uOM1 for this lineChangeOrder.
         /// </field>
         /// <field name="details" type="msls.application.LineChangeOrder.Details">
         /// Gets the details for this lineChangeOrder.
@@ -313,11 +313,11 @@ window.myapp = msls.application;
         /// <field name="Mfg_Name" type="String">
         /// Gets or sets the mfg_Name for this manufacturer.
         /// </field>
-        /// <field name="Specialty" type="String">
-        /// Gets or sets the specialty for this manufacturer.
-        /// </field>
         /// <field name="SupplierManufactures" type="msls.EntityCollection">
         /// Gets the supplierManufactures for this manufacturer.
+        /// </field>
+        /// <field name="Specialty1" type="msls.application.Specialty">
+        /// Gets or sets the specialty1 for this manufacturer.
         /// </field>
         /// <field name="details" type="msls.application.Manufacturer.Details">
         /// Gets the details for this manufacturer.
@@ -1076,14 +1076,14 @@ window.myapp = msls.application;
         /// <field name="ID" type="Number">
         /// Gets or sets the iD for this supplier_Specialty.
         /// </field>
-        /// <field name="Specialty" type="String">
-        /// Gets or sets the specialty for this supplier_Specialty.
-        /// </field>
-        /// <field name="SpecialtyWeight" type="Number">
-        /// Gets or sets the specialtyWeight for this supplier_Specialty.
+        /// <field name="Specialty1" type="msls.application.Specialty">
+        /// Gets or sets the specialty1 for this supplier_Specialty.
         /// </field>
         /// <field name="PerformanceArea" type="String">
         /// Gets or sets the performanceArea for this supplier_Specialty.
+        /// </field>
+        /// <field name="SpecialtyWeight" type="Number">
+        /// Gets or sets the specialtyWeight for this supplier_Specialty.
         /// </field>
         /// <field name="Comment" type="String">
         /// Gets or sets the comment for this supplier_Specialty.
@@ -1291,8 +1291,39 @@ window.myapp = msls.application;
         /// <field name="RFQ_Lines" type="msls.EntityCollection">
         /// Gets the rFQ_Lines for this uOM.
         /// </field>
+        /// <field name="ChangeOrders" type="msls.EntityCollection">
+        /// Gets the changeOrders for this uOM.
+        /// </field>
+        /// <field name="LineChangeOrders" type="msls.EntityCollection">
+        /// Gets the lineChangeOrders for this uOM.
+        /// </field>
         /// <field name="details" type="msls.application.UOM.Details">
         /// Gets the details for this uOM.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function Specialty(entitySet) {
+        /// <summary>
+        /// Represents the Specialty entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this specialty.
+        /// </param>
+        /// <field name="ID" type="Number">
+        /// Gets or sets the iD for this specialty.
+        /// </field>
+        /// <field name="Specialty1" type="String">
+        /// Gets or sets the specialty1 for this specialty.
+        /// </field>
+        /// <field name="Supplier_Specialties" type="msls.EntityCollection">
+        /// Gets the supplier_Specialties for this specialty.
+        /// </field>
+        /// <field name="Manufacturers" type="msls.EntityCollection">
+        /// Gets the manufacturers for this specialty.
+        /// </field>
+        /// <field name="details" type="msls.application.Specialty.Details">
+        /// Gets the details for this specialty.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -1452,8 +1483,8 @@ window.myapp = msls.application;
         /// <field name="Phases" type="msls.EntitySet">
         /// Gets the Phases entity set.
         /// </field>
-        /// <field name="POes" type="msls.EntitySet">
-        /// Gets the POes entity set.
+        /// <field name="PO" type="msls.EntitySet">
+        /// Gets the PO entity set.
         /// </field>
         /// <field name="PO_Lines" type="msls.EntitySet">
         /// Gets the PO_Lines entity set.
@@ -1517,6 +1548,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="UOMs" type="msls.EntitySet">
         /// Gets the UOMs entity set.
+        /// </field>
+        /// <field name="Specialties" type="msls.EntitySet">
+        /// Gets the Specialties entity set.
         /// </field>
         /// <field name="details" type="msls.application.ProcurementData.Details">
         /// Gets the details for this data service.
@@ -1593,11 +1627,11 @@ window.myapp = msls.application;
             { name: "CO_Description", type: String },
             { name: "CO_WBS", type: String },
             { name: "CO_Qty", type: Number },
-            { name: "CO_UOM", type: String },
             { name: "CO_CostPerUnit", type: Number },
             { name: "PO", kind: "reference", type: PO },
             { name: "PO_Line", kind: "reference", type: PO_Line },
-            { name: "LineChangeOrders", kind: "collection", elementType: LineChangeOrder }
+            { name: "LineChangeOrders", kind: "collection", elementType: LineChangeOrder },
+            { name: "UOM1", kind: "reference", type: UOM }
         ]),
 
         Client_Approved: $defineEntity(Client_Approved, [
@@ -1636,17 +1670,17 @@ window.myapp = msls.application;
             { name: "CO_Description", type: String },
             { name: "CO_WBS", type: String },
             { name: "CO_Qty", type: Number },
-            { name: "CO_UOM", type: String },
             { name: "CO_CostPerUnit", type: Number },
             { name: "ChangeOrder", kind: "reference", type: ChangeOrder },
-            { name: "PO_Line", kind: "reference", type: PO_Line }
+            { name: "PO_Line", kind: "reference", type: PO_Line },
+            { name: "UOM1", kind: "reference", type: UOM }
         ]),
 
         Manufacturer: $defineEntity(Manufacturer, [
             { name: "ID", type: Number },
             { name: "Mfg_Name", type: String },
-            { name: "Specialty", type: String },
-            { name: "SupplierManufactures", kind: "collection", elementType: SupplierManufacture }
+            { name: "SupplierManufactures", kind: "collection", elementType: SupplierManufacture },
+            { name: "Specialty1", kind: "reference", type: Specialty }
         ]),
 
         Material_Status: $defineEntity(Material_Status, [
@@ -1874,9 +1908,9 @@ window.myapp = msls.application;
 
         Supplier_Specialty: $defineEntity(Supplier_Specialty, [
             { name: "ID", type: Number },
-            { name: "Specialty", type: String },
-            { name: "SpecialtyWeight", type: Number },
+            { name: "Specialty1", kind: "reference", type: Specialty },
             { name: "PerformanceArea", type: String },
+            { name: "SpecialtyWeight", type: Number },
             { name: "Comment", type: String },
             { name: "Supplier_Contacts", kind: "collection", elementType: Supplier_Contact },
             { name: "Supplier", kind: "reference", type: Supplier }
@@ -1938,7 +1972,16 @@ window.myapp = msls.application;
         UOM: $defineEntity(UOM, [
             { name: "id", type: Number },
             { name: "UOM1", type: String },
-            { name: "RFQ_Lines", kind: "collection", elementType: RFQ_Line }
+            { name: "RFQ_Lines", kind: "collection", elementType: RFQ_Line },
+            { name: "ChangeOrders", kind: "collection", elementType: ChangeOrder },
+            { name: "LineChangeOrders", kind: "collection", elementType: LineChangeOrder }
+        ]),
+
+        Specialty: $defineEntity(Specialty, [
+            { name: "ID", type: Number },
+            { name: "Specialty1", type: String },
+            { name: "Supplier_Specialties", kind: "collection", elementType: Supplier_Specialty },
+            { name: "Manufacturers", kind: "collection", elementType: Manufacturer }
         ]),
 
         CL: $defineEntity(CL, [
@@ -1990,7 +2033,7 @@ window.myapp = msls.application;
             { name: "Manufacturers", elementType: Manufacturer },
             { name: "Material_Status", elementType: Material_Status },
             { name: "Phases", elementType: Phase },
-            { name: "POes", elementType: PO },
+            { name: "PO", elementType: PO },
             { name: "PO_Lines", elementType: PO_Line },
             { name: "Preferences", elementType: Preference },
             { name: "Projects", elementType: Project },
@@ -2011,7 +2054,8 @@ window.myapp = msls.application;
             { name: "Suppliers", elementType: Supplier },
             { name: "Transport_Types", elementType: Transport_Type },
             { name: "SubmittalTypes", elementType: SubmittalType },
-            { name: "UOMs", elementType: UOM }
+            { name: "UOMs", elementType: UOM },
+            { name: "Specialties", elementType: Specialty }
         ], [
             {
                 name: "Award_Selecteds_SingleOrDefault", value: function (ID) {
@@ -2091,9 +2135,9 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "POes_SingleOrDefault", value: function (ID) {
-                    return new $DataServiceQuery({ _entitySet: this.POes },
-                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/POes(" + "ID=" + $toODataString(ID, "Int32?") + ")"
+                name: "PO_SingleOrDefault", value: function (ID) {
+                    return new $DataServiceQuery({ _entitySet: this.PO },
+                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/PO(" + "ID=" + $toODataString(ID, "Int32?") + ")"
                     );
                 }
             },
@@ -2241,6 +2285,13 @@ window.myapp = msls.application;
                 name: "UOMs_SingleOrDefault", value: function (id) {
                     return new $DataServiceQuery({ _entitySet: this.UOMs },
                         lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/UOMs(" + "id=" + $toODataString(id, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "Specialties_SingleOrDefault", value: function (ID) {
+                    return new $DataServiceQuery({ _entitySet: this.Specialties },
+                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/Specialties(" + "ID=" + $toODataString(ID, "Int32?") + ")"
                     );
                 }
             }

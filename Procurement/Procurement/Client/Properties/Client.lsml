@@ -495,4 +495,22 @@
         Target="ServiceInterface:FK_Project_Phase" />
     </Association.Attributes>
   </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Specialty" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Supplier_Specialty_Specialty" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Manufacturers_Specialty" />
+    </Association.Attributes>
+  </Association>
 </ModelFragment>

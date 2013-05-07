@@ -175,7 +175,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> SiteApproved
+        public bool SiteApproved
         {
             get
             {
@@ -356,11 +356,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, global::System.Nullable<bool>> SiteApproved
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, bool> SiteApproved
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Client_Approved.DetailsClass.PropertySetProperties.SiteApproved) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.Client_Approved.DetailsClass.PropertySetProperties.SiteApproved) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, bool>;
                     }
                 }
                 
@@ -390,7 +390,7 @@ namespace LightSwitchApplication
                 new string Client { get; set; }
                 new string ServiceAgreement { get; set; }
                 new string SupplierID_No { get; set; }
-                new global::System.Nullable<bool> SiteApproved { get; set; }
+                new bool SiteApproved { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Preference1 { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Supplier { get; set; }
             }
@@ -547,8 +547,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, global::System.Nullable<bool>>.Entry
-                    SiteApproved = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, global::System.Nullable<bool>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, bool>.Entry
+                    SiteApproved = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, bool>.Entry(
                         "SiteApproved",
                         global::LightSwitchApplication.Client_Approved.DetailsClass.PropertySetProperties._SiteApproved_Stub,
                         global::LightSwitchApplication.Client_Approved.DetailsClass.PropertySetProperties._SiteApproved_ComputeIsReadOnly,
@@ -556,7 +556,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.Client_Approved.DetailsClass.PropertySetProperties._SiteApproved_GetImplementationValue,
                         global::LightSwitchApplication.Client_Approved.DetailsClass.PropertySetProperties._SiteApproved_SetImplementationValue,
                         global::LightSwitchApplication.Client_Approved.DetailsClass.PropertySetProperties._SiteApproved_OnValueChanged);
-                private static void _SiteApproved_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client_Approved.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.Client_Approved.DetailsClass d, object sf)
+                private static void _SiteApproved_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Client_Approved.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, bool>.Data> c, global::LightSwitchApplication.Client_Approved.DetailsClass d, object sf)
                 {
                     c(d, ref d._SiteApproved, sf);
                 }
@@ -570,11 +570,11 @@ namespace LightSwitchApplication
                 {
                     e.SiteApproved_Validate(r);
                 }
-                private static global::System.Nullable<bool> _SiteApproved_GetImplementationValue(global::LightSwitchApplication.Client_Approved.DetailsClass d)
+                private static bool _SiteApproved_GetImplementationValue(global::LightSwitchApplication.Client_Approved.DetailsClass d)
                 {
                     return d.ImplementationEntity.SiteApproved;
                 }
-                private static void _SiteApproved_SetImplementationValue(global::LightSwitchApplication.Client_Approved.DetailsClass d, global::System.Nullable<bool> v)
+                private static void _SiteApproved_SetImplementationValue(global::LightSwitchApplication.Client_Approved.DetailsClass d, bool v)
                 {
                     d.ImplementationEntity.SiteApproved = v;
                 }
@@ -692,7 +692,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, string>.Data _SupplierID_No;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, global::System.Nullable<bool>>.Data _SiteApproved;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, bool>.Data _SiteApproved;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Client_Approved, global::LightSwitchApplication.Client_Approved.DetailsClass, global::LightSwitchApplication.Preference>.Data _Preference1;

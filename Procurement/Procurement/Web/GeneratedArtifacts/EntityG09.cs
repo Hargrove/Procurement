@@ -843,7 +843,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<bool> MeetSpecs
+        public bool MeetSpecs
         {
             get
             {
@@ -1135,11 +1135,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<bool>> MeetSpecs
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, bool> MeetSpecs
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties.MeetSpecs) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<bool>>;
+                        return base.GetItem(global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties.MeetSpecs) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, bool>;
                     }
                 }
                 
@@ -1208,7 +1208,7 @@ namespace LightSwitchApplication
                 new int ID { get; }
                 new global::System.Nullable<int> ProposalID { get; set; }
                 new global::System.Nullable<decimal> CostPerUnit { get; set; }
-                new global::System.Nullable<bool> MeetSpecs { get; set; }
+                new bool MeetSpecs { get; set; }
                 new string CountryOfOrigin { get; set; }
                 new global::System.Nullable<decimal> ShippingARO { get; set; }
                 new global::System.Nullable<decimal> SubmittalsARO { get; set; }
@@ -1333,8 +1333,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<bool>>.Entry
-                    MeetSpecs = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<bool>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, bool>.Entry
+                    MeetSpecs = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, bool>.Entry(
                         "MeetSpecs",
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._MeetSpecs_Stub,
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._MeetSpecs_ComputeIsReadOnly,
@@ -1342,7 +1342,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._MeetSpecs_GetImplementationValue,
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._MeetSpecs_SetImplementationValue,
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._MeetSpecs_OnValueChanged);
-                private static void _MeetSpecs_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Proposal_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<bool>>.Data> c, global::LightSwitchApplication.Proposal_Line.DetailsClass d, object sf)
+                private static void _MeetSpecs_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Proposal_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, bool>.Data> c, global::LightSwitchApplication.Proposal_Line.DetailsClass d, object sf)
                 {
                     c(d, ref d._MeetSpecs, sf);
                 }
@@ -1356,11 +1356,11 @@ namespace LightSwitchApplication
                 {
                     e.MeetSpecs_Validate(r);
                 }
-                private static global::System.Nullable<bool> _MeetSpecs_GetImplementationValue(global::LightSwitchApplication.Proposal_Line.DetailsClass d)
+                private static bool _MeetSpecs_GetImplementationValue(global::LightSwitchApplication.Proposal_Line.DetailsClass d)
                 {
                     return d.ImplementationEntity.MeetSpecs;
                 }
-                private static void _MeetSpecs_SetImplementationValue(global::LightSwitchApplication.Proposal_Line.DetailsClass d, global::System.Nullable<bool> v)
+                private static void _MeetSpecs_SetImplementationValue(global::LightSwitchApplication.Proposal_Line.DetailsClass d, bool v)
                 {
                     d.ImplementationEntity.MeetSpecs = v;
                 }
@@ -1633,7 +1633,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<decimal>>.Data _CostPerUnit;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<bool>>.Data _MeetSpecs;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, bool>.Data _MeetSpecs;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, string>.Data _CountryOfOrigin;

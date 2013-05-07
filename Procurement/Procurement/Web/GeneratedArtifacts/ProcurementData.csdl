@@ -50,13 +50,14 @@
     <Property Name="CO_Description" Type="Edm.String" Nullable="false" MaxLength="Max" ConcurrencyMode="Fixed" />
     <Property Name="CO_WBS" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="CO_Qty" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
-    <Property Name="CO_UOM" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="CO_CostPerUnit" Type="Edm.Decimal" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
     <Property Name="PONum" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="POLineID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="CO_UOM" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="PO" Relationship="LightSwitchApplication.FK_ChangeOrder_PO" ToRole="PO" FromRole="ChangeOrder" />
     <NavigationProperty Name="PO_Line" Relationship="LightSwitchApplication.FK_ChangeOrder_PO_Line" ToRole="PO_Line" FromRole="ChangeOrder" />
     <NavigationProperty Name="LineChangeOrders" Relationship="LightSwitchApplication.FK_LineChangeOrder_ChangeOrder" ToRole="LineChangeOrder" FromRole="ChangeOrder" />
+    <NavigationProperty Name="UOM1" Relationship="LightSwitchApplication.FK_ChangeOrder_UOM" ToRole="UOM" FromRole="ChangeOrder" />
   </EntityType>
   <EntityType Name="Client_Approved">
     <Key>
@@ -66,7 +67,7 @@
     <Property Name="Client" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="ServiceAgreement" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="SupplierID_No" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="SiteApproved" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="SiteApproved" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="Preference" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="SupplierID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Preference1" Relationship="LightSwitchApplication.FK_Client_Approved_Preference" ToRole="Preference" FromRole="Client_Approved" />
@@ -108,12 +109,13 @@
     <Property Name="CO_Description" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="CO_WBS" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="CO_Qty" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
-    <Property Name="CO_UOM" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="CO_CostPerUnit" Type="Edm.Decimal" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
     <Property Name="ChangeOrderID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="POLineID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="CO_UOM" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="ChangeOrder" Relationship="LightSwitchApplication.FK_LineChangeOrder_ChangeOrder" ToRole="ChangeOrder" FromRole="LineChangeOrder" />
     <NavigationProperty Name="PO_Line" Relationship="LightSwitchApplication.FK_LineChangeOrder_PO_Line" ToRole="PO_Line" FromRole="LineChangeOrder" />
+    <NavigationProperty Name="UOM1" Relationship="LightSwitchApplication.FK_LineChangeOrder_UOM" ToRole="UOM" FromRole="LineChangeOrder" />
   </EntityType>
   <EntityType Name="Manufacturer">
     <Key>
@@ -121,8 +123,9 @@
     </Key>
     <Property Name="ID" Type="Edm.Int32" Nullable="false" />
     <Property Name="Mfg_Name" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="Specialty" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Specialty" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="SupplierManufactures" Relationship="LightSwitchApplication.FK_SupplierManufactures_Manufacturers" ToRole="SupplierManufactures" FromRole="Manufacturers" />
+    <NavigationProperty Name="Specialty1" Relationship="LightSwitchApplication.FK_Manufacturers_Specialty" ToRole="Specialty" FromRole="Manufacturers" />
   </EntityType>
   <EntityType Name="Material_Status">
     <Key>
@@ -223,7 +226,7 @@
     <Property Name="ID" Type="Edm.Int32" Nullable="false" />
     <Property Name="ProposalID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <Property Name="CostPerUnit" Type="Edm.Decimal" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
-    <Property Name="MeetSpecs" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="MeetSpecs" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="CountryOfOrigin" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="ShippingARO" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
     <Property Name="SubmittalsARO" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
@@ -241,9 +244,9 @@
     <Property Name="RFQLineNo" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
     <Property Name="Description" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
     <Property Name="Qty" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
-    <Property Name="TestingReq" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="TestingReq" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="TestingLevel" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="Inspection" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Inspection" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="ShippingRefNo" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="TagNo" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="RecievedQty" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
@@ -278,17 +281,17 @@
     <Property Name="SpecifiedBidDue" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="RevisedBidDue" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="BidsReceived" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
-    <Property Name="PreBidRequired" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
-    <Property Name="PreAwardRequired" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="PreBidRequired" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="PreAwardRequired" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="BidOpening" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="ToEng" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="EngApproval" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
-    <Property Name="TechComplaint" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="TechComplaint" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="Regret" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="CommercialDone" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
-    <Property Name="CommercialComplaint" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="CommercialComplaint" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="Comments" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
-    <Property Name="CriticalPath" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="CriticalPath" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="ProjectNoID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="Award_Selecteds" Relationship="LightSwitchApplication.FK_Award_Selected_RFQ_P" ToRole="Award_Selected" FromRole="RFQ_P" />
     <NavigationProperty Name="BidLists" Relationship="LightSwitchApplication.FK_BidList_RFQ_P1" ToRole="BidList" FromRole="RFQ_P" />
@@ -302,7 +305,7 @@
     </Key>
     <Property Name="ID" Type="Edm.Int32" Nullable="false" />
     <Property Name="Year" Type="Edm.Decimal" Precision="4" Scale="0" ConcurrencyMode="Fixed" />
-    <Property Name="EMR" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
+    <Property Name="EMR" Type="Edm.Decimal" Precision="18" Scale="2" ConcurrencyMode="Fixed" />
     <Property Name="TIFR" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
     <Property Name="Comments" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
     <Property Name="StatusID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
@@ -406,11 +409,12 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Edm.Int32" Nullable="false" />
-    <Property Name="Specialty" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="SpecialtyWeight" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
     <Property Name="PerformanceArea" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="SpecialtyWeight" Type="Edm.Decimal" Precision="18" Scale="0" ConcurrencyMode="Fixed" />
     <Property Name="Comment" Type="Edm.String" MaxLength="Max" ConcurrencyMode="Fixed" />
     <Property Name="SupplierID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="Specialty" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Specialty1" Relationship="LightSwitchApplication.FK_Supplier_Specialty_Specialty" ToRole="Specialty" FromRole="Supplier_Specialty" />
     <NavigationProperty Name="Supplier_Contacts" Relationship="LightSwitchApplication.FK_Supplier_Contact_Supplier_Specialty" ToRole="Supplier_Contact" FromRole="Supplier_Specialty" />
     <NavigationProperty Name="Supplier" Relationship="LightSwitchApplication.FK_Supplier_Specialty_Suppliers" ToRole="Suppliers" FromRole="Supplier_Specialty" />
   </EntityType>
@@ -443,9 +447,9 @@
     <Property Name="NoOfEmployees" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="VendorNumber" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="AccountNumber" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="Active" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="Active" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="FederalID" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
-    <Property Name="W9OnFile" Type="Edm.Boolean" ConcurrencyMode="Fixed" />
+    <Property Name="W9OnFile" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="LicenseExpires" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="WCExpires" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
     <Property Name="GLExpires" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
@@ -485,6 +489,17 @@
     <Property Name="id" Type="Edm.Int32" Nullable="false" />
     <Property Name="UOM1" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="RFQ_Lines" Relationship="LightSwitchApplication.FK_RFQ_Line_UOM" ToRole="RFQ_Line" FromRole="UOM" />
+    <NavigationProperty Name="ChangeOrders" Relationship="LightSwitchApplication.FK_ChangeOrder_UOM" ToRole="ChangeOrder" FromRole="UOM" />
+    <NavigationProperty Name="LineChangeOrders" Relationship="LightSwitchApplication.FK_LineChangeOrder_UOM" ToRole="LineChangeOrder" FromRole="UOM" />
+  </EntityType>
+  <EntityType Name="Specialty">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Specialty1" Type="Edm.String" MaxLength="250" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="Supplier_Specialties" Relationship="LightSwitchApplication.FK_Supplier_Specialty_Specialty" ToRole="Supplier_Specialty" FromRole="Specialty" />
+    <NavigationProperty Name="Manufacturers" Relationship="LightSwitchApplication.FK_Manufacturers_Specialty" ToRole="Manufacturers" FromRole="Specialty" />
   </EntityType>
   <Association Name="FK_Award_Selected_PO_Line">
     <End Role="PO_Line" Type="LightSwitchApplication.PO_Line" Multiplicity="0..1" />
@@ -930,6 +945,54 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Supplier_Specialty_Specialty">
+    <End Role="Specialty" Type="LightSwitchApplication.Specialty" Multiplicity="0..1" />
+    <End Role="Supplier_Specialty" Type="LightSwitchApplication.Supplier_Specialty" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specialty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Supplier_Specialty">
+        <PropertyRef Name="Specialty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Manufacturers_Specialty">
+    <End Role="Specialty" Type="LightSwitchApplication.Specialty" Multiplicity="0..1" />
+    <End Role="Manufacturers" Type="LightSwitchApplication.Manufacturer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specialty">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Manufacturers">
+        <PropertyRef Name="Specialty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangeOrder_UOM">
+    <End Role="UOM" Type="LightSwitchApplication.UOM" Multiplicity="0..1" />
+    <End Role="ChangeOrder" Type="LightSwitchApplication.ChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UOM">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangeOrder">
+        <PropertyRef Name="CO_UOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LineChangeOrder_UOM">
+    <End Role="UOM" Type="LightSwitchApplication.UOM" Multiplicity="0..1" />
+    <End Role="LineChangeOrder" Type="LightSwitchApplication.LineChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UOM">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="LineChangeOrder">
+        <PropertyRef Name="CO_UOM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="ProcurementDataObjectContext" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Award_Selecteds" EntityType="LightSwitchApplication.Award_Selected" />
     <EntitySet Name="BidLists" EntityType="LightSwitchApplication.BidList" />
@@ -942,7 +1005,7 @@
     <EntitySet Name="Manufacturers" EntityType="LightSwitchApplication.Manufacturer" />
     <EntitySet Name="Material_Status" EntityType="LightSwitchApplication.Material_Status" />
     <EntitySet Name="Phases" EntityType="LightSwitchApplication.Phase" />
-    <EntitySet Name="POes" EntityType="LightSwitchApplication.PO" />
+    <EntitySet Name="PO" EntityType="LightSwitchApplication.PO" />
     <EntitySet Name="PO_Lines" EntityType="LightSwitchApplication.PO_Line" />
     <EntitySet Name="Preferences" EntityType="LightSwitchApplication.Preference" />
     <EntitySet Name="Projects" EntityType="LightSwitchApplication.Project" />
@@ -964,6 +1027,7 @@
     <EntitySet Name="Transport_Types" EntityType="LightSwitchApplication.Transport_Type" />
     <EntitySet Name="SubmittalTypes" EntityType="LightSwitchApplication.SubmittalType" />
     <EntitySet Name="UOMs" EntityType="LightSwitchApplication.UOM" />
+    <EntitySet Name="Specialties" EntityType="LightSwitchApplication.Specialty" />
     <AssociationSet Name="FK_Award_Selected_PO_Line" Association="LightSwitchApplication.FK_Award_Selected_PO_Line">
       <End Role="PO_Line" EntitySet="PO_Lines" />
       <End Role="Award_Selected" EntitySet="Award_Selecteds" />
@@ -985,7 +1049,7 @@
       <End Role="BidList" EntitySet="BidLists" />
     </AssociationSet>
     <AssociationSet Name="FK_ChangeOrder_PO" Association="LightSwitchApplication.FK_ChangeOrder_PO">
-      <End Role="PO" EntitySet="POes" />
+      <End Role="PO" EntitySet="PO" />
       <End Role="ChangeOrder" EntitySet="ChangeOrders" />
     </AssociationSet>
     <AssociationSet Name="FK_ChangeOrder_PO_Line" Association="LightSwitchApplication.FK_ChangeOrder_PO_Line">
@@ -1021,7 +1085,7 @@
       <End Role="LineChangeOrder" EntitySet="LineChangeOrders" />
     </AssociationSet>
     <AssociationSet Name="FK_PO_Line_PO" Association="LightSwitchApplication.FK_PO_Line_PO">
-      <End Role="PO" EntitySet="POes" />
+      <End Role="PO" EntitySet="PO" />
       <End Role="PO_Line" EntitySet="PO_Lines" />
     </AssociationSet>
     <AssociationSet Name="FK_Project_Stakeholders_Project" Association="LightSwitchApplication.FK_Project_Stakeholders_Project">
@@ -1111,6 +1175,22 @@
     <AssociationSet Name="FK_Project_Phase" Association="LightSwitchApplication.FK_Project_Phase">
       <End Role="Phase" EntitySet="Phases" />
       <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplier_Specialty_Specialty" Association="LightSwitchApplication.FK_Supplier_Specialty_Specialty">
+      <End Role="Specialty" EntitySet="Specialties" />
+      <End Role="Supplier_Specialty" EntitySet="Supplier_Specialties" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Manufacturers_Specialty" Association="LightSwitchApplication.FK_Manufacturers_Specialty">
+      <End Role="Specialty" EntitySet="Specialties" />
+      <End Role="Manufacturers" EntitySet="Manufacturers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangeOrder_UOM" Association="LightSwitchApplication.FK_ChangeOrder_UOM">
+      <End Role="UOM" EntitySet="UOMs" />
+      <End Role="ChangeOrder" EntitySet="ChangeOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LineChangeOrder_UOM" Association="LightSwitchApplication.FK_LineChangeOrder_UOM">
+      <End Role="UOM" EntitySet="UOMs" />
+      <End Role="LineChangeOrder" EntitySet="LineChangeOrders" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

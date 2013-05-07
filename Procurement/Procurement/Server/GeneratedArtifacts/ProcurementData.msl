@@ -46,10 +46,10 @@
           <ScalarProperty Name="CO_Description" ColumnName="CO_Description" />
           <ScalarProperty Name="CO_WBS" ColumnName="CO_WBS" />
           <ScalarProperty Name="CO_Qty" ColumnName="CO_Qty" />
-          <ScalarProperty Name="CO_UOM" ColumnName="CO_UOM" />
           <ScalarProperty Name="CO_CostPerUnit" ColumnName="CO_CostPerUnit" />
           <ScalarProperty Name="PONum" ColumnName="PONum" />
           <ScalarProperty Name="POLineID" ColumnName="POLineID" />
+          <ScalarProperty Name="CO_UOM" ColumnName="CO_UOM" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -99,10 +99,10 @@
           <ScalarProperty Name="CO_Description" ColumnName="CO_Description" />
           <ScalarProperty Name="CO_WBS" ColumnName="CO_WBS" />
           <ScalarProperty Name="CO_Qty" ColumnName="CO_Qty" />
-          <ScalarProperty Name="CO_UOM" ColumnName="CO_UOM" />
           <ScalarProperty Name="CO_CostPerUnit" ColumnName="CO_CostPerUnit" />
           <ScalarProperty Name="ChangeOrderID" ColumnName="ChangeOrderID" />
           <ScalarProperty Name="POLineID" ColumnName="POLineID" />
+          <ScalarProperty Name="CO_UOM" ColumnName="CO_UOM" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -131,9 +131,9 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="POes">
+    <EntitySetMapping Name="PO">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.PO)">
-        <MappingFragment StoreEntitySet="POes">
+        <MappingFragment StoreEntitySet="PO">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="PONumber" ColumnName="PONumber" />
           <ScalarProperty Name="AwardDate" ColumnName="AwardDate" />
@@ -373,8 +373,8 @@
         <MappingFragment StoreEntitySet="Supplier_Specialties">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Specialty" ColumnName="Specialty" />
-          <ScalarProperty Name="SpecialtyWeight" ColumnName="SpecialtyWeight" />
           <ScalarProperty Name="PerformanceArea" ColumnName="PerformanceArea" />
+          <ScalarProperty Name="SpecialtyWeight" ColumnName="SpecialtyWeight" />
           <ScalarProperty Name="Comment" ColumnName="Comment" />
           <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
         </MappingFragment>
@@ -443,6 +443,14 @@
         <MappingFragment StoreEntitySet="UOMs">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="UOM1" ColumnName="UOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specialties">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Specialty)">
+        <MappingFragment StoreEntitySet="Specialties">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Specialty1" ColumnName="Specialty" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
