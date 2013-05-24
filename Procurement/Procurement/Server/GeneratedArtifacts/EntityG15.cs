@@ -1237,6 +1237,75 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Business_Class_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.SupplierRegion> SupplierRegions
+        {
+            get
+            {
+                return global::LightSwitchApplication.Supplier.DetailsClass.GetValue(this, global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.SupplierRegions);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.SupplierRegion> SupplierRegionsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Supplier.DetailsClass.GetQuery(this, global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.SupplierRegions);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Proposal> Proposals
+        {
+            get
+            {
+                return global::LightSwitchApplication.Supplier.DetailsClass.GetValue(this, global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.Proposals);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Proposal> ProposalsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Supplier.DetailsClass.GetQuery(this, global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.Proposals);
+            }
+        }
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.PO> POes
+        {
+            get
+            {
+                return global::LightSwitchApplication.Supplier.DetailsClass.GetValue(this, global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.POes);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PO> POesQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Supplier.DetailsClass.GetQuery(this, global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.POes);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -1575,6 +1644,30 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.SupplierRegion> SupplierRegions
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.SupplierRegions) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.SupplierRegion>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.Proposal> Proposals
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.Proposals) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.Proposal>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.PO> POes
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.POes) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.PO>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -1613,6 +1706,9 @@ namespace LightSwitchApplication
                 new global::System.Collections.IEnumerable Supplier_Specialties { get; }
                 new global::System.Collections.IEnumerable SupplierManufactures { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Business_Class { get; set; }
+                new global::System.Collections.IEnumerable SupplierRegions { get; }
+                new global::System.Collections.IEnumerable Proposals { get; }
+                new global::System.Collections.IEnumerable POes { get; }
             }
             #pragma warning restore 109
     
@@ -2727,6 +2823,66 @@ namespace LightSwitchApplication
                     e.Business_Class_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.SupplierRegion>.Entry
+                    SupplierRegions = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.SupplierRegion>.Entry(
+                        "SupplierRegions",
+                        global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties._SupplierRegions_Stub,
+                        global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties._SupplierRegions_GetReferencedEntities,
+                        global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties._SupplierRegions_GetEntityCollection);
+                private static void _SupplierRegions_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Supplier.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.SupplierRegion>.Data> c, global::LightSwitchApplication.Supplier.DetailsClass d, object sf)
+                {
+                    c(d, ref d._SupplierRegions, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.SupplierRegion> _SupplierRegions_GetReferencedEntities(global::LightSwitchApplication.Supplier.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.SupplierRegion, global::LightSwitchApplication.SupplierRegion.DetailsClass>(global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.SupplierRegions, ref d._SupplierRegions);
+                }
+                private static global::System.Collections.IEnumerable _SupplierRegions_GetEntityCollection(global::LightSwitchApplication.Supplier.DetailsClass d)
+                {
+                    return d.ImplementationEntity.SupplierRegions;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.Proposal>.Entry
+                    Proposals = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.Proposal>.Entry(
+                        "Proposals",
+                        global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties._Proposals_Stub,
+                        global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties._Proposals_GetReferencedEntities,
+                        global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties._Proposals_GetEntityCollection);
+                private static void _Proposals_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Supplier.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.Proposal>.Data> c, global::LightSwitchApplication.Supplier.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Proposals, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Proposal> _Proposals_GetReferencedEntities(global::LightSwitchApplication.Supplier.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Proposal, global::LightSwitchApplication.Proposal.DetailsClass>(global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.Proposals, ref d._Proposals);
+                }
+                private static global::System.Collections.IEnumerable _Proposals_GetEntityCollection(global::LightSwitchApplication.Supplier.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Proposals;
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.PO>.Entry
+                    POes = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.PO>.Entry(
+                        "POes",
+                        global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties._POes_Stub,
+                        global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties._POes_GetReferencedEntities,
+                        global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties._POes_GetEntityCollection);
+                private static void _POes_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Supplier.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.PO>.Data> c, global::LightSwitchApplication.Supplier.DetailsClass d, object sf)
+                {
+                    c(d, ref d._POes, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.PO> _POes_GetReferencedEntities(global::LightSwitchApplication.Supplier.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.PO, global::LightSwitchApplication.PO.DetailsClass>(global::LightSwitchApplication.Supplier.DetailsClass.PropertySetProperties.POes, ref d._POes);
+                }
+                private static global::System.Collections.IEnumerable _POes_GetEntityCollection(global::LightSwitchApplication.Supplier.DetailsClass d)
+                {
+                    return d.ImplementationEntity.POes;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2824,6 +2980,15 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.Business_Class>.Data _Business_Class;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.SupplierRegion>.Data _SupplierRegions;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.Proposal>.Data _Proposals;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Supplier, global::LightSwitchApplication.Supplier.DetailsClass, global::LightSwitchApplication.PO>.Data _POes;
             
         }
     

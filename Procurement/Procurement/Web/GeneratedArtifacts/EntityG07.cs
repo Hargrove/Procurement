@@ -127,7 +127,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<int> PropLineSlctd
+        public int PropLineSlctd
         {
             get
             {
@@ -151,7 +151,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<int> ProposalSelected
+        public int ProposalSelected
         {
             get
             {
@@ -169,121 +169,6 @@ namespace LightSwitchApplication
         partial void ProposalSelected_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ProposalSelected_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Award_Selected> Award_Selecteds
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetValue(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selecteds);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Award_Selected> Award_SelectedsQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetQuery(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selecteds);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Award_Selected> Award_Selecteds1
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetValue(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selecteds1);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Award_Selected> Award_Selecteds1Query
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetQuery(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selecteds1);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.ChangeOrder> ChangeOrders
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetValue(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.ChangeOrders);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.ChangeOrder> ChangeOrdersQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetQuery(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.ChangeOrders);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Expediting> Expeditings
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetValue(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Expeditings);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Expediting> ExpeditingsQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetQuery(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Expeditings);
-            }
-        }
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.LineChangeOrder> LineChangeOrders
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetValue(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.LineChangeOrders);
-            }
-        }
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.LineChangeOrder> LineChangeOrdersQuery
-        {
-            get
-            {
-                return global::LightSwitchApplication.PO_Line.DetailsClass.GetQuery(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.LineChangeOrders);
-            }
-        }
 
         /// <summary>
         /// No Modeled Description Available
@@ -308,6 +193,30 @@ namespace LightSwitchApplication
         partial void PO_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void PO_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Award_Selected Award_Selected1
+        {
+            get
+            {
+                return global::LightSwitchApplication.PO_Line.DetailsClass.GetValue(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selected1);
+            }
+            set
+            {
+                global::LightSwitchApplication.PO_Line.DetailsClass.SetValue(this, global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selected1, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Award_Selected1_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Award_Selected1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Award_Selected1_Changed();
 
         #endregion
     
@@ -407,59 +316,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>> PropLineSlctd
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int> PropLineSlctd
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.PropLineSlctd) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>;
+                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.PropLineSlctd) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>> ProposalSelected
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int> ProposalSelected
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.ProposalSelected) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected> Award_Selecteds
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selecteds) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected> Award_Selecteds1
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selecteds1) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.ChangeOrder> ChangeOrders
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.ChangeOrders) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.ChangeOrder>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Expediting> Expeditings
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Expeditings) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Expediting>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.LineChangeOrder> LineChangeOrders
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.LineChangeOrders) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.LineChangeOrder>;
+                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.ProposalSelected) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>;
                     }
                 }
                 
@@ -471,6 +340,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected> Award_Selected1
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selected1) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -479,14 +356,10 @@ namespace LightSwitchApplication
             {
                 new int id { get; }
                 new global::System.Nullable<decimal> POLineRef { get; set; }
-                new global::System.Nullable<int> PropLineSlctd { get; set; }
-                new global::System.Nullable<int> ProposalSelected { get; set; }
-                new global::System.Collections.IEnumerable Award_Selecteds { get; }
-                new global::System.Collections.IEnumerable Award_Selecteds1 { get; }
-                new global::System.Collections.IEnumerable ChangeOrders { get; }
-                new global::System.Collections.IEnumerable Expeditings { get; }
-                new global::System.Collections.IEnumerable LineChangeOrders { get; }
+                new int PropLineSlctd { get; set; }
+                new int ProposalSelected { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation PO { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Award_Selected1 { get; set; }
             }
             #pragma warning restore 109
     
@@ -567,8 +440,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>.Entry
-                    PropLineSlctd = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>.Entry
+                    PropLineSlctd = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>.Entry(
                         "PropLineSlctd",
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._PropLineSlctd_Stub,
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._PropLineSlctd_ComputeIsReadOnly,
@@ -576,7 +449,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._PropLineSlctd_GetImplementationValue,
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._PropLineSlctd_SetImplementationValue,
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._PropLineSlctd_OnValueChanged);
-                private static void _PropLineSlctd_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
+                private static void _PropLineSlctd_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
                 {
                     c(d, ref d._PropLineSlctd, sf);
                 }
@@ -590,11 +463,11 @@ namespace LightSwitchApplication
                 {
                     e.PropLineSlctd_Validate(r);
                 }
-                private static global::System.Nullable<int> _PropLineSlctd_GetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d)
+                private static int _PropLineSlctd_GetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d)
                 {
                     return d.ImplementationEntity.PropLineSlctd;
                 }
-                private static void _PropLineSlctd_SetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d, global::System.Nullable<int> v)
+                private static void _PropLineSlctd_SetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d, int v)
                 {
                     d.ImplementationEntity.PropLineSlctd = v;
                 }
@@ -604,8 +477,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>.Entry
-                    ProposalSelected = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>.Entry
+                    ProposalSelected = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>.Entry(
                         "ProposalSelected",
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._ProposalSelected_Stub,
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._ProposalSelected_ComputeIsReadOnly,
@@ -613,7 +486,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._ProposalSelected_GetImplementationValue,
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._ProposalSelected_SetImplementationValue,
                         global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._ProposalSelected_OnValueChanged);
-                private static void _ProposalSelected_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
+                private static void _ProposalSelected_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
                 {
                     c(d, ref d._ProposalSelected, sf);
                 }
@@ -627,117 +500,17 @@ namespace LightSwitchApplication
                 {
                     e.ProposalSelected_Validate(r);
                 }
-                private static global::System.Nullable<int> _ProposalSelected_GetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d)
+                private static int _ProposalSelected_GetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d)
                 {
                     return d.ImplementationEntity.ProposalSelected;
                 }
-                private static void _ProposalSelected_SetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d, global::System.Nullable<int> v)
+                private static void _ProposalSelected_SetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d, int v)
                 {
                     d.ImplementationEntity.ProposalSelected = v;
                 }
                 private static void _ProposalSelected_OnValueChanged(global::LightSwitchApplication.PO_Line e)
                 {
                     e.ProposalSelected_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry
-                    Award_Selecteds = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry(
-                        "Award_Selecteds",
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selecteds_Stub,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selecteds_GetReferencedEntities,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selecteds_GetEntityCollection);
-                private static void _Award_Selecteds_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Award_Selecteds, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Award_Selected> _Award_Selecteds_GetReferencedEntities(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass>(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selecteds, ref d._Award_Selecteds);
-                }
-                private static global::System.Collections.IEnumerable _Award_Selecteds_GetEntityCollection(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Award_Selecteds;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry
-                    Award_Selecteds1 = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry(
-                        "Award_Selecteds1",
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selecteds1_Stub,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selecteds1_GetReferencedEntities,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selecteds1_GetEntityCollection);
-                private static void _Award_Selecteds1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Award_Selecteds1, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Award_Selected> _Award_Selecteds1_GetReferencedEntities(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass>(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selecteds1, ref d._Award_Selecteds1);
-                }
-                private static global::System.Collections.IEnumerable _Award_Selecteds1_GetEntityCollection(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Award_Selecteds1;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.ChangeOrder>.Entry
-                    ChangeOrders = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.ChangeOrder>.Entry(
-                        "ChangeOrders",
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._ChangeOrders_Stub,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._ChangeOrders_GetReferencedEntities,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._ChangeOrders_GetEntityCollection);
-                private static void _ChangeOrders_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.ChangeOrder>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ChangeOrders, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.ChangeOrder> _ChangeOrders_GetReferencedEntities(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.ChangeOrder, global::LightSwitchApplication.ChangeOrder.DetailsClass>(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.ChangeOrders, ref d._ChangeOrders);
-                }
-                private static global::System.Collections.IEnumerable _ChangeOrders_GetEntityCollection(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.ImplementationEntity.ChangeOrders;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Expediting>.Entry
-                    Expeditings = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Expediting>.Entry(
-                        "Expeditings",
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Expeditings_Stub,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Expeditings_GetReferencedEntities,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Expeditings_GetEntityCollection);
-                private static void _Expeditings_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Expediting>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Expeditings, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Expediting> _Expeditings_GetReferencedEntities(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Expediting, global::LightSwitchApplication.Expediting.DetailsClass>(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Expeditings, ref d._Expeditings);
-                }
-                private static global::System.Collections.IEnumerable _Expeditings_GetEntityCollection(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Expeditings;
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Entry
-                    LineChangeOrders = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Entry(
-                        "LineChangeOrders",
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._LineChangeOrders_Stub,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._LineChangeOrders_GetReferencedEntities,
-                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._LineChangeOrders_GetEntityCollection);
-                private static void _LineChangeOrders_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
-                {
-                    c(d, ref d._LineChangeOrders, sf);
-                }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.LineChangeOrder> _LineChangeOrders_GetReferencedEntities(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.LineChangeOrder, global::LightSwitchApplication.LineChangeOrder.DetailsClass>(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.LineChangeOrders, ref d._LineChangeOrders);
-                }
-                private static global::System.Collections.IEnumerable _LineChangeOrders_GetEntityCollection(global::LightSwitchApplication.PO_Line.DetailsClass d)
-                {
-                    return d.ImplementationEntity.LineChangeOrders;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -787,6 +560,53 @@ namespace LightSwitchApplication
                     e.PO_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry
+                    Award_Selected1 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry(
+                        "Award_Selected1",
+                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selected1_Stub,
+                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selected1_ComputeIsReadOnly,
+                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selected1_Validate,
+                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selected1_GetCoreImplementationValue,
+                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selected1_GetImplementationValue,
+                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selected1_SetImplementationValue,
+                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selected1_Refresh,
+                        global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties._Award_Selected1_OnValueChanged);
+                private static void _Award_Selected1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.PO_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data> c, global::LightSwitchApplication.PO_Line.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Award_Selected1, sf);
+                }
+                private static bool _Award_Selected1_ComputeIsReadOnly(global::LightSwitchApplication.PO_Line e)
+                {
+                    bool result = false;
+                    e.Award_Selected1_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Award_Selected1_Validate(global::LightSwitchApplication.PO_Line e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Award_Selected1_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Award_Selected1_GetCoreImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Award_Selected1;
+                }
+                private static global::LightSwitchApplication.Award_Selected _Award_Selected1_GetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass>(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selected1, ref d._Award_Selected1);
+                }
+                private static void _Award_Selected1_SetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass d, global::LightSwitchApplication.Award_Selected v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selected1, ref d._Award_Selected1, (i, ev) => i.Award_Selected1 = ev, v);
+                }
+                private static void _Award_Selected1_Refresh(global::LightSwitchApplication.PO_Line.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.PO_Line.DetailsClass.PropertySetProperties.Award_Selected1, ref d._Award_Selected1);
+                }
+                private static void _Award_Selected1_OnValueChanged(global::LightSwitchApplication.PO_Line e)
+                {
+                    e.Award_Selected1_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -796,28 +616,16 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<decimal>>.Data _POLineRef;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>.Data _PropLineSlctd;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>.Data _PropLineSlctd;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::System.Nullable<int>>.Data _ProposalSelected;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _Award_Selecteds;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _Award_Selecteds1;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.ChangeOrder>.Data _ChangeOrders;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Expediting>.Data _Expeditings;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Data _LineChangeOrders;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, int>.Data _ProposalSelected;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.PO>.Data _PO;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.PO_Line, global::LightSwitchApplication.PO_Line.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _Award_Selected1;
             
         }
     

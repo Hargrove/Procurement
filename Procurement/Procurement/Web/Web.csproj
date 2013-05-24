@@ -187,6 +187,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCode\AddProjectStakeholder.cs" />
+    <Compile Include="UserCode\CreateNewProposal.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="UserCode\ManufacturerDetail.cs" />
     <Compile Include="UserCode\NewProject.cs">
       <SubType>Code</SubType>

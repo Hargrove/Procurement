@@ -274,6 +274,38 @@
         created: [lightSwitchApplication.Specialty]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.Region, {
+        /// <field>
+        /// Called when a new region is created.
+        /// <br/>created(msls.application.Region entity)
+        /// </field>
+        created: [lightSwitchApplication.Region]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.SupplierRegion, {
+        /// <field>
+        /// Called when a new supplierRegion is created.
+        /// <br/>created(msls.application.SupplierRegion entity)
+        /// </field>
+        created: [lightSwitchApplication.SupplierRegion]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.SourceStrategy, {
+        /// <field>
+        /// Called when a new sourceStrategy is created.
+        /// <br/>created(msls.application.SourceStrategy entity)
+        /// </field>
+        created: [lightSwitchApplication.SourceStrategy]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Year, {
+        /// <field>
+        /// Called when a new year is created.
+        /// <br/>created(msls.application.Year entity)
+        /// </field>
+        created: [lightSwitchApplication.Year]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.CL, {
         /// <field>
         /// Called when a new cL is created.

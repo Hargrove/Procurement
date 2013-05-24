@@ -55,17 +55,6 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Award_Selected/Properties[RFQItem]",
-              "name": "RFQItem",
-              "propertyType": { "__id": ":Decimal?" },
-              ":@DecimalConstraint":
-              {
-                "precision": 18,
-                "scale": 0
-              },
-              ":@NotSearchable": { }
-            },
-            {
               "id": "Award_Selected/Properties[SourceReason]",
               "name": "SourceReason",
               "propertyType": { "__id": ":String?" },
@@ -140,26 +129,35 @@
               }
             },
             {
-              "id": "Award_Selected/Properties[PO_Line]",
-              "name": "PO_Line",
-              "association": { "__id": "FK_Award_Selected_PO_Line" },
-              "elementType": { "__id": "PO_Line" },
-              "fromEnd": { "__id": "FK_Award_Selected_PO_Line/Ends[Award_Selected]" },
-              "propertyType": { "__id": "PO_Line" },
-              "toEnd": { "__id": "FK_Award_Selected_PO_Line/Ends[PO_Line]" }
+              "id": "Award_Selected/Properties[Proposal_Line1]",
+              "name": "Proposal_Line1",
+              "association": { "__id": "FK_Award_Selected_Proposal_Line" },
+              "elementType": { "__id": "Proposal_Line" },
+              "fromEnd": { "__id": "FK_Award_Selected_Proposal_Line/Ends[Award_Selected]" },
+              "propertyType": { "__id": "Proposal_Line" },
+              "toEnd": { "__id": "FK_Award_Selected_Proposal_Line/Ends[Proposal_Line]" }
             },
             {
-              "id": "Award_Selected/Properties[PO_Line1]",
-              "name": "PO_Line1",
-              "association": { "__id": "FK_Award_Selected_PO_Line1" },
-              "elementType": { "__id": "PO_Line" },
-              "fromEnd": { "__id": "FK_Award_Selected_PO_Line1/Ends[Award_Selected]" },
-              "propertyType": { "__id": "PO_Line" },
-              "toEnd": { "__id": "FK_Award_Selected_PO_Line1/Ends[PO_Line]" }
+              "id": "Award_Selected/Properties[Proposal1]",
+              "name": "Proposal1",
+              "association": { "__id": "FK_Award_Selected_Proposal" },
+              "elementType": { "__id": "Proposal" },
+              "fromEnd": { "__id": "FK_Award_Selected_Proposal/Ends[Award_Selected]" },
+              "propertyType": { "__id": "Proposal" },
+              "toEnd": { "__id": "FK_Award_Selected_Proposal/Ends[Proposal]" }
             },
             {
-              "id": "Award_Selected/Properties[RFQ_PItem]",
-              "name": "RFQ_PItem",
+              "id": "Award_Selected/Properties[RFQ_Line1]",
+              "name": "RFQ_Line1",
+              "association": { "__id": "FK_Award_Selected_RFQ_Line" },
+              "elementType": { "__id": "RFQ_Line" },
+              "fromEnd": { "__id": "FK_Award_Selected_RFQ_Line/Ends[Award_Selected]" },
+              "propertyType": { "__id": "RFQ_Line" },
+              "toEnd": { "__id": "FK_Award_Selected_RFQ_Line/Ends[RFQ_Line]" }
+            },
+            {
+              "id": "Award_Selected/Properties[RFQ_PItem1]",
+              "name": "RFQ_PItem1",
               "association": { "__id": "FK_Award_Selected_RFQ_P" },
               "elementType": { "__id": "RFQ_PItem" },
               "fromEnd": { "__id": "FK_Award_Selected_RFQ_P/Ends[Award_Selected]" },
@@ -167,13 +165,13 @@
               "toEnd": { "__id": "FK_Award_Selected_RFQ_P/Ends[RFQ_P]" }
             },
             {
-              "id": "Award_Selected/Properties[Proposal]",
-              "name": "Proposal",
-              "association": { "__id": "FK_Proposal_Award_Selected" },
-              "elementType": { "__id": "Proposal" },
-              "fromEnd": { "__id": "FK_Proposal_Award_Selected/Ends[Award_Selected]" },
-              "propertyType": { "__id": "Proposal" },
-              "toEnd": { "__id": "FK_Proposal_Award_Selected/Ends[Proposal]" }
+              "id": "Award_Selected/Properties[PO_Lines]",
+              "name": "PO_Lines",
+              "association": { "__id": "FK_PO_Line_Award_Selected" },
+              "elementType": { "__id": "PO_Line" },
+              "fromEnd": { "__id": "FK_PO_Line_Award_Selected/Ends[Award_Selected]" },
+              "propertyType": { "__id": "PO_Line*" },
+              "toEnd": { "__id": "FK_PO_Line_Award_Selected/Ends[PO_Line]" }
             }
           ]
         },
@@ -348,15 +346,6 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "ChangeOrder/Properties[CO_UOM]",
-              "name": "CO_UOM",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              }
-            },
-            {
               "id": "ChangeOrder/Properties[CO_CostPerUnit]",
               "name": "CO_CostPerUnit",
               "propertyType": { "__id": ":Decimal?" },
@@ -377,15 +366,6 @@
               "toEnd": { "__id": "FK_ChangeOrder_PO/Ends[PO]" }
             },
             {
-              "id": "ChangeOrder/Properties[PO_Line]",
-              "name": "PO_Line",
-              "association": { "__id": "FK_ChangeOrder_PO_Line" },
-              "elementType": { "__id": "PO_Line" },
-              "fromEnd": { "__id": "FK_ChangeOrder_PO_Line/Ends[ChangeOrder]" },
-              "propertyType": { "__id": "PO_Line" },
-              "toEnd": { "__id": "FK_ChangeOrder_PO_Line/Ends[PO_Line]" }
-            },
-            {
               "id": "ChangeOrder/Properties[LineChangeOrders]",
               "name": "LineChangeOrders",
               "association": { "__id": "FK_LineChangeOrder_ChangeOrder" },
@@ -393,6 +373,21 @@
               "fromEnd": { "__id": "FK_LineChangeOrder_ChangeOrder/Ends[ChangeOrder]" },
               "propertyType": { "__id": "LineChangeOrder*" },
               "toEnd": { "__id": "FK_LineChangeOrder_ChangeOrder/Ends[LineChangeOrder]" }
+            },
+            {
+              "id": "ChangeOrder/Properties[UOM1]",
+              "name": "UOM1",
+              "association": { "__id": "FK_ChangeOrder_UOM" },
+              "elementType": { "__id": "UOM" },
+              "fromEnd": { "__id": "FK_ChangeOrder_UOM/Ends[ChangeOrder]" },
+              "propertyType": { "__id": "UOM" },
+              "toEnd": { "__id": "FK_ChangeOrder_UOM/Ends[UOM]" }
+            },
+            {
+              "id": "ChangeOrder/Properties[POLineID]",
+              "name": "POLineID",
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -420,15 +415,6 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Client_Approved/Properties[Client]",
-              "name": "Client",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              }
-            },
-            {
               "id": "Client_Approved/Properties[ServiceAgreement]",
               "name": "ServiceAgreement",
               "propertyType": { "__id": ":String?" },
@@ -449,8 +435,9 @@
             {
               "id": "Client_Approved/Properties[SiteApproved]",
               "name": "SiteApproved",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "Client_Approved/Properties[Preference1]",
@@ -469,6 +456,15 @@
               "fromEnd": { "__id": "FK_Client_Approved_Suppliers/Ends[Client_Approved]" },
               "propertyType": { "__id": "Supplier" },
               "toEnd": { "__id": "FK_Client_Approved_Suppliers/Ends[Suppliers]" }
+            },
+            {
+              "id": "Client_Approved/Properties[Client1]",
+              "name": "Client1",
+              "association": { "__id": "FK_Client_Approved_Clients" },
+              "elementType": { "__id": "Client" },
+              "fromEnd": { "__id": "FK_Client_Approved_Clients/Ends[Client_Approved]" },
+              "propertyType": { "__id": "Client" },
+              "toEnd": { "__id": "FK_Client_Approved_Clients/Ends[Clients]" }
             }
           ]
         },
@@ -514,6 +510,15 @@
               "fromEnd": { "__id": "FK_Project_Clients/Ends[Clients]" },
               "propertyType": { "__id": "Project*" },
               "toEnd": { "__id": "FK_Project_Clients/Ends[Project]" }
+            },
+            {
+              "id": "Client/Properties[Client_Approveds]",
+              "name": "Client_Approveds",
+              "association": { "__id": "FK_Client_Approved_Clients" },
+              "elementType": { "__id": "Client_Approved" },
+              "fromEnd": { "__id": "FK_Client_Approved_Clients/Ends[Clients]" },
+              "propertyType": { "__id": "Client_Approved*" },
+              "toEnd": { "__id": "FK_Client_Approved_Clients/Ends[Client_Approved]" }
             }
           ]
         },
@@ -633,15 +638,6 @@
               "toEnd": { "__id": "FK_Expediting_Material_Status/Ends[Material_Status]" }
             },
             {
-              "id": "Expediting/Properties[PO_Line]",
-              "name": "PO_Line",
-              "association": { "__id": "FK_Expediting_PO_Line" },
-              "elementType": { "__id": "PO_Line" },
-              "fromEnd": { "__id": "FK_Expediting_PO_Line/Ends[Expediting]" },
-              "propertyType": { "__id": "PO_Line" },
-              "toEnd": { "__id": "FK_Expediting_PO_Line/Ends[PO_Line]" }
-            },
-            {
               "id": "Expediting/Properties[Shipment]",
               "name": "Shipment",
               "association": { "__id": "FK_Expediting_Shipment" },
@@ -649,6 +645,12 @@
               "fromEnd": { "__id": "FK_Expediting_Shipment/Ends[Expediting]" },
               "propertyType": { "__id": "Shipment" },
               "toEnd": { "__id": "FK_Expediting_Shipment/Ends[Shipment]" }
+            },
+            {
+              "id": "Expediting/Properties[POLineID]",
+              "name": "POLineID",
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -705,15 +707,6 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "LineChangeOrder/Properties[CO_UOM]",
-              "name": "CO_UOM",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              }
-            },
-            {
               "id": "LineChangeOrder/Properties[CO_CostPerUnit]",
               "name": "CO_CostPerUnit",
               "propertyType": { "__id": ":Decimal?" },
@@ -734,13 +727,19 @@
               "toEnd": { "__id": "FK_LineChangeOrder_ChangeOrder/Ends[ChangeOrder]" }
             },
             {
-              "id": "LineChangeOrder/Properties[PO_Line]",
-              "name": "PO_Line",
-              "association": { "__id": "FK_LineChangeOrder_PO_Line" },
-              "elementType": { "__id": "PO_Line" },
-              "fromEnd": { "__id": "FK_LineChangeOrder_PO_Line/Ends[LineChangeOrder]" },
-              "propertyType": { "__id": "PO_Line" },
-              "toEnd": { "__id": "FK_LineChangeOrder_PO_Line/Ends[PO_Line]" }
+              "id": "LineChangeOrder/Properties[UOM1]",
+              "name": "UOM1",
+              "association": { "__id": "FK_LineChangeOrder_UOM" },
+              "elementType": { "__id": "UOM" },
+              "fromEnd": { "__id": "FK_LineChangeOrder_UOM/Ends[LineChangeOrder]" },
+              "propertyType": { "__id": "UOM" },
+              "toEnd": { "__id": "FK_LineChangeOrder_UOM/Ends[UOM]" }
+            },
+            {
+              "id": "LineChangeOrder/Properties[POLineID]",
+              "name": "POLineID",
+              "propertyType": { "__id": ":Int32?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -993,63 +992,6 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "PO_Line/Properties[PropLineSlctd]",
-              "name": "PropLineSlctd",
-              "propertyType": { "__id": ":Int32?" },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "PO_Line/Properties[ProposalSelected]",
-              "name": "ProposalSelected",
-              "propertyType": { "__id": ":Int32?" },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "PO_Line/Properties[Award_Selecteds]",
-              "name": "Award_Selecteds",
-              "association": { "__id": "FK_Award_Selected_PO_Line" },
-              "elementType": { "__id": "Award_Selected" },
-              "fromEnd": { "__id": "FK_Award_Selected_PO_Line/Ends[PO_Line]" },
-              "propertyType": { "__id": "Award_Selected*" },
-              "toEnd": { "__id": "FK_Award_Selected_PO_Line/Ends[Award_Selected]" }
-            },
-            {
-              "id": "PO_Line/Properties[Award_Selecteds1]",
-              "name": "Award_Selecteds1",
-              "association": { "__id": "FK_Award_Selected_PO_Line1" },
-              "elementType": { "__id": "Award_Selected" },
-              "fromEnd": { "__id": "FK_Award_Selected_PO_Line1/Ends[PO_Line]" },
-              "propertyType": { "__id": "Award_Selected*" },
-              "toEnd": { "__id": "FK_Award_Selected_PO_Line1/Ends[Award_Selected]" }
-            },
-            {
-              "id": "PO_Line/Properties[ChangeOrders]",
-              "name": "ChangeOrders",
-              "association": { "__id": "FK_ChangeOrder_PO_Line" },
-              "elementType": { "__id": "ChangeOrder" },
-              "fromEnd": { "__id": "FK_ChangeOrder_PO_Line/Ends[PO_Line]" },
-              "propertyType": { "__id": "ChangeOrder*" },
-              "toEnd": { "__id": "FK_ChangeOrder_PO_Line/Ends[ChangeOrder]" }
-            },
-            {
-              "id": "PO_Line/Properties[Expeditings]",
-              "name": "Expeditings",
-              "association": { "__id": "FK_Expediting_PO_Line" },
-              "elementType": { "__id": "Expediting" },
-              "fromEnd": { "__id": "FK_Expediting_PO_Line/Ends[PO_Line]" },
-              "propertyType": { "__id": "Expediting*" },
-              "toEnd": { "__id": "FK_Expediting_PO_Line/Ends[Expediting]" }
-            },
-            {
-              "id": "PO_Line/Properties[LineChangeOrders]",
-              "name": "LineChangeOrders",
-              "association": { "__id": "FK_LineChangeOrder_PO_Line" },
-              "elementType": { "__id": "LineChangeOrder" },
-              "fromEnd": { "__id": "FK_LineChangeOrder_PO_Line/Ends[PO_Line]" },
-              "propertyType": { "__id": "LineChangeOrder*" },
-              "toEnd": { "__id": "FK_LineChangeOrder_PO_Line/Ends[LineChangeOrder]" }
-            },
-            {
               "id": "PO_Line/Properties[PO]",
               "name": "PO",
               "association": { "__id": "FK_PO_Line_PO" },
@@ -1057,6 +999,29 @@
               "fromEnd": { "__id": "FK_PO_Line_PO/Ends[PO_Line]" },
               "propertyType": { "__id": "PO" },
               "toEnd": { "__id": "FK_PO_Line_PO/Ends[PO]" }
+            },
+            {
+              "id": "PO_Line/Properties[PropLineSlctd]",
+              "name": "PropLineSlctd",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "PO_Line/Properties[ProposalSelected]",
+              "name": "ProposalSelected",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "PO_Line/Properties[Award_Selected1]",
+              "name": "Award_Selected1",
+              "association": { "__id": "FK_PO_Line_Award_Selected" },
+              "elementType": { "__id": "Award_Selected" },
+              "fromEnd": { "__id": "FK_PO_Line_Award_Selected/Ends[PO_Line]" },
+              "propertyType": { "__id": "Award_Selected" },
+              "toEnd": { "__id": "FK_PO_Line_Award_Selected/Ends[Award_Selected]" }
             }
           ]
         },
@@ -1107,6 +1072,7 @@
           "__isEntityType": 1,
           "id": "Project",
           "name": "Project",
+          ":@NotSearchable": { },
           "methods":
           [
             {
@@ -1134,19 +1100,6 @@
               ":@MaxLength":
               {
                 "value": 50
-              }
-            },
-            {
-              "id": "Project/Properties[Year]",
-              "name": "Year",
-              "propertyType": { "__id": ":Date?" },
-              ":@NotSearchable": { },
-              ":@StringValueFormat": { "value": "yyyy" },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 0,
-                "preserveSeconds": true
               }
             },
             {
@@ -1192,6 +1145,15 @@
               "fromEnd": { "__id": "FK_Project_Phase/Ends[Project]" },
               "propertyType": { "__id": "Phase" },
               "toEnd": { "__id": "FK_Project_Phase/Ends[Phase]" }
+            },
+            {
+              "id": "Project/Properties[Year1]",
+              "name": "Year1",
+              "association": { "__id": "FK_Project_Year" },
+              "elementType": { "__id": "Year" },
+              "fromEnd": { "__id": "FK_Project_Year/Ends[Project]" },
+              "propertyType": { "__id": "Year" },
+              "toEnd": { "__id": "FK_Project_Year/Ends[Year]" }
             }
           ]
         },
@@ -1271,10 +1233,13 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Proposal/Properties[SupplierID]",
-              "name": "SupplierID",
-              "propertyType": { "__id": ":Int32?" },
-              ":@NotSearchable": { }
+              "id": "Proposal/Properties[ProposalNumber]",
+              "name": "ProposalNumber",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              }
             },
             {
               "id": "Proposal/Properties[ShippingRefNo]",
@@ -1306,15 +1271,6 @@
               }
             },
             {
-              "id": "Proposal/Properties[Award_Selected]",
-              "name": "Award_Selected",
-              "association": { "__id": "FK_Proposal_Award_Selected" },
-              "elementType": { "__id": "Award_Selected" },
-              "fromEnd": { "__id": "FK_Proposal_Award_Selected/Ends[Proposal]" },
-              "propertyType": { "__id": "Award_Selected" },
-              "toEnd": { "__id": "FK_Proposal_Award_Selected/Ends[Award_Selected]" }
-            },
-            {
               "id": "Proposal/Properties[RFQ_PItem]",
               "name": "RFQ_PItem",
               "association": { "__id": "FK_Proposal_RFQ_P" },
@@ -1322,6 +1278,33 @@
               "fromEnd": { "__id": "FK_Proposal_RFQ_P/Ends[Proposal]" },
               "propertyType": { "__id": "RFQ_PItem" },
               "toEnd": { "__id": "FK_Proposal_RFQ_P/Ends[RFQ_P]" }
+            },
+            {
+              "id": "Proposal/Properties[Proposal_Lines]",
+              "name": "Proposal_Lines",
+              "association": { "__id": "FK_Proposal_Line_Proposal" },
+              "elementType": { "__id": "Proposal_Line" },
+              "fromEnd": { "__id": "FK_Proposal_Line_Proposal/Ends[Proposal]" },
+              "propertyType": { "__id": "Proposal_Line*" },
+              "toEnd": { "__id": "FK_Proposal_Line_Proposal/Ends[Proposal_Line]" }
+            },
+            {
+              "id": "Proposal/Properties[Supplier1]",
+              "name": "Supplier1",
+              "association": { "__id": "FK_Proposal_Suppliers" },
+              "elementType": { "__id": "Supplier" },
+              "fromEnd": { "__id": "FK_Proposal_Suppliers/Ends[Proposal]" },
+              "propertyType": { "__id": "Supplier" },
+              "toEnd": { "__id": "FK_Proposal_Suppliers/Ends[Suppliers]" }
+            },
+            {
+              "id": "Proposal/Properties[Award_Selecteds]",
+              "name": "Award_Selecteds",
+              "association": { "__id": "FK_Award_Selected_Proposal" },
+              "elementType": { "__id": "Award_Selected" },
+              "fromEnd": { "__id": "FK_Award_Selected_Proposal/Ends[Proposal]" },
+              "propertyType": { "__id": "Award_Selected*" },
+              "toEnd": { "__id": "FK_Award_Selected_Proposal/Ends[Award_Selected]" }
             }
           ]
         },
@@ -1349,10 +1332,13 @@
               ":@NotSearchable": { }
             },
             {
-              "id": "Proposal_Line/Properties[ProposalID]",
-              "name": "ProposalID",
-              "propertyType": { "__id": ":Int32?" },
-              ":@NotSearchable": { }
+              "id": "Proposal_Line/Properties[RFQ_Line]",
+              "name": "RFQ_Line",
+              "association": { "__id": "FK_Proposal_Line_RFQ_Line" },
+              "elementType": { "__id": "RFQ_Line" },
+              "fromEnd": { "__id": "FK_Proposal_Line_RFQ_Line/Ends[Proposal_Line]" },
+              "propertyType": { "__id": "RFQ_Line" },
+              "toEnd": { "__id": "FK_Proposal_Line_RFQ_Line/Ends[RFQ_Line]" }
             },
             {
               "id": "Proposal_Line/Properties[CostPerUnit]",
@@ -1368,8 +1354,9 @@
             {
               "id": "Proposal_Line/Properties[MeetSpecs]",
               "name": "MeetSpecs",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "Proposal_Line/Properties[CountryOfOrigin]",
@@ -1422,15 +1409,6 @@
               }
             },
             {
-              "id": "Proposal_Line/Properties[RFQ_Line]",
-              "name": "RFQ_Line",
-              "association": { "__id": "FK_Proposal_Line_RFQ_Line" },
-              "elementType": { "__id": "RFQ_Line" },
-              "fromEnd": { "__id": "FK_Proposal_Line_RFQ_Line/Ends[Proposal_Line]" },
-              "propertyType": { "__id": "RFQ_Line" },
-              "toEnd": { "__id": "FK_Proposal_Line_RFQ_Line/Ends[RFQ_Line]" }
-            },
-            {
               "id": "Proposal_Line/Properties[Shipments]",
               "name": "Shipments",
               "association": { "__id": "FK_Shipment_Proposal_Line" },
@@ -1438,6 +1416,24 @@
               "fromEnd": { "__id": "FK_Shipment_Proposal_Line/Ends[Proposal_Line]" },
               "propertyType": { "__id": "Shipment*" },
               "toEnd": { "__id": "FK_Shipment_Proposal_Line/Ends[Shipment]" }
+            },
+            {
+              "id": "Proposal_Line/Properties[Award_Selecteds]",
+              "name": "Award_Selecteds",
+              "association": { "__id": "FK_Award_Selected_Proposal_Line" },
+              "elementType": { "__id": "Award_Selected" },
+              "fromEnd": { "__id": "FK_Award_Selected_Proposal_Line/Ends[Proposal_Line]" },
+              "propertyType": { "__id": "Award_Selected*" },
+              "toEnd": { "__id": "FK_Award_Selected_Proposal_Line/Ends[Award_Selected]" }
+            },
+            {
+              "id": "Proposal_Line/Properties[Proposal1]",
+              "name": "Proposal1",
+              "association": { "__id": "FK_Proposal_Line_Proposal" },
+              "elementType": { "__id": "Proposal" },
+              "fromEnd": { "__id": "FK_Proposal_Line_Proposal/Ends[Proposal_Line]" },
+              "propertyType": { "__id": "Proposal" },
+              "toEnd": { "__id": "FK_Proposal_Line_Proposal/Ends[Proposal]" }
             }
           ]
         },
@@ -1497,8 +1493,9 @@
             {
               "id": "RFQ_Line/Properties[TestingReq]",
               "name": "TestingReq",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "RFQ_Line/Properties[TestingLevel]",
@@ -1512,8 +1509,9 @@
             {
               "id": "RFQ_Line/Properties[Inspection]",
               "name": "Inspection",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "RFQ_Line/Properties[ShippingRefNo]",
@@ -1587,6 +1585,15 @@
               "fromEnd": { "__id": "FK_RFQ_Line_UOM/Ends[RFQ_Line]" },
               "propertyType": { "__id": "UOM" },
               "toEnd": { "__id": "FK_RFQ_Line_UOM/Ends[UOM]" }
+            },
+            {
+              "id": "RFQ_Line/Properties[Award_Selecteds]",
+              "name": "Award_Selecteds",
+              "association": { "__id": "FK_Award_Selected_RFQ_Line" },
+              "elementType": { "__id": "Award_Selected" },
+              "fromEnd": { "__id": "FK_Award_Selected_RFQ_Line/Ends[RFQ_Line]" },
+              "propertyType": { "__id": "Award_Selected*" },
+              "toEnd": { "__id": "FK_Award_Selected_RFQ_Line/Ends[Award_Selected]" }
             }
           ]
         },
@@ -1659,15 +1666,6 @@
                 "scale": 4
               },
               ":@NotSearchable": { }
-            },
-            {
-              "id": "RFQ_PItem/Properties[SourceStrategy]",
-              "name": "SourceStrategy",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              }
             },
             {
               "id": "RFQ_PItem/Properties[ReqdOnSite]",
@@ -1803,14 +1801,16 @@
             {
               "id": "RFQ_PItem/Properties[PreBidRequired]",
               "name": "PreBidRequired",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "RFQ_PItem/Properties[PreAwardRequired]",
               "name": "PreAwardRequired",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "RFQ_PItem/Properties[BidOpening]",
@@ -1851,8 +1851,9 @@
             {
               "id": "RFQ_PItem/Properties[TechComplaint]",
               "name": "TechComplaint",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "RFQ_PItem/Properties[Regret]",
@@ -1881,8 +1882,9 @@
             {
               "id": "RFQ_PItem/Properties[CommercialComplaint]",
               "name": "CommercialComplaint",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "RFQ_PItem/Properties[Comments]",
@@ -1895,17 +1897,9 @@
             {
               "id": "RFQ_PItem/Properties[CriticalPath]",
               "name": "CriticalPath",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "RFQ_PItem/Properties[Award_Selecteds]",
-              "name": "Award_Selecteds",
-              "association": { "__id": "FK_Award_Selected_RFQ_P" },
-              "elementType": { "__id": "Award_Selected" },
-              "fromEnd": { "__id": "FK_Award_Selected_RFQ_P/Ends[RFQ_P]" },
-              "propertyType": { "__id": "Award_Selected*" },
-              "toEnd": { "__id": "FK_Award_Selected_RFQ_P/Ends[Award_Selected]" }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "RFQ_PItem/Properties[BidLists]",
@@ -1942,6 +1936,24 @@
               "fromEnd": { "__id": "FK_RFQ_P_Project/Ends[RFQ_P]" },
               "propertyType": { "__id": "Project" },
               "toEnd": { "__id": "FK_RFQ_P_Project/Ends[Project]" }
+            },
+            {
+              "id": "RFQ_PItem/Properties[SourceStrategy1]",
+              "name": "SourceStrategy1",
+              "association": { "__id": "FK_RFQ_P_SourceStrategy" },
+              "elementType": { "__id": "SourceStrategy" },
+              "fromEnd": { "__id": "FK_RFQ_P_SourceStrategy/Ends[RFQ_P]" },
+              "propertyType": { "__id": "SourceStrategy" },
+              "toEnd": { "__id": "FK_RFQ_P_SourceStrategy/Ends[SourceStrategy]" }
+            },
+            {
+              "id": "RFQ_PItem/Properties[Award_Selecteds]",
+              "name": "Award_Selecteds",
+              "association": { "__id": "FK_Award_Selected_RFQ_P" },
+              "elementType": { "__id": "Award_Selected" },
+              "fromEnd": { "__id": "FK_Award_Selected_RFQ_P/Ends[RFQ_P]" },
+              "propertyType": { "__id": "Award_Selected*" },
+              "toEnd": { "__id": "FK_Award_Selected_RFQ_P/Ends[Award_Selected]" }
             }
           ]
         },
@@ -2375,15 +2387,6 @@
               }
             },
             {
-              "id": "Stakeholder/Properties[Phone]",
-              "name": "Phone",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              }
-            },
-            {
               "id": "Stakeholder/Properties[Email]",
               "name": "Email",
               "propertyType": { "__id": ":String?" },
@@ -2400,6 +2403,24 @@
               "fromEnd": { "__id": "FK_Project_Stakeholders_Stakeholders/Ends[Stakeholders]" },
               "propertyType": { "__id": "Project_Stakeholder*" },
               "toEnd": { "__id": "FK_Project_Stakeholders_Stakeholders/Ends[Project_Stakeholders]" }
+            },
+            {
+              "id": "Stakeholder/Properties[OfficePhone]",
+              "name": "OfficePhone",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              }
+            },
+            {
+              "id": "Stakeholder/Properties[MobilePhone]",
+              "name": "MobilePhone",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              }
             }
           ]
         },
@@ -2924,8 +2945,9 @@
             {
               "id": "Supplier/Properties[Active]",
               "name": "Active",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "Supplier/Properties[FederalID]",
@@ -2939,8 +2961,9 @@
             {
               "id": "Supplier/Properties[W9OnFile]",
               "name": "W9OnFile",
-              "propertyType": { "__id": ":Boolean?" },
-              ":@NotSearchable": { }
+              "propertyType": { "__id": ":Boolean" },
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "Supplier/Properties[LicenseExpires]",
@@ -3087,6 +3110,24 @@
               "fromEnd": { "__id": "FK_Suppliers_Business_Classes/Ends[Suppliers]" },
               "propertyType": { "__id": "Business_Class" },
               "toEnd": { "__id": "FK_Suppliers_Business_Classes/Ends[Business_Classes]" }
+            },
+            {
+              "id": "Supplier/Properties[SupplierRegions]",
+              "name": "SupplierRegions",
+              "association": { "__id": "FK_SupplierRegion_Suppliers" },
+              "elementType": { "__id": "SupplierRegion" },
+              "fromEnd": { "__id": "FK_SupplierRegion_Suppliers/Ends[Suppliers]" },
+              "propertyType": { "__id": "SupplierRegion*" },
+              "toEnd": { "__id": "FK_SupplierRegion_Suppliers/Ends[SupplierRegion]" }
+            },
+            {
+              "id": "Supplier/Properties[Proposals]",
+              "name": "Proposals",
+              "association": { "__id": "FK_Proposal_Suppliers" },
+              "elementType": { "__id": "Proposal" },
+              "fromEnd": { "__id": "FK_Proposal_Suppliers/Ends[Suppliers]" },
+              "propertyType": { "__id": "Proposal*" },
+              "toEnd": { "__id": "FK_Proposal_Suppliers/Ends[Proposal]" }
             }
           ]
         },
@@ -3130,66 +3171,6 @@
               "fromEnd": { "__id": "FK_Shipment_Transport_Type/Ends[Transport_Type]" },
               "propertyType": { "__id": "Shipment*" },
               "toEnd": { "__id": "FK_Shipment_Transport_Type/Ends[Shipment]" }
-            }
-          ]
-        },
-        {
-          "id": "FK_Award_Selected_PO_Line",
-          "name": "FK_Award_Selected_PO_Line",
-          "ends":
-          [
-            {
-              "id": "FK_Award_Selected_PO_Line/Ends[PO_Line]",
-              "name": "PO_Line",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "PO_Line" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "FK_Award_Selected_PO_Line/Ends[Award_Selected]",
-              "name": "Award_Selected",
-              "multiplicity": "Many",
-              "entityType": { "__id": "Award_Selected" }
-            }
-          ]
-        },
-        {
-          "id": "FK_Award_Selected_PO_Line1",
-          "name": "FK_Award_Selected_PO_Line1",
-          "ends":
-          [
-            {
-              "id": "FK_Award_Selected_PO_Line1/Ends[PO_Line]",
-              "name": "PO_Line",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "PO_Line" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "FK_Award_Selected_PO_Line1/Ends[Award_Selected]",
-              "name": "Award_Selected",
-              "multiplicity": "Many",
-              "entityType": { "__id": "Award_Selected" }
-            }
-          ]
-        },
-        {
-          "id": "FK_Award_Selected_RFQ_P",
-          "name": "FK_Award_Selected_RFQ_P",
-          "ends":
-          [
-            {
-              "id": "FK_Award_Selected_RFQ_P/Ends[RFQ_P]",
-              "name": "RFQ_P",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "RFQ_PItem" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "FK_Award_Selected_RFQ_P/Ends[Award_Selected]",
-              "name": "Award_Selected",
-              "multiplicity": "Many",
-              "entityType": { "__id": "Award_Selected" }
             }
           ]
         },
@@ -3247,26 +3228,6 @@
             },
             {
               "id": "FK_ChangeOrder_PO/Ends[ChangeOrder]",
-              "name": "ChangeOrder",
-              "multiplicity": "Many",
-              "entityType": { "__id": "ChangeOrder" }
-            }
-          ]
-        },
-        {
-          "id": "FK_ChangeOrder_PO_Line",
-          "name": "FK_ChangeOrder_PO_Line",
-          "ends":
-          [
-            {
-              "id": "FK_ChangeOrder_PO_Line/Ends[PO_Line]",
-              "name": "PO_Line",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "PO_Line" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "FK_ChangeOrder_PO_Line/Ends[ChangeOrder]",
               "name": "ChangeOrder",
               "multiplicity": "Many",
               "entityType": { "__id": "ChangeOrder" }
@@ -3334,26 +3295,6 @@
           ]
         },
         {
-          "id": "FK_Expediting_PO_Line",
-          "name": "FK_Expediting_PO_Line",
-          "ends":
-          [
-            {
-              "id": "FK_Expediting_PO_Line/Ends[PO_Line]",
-              "name": "PO_Line",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "PO_Line" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "FK_Expediting_PO_Line/Ends[Expediting]",
-              "name": "Expediting",
-              "multiplicity": "Many",
-              "entityType": { "__id": "Expediting" }
-            }
-          ]
-        },
-        {
           "id": "FK_Expediting_Shipment",
           "name": "FK_Expediting_Shipment",
           "ends":
@@ -3387,26 +3328,6 @@
             },
             {
               "id": "FK_LineChangeOrder_ChangeOrder/Ends[LineChangeOrder]",
-              "name": "LineChangeOrder",
-              "multiplicity": "Many",
-              "entityType": { "__id": "LineChangeOrder" }
-            }
-          ]
-        },
-        {
-          "id": "FK_LineChangeOrder_PO_Line",
-          "name": "FK_LineChangeOrder_PO_Line",
-          "ends":
-          [
-            {
-              "id": "FK_LineChangeOrder_PO_Line/Ends[PO_Line]",
-              "name": "PO_Line",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "PO_Line" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "FK_LineChangeOrder_PO_Line/Ends[LineChangeOrder]",
               "name": "LineChangeOrder",
               "multiplicity": "Many",
               "entityType": { "__id": "LineChangeOrder" }
@@ -3490,26 +3411,6 @@
               "name": "Project_Stakeholders",
               "multiplicity": "Many",
               "entityType": { "__id": "Project_Stakeholder" }
-            }
-          ]
-        },
-        {
-          "id": "FK_Proposal_Award_Selected",
-          "name": "FK_Proposal_Award_Selected",
-          "ends":
-          [
-            {
-              "id": "FK_Proposal_Award_Selected/Ends[Award_Selected]",
-              "name": "Award_Selected",
-              "multiplicity": "One",
-              "entityType": { "__id": "Award_Selected" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "FK_Proposal_Award_Selected/Ends[Proposal]",
-              "name": "Proposal",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "Proposal" }
             }
           ]
         },
@@ -3779,60 +3680,6 @@
           "associationSets":
           [
             {
-              "id": "ProcurementData/Members[FK_Award_Selected_PO_Line]",
-              "name": "FK_Award_Selected_PO_Line",
-              "association": { "__id": "FK_Award_Selected_PO_Line" },
-              "ends":
-              [
-                {
-                  "id": "ProcurementData/Members[FK_Award_Selected_PO_Line]/Members[PO_Line]",
-                  "name": "PO_Line",
-                  "entitySet": { "__id": "ProcurementData/Members[PO_Lines]" }
-                },
-                {
-                  "id": "ProcurementData/Members[FK_Award_Selected_PO_Line]/Members[Award_Selected]",
-                  "name": "Award_Selected",
-                  "entitySet": { "__id": "ProcurementData/Members[Award_Selecteds]" }
-                }
-              ]
-            },
-            {
-              "id": "ProcurementData/Members[FK_Award_Selected_PO_Line1]",
-              "name": "FK_Award_Selected_PO_Line1",
-              "association": { "__id": "FK_Award_Selected_PO_Line1" },
-              "ends":
-              [
-                {
-                  "id": "ProcurementData/Members[FK_Award_Selected_PO_Line1]/Members[PO_Line]",
-                  "name": "PO_Line",
-                  "entitySet": { "__id": "ProcurementData/Members[PO_Lines]" }
-                },
-                {
-                  "id": "ProcurementData/Members[FK_Award_Selected_PO_Line1]/Members[Award_Selected]",
-                  "name": "Award_Selected",
-                  "entitySet": { "__id": "ProcurementData/Members[Award_Selecteds]" }
-                }
-              ]
-            },
-            {
-              "id": "ProcurementData/Members[FK_Award_Selected_RFQ_P]",
-              "name": "FK_Award_Selected_RFQ_P",
-              "association": { "__id": "FK_Award_Selected_RFQ_P" },
-              "ends":
-              [
-                {
-                  "id": "ProcurementData/Members[FK_Award_Selected_RFQ_P]/Members[RFQ_P]",
-                  "name": "RFQ_P",
-                  "entitySet": { "__id": "ProcurementData/Members[RFQ_P]" }
-                },
-                {
-                  "id": "ProcurementData/Members[FK_Award_Selected_RFQ_P]/Members[Award_Selected]",
-                  "name": "Award_Selected",
-                  "entitySet": { "__id": "ProcurementData/Members[Award_Selecteds]" }
-                }
-              ]
-            },
-            {
               "id": "ProcurementData/Members[FK_BidList_RFQ_P1]",
               "name": "FK_BidList_RFQ_P1",
               "association": { "__id": "FK_BidList_RFQ_P1" },
@@ -3881,24 +3728,6 @@
                 },
                 {
                   "id": "ProcurementData/Members[FK_ChangeOrder_PO]/Members[ChangeOrder]",
-                  "name": "ChangeOrder",
-                  "entitySet": { "__id": "ProcurementData/Members[ChangeOrders]" }
-                }
-              ]
-            },
-            {
-              "id": "ProcurementData/Members[FK_ChangeOrder_PO_Line]",
-              "name": "FK_ChangeOrder_PO_Line",
-              "association": { "__id": "FK_ChangeOrder_PO_Line" },
-              "ends":
-              [
-                {
-                  "id": "ProcurementData/Members[FK_ChangeOrder_PO_Line]/Members[PO_Line]",
-                  "name": "PO_Line",
-                  "entitySet": { "__id": "ProcurementData/Members[PO_Lines]" }
-                },
-                {
-                  "id": "ProcurementData/Members[FK_ChangeOrder_PO_Line]/Members[ChangeOrder]",
                   "name": "ChangeOrder",
                   "entitySet": { "__id": "ProcurementData/Members[ChangeOrders]" }
                 }
@@ -3959,24 +3788,6 @@
               ]
             },
             {
-              "id": "ProcurementData/Members[FK_Expediting_PO_Line]",
-              "name": "FK_Expediting_PO_Line",
-              "association": { "__id": "FK_Expediting_PO_Line" },
-              "ends":
-              [
-                {
-                  "id": "ProcurementData/Members[FK_Expediting_PO_Line]/Members[PO_Line]",
-                  "name": "PO_Line",
-                  "entitySet": { "__id": "ProcurementData/Members[PO_Lines]" }
-                },
-                {
-                  "id": "ProcurementData/Members[FK_Expediting_PO_Line]/Members[Expediting]",
-                  "name": "Expediting",
-                  "entitySet": { "__id": "ProcurementData/Members[Expeditings]" }
-                }
-              ]
-            },
-            {
               "id": "ProcurementData/Members[FK_Expediting_Shipment]",
               "name": "FK_Expediting_Shipment",
               "association": { "__id": "FK_Expediting_Shipment" },
@@ -4007,24 +3818,6 @@
                 },
                 {
                   "id": "ProcurementData/Members[FK_LineChangeOrder_ChangeOrder]/Members[LineChangeOrder]",
-                  "name": "LineChangeOrder",
-                  "entitySet": { "__id": "ProcurementData/Members[LineChangeOrders]" }
-                }
-              ]
-            },
-            {
-              "id": "ProcurementData/Members[FK_LineChangeOrder_PO_Line]",
-              "name": "FK_LineChangeOrder_PO_Line",
-              "association": { "__id": "FK_LineChangeOrder_PO_Line" },
-              "ends":
-              [
-                {
-                  "id": "ProcurementData/Members[FK_LineChangeOrder_PO_Line]/Members[PO_Line]",
-                  "name": "PO_Line",
-                  "entitySet": { "__id": "ProcurementData/Members[PO_Lines]" }
-                },
-                {
-                  "id": "ProcurementData/Members[FK_LineChangeOrder_PO_Line]/Members[LineChangeOrder]",
                   "name": "LineChangeOrder",
                   "entitySet": { "__id": "ProcurementData/Members[LineChangeOrders]" }
                 }
@@ -4099,24 +3892,6 @@
                   "id": "ProcurementData/Members[FK_Project_Stakeholders_Stakeholders]/Members[Project_Stakeholders]",
                   "name": "Project_Stakeholders",
                   "entitySet": { "__id": "ProcurementData/Members[Project_Stakeholders]" }
-                }
-              ]
-            },
-            {
-              "id": "ProcurementData/Members[FK_Proposal_Award_Selected]",
-              "name": "FK_Proposal_Award_Selected",
-              "association": { "__id": "FK_Proposal_Award_Selected" },
-              "ends":
-              [
-                {
-                  "id": "ProcurementData/Members[FK_Proposal_Award_Selected]/Members[Award_Selected]",
-                  "name": "Award_Selected",
-                  "entitySet": { "__id": "ProcurementData/Members[Award_Selecteds]" }
-                },
-                {
-                  "id": "ProcurementData/Members[FK_Proposal_Award_Selected]/Members[Proposal]",
-                  "name": "Proposal",
-                  "entitySet": { "__id": "ProcurementData/Members[Proposals]" }
                 }
               ]
             },
@@ -4479,6 +4254,258 @@
                   "entitySet": { "__id": "ProcurementData/Members[Manufacturers]" }
                 }
               ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_ChangeOrder_UOM]",
+              "name": "FK_ChangeOrder_UOM",
+              "association": { "__id": "FK_ChangeOrder_UOM" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_ChangeOrder_UOM]/Members[UOM]",
+                  "name": "UOM",
+                  "entitySet": { "__id": "ProcurementData/Members[UOMs]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_ChangeOrder_UOM]/Members[ChangeOrder]",
+                  "name": "ChangeOrder",
+                  "entitySet": { "__id": "ProcurementData/Members[ChangeOrders]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_LineChangeOrder_UOM]",
+              "name": "FK_LineChangeOrder_UOM",
+              "association": { "__id": "FK_LineChangeOrder_UOM" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_LineChangeOrder_UOM]/Members[UOM]",
+                  "name": "UOM",
+                  "entitySet": { "__id": "ProcurementData/Members[UOMs]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_LineChangeOrder_UOM]/Members[LineChangeOrder]",
+                  "name": "LineChangeOrder",
+                  "entitySet": { "__id": "ProcurementData/Members[LineChangeOrders]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_SupplierRegion_Region]",
+              "name": "FK_SupplierRegion_Region",
+              "association": { "__id": "FK_SupplierRegion_Region" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_SupplierRegion_Region]/Members[Region]",
+                  "name": "Region",
+                  "entitySet": { "__id": "ProcurementData/Members[Regions]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_SupplierRegion_Region]/Members[SupplierRegion]",
+                  "name": "SupplierRegion",
+                  "entitySet": { "__id": "ProcurementData/Members[SupplierRegions]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_SupplierRegion_Suppliers]",
+              "name": "FK_SupplierRegion_Suppliers",
+              "association": { "__id": "FK_SupplierRegion_Suppliers" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_SupplierRegion_Suppliers]/Members[Suppliers]",
+                  "name": "Suppliers",
+                  "entitySet": { "__id": "ProcurementData/Members[Suppliers]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_SupplierRegion_Suppliers]/Members[SupplierRegion]",
+                  "name": "SupplierRegion",
+                  "entitySet": { "__id": "ProcurementData/Members[SupplierRegions]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_RFQ_P_SourceStrategy]",
+              "name": "FK_RFQ_P_SourceStrategy",
+              "association": { "__id": "FK_RFQ_P_SourceStrategy" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_RFQ_P_SourceStrategy]/Members[SourceStrategy]",
+                  "name": "SourceStrategy",
+                  "entitySet": { "__id": "ProcurementData/Members[SourceStrategies]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_RFQ_P_SourceStrategy]/Members[RFQ_P]",
+                  "name": "RFQ_P",
+                  "entitySet": { "__id": "ProcurementData/Members[RFQ_P]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Client_Approved_Clients]",
+              "name": "FK_Client_Approved_Clients",
+              "association": { "__id": "FK_Client_Approved_Clients" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Client_Approved_Clients]/Members[Clients]",
+                  "name": "Clients",
+                  "entitySet": { "__id": "ProcurementData/Members[Clients]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Client_Approved_Clients]/Members[Client_Approved]",
+                  "name": "Client_Approved",
+                  "entitySet": { "__id": "ProcurementData/Members[Client_Approveds]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Award_Selected_Proposal_Line]",
+              "name": "FK_Award_Selected_Proposal_Line",
+              "association": { "__id": "FK_Award_Selected_Proposal_Line" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Award_Selected_Proposal_Line]/Members[Proposal_Line]",
+                  "name": "Proposal_Line",
+                  "entitySet": { "__id": "ProcurementData/Members[Proposal_Lines]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Award_Selected_Proposal_Line]/Members[Award_Selected]",
+                  "name": "Award_Selected",
+                  "entitySet": { "__id": "ProcurementData/Members[Award_Selecteds]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Proposal_Line_Proposal]",
+              "name": "FK_Proposal_Line_Proposal",
+              "association": { "__id": "FK_Proposal_Line_Proposal" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Proposal_Line_Proposal]/Members[Proposal]",
+                  "name": "Proposal",
+                  "entitySet": { "__id": "ProcurementData/Members[Proposals]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Proposal_Line_Proposal]/Members[Proposal_Line]",
+                  "name": "Proposal_Line",
+                  "entitySet": { "__id": "ProcurementData/Members[Proposal_Lines]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Proposal_Suppliers]",
+              "name": "FK_Proposal_Suppliers",
+              "association": { "__id": "FK_Proposal_Suppliers" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Proposal_Suppliers]/Members[Suppliers]",
+                  "name": "Suppliers",
+                  "entitySet": { "__id": "ProcurementData/Members[Suppliers]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Proposal_Suppliers]/Members[Proposal]",
+                  "name": "Proposal",
+                  "entitySet": { "__id": "ProcurementData/Members[Proposals]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Award_Selected_Proposal]",
+              "name": "FK_Award_Selected_Proposal",
+              "association": { "__id": "FK_Award_Selected_Proposal" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Award_Selected_Proposal]/Members[Proposal]",
+                  "name": "Proposal",
+                  "entitySet": { "__id": "ProcurementData/Members[Proposals]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Award_Selected_Proposal]/Members[Award_Selected]",
+                  "name": "Award_Selected",
+                  "entitySet": { "__id": "ProcurementData/Members[Award_Selecteds]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Award_Selected_RFQ_Line]",
+              "name": "FK_Award_Selected_RFQ_Line",
+              "association": { "__id": "FK_Award_Selected_RFQ_Line" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Award_Selected_RFQ_Line]/Members[RFQ_Line]",
+                  "name": "RFQ_Line",
+                  "entitySet": { "__id": "ProcurementData/Members[RFQ_Lines]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Award_Selected_RFQ_Line]/Members[Award_Selected]",
+                  "name": "Award_Selected",
+                  "entitySet": { "__id": "ProcurementData/Members[Award_Selecteds]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Award_Selected_RFQ_P]",
+              "name": "FK_Award_Selected_RFQ_P",
+              "association": { "__id": "FK_Award_Selected_RFQ_P" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Award_Selected_RFQ_P]/Members[RFQ_P]",
+                  "name": "RFQ_P",
+                  "entitySet": { "__id": "ProcurementData/Members[RFQ_P]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Award_Selected_RFQ_P]/Members[Award_Selected]",
+                  "name": "Award_Selected",
+                  "entitySet": { "__id": "ProcurementData/Members[Award_Selecteds]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_PO_Line_Award_Selected]",
+              "name": "FK_PO_Line_Award_Selected",
+              "association": { "__id": "FK_PO_Line_Award_Selected" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_PO_Line_Award_Selected]/Members[Award_Selected]",
+                  "name": "Award_Selected",
+                  "entitySet": { "__id": "ProcurementData/Members[Award_Selecteds]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_PO_Line_Award_Selected]/Members[PO_Line]",
+                  "name": "PO_Line",
+                  "entitySet": { "__id": "ProcurementData/Members[PO_Lines]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_Project_Year]",
+              "name": "FK_Project_Year",
+              "association": { "__id": "FK_Project_Year" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_Project_Year]/Members[Year]",
+                  "name": "Year",
+                  "entitySet": { "__id": "ProcurementData/Members[Years]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_Project_Year]/Members[Project]",
+                  "name": "Project",
+                  "entitySet": { "__id": "ProcurementData/Members[Projects]" }
+                }
+              ]
             }
           ],
           "entitySets":
@@ -4630,6 +4657,9 @@
             {
               "id": "ProcurementData/Members[Proposals]",
               "name": "Proposals",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
               "elementType": { "__id": "Proposal" },
               "entityType": { "__id": "Proposal" }
             },
@@ -4785,6 +4815,42 @@
               "canUpdate": true,
               "elementType": { "__id": "Specialty" },
               "entityType": { "__id": "Specialty" }
+            },
+            {
+              "id": "ProcurementData/Members[Regions]",
+              "name": "Regions",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Region" },
+              "entityType": { "__id": "Region" }
+            },
+            {
+              "id": "ProcurementData/Members[SupplierRegions]",
+              "name": "SupplierRegions",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "SupplierRegion" },
+              "entityType": { "__id": "SupplierRegion" }
+            },
+            {
+              "id": "ProcurementData/Members[SourceStrategies]",
+              "name": "SourceStrategies",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "SourceStrategy" },
+              "entityType": { "__id": "SourceStrategy" }
+            },
+            {
+              "id": "ProcurementData/Members[Years]",
+              "name": "Years",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Year" },
+              "entityType": { "__id": "Year" }
             }
           ],
           "queryOperations":
@@ -6080,6 +6146,195 @@
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
+            },
+            {
+              "id": "ProcurementData/Members[Regions_Single]",
+              "name": "Regions_Single",
+              "elementType": { "__id": "Region" },
+              "query": { "__id": "ProcurementData/Members[Regions_Single]" },
+              "returnType": { "__id": "Region" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[Regions]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[Regions_Single]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[Regions_SingleOrDefault]",
+              "name": "Regions_SingleOrDefault",
+              "elementType": { "__id": "Region" },
+              "query": { "__id": "ProcurementData/Members[Regions_SingleOrDefault]" },
+              "returnType": { "__id": "Region" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[Regions]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[Regions_SingleOrDefault]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[SupplierRegions_Single]",
+              "name": "SupplierRegions_Single",
+              "elementType": { "__id": "SupplierRegion" },
+              "query": { "__id": "ProcurementData/Members[SupplierRegions_Single]" },
+              "returnType": { "__id": "SupplierRegion" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[SupplierRegions]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[SupplierRegions_Single]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[SupplierRegions_SingleOrDefault]",
+              "name": "SupplierRegions_SingleOrDefault",
+              "elementType": { "__id": "SupplierRegion" },
+              "query": { "__id": "ProcurementData/Members[SupplierRegions_SingleOrDefault]" },
+              "returnType": { "__id": "SupplierRegion" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[SupplierRegions]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[SupplierRegions_SingleOrDefault]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[SourceStrategies_Single]",
+              "name": "SourceStrategies_Single",
+              "elementType": { "__id": "SourceStrategy" },
+              "query": { "__id": "ProcurementData/Members[SourceStrategies_Single]" },
+              "returnType": { "__id": "SourceStrategy" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[SourceStrategies]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[SourceStrategies_Single]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[SourceStrategies_SingleOrDefault]",
+              "name": "SourceStrategies_SingleOrDefault",
+              "elementType": { "__id": "SourceStrategy" },
+              "query": { "__id": "ProcurementData/Members[SourceStrategies_SingleOrDefault]" },
+              "returnType": { "__id": "SourceStrategy" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[SourceStrategies]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[SourceStrategies_SingleOrDefault]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[Years_Single]",
+              "name": "Years_Single",
+              "elementType": { "__id": "Year" },
+              "query": { "__id": "ProcurementData/Members[Years_Single]" },
+              "returnType": { "__id": "Year" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[Years]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[Years_Single]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[Years_SingleOrDefault]",
+              "name": "Years_SingleOrDefault",
+              "elementType": { "__id": "Year" },
+              "query": { "__id": "ProcurementData/Members[Years_SingleOrDefault]" },
+              "returnType": { "__id": "Year" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[Years]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "ProcurementData/Members[Years_SingleOrDefault]/Parameters[ID]",
+                  "name": "ID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[Query1]",
+              "name": "Query1",
+              "elementType": { "__id": "Year" },
+              "query": { "__id": "ProcurementData/Members[Query1]" },
+              "returnType": { "__id": "Year*" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[Years]" }
+              },
+              "sortCriteria":
+              [
+                {
+                  "member": { "__id": "Year/Properties[Year1]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[SortedStakeholders]",
+              "name": "SortedStakeholders",
+              "elementType": { "__id": "Stakeholder" },
+              "query": { "__id": "ProcurementData/Members[SortedStakeholders]" },
+              "returnType": { "__id": "Stakeholder*" },
+              "source":
+              {
+                "member": { "__id": "ProcurementData/Members[Stakeholders]" }
+              },
+              "sortCriteria":
+              [
+                {
+                  "member": { "__id": "Stakeholder/Properties[LastName]" }
+                },
+                {
+                  "member": { "__id": "Stakeholder/Properties[FirstName]" }
+                }
+              ]
             }
           ]
         },
@@ -6190,6 +6445,24 @@
               "fromEnd": { "__id": "FK_RFQ_Line_UOM/Ends[UOM]" },
               "propertyType": { "__id": "RFQ_Line*" },
               "toEnd": { "__id": "FK_RFQ_Line_UOM/Ends[RFQ_Line]" }
+            },
+            {
+              "id": "UOM/Properties[ChangeOrders]",
+              "name": "ChangeOrders",
+              "association": { "__id": "FK_ChangeOrder_UOM" },
+              "elementType": { "__id": "ChangeOrder" },
+              "fromEnd": { "__id": "FK_ChangeOrder_UOM/Ends[UOM]" },
+              "propertyType": { "__id": "ChangeOrder*" },
+              "toEnd": { "__id": "FK_ChangeOrder_UOM/Ends[ChangeOrder]" }
+            },
+            {
+              "id": "UOM/Properties[LineChangeOrders]",
+              "name": "LineChangeOrders",
+              "association": { "__id": "FK_LineChangeOrder_UOM" },
+              "elementType": { "__id": "LineChangeOrder" },
+              "fromEnd": { "__id": "FK_LineChangeOrder_UOM/Ends[UOM]" },
+              "propertyType": { "__id": "LineChangeOrder*" },
+              "toEnd": { "__id": "FK_LineChangeOrder_UOM/Ends[LineChangeOrder]" }
             }
           ]
         },
@@ -6791,6 +7064,700 @@
               "name": "Manufacturers",
               "multiplicity": "Many",
               "entityType": { "__id": "Manufacturer" }
+            }
+          ]
+        },
+        {
+          "id": "FK_ChangeOrder_UOM",
+          "name": "FK_ChangeOrder_UOM",
+          "ends":
+          [
+            {
+              "id": "FK_ChangeOrder_UOM/Ends[UOM]",
+              "name": "UOM",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "UOM" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_ChangeOrder_UOM/Ends[ChangeOrder]",
+              "name": "ChangeOrder",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ChangeOrder" }
+            }
+          ]
+        },
+        {
+          "id": "FK_LineChangeOrder_UOM",
+          "name": "FK_LineChangeOrder_UOM",
+          "ends":
+          [
+            {
+              "id": "FK_LineChangeOrder_UOM/Ends[UOM]",
+              "name": "UOM",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "UOM" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_LineChangeOrder_UOM/Ends[LineChangeOrder]",
+              "name": "LineChangeOrder",
+              "multiplicity": "Many",
+              "entityType": { "__id": "LineChangeOrder" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          "id": "Region",
+          "name": "Region",
+          "methods":
+          [
+            {
+              "id": "Region/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Region/Properties[ID]",
+              "name": "ID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Region/Properties[Region1]",
+              "name": "Region1",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 150
+              }
+            },
+            {
+              "id": "Region/Properties[SupplierRegions]",
+              "name": "SupplierRegions",
+              "association": { "__id": "FK_SupplierRegion_Region" },
+              "elementType": { "__id": "SupplierRegion" },
+              "fromEnd": { "__id": "FK_SupplierRegion_Region/Ends[Region]" },
+              "propertyType": { "__id": "SupplierRegion*" },
+              "toEnd": { "__id": "FK_SupplierRegion_Region/Ends[SupplierRegion]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          "id": "SupplierRegion",
+          "name": "SupplierRegion",
+          "methods":
+          [
+            {
+              "id": "SupplierRegion/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "SupplierRegion/Properties[ID]",
+              "name": "ID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "SupplierRegion/Properties[Region]",
+              "name": "Region",
+              "association": { "__id": "FK_SupplierRegion_Region" },
+              "elementType": { "__id": "Region" },
+              "fromEnd": { "__id": "FK_SupplierRegion_Region/Ends[SupplierRegion]" },
+              "propertyType": { "__id": "Region" },
+              "toEnd": { "__id": "FK_SupplierRegion_Region/Ends[Region]" }
+            },
+            {
+              "id": "SupplierRegion/Properties[Supplier1]",
+              "name": "Supplier1",
+              "association": { "__id": "FK_SupplierRegion_Suppliers" },
+              "elementType": { "__id": "Supplier" },
+              "fromEnd": { "__id": "FK_SupplierRegion_Suppliers/Ends[SupplierRegion]" },
+              "propertyType": { "__id": "Supplier" },
+              "toEnd": { "__id": "FK_SupplierRegion_Suppliers/Ends[Suppliers]" }
+            }
+          ]
+        },
+        {
+          "id": "FK_SupplierRegion_Region",
+          "name": "FK_SupplierRegion_Region",
+          "ends":
+          [
+            {
+              "id": "FK_SupplierRegion_Region/Ends[Region]",
+              "name": "Region",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Region" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_SupplierRegion_Region/Ends[SupplierRegion]",
+              "name": "SupplierRegion",
+              "multiplicity": "Many",
+              "entityType": { "__id": "SupplierRegion" }
+            }
+          ]
+        },
+        {
+          "id": "FK_SupplierRegion_Suppliers",
+          "name": "FK_SupplierRegion_Suppliers",
+          "ends":
+          [
+            {
+              "id": "FK_SupplierRegion_Suppliers/Ends[Suppliers]",
+              "name": "Suppliers",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Supplier" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_SupplierRegion_Suppliers/Ends[SupplierRegion]",
+              "name": "SupplierRegion",
+              "multiplicity": "Many",
+              "entityType": { "__id": "SupplierRegion" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          "id": "SourceStrategy",
+          "name": "SourceStrategy",
+          "methods":
+          [
+            {
+              "id": "SourceStrategy/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "SourceStrategy/Properties[ID]",
+              "name": "ID",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { },
+              ":@Hidden": { }
+            },
+            {
+              "id": "SourceStrategy/Properties[SourceStrategy1]",
+              "name": "SourceStrategy1",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              }
+            },
+            {
+              "id": "SourceStrategy/Properties[RFQ_P]",
+              "name": "RFQ_P",
+              "association": { "__id": "FK_RFQ_P_SourceStrategy" },
+              "elementType": { "__id": "RFQ_PItem" },
+              "fromEnd": { "__id": "FK_RFQ_P_SourceStrategy/Ends[SourceStrategy]" },
+              "propertyType": { "__id": "RFQ_PItem*" },
+              "toEnd": { "__id": "FK_RFQ_P_SourceStrategy/Ends[RFQ_P]" }
+            }
+          ]
+        },
+        {
+          "id": "FK_RFQ_P_SourceStrategy",
+          "name": "FK_RFQ_P_SourceStrategy",
+          "ends":
+          [
+            {
+              "id": "FK_RFQ_P_SourceStrategy/Ends[SourceStrategy]",
+              "name": "SourceStrategy",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "SourceStrategy" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_RFQ_P_SourceStrategy/Ends[RFQ_P]",
+              "name": "RFQ_P",
+              "multiplicity": "Many",
+              "entityType": { "__id": "RFQ_PItem" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Client_Approved_Clients",
+          "name": "FK_Client_Approved_Clients",
+          "ends":
+          [
+            {
+              "id": "FK_Client_Approved_Clients/Ends[Clients]",
+              "name": "Clients",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Client" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Client_Approved_Clients/Ends[Client_Approved]",
+              "name": "Client_Approved",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Client_Approved" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Award_Selected_Proposal_Line",
+          "name": "FK_Award_Selected_Proposal_Line",
+          "ends":
+          [
+            {
+              "id": "FK_Award_Selected_Proposal_Line/Ends[Proposal_Line]",
+              "name": "Proposal_Line",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Proposal_Line" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Award_Selected_Proposal_Line/Ends[Award_Selected]",
+              "name": "Award_Selected",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Award_Selected" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Proposal_Line_Proposal",
+          "name": "FK_Proposal_Line_Proposal",
+          "ends":
+          [
+            {
+              "id": "FK_Proposal_Line_Proposal/Ends[Proposal]",
+              "name": "Proposal",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Proposal" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Proposal_Line_Proposal/Ends[Proposal_Line]",
+              "name": "Proposal_Line",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Proposal_Line" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Proposal_Suppliers",
+          "name": "FK_Proposal_Suppliers",
+          "ends":
+          [
+            {
+              "id": "FK_Proposal_Suppliers/Ends[Suppliers]",
+              "name": "Suppliers",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Supplier" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Proposal_Suppliers/Ends[Proposal]",
+              "name": "Proposal",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Proposal" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Award_Selected_Proposal",
+          "name": "FK_Award_Selected_Proposal",
+          "ends":
+          [
+            {
+              "id": "FK_Award_Selected_Proposal/Ends[Proposal]",
+              "name": "Proposal",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Proposal" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Award_Selected_Proposal/Ends[Award_Selected]",
+              "name": "Award_Selected",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Award_Selected" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Award_Selected_RFQ_Line",
+          "name": "FK_Award_Selected_RFQ_Line",
+          "ends":
+          [
+            {
+              "id": "FK_Award_Selected_RFQ_Line/Ends[RFQ_Line]",
+              "name": "RFQ_Line",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "RFQ_Line" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Award_Selected_RFQ_Line/Ends[Award_Selected]",
+              "name": "Award_Selected",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Award_Selected" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Award_Selected_RFQ_P",
+          "name": "FK_Award_Selected_RFQ_P",
+          "ends":
+          [
+            {
+              "id": "FK_Award_Selected_RFQ_P/Ends[RFQ_P]",
+              "name": "RFQ_P",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "RFQ_PItem" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Award_Selected_RFQ_P/Ends[Award_Selected]",
+              "name": "Award_Selected",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Award_Selected" }
+            }
+          ]
+        },
+        {
+          "id": "FK_PO_Line_Award_Selected",
+          "name": "FK_PO_Line_Award_Selected",
+          "ends":
+          [
+            {
+              "id": "FK_PO_Line_Award_Selected/Ends[Award_Selected]",
+              "name": "Award_Selected",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Award_Selected" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_PO_Line_Award_Selected/Ends[PO_Line]",
+              "name": "PO_Line",
+              "multiplicity": "Many",
+              "entityType": { "__id": "PO_Line" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          "id": "Year",
+          "name": "Year",
+          "methods":
+          [
+            {
+              "id": "Year/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Year/Properties[Year1]",
+              "name": "Year1",
+              "propertyType": { "__id": ":String?" },
+              ":@NotSearchable": { },
+              ":@MaxLength":
+              {
+                "value": 4
+              }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Year/Properties[ID]",
+              "name": "ID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Year/Properties[Projects]",
+              "name": "Projects",
+              "association": { "__id": "FK_Project_Year" },
+              "elementType": { "__id": "Project" },
+              "fromEnd": { "__id": "FK_Project_Year/Ends[Year]" },
+              "propertyType": { "__id": "Project*" },
+              "toEnd": { "__id": "FK_Project_Year/Ends[Project]" }
+            }
+          ]
+        },
+        {
+          "id": "FK_Project_Year",
+          "name": "FK_Project_Year",
+          "ends":
+          [
+            {
+              "id": "FK_Project_Year/Ends[Year]",
+              "name": "Year",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Year" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_Project_Year/Ends[Project]",
+              "name": "Project",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Project" }
+            }
+          ]
+        },
+        {
+          "id": "Year*",
+          "name": "Year*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Year" }
+        },
+        {
+          "id": "CollectionView$Year",
+          "name": "CollectionView$Year",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Year" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Year/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Year" },
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_add.png" }
+            },
+            {
+              "id": "CollectionView$Year/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Year" },
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_addandedit.png" }
+            },
+            {
+              "id": "CollectionView$Year/Methods[editSelected]",
+              "name": "editSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_edit.png" }
+            },
+            {
+              "id": "CollectionView$Year/Methods[deleteSelected]",
+              "name": "deleteSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_delete.png" }
+            },
+            {
+              "id": "CollectionView$Year/Methods[removeSelected]",
+              "name": "removeSelected",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_remove.png" }
+            },
+            {
+              "id": "CollectionView$Year/Methods[refresh]",
+              "name": "refresh",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_refresh.png" }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Year/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Year" }
+            }
+          ]
+        },
+        {
+          "id": "SourceStrategy*",
+          "name": "SourceStrategy*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "SourceStrategy" }
+        },
+        {
+          "id": "CollectionView$SourceStrategy",
+          "name": "CollectionView$SourceStrategy",
+          "kind": "CollectionView",
+          "elementType": { "__id": "SourceStrategy" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$SourceStrategy/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "SourceStrategy" },
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_add.png" }
+            },
+            {
+              "id": "CollectionView$SourceStrategy/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "SourceStrategy" },
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_addandedit.png" }
+            },
+            {
+              "id": "CollectionView$SourceStrategy/Methods[editSelected]",
+              "name": "editSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_edit.png" }
+            },
+            {
+              "id": "CollectionView$SourceStrategy/Methods[deleteSelected]",
+              "name": "deleteSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_delete.png" }
+            },
+            {
+              "id": "CollectionView$SourceStrategy/Methods[removeSelected]",
+              "name": "removeSelected",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_remove.png" }
+            },
+            {
+              "id": "CollectionView$SourceStrategy/Methods[refresh]",
+              "name": "refresh",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_refresh.png" }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$SourceStrategy/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "SourceStrategy" }
+            }
+          ]
+        },
+        {
+          "id": "SupplierRegion*",
+          "name": "SupplierRegion*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "SupplierRegion" }
+        },
+        {
+          "id": "CollectionView$SupplierRegion",
+          "name": "CollectionView$SupplierRegion",
+          "kind": "CollectionView",
+          "elementType": { "__id": "SupplierRegion" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$SupplierRegion/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "SupplierRegion" },
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_add.png" }
+            },
+            {
+              "id": "CollectionView$SupplierRegion/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "SupplierRegion" },
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_addandedit.png" }
+            },
+            {
+              "id": "CollectionView$SupplierRegion/Methods[editSelected]",
+              "name": "editSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_edit.png" }
+            },
+            {
+              "id": "CollectionView$SupplierRegion/Methods[deleteSelected]",
+              "name": "deleteSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_delete.png" }
+            },
+            {
+              "id": "CollectionView$SupplierRegion/Methods[removeSelected]",
+              "name": "removeSelected",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_remove.png" }
+            },
+            {
+              "id": "CollectionView$SupplierRegion/Methods[refresh]",
+              "name": "refresh",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_refresh.png" }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$SupplierRegion/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "SupplierRegion" }
+            }
+          ]
+        },
+        {
+          "id": "Region*",
+          "name": "Region*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Region" }
+        },
+        {
+          "id": "CollectionView$Region",
+          "name": "CollectionView$Region",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Region" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Region/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Region" },
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_add.png" }
+            },
+            {
+              "id": "CollectionView$Region/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Region" },
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_addandedit.png" }
+            },
+            {
+              "id": "CollectionView$Region/Methods[editSelected]",
+              "name": "editSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_edit.png" }
+            },
+            {
+              "id": "CollectionView$Region/Methods[deleteSelected]",
+              "name": "deleteSelected",
+              ":@DisplayMethodByDefault": { "display": true },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_delete.png" }
+            },
+            {
+              "id": "CollectionView$Region/Methods[removeSelected]",
+              "name": "removeSelected",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_remove.png" }
+            },
+            {
+              "id": "CollectionView$Region/Methods[refresh]",
+              "name": "refresh",
+              ":@DisplayMethodByDefault": { },
+              ":@ImageResource": { "resourceId": "Microsoft.LightSwitch.BuiltInImageResources::BuiltInResources/collection_refresh.png" }
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Region/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Region" }
             }
           ]
         },

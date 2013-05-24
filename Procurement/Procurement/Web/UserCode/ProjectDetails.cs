@@ -100,6 +100,35 @@ namespace LightSwitchApplication
 
         }
 
+        partial void AddRFQ_Execute()
+        {
+            this.CloseModalWindow("modalRFQ");// Write your code here.
+
+        }
+
+        partial void CancelRFQ_Execute()
+        {
+            foreach (RFQ_PItem rfq in this.DataWorkspace.ProcurementData.Details.GetChanges().AddedEntities.OfType<RFQ_PItem>())
+                rfq.Details.DiscardChanges();
+            this.CloseModalWindow("modalRFQ");
+
+        }
+
+        partial void Project_StakeholdersEditSelected_CanExecute(ref bool result)
+        {
+            // Write your code here.
+
+        }
+
+        partial void Project_StakeholdersEditSelected_Execute()
+        {
+            Stakeholder STK = this.Project_Stakeholders.SelectedItem.Stakeholder1;
+            this.Stakeholders.SelectedItem = STK;
+            this.OpenModalWindow("modalESTK");
+
+
+        }
+
         
     }
 }

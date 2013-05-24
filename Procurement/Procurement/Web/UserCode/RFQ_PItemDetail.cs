@@ -64,5 +64,21 @@ namespace LightSwitchApplication
             BidLists.DeleteSelected();// Write your code here.
 
         }
+
+        partial void Award_SelectedsAddAndEditNew_CanExecute(ref bool result)
+        {
+            result = this.Award_Selecteds.CanAddNew;
+
+        }
+
+        partial void Award_SelectedsAddAndEditNew_Execute()
+        {
+           
+
+            Award_Selected asel = this.Award_Selecteds.AddNew();
+            this.Award_Selecteds.SelectedItem = asel;
+            this.OpenModalWindow("modalASEL");
+
+        }
     }
 }

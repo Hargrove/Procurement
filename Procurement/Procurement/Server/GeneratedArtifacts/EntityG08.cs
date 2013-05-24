@@ -127,30 +127,6 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<global::System.DateTime> Year
-        {
-            get
-            {
-                return global::LightSwitchApplication.Project.DetailsClass.GetValue(this, global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties.Year);
-            }
-            set
-            {
-                global::LightSwitchApplication.Project.DetailsClass.SetValue(this, global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties.Year, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Year_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Year_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Year_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string Name
         {
             get
@@ -264,6 +240,30 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Phase1_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::LightSwitchApplication.Year Year1
+        {
+            get
+            {
+                return global::LightSwitchApplication.Project.DetailsClass.GetValue(this, global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties.Year1);
+            }
+            set
+            {
+                global::LightSwitchApplication.Project.DetailsClass.SetValue(this, global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties.Year1, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Year1_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Year1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Year1_Changed();
+
         #endregion
     
         #region Details Class
@@ -362,14 +362,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::System.Nullable<global::System.DateTime>> Year
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties.Year) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::System.Nullable<global::System.DateTime>>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, string> Name
                 {
                     get
@@ -410,6 +402,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::LightSwitchApplication.Year> Year1
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties.Year1) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::LightSwitchApplication.Year>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -418,12 +418,12 @@ namespace LightSwitchApplication
             {
                 new int ID { get; }
                 new string ProjectNo { get; set; }
-                new global::System.Nullable<global::System.DateTime> Year { get; set; }
                 new string Name { get; set; }
                 new global::System.Collections.IEnumerable Project_Stakeholders { get; }
                 new global::System.Collections.IEnumerable RFQ_P { get; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Client1 { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Phase1 { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Year1 { get; set; }
             }
             #pragma warning restore 109
     
@@ -501,43 +501,6 @@ namespace LightSwitchApplication
                 private static void _ProjectNo_OnValueChanged(global::LightSwitchApplication.Project e)
                 {
                     e.ProjectNo_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
-                    Year = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
-                        "Year",
-                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year_Stub,
-                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year_Validate,
-                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year_GetImplementationValue,
-                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year_SetImplementationValue,
-                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year_OnValueChanged);
-                private static void _Year_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Project.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.Project.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Year, sf);
-                }
-                private static bool _Year_ComputeIsReadOnly(global::LightSwitchApplication.Project e)
-                {
-                    bool result = false;
-                    e.Year_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Year_Validate(global::LightSwitchApplication.Project e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Year_Validate(r);
-                }
-                private static global::System.Nullable<global::System.DateTime> _Year_GetImplementationValue(global::LightSwitchApplication.Project.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Year;
-                }
-                private static void _Year_SetImplementationValue(global::LightSwitchApplication.Project.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
-                {
-                    d.ImplementationEntity.Year = global::LightSwitchApplication.Project.DetailsClass.TruncateDate(v);
-                }
-                private static void _Year_OnValueChanged(global::LightSwitchApplication.Project e)
-                {
-                    e.Year_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -711,6 +674,53 @@ namespace LightSwitchApplication
                     e.Phase1_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::LightSwitchApplication.Year>.Entry
+                    Year1 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::LightSwitchApplication.Year>.Entry(
+                        "Year1",
+                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year1_Stub,
+                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year1_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year1_Validate,
+                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year1_GetCoreImplementationValue,
+                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year1_GetImplementationValue,
+                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year1_SetImplementationValue,
+                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year1_Refresh,
+                        global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties._Year1_OnValueChanged);
+                private static void _Year1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Project.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::LightSwitchApplication.Year>.Data> c, global::LightSwitchApplication.Project.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Year1, sf);
+                }
+                private static bool _Year1_ComputeIsReadOnly(global::LightSwitchApplication.Project e)
+                {
+                    bool result = false;
+                    e.Year1_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Year1_Validate(global::LightSwitchApplication.Project e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Year1_Validate(r);
+                }
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Year1_GetCoreImplementationValue(global::LightSwitchApplication.Project.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Year1;
+                }
+                private static global::LightSwitchApplication.Year _Year1_GetImplementationValue(global::LightSwitchApplication.Project.DetailsClass d)
+                {
+                    return d.GetImplementationValue<global::LightSwitchApplication.Year, global::LightSwitchApplication.Year.DetailsClass>(global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties.Year1, ref d._Year1);
+                }
+                private static void _Year1_SetImplementationValue(global::LightSwitchApplication.Project.DetailsClass d, global::LightSwitchApplication.Year v)
+                {
+                    d.SetImplementationValue(global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties.Year1, ref d._Year1, (i, ev) => i.Year1 = ev, v);
+                }
+                private static void _Year1_Refresh(global::LightSwitchApplication.Project.DetailsClass d)
+                {
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.Project.DetailsClass.PropertySetProperties.Year1, ref d._Year1);
+                }
+                private static void _Year1_OnValueChanged(global::LightSwitchApplication.Project e)
+                {
+                    e.Year1_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -718,9 +728,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, string>.Data _ProjectNo;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _Year;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, string>.Data _Name;
@@ -736,6 +743,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::LightSwitchApplication.Phase>.Data _Phase1;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass, global::LightSwitchApplication.Year>.Data _Year1;
             
         }
     
