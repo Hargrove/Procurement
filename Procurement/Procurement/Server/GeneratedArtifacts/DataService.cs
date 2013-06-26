@@ -312,42 +312,6 @@ namespace LightSwitchApplication
         partial void Expeditings_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Expediting, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_Inserting(global::LightSwitchApplication.LineChangeOrder entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_Inserted(global::LightSwitchApplication.LineChangeOrder entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_Updating(global::LightSwitchApplication.LineChangeOrder entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_Updated(global::LightSwitchApplication.LineChangeOrder entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_Deleting(global::LightSwitchApplication.LineChangeOrder entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_Deleted(global::LightSwitchApplication.LineChangeOrder entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_Validate(global::LightSwitchApplication.LineChangeOrder entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void LineChangeOrders_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.LineChangeOrder, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Manufacturers_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1428,6 +1392,42 @@ namespace LightSwitchApplication
         partial void Years_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Year, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_Inserting(global::LightSwitchApplication.ProjectClassification entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_Inserted(global::LightSwitchApplication.ProjectClassification entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_Updating(global::LightSwitchApplication.ProjectClassification entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_Updated(global::LightSwitchApplication.ProjectClassification entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_Deleting(global::LightSwitchApplication.ProjectClassification entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_Deleted(global::LightSwitchApplication.ProjectClassification entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_Validate(global::LightSwitchApplication.ProjectClassification entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProjectClassifications_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ProjectClassification, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1468,6 +1468,96 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         partial void SortedStakeholders_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilterBYRfqnum_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilterBYRfqnum_Executing(global::System.Nullable<int> PkgNumberID);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilterBYRfqnum_PreprocessQuery(global::System.Nullable<int> PkgNumberID, ref global::System.Linq.IQueryable<global::LightSwitchApplication.RFQ_Line> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilterBYRfqnum_Executed(global::System.Nullable<int> PkgNumberID, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.RFQ_Line> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilterBYRfqnum_ExecuteFailed(global::System.Nullable<int> PkgNumberID, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilteredByRFQ_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilteredByRFQ_Executing(global::System.Nullable<int> RFQFilter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilteredByRFQ_PreprocessQuery(global::System.Nullable<int> RFQFilter, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Proposal> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilteredByRFQ_Executed(global::System.Nullable<int> RFQFilter, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Proposal> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilteredByRFQ_ExecuteFailed(global::System.Nullable<int> RFQFilter, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilerByProposalNumber_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilerByProposalNumber_Executing(global::System.Nullable<int> ProposalNum);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilerByProposalNumber_PreprocessQuery(global::System.Nullable<int> ProposalNum, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Proposal_Line> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilerByProposalNumber_Executed(global::System.Nullable<int> ProposalNum, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Proposal_Line> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilerByProposalNumber_ExecuteFailed(global::System.Nullable<int> ProposalNum, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AwardByrfqID_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void AwardByrfqID_Executing(global::System.Nullable<int> rfqid);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AwardByrfqID_PreprocessQuery(global::System.Nullable<int> rfqid, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Award_Selected> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void AwardByrfqID_Executed(global::System.Nullable<int> rfqid, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Award_Selected> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void AwardByrfqID_ExecuteFailed(global::System.Nullable<int> rfqid, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilterByAwardedSupplierID_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilterByAwardedSupplierID_Executing(global::System.Nullable<int> SupplierID, global::System.Nullable<int> RfqID);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FilterByAwardedSupplierID_PreprocessQuery(global::System.Nullable<int> SupplierID, global::System.Nullable<int> RfqID, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Award_Selected> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilterByAwardedSupplierID_Executed(global::System.Nullable<int> SupplierID, global::System.Nullable<int> RfqID, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Award_Selected> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void FilterByAwardedSupplierID_ExecuteFailed(global::System.Nullable<int> SupplierID, global::System.Nullable<int> RfqID, global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AwardsByProposalID_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void AwardsByProposalID_Executing(global::System.Nullable<int> ProposalID);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void AwardsByProposalID_PreprocessQuery(global::System.Nullable<int> ProposalID, ref global::System.Linq.IQueryable<global::LightSwitchApplication.Award_Selected> query);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void AwardsByProposalID_Executed(global::System.Nullable<int> ProposalID, global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Award_Selected> result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        partial void AwardsByProposalID_ExecuteFailed(global::System.Nullable<int> ProposalID, global::System.Exception exception);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
@@ -2014,81 +2104,6 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.Expediting, bool>> filter = null;
                 d.Expeditings_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.LineChangeOrder>
-                __LineChangeOrdersEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.LineChangeOrder>(
-                    "LineChangeOrders",
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_CanInsert,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_CanUpdate,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_CanDelete,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_CanRead,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_Inserting,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_Inserted,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_Updating,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_Updated,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_Deleting,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_Deleted,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_Validate,
-                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__LineChangeOrders_Filter);
-            private static bool __LineChangeOrders_CanInsert(global::LightSwitchApplication.ProcurementDataService d)
-            {
-                bool result = true;
-                d.LineChangeOrders_CanInsert(ref result);
-                return result;
-            }
-            private static bool __LineChangeOrders_CanUpdate(global::LightSwitchApplication.ProcurementDataService d)
-            {
-                bool result = true;
-                d.LineChangeOrders_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __LineChangeOrders_CanDelete(global::LightSwitchApplication.ProcurementDataService d)
-            {
-                bool result = true;
-                d.LineChangeOrders_CanDelete(ref result);
-                return result;
-            }
-            private static bool __LineChangeOrders_CanRead(global::LightSwitchApplication.ProcurementDataService d)
-            {
-                bool result = true;
-                d.LineChangeOrders_CanRead(ref result);
-                return result;
-            }
-            private static void __LineChangeOrders_Inserting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.LineChangeOrder e)
-            {
-                d.LineChangeOrders_Inserting(e);
-            }
-            private static void __LineChangeOrders_Inserted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.LineChangeOrder e)
-            {
-                d.LineChangeOrders_Inserted(e);
-            }
-            private static void __LineChangeOrders_Updating(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.LineChangeOrder e)
-            {
-                d.LineChangeOrders_Updating(e);
-            }
-            private static void __LineChangeOrders_Updated(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.LineChangeOrder e)
-            {
-                d.LineChangeOrders_Updated(e);
-            }
-            private static void __LineChangeOrders_Deleting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.LineChangeOrder e)
-            {
-                d.LineChangeOrders_Deleting(e);
-            }
-            private static void __LineChangeOrders_Deleted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.LineChangeOrder e)
-            {
-                d.LineChangeOrders_Deleted(e);
-            }
-            private static void __LineChangeOrders_Validate(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.LineChangeOrder e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.LineChangeOrders_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.LineChangeOrder, bool>> __LineChangeOrders_Filter(global::LightSwitchApplication.ProcurementDataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.LineChangeOrder, bool>> filter = null;
-                d.LineChangeOrders_Filter(ref filter);
                 return filter;
             }
             
@@ -4343,6 +4358,81 @@ namespace LightSwitchApplication
             }
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.ProjectClassification>
+                __ProjectClassificationsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.ProjectClassification>(
+                    "ProjectClassifications",
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_CanInsert,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_CanUpdate,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_CanDelete,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_CanRead,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_Inserting,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_Inserted,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_Updating,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_Updated,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_Deleting,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_Deleted,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_Validate,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__ProjectClassifications_Filter);
+            private static bool __ProjectClassifications_CanInsert(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                bool result = true;
+                d.ProjectClassifications_CanInsert(ref result);
+                return result;
+            }
+            private static bool __ProjectClassifications_CanUpdate(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                bool result = true;
+                d.ProjectClassifications_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __ProjectClassifications_CanDelete(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                bool result = true;
+                d.ProjectClassifications_CanDelete(ref result);
+                return result;
+            }
+            private static bool __ProjectClassifications_CanRead(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                bool result = true;
+                d.ProjectClassifications_CanRead(ref result);
+                return result;
+            }
+            private static void __ProjectClassifications_Inserting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.ProjectClassification e)
+            {
+                d.ProjectClassifications_Inserting(e);
+            }
+            private static void __ProjectClassifications_Inserted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.ProjectClassification e)
+            {
+                d.ProjectClassifications_Inserted(e);
+            }
+            private static void __ProjectClassifications_Updating(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.ProjectClassification e)
+            {
+                d.ProjectClassifications_Updating(e);
+            }
+            private static void __ProjectClassifications_Updated(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.ProjectClassification e)
+            {
+                d.ProjectClassifications_Updated(e);
+            }
+            private static void __ProjectClassifications_Deleting(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.ProjectClassification e)
+            {
+                d.ProjectClassifications_Deleting(e);
+            }
+            private static void __ProjectClassifications_Deleted(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.ProjectClassification e)
+            {
+                d.ProjectClassifications_Deleted(e);
+            }
+            private static void __ProjectClassifications_Validate(global::LightSwitchApplication.ProcurementDataService d, global::LightSwitchApplication.ProjectClassification e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.ProjectClassifications_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ProjectClassification, bool>> __ProjectClassifications_Filter(global::LightSwitchApplication.ProcurementDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.ProjectClassification, bool>> filter = null;
+                d.ProjectClassifications_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.ProcurementDataService>
                 __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.ProcurementDataService>(
                     "SaveChanges",
@@ -4431,6 +4521,204 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.IQueryable<global::LightSwitchApplication.Stakeholder> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Stakeholder>)args[0];
                 d.SortedStakeholders_PreprocessQuery(ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.RFQ_Line>
+                __FilterBYRfqnumEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.RFQ_Line>(
+                    "FilterBYRfqnum",
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterBYRfqnum_CanExecute,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterBYRfqnum_Executing,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterBYRfqnum_Executed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterBYRfqnum_Failed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterBYRfqnum_PreprocessQuery);
+            private static bool __FilterBYRfqnum_CanExecute(global::LightSwitchApplication.ProcurementDataService d, bool r)
+            {
+                d.FilterBYRfqnum_CanExecute(ref r);
+                return r;
+            }
+            private static void __FilterBYRfqnum_Executing(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.FilterBYRfqnum_Executing((global::System.Nullable<int>)args[0]);
+            }
+            private static void __FilterBYRfqnum_Executed(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.FilterBYRfqnum_Executed((global::System.Nullable<int>)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.RFQ_Line>)args[1]);
+            }
+            private static void __FilterBYRfqnum_Failed(global::LightSwitchApplication.ProcurementDataService d, object[] args, global::System.Exception ex)
+            {
+                d.FilterBYRfqnum_ExecuteFailed((global::System.Nullable<int>)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __FilterBYRfqnum_PreprocessQuery(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.RFQ_Line> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.RFQ_Line>)args[1];
+                d.FilterBYRfqnum_PreprocessQuery((global::System.Nullable<int>)args[0], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Proposal>
+                __FilteredByRFQEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Proposal>(
+                    "FilteredByRFQ",
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilteredByRFQ_CanExecute,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilteredByRFQ_Executing,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilteredByRFQ_Executed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilteredByRFQ_Failed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilteredByRFQ_PreprocessQuery);
+            private static bool __FilteredByRFQ_CanExecute(global::LightSwitchApplication.ProcurementDataService d, bool r)
+            {
+                d.FilteredByRFQ_CanExecute(ref r);
+                return r;
+            }
+            private static void __FilteredByRFQ_Executing(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.FilteredByRFQ_Executing((global::System.Nullable<int>)args[0]);
+            }
+            private static void __FilteredByRFQ_Executed(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.FilteredByRFQ_Executed((global::System.Nullable<int>)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Proposal>)args[1]);
+            }
+            private static void __FilteredByRFQ_Failed(global::LightSwitchApplication.ProcurementDataService d, object[] args, global::System.Exception ex)
+            {
+                d.FilteredByRFQ_ExecuteFailed((global::System.Nullable<int>)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __FilteredByRFQ_PreprocessQuery(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Proposal> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Proposal>)args[1];
+                d.FilteredByRFQ_PreprocessQuery((global::System.Nullable<int>)args[0], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Proposal_Line>
+                __FilerByProposalNumberEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Proposal_Line>(
+                    "FilerByProposalNumber",
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilerByProposalNumber_CanExecute,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilerByProposalNumber_Executing,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilerByProposalNumber_Executed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilerByProposalNumber_Failed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilerByProposalNumber_PreprocessQuery);
+            private static bool __FilerByProposalNumber_CanExecute(global::LightSwitchApplication.ProcurementDataService d, bool r)
+            {
+                d.FilerByProposalNumber_CanExecute(ref r);
+                return r;
+            }
+            private static void __FilerByProposalNumber_Executing(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.FilerByProposalNumber_Executing((global::System.Nullable<int>)args[0]);
+            }
+            private static void __FilerByProposalNumber_Executed(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.FilerByProposalNumber_Executed((global::System.Nullable<int>)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Proposal_Line>)args[1]);
+            }
+            private static void __FilerByProposalNumber_Failed(global::LightSwitchApplication.ProcurementDataService d, object[] args, global::System.Exception ex)
+            {
+                d.FilerByProposalNumber_ExecuteFailed((global::System.Nullable<int>)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __FilerByProposalNumber_PreprocessQuery(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Proposal_Line> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Proposal_Line>)args[1];
+                d.FilerByProposalNumber_PreprocessQuery((global::System.Nullable<int>)args[0], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Award_Selected>
+                __AwardByrfqIDEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Award_Selected>(
+                    "AwardByrfqID",
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardByrfqID_CanExecute,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardByrfqID_Executing,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardByrfqID_Executed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardByrfqID_Failed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardByrfqID_PreprocessQuery);
+            private static bool __AwardByrfqID_CanExecute(global::LightSwitchApplication.ProcurementDataService d, bool r)
+            {
+                d.AwardByrfqID_CanExecute(ref r);
+                return r;
+            }
+            private static void __AwardByrfqID_Executing(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.AwardByrfqID_Executing((global::System.Nullable<int>)args[0]);
+            }
+            private static void __AwardByrfqID_Executed(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.AwardByrfqID_Executed((global::System.Nullable<int>)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Award_Selected>)args[1]);
+            }
+            private static void __AwardByrfqID_Failed(global::LightSwitchApplication.ProcurementDataService d, object[] args, global::System.Exception ex)
+            {
+                d.AwardByrfqID_ExecuteFailed((global::System.Nullable<int>)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __AwardByrfqID_PreprocessQuery(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Award_Selected> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Award_Selected>)args[1];
+                d.AwardByrfqID_PreprocessQuery((global::System.Nullable<int>)args[0], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Award_Selected>
+                __FilterByAwardedSupplierIDEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Award_Selected>(
+                    "FilterByAwardedSupplierID",
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterByAwardedSupplierID_CanExecute,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterByAwardedSupplierID_Executing,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterByAwardedSupplierID_Executed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterByAwardedSupplierID_Failed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__FilterByAwardedSupplierID_PreprocessQuery);
+            private static bool __FilterByAwardedSupplierID_CanExecute(global::LightSwitchApplication.ProcurementDataService d, bool r)
+            {
+                d.FilterByAwardedSupplierID_CanExecute(ref r);
+                return r;
+            }
+            private static void __FilterByAwardedSupplierID_Executing(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.FilterByAwardedSupplierID_Executing((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1]);
+            }
+            private static void __FilterByAwardedSupplierID_Executed(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.FilterByAwardedSupplierID_Executed((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Award_Selected>)args[2]);
+            }
+            private static void __FilterByAwardedSupplierID_Failed(global::LightSwitchApplication.ProcurementDataService d, object[] args, global::System.Exception ex)
+            {
+                d.FilterByAwardedSupplierID_ExecuteFailed((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], ex);
+            }
+            private static global::System.Linq.IQueryable __FilterByAwardedSupplierID_PreprocessQuery(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Award_Selected> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Award_Selected>)args[2];
+                d.FilterByAwardedSupplierID_PreprocessQuery((global::System.Nullable<int>)args[0], (global::System.Nullable<int>)args[1], ref query);
+                return query;
+            }
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Award_Selected>
+                __AwardsByProposalIDEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryOperationEntry<global::LightSwitchApplication.ProcurementDataService, global::LightSwitchApplication.Award_Selected>(
+                    "AwardsByProposalID",
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardsByProposalID_CanExecute,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardsByProposalID_Executing,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardsByProposalID_Executed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardsByProposalID_Failed,
+                    global::LightSwitchApplication.ProcurementDataService.DetailsClass.__AwardsByProposalID_PreprocessQuery);
+            private static bool __AwardsByProposalID_CanExecute(global::LightSwitchApplication.ProcurementDataService d, bool r)
+            {
+                d.AwardsByProposalID_CanExecute(ref r);
+                return r;
+            }
+            private static void __AwardsByProposalID_Executing(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.AwardsByProposalID_Executing((global::System.Nullable<int>)args[0]);
+            }
+            private static void __AwardsByProposalID_Executed(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                d.AwardsByProposalID_Executed((global::System.Nullable<int>)args[0], (global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Award_Selected>)args[1]);
+            }
+            private static void __AwardsByProposalID_Failed(global::LightSwitchApplication.ProcurementDataService d, object[] args, global::System.Exception ex)
+            {
+                d.AwardsByProposalID_ExecuteFailed((global::System.Nullable<int>)args[0], ex);
+            }
+            private static global::System.Linq.IQueryable __AwardsByProposalID_PreprocessQuery(global::LightSwitchApplication.ProcurementDataService d, object[] args)
+            {
+                global::System.Linq.IQueryable<global::LightSwitchApplication.Award_Selected> query = (global::System.Linq.IQueryable<global::LightSwitchApplication.Award_Selected>)args[1];
+                d.AwardsByProposalID_PreprocessQuery((global::System.Nullable<int>)args[0], ref query);
                 return query;
             }
     

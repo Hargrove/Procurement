@@ -16,6 +16,8 @@
           <ScalarProperty Name="ProposalSelected" ColumnName="ProposalSelected" />
           <ScalarProperty Name="RFQItem" ColumnName="RFQItem" />
           <ScalarProperty Name="PkgNoID" ColumnName="PkgNoID" />
+          <ScalarProperty Name="OrderType" ColumnName="OrderType" />
+          <ScalarProperty Name="HasPO" ColumnName="HasPO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -47,8 +49,8 @@
           <ScalarProperty Name="CO_WBS" ColumnName="CO_WBS" />
           <ScalarProperty Name="CO_Qty" ColumnName="CO_Qty" />
           <ScalarProperty Name="CO_CostPerUnit" ColumnName="CO_CostPerUnit" />
-          <ScalarProperty Name="PONum" ColumnName="PONum" />
           <ScalarProperty Name="CO_UOM" ColumnName="CO_UOM" />
+          <ScalarProperty Name="PONum" ColumnName="PONum" />
           <ScalarProperty Name="POLineID" ColumnName="POLineID" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -92,20 +94,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LineChangeOrders">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.LineChangeOrder)">
-        <MappingFragment StoreEntitySet="LineChangeOrders">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="CO_Description" ColumnName="CO_Description" />
-          <ScalarProperty Name="CO_WBS" ColumnName="CO_WBS" />
-          <ScalarProperty Name="CO_Qty" ColumnName="CO_Qty" />
-          <ScalarProperty Name="CO_CostPerUnit" ColumnName="CO_CostPerUnit" />
-          <ScalarProperty Name="ChangeOrderID" ColumnName="ChangeOrderID" />
-          <ScalarProperty Name="CO_UOM" ColumnName="CO_UOM" />
-          <ScalarProperty Name="POLineID" ColumnName="POLineID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Manufacturers">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Manufacturer)">
         <MappingFragment StoreEntitySet="Manufacturers">
@@ -145,12 +133,13 @@
     <EntitySetMapping Name="PO_Lines">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.PO_Line)">
         <MappingFragment StoreEntitySet="PO_Lines">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="POLineRef" ColumnName="POLineRef" />
           <ScalarProperty Name="POid" ColumnName="POid" />
-          <ScalarProperty Name="PropLineSlctd" ColumnName="PropLineSlctd" />
-          <ScalarProperty Name="ProposalSelected" ColumnName="ProposalSelected" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="Award" ColumnName="Award" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ProposalSelected" ColumnName="ProposalSelected" />
+          <ScalarProperty Name="PropLineSlctd" ColumnName="PropLineSlctd" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -171,6 +160,7 @@
           <ScalarProperty Name="Client" ColumnName="Client" />
           <ScalarProperty Name="PhaseID" ColumnName="PhaseID" />
           <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="ClassificationID" ColumnName="ClassificationID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -194,6 +184,8 @@
           <ScalarProperty Name="Comment" ColumnName="Comment" />
           <ScalarProperty Name="PkgNoID" ColumnName="PkgNoID" />
           <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="TechCompliant" ColumnName="TechCompliant" />
+          <ScalarProperty Name="CommercialCompliant" ColumnName="CommercialCompliant" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -201,15 +193,18 @@
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Proposal_Line)">
         <MappingFragment StoreEntitySet="Proposal_Lines">
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProposalLineNo" ColumnName="ProposalLineNo" />
+          <ScalarProperty Name="MeetSpecs" ColumnName="MeetSpecs" />
           <ScalarProperty Name="RFQLineID" ColumnName="RFQLineID" />
           <ScalarProperty Name="CostPerUnit" ColumnName="CostPerUnit" />
-          <ScalarProperty Name="MeetSpecs" ColumnName="MeetSpecs" />
+          <ScalarProperty Name="ManufacturingPoint" ColumnName="ManufacturingPoint" />
           <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
           <ScalarProperty Name="ShippingARO" ColumnName="ShippingARO" />
           <ScalarProperty Name="SubmittalsARO" ColumnName="SubmittalsARO" />
           <ScalarProperty Name="NegotiatedFinalCost" ColumnName="NegotiatedFinalCost" />
           <ScalarProperty Name="Notes" ColumnName="Notes" />
           <ScalarProperty Name="ProposalID" ColumnName="ProposalID" />
+          <ScalarProperty Name="AwardIt" ColumnName="AwardIt" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -258,10 +253,8 @@
           <ScalarProperty Name="BidOpening" ColumnName="BidOpening" />
           <ScalarProperty Name="ToEng" ColumnName="ToEng" />
           <ScalarProperty Name="EngApproval" ColumnName="EngApproval" />
-          <ScalarProperty Name="TechComplaint" ColumnName="TechComplaint" />
           <ScalarProperty Name="Regret" ColumnName="Regret" />
           <ScalarProperty Name="CommercialDone" ColumnName="CommercialDone" />
-          <ScalarProperty Name="CommercialComplaint" ColumnName="CommercialComplaint" />
           <ScalarProperty Name="Comments" ColumnName="Comments" />
           <ScalarProperty Name="CriticalPath" ColumnName="CriticalPath" />
           <ScalarProperty Name="ProjectNoID" ColumnName="ProjectNoID" />
@@ -397,8 +390,8 @@
         <MappingFragment StoreEntitySet="Suppliers">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
-          <ScalarProperty Name="SupplierFax" ColumnName="SupplierFax" />
           <ScalarProperty Name="SupplierPhone" ColumnName="SupplierPhone" />
+          <ScalarProperty Name="SupplierFax" ColumnName="SupplierFax" />
           <ScalarProperty Name="SupplierEmail" ColumnName="SupplierEmail" />
           <ScalarProperty Name="SupplierAddress1" ColumnName="SupplierAddress1" />
           <ScalarProperty Name="SupplierAddress2" ColumnName="SupplierAddress2" />
@@ -487,6 +480,14 @@
         <MappingFragment StoreEntitySet="Years">
           <ScalarProperty Name="Year1" ColumnName="Year" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectClassifications">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ProjectClassification)">
+        <MappingFragment StoreEntitySet="ProjectClassifications">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProjectClassification1" ColumnName="ProjectClassification" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

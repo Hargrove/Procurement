@@ -96,12 +96,6 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:LineChangeOrder" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:Manufacturer" />
     </EntityType.Attributes>
   </EntityType>
@@ -252,12 +246,6 @@
   <Association>
     <Association.Attributes>
       <Proxy
-        Target="ServiceInterface:FK_ChangeOrder_PO" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
         Target="ServiceInterface:FK_Client_Approved_Preference" />
     </Association.Attributes>
   </Association>
@@ -277,12 +265,6 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:FK_Expediting_Shipment" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
-        Target="ServiceInterface:FK_LineChangeOrder_ChangeOrder" />
     </Association.Attributes>
   </Association>
   <Association>
@@ -477,12 +459,6 @@
         Target="ServiceInterface:FK_ChangeOrder_UOM" />
     </Association.Attributes>
   </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
-        Target="ServiceInterface:FK_LineChangeOrder_UOM" />
-    </Association.Attributes>
-  </Association>
   <EntityType>
     <EntityType.Attributes>
       <Proxy
@@ -561,12 +537,6 @@
         Target="ServiceInterface:FK_Award_Selected_RFQ_P" />
     </Association.Attributes>
   </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
-        Target="ServiceInterface:FK_PO_Line_Award_Selected" />
-    </Association.Attributes>
-  </Association>
   <EntityType>
     <EntityType.Attributes>
       <Proxy
@@ -577,6 +547,48 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:FK_Project_Year" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_PO_Suppliers" />
+    </Association.Attributes>
+  </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:ProjectClassification" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Project_ProjectClassification" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_PO_Line_Award_Selected" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_Expediting_PO_Line" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_PO_Line_Proposal" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_PO_Line_Proposal_Line" />
     </Association.Attributes>
   </Association>
 </ModelFragment>

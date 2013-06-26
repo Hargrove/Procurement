@@ -158,7 +158,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserCode\ProcurementDataService.cs" />
+    <Compile Include="UserCode\Shared\Award_Selected.cs" />
     <Compile Include="UserCode\Shared\Project.cs" />
+    <Compile Include="UserCode\Shared\Proposal_Line.cs" />
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Service.lsml">

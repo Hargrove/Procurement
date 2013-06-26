@@ -56,8 +56,14 @@ window.myapp = msls.application;
         /// <field name="RFQ_PItem1" type="msls.application.RFQ_PItem">
         /// Gets or sets the rFQ_PItem1 for this award_Selected.
         /// </field>
+        /// <field name="OrderType" type="String">
+        /// Gets or sets the orderType for this award_Selected.
+        /// </field>
         /// <field name="PO_Lines" type="msls.EntityCollection">
         /// Gets the pO_Lines for this award_Selected.
+        /// </field>
+        /// <field name="HasPO" type="Boolean">
+        /// Gets or sets the hasPO for this award_Selected.
         /// </field>
         /// <field name="details" type="msls.application.Award_Selected.Details">
         /// Gets the details for this award_Selected.
@@ -140,14 +146,11 @@ window.myapp = msls.application;
         /// <field name="CO_CostPerUnit" type="Number">
         /// Gets or sets the cO_CostPerUnit for this changeOrder.
         /// </field>
-        /// <field name="PO" type="msls.application.PO">
-        /// Gets or sets the pO for this changeOrder.
-        /// </field>
-        /// <field name="LineChangeOrders" type="msls.EntityCollection">
-        /// Gets the lineChangeOrders for this changeOrder.
-        /// </field>
         /// <field name="UOM1" type="msls.application.UOM">
         /// Gets or sets the uOM1 for this changeOrder.
+        /// </field>
+        /// <field name="PONum" type="Number">
+        /// Gets or sets the pONum for this changeOrder.
         /// </field>
         /// <field name="POLineID" type="Number">
         /// Gets or sets the pOLineID for this changeOrder.
@@ -257,48 +260,11 @@ window.myapp = msls.application;
         /// <field name="Shipment" type="msls.application.Shipment">
         /// Gets or sets the shipment for this expediting.
         /// </field>
-        /// <field name="POLineID" type="Number">
-        /// Gets or sets the pOLineID for this expediting.
+        /// <field name="PO_Line1" type="msls.application.PO_Line">
+        /// Gets or sets the pO_Line1 for this expediting.
         /// </field>
         /// <field name="details" type="msls.application.Expediting.Details">
         /// Gets the details for this expediting.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function LineChangeOrder(entitySet) {
-        /// <summary>
-        /// Represents the LineChangeOrder entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this lineChangeOrder.
-        /// </param>
-        /// <field name="ID" type="Number">
-        /// Gets or sets the iD for this lineChangeOrder.
-        /// </field>
-        /// <field name="CO_Description" type="String">
-        /// Gets or sets the cO_Description for this lineChangeOrder.
-        /// </field>
-        /// <field name="CO_WBS" type="String">
-        /// Gets or sets the cO_WBS for this lineChangeOrder.
-        /// </field>
-        /// <field name="CO_Qty" type="Number">
-        /// Gets or sets the cO_Qty for this lineChangeOrder.
-        /// </field>
-        /// <field name="CO_CostPerUnit" type="Number">
-        /// Gets or sets the cO_CostPerUnit for this lineChangeOrder.
-        /// </field>
-        /// <field name="ChangeOrder" type="msls.application.ChangeOrder">
-        /// Gets or sets the changeOrder for this lineChangeOrder.
-        /// </field>
-        /// <field name="UOM1" type="msls.application.UOM">
-        /// Gets or sets the uOM1 for this lineChangeOrder.
-        /// </field>
-        /// <field name="POLineID" type="Number">
-        /// Gets or sets the pOLineID for this lineChangeOrder.
-        /// </field>
-        /// <field name="details" type="msls.application.LineChangeOrder.Details">
-        /// Gets the details for this lineChangeOrder.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -391,14 +357,11 @@ window.myapp = msls.application;
         /// <field name="Closed" type="Boolean">
         /// Gets or sets the closed for this pO.
         /// </field>
-        /// <field name="ChangeOrders" type="msls.EntityCollection">
-        /// Gets the changeOrders for this pO.
-        /// </field>
         /// <field name="PO_Lines" type="msls.EntityCollection">
         /// Gets the pO_Lines for this pO.
         /// </field>
-        /// <field name="Supplier1" type="msls.application.Supplier">
-        /// Gets or sets the supplier1 for this pO.
+        /// <field name="Supplier" type="msls.application.Supplier">
+        /// Gets or sets the supplier for this pO.
         /// </field>
         /// <field name="details" type="msls.application.PO.Details">
         /// Gets the details for this pO.
@@ -413,23 +376,29 @@ window.myapp = msls.application;
         /// <param name="entitySet" type="msls.EntitySet" optional="true">
         /// The entity set that should contain this pO_Line.
         /// </param>
-        /// <field name="id" type="Number">
-        /// Gets or sets the id for this pO_Line.
-        /// </field>
         /// <field name="POLineRef" type="Number">
         /// Gets or sets the pOLineRef for this pO_Line.
         /// </field>
         /// <field name="PO" type="msls.application.PO">
         /// Gets or sets the pO for this pO_Line.
         /// </field>
-        /// <field name="PropLineSlctd" type="Number">
-        /// Gets or sets the propLineSlctd for this pO_Line.
-        /// </field>
-        /// <field name="ProposalSelected" type="Number">
-        /// Gets or sets the proposalSelected for this pO_Line.
+        /// <field name="id" type="Number">
+        /// Gets or sets the id for this pO_Line.
         /// </field>
         /// <field name="Award_Selected1" type="msls.application.Award_Selected">
         /// Gets or sets the award_Selected1 for this pO_Line.
+        /// </field>
+        /// <field name="Description" type="String">
+        /// Gets or sets the description for this pO_Line.
+        /// </field>
+        /// <field name="Expeditings" type="msls.EntityCollection">
+        /// Gets the expeditings for this pO_Line.
+        /// </field>
+        /// <field name="Proposal1" type="msls.application.Proposal">
+        /// Gets or sets the proposal1 for this pO_Line.
+        /// </field>
+        /// <field name="Proposal_Line1" type="msls.application.Proposal_Line">
+        /// Gets or sets the proposal_Line1 for this pO_Line.
         /// </field>
         /// <field name="details" type="msls.application.PO_Line.Details">
         /// Gets the details for this pO_Line.
@@ -489,6 +458,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="Year1" type="msls.application.Year">
         /// Gets or sets the year1 for this project.
+        /// </field>
+        /// <field name="ProjectClassification" type="msls.application.ProjectClassification">
+        /// Gets or sets the projectClassification for this project.
         /// </field>
         /// <field name="details" type="msls.application.Project.Details">
         /// Gets the details for this project.
@@ -555,6 +527,15 @@ window.myapp = msls.application;
         /// <field name="Award_Selecteds" type="msls.EntityCollection">
         /// Gets the award_Selecteds for this proposal.
         /// </field>
+        /// <field name="TechCompliant" type="Boolean">
+        /// Gets or sets the techCompliant for this proposal.
+        /// </field>
+        /// <field name="CommercialCompliant" type="Boolean">
+        /// Gets or sets the commercialCompliant for this proposal.
+        /// </field>
+        /// <field name="PO_Lines" type="msls.EntityCollection">
+        /// Gets the pO_Lines for this proposal.
+        /// </field>
         /// <field name="details" type="msls.application.Proposal.Details">
         /// Gets the details for this proposal.
         /// </field>
@@ -571,14 +552,20 @@ window.myapp = msls.application;
         /// <field name="ID" type="Number">
         /// Gets or sets the iD for this proposal_Line.
         /// </field>
+        /// <field name="ProposalLineNo" type="Number">
+        /// Gets or sets the proposalLineNo for this proposal_Line.
+        /// </field>
+        /// <field name="MeetSpecs" type="Boolean">
+        /// Gets or sets the meetSpecs for this proposal_Line.
+        /// </field>
         /// <field name="RFQ_Line" type="msls.application.RFQ_Line">
         /// Gets or sets the rFQ_Line for this proposal_Line.
         /// </field>
         /// <field name="CostPerUnit" type="Number">
         /// Gets or sets the costPerUnit for this proposal_Line.
         /// </field>
-        /// <field name="MeetSpecs" type="Boolean">
-        /// Gets or sets the meetSpecs for this proposal_Line.
+        /// <field name="ManufacturingPoint" type="String">
+        /// Gets or sets the manufacturingPoint for this proposal_Line.
         /// </field>
         /// <field name="CountryOfOrigin" type="String">
         /// Gets or sets the countryOfOrigin for this proposal_Line.
@@ -603,6 +590,12 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="Proposal1" type="msls.application.Proposal">
         /// Gets or sets the proposal1 for this proposal_Line.
+        /// </field>
+        /// <field name="AwardIt" type="Boolean">
+        /// Gets or sets the awardIt for this proposal_Line.
+        /// </field>
+        /// <field name="PO_Lines" type="msls.EntityCollection">
+        /// Gets the pO_Lines for this proposal_Line.
         /// </field>
         /// <field name="details" type="msls.application.Proposal_Line.Details">
         /// Gets the details for this proposal_Line.
@@ -747,17 +740,11 @@ window.myapp = msls.application;
         /// <field name="EngApproval" type="Date">
         /// Gets or sets the engApproval for this rFQ_PItem.
         /// </field>
-        /// <field name="TechComplaint" type="Boolean">
-        /// Gets or sets the techComplaint for this rFQ_PItem.
-        /// </field>
         /// <field name="Regret" type="Date">
         /// Gets or sets the regret for this rFQ_PItem.
         /// </field>
         /// <field name="CommercialDone" type="Date">
         /// Gets or sets the commercialDone for this rFQ_PItem.
-        /// </field>
-        /// <field name="CommercialComplaint" type="Boolean">
-        /// Gets or sets the commercialComplaint for this rFQ_PItem.
         /// </field>
         /// <field name="Comments" type="String">
         /// Gets or sets the comments for this rFQ_PItem.
@@ -1141,11 +1128,11 @@ window.myapp = msls.application;
         /// <field name="SupplierName" type="String">
         /// Gets or sets the supplierName for this supplier.
         /// </field>
-        /// <field name="SupplierFax" type="String">
-        /// Gets or sets the supplierFax for this supplier.
-        /// </field>
         /// <field name="SupplierPhone" type="String">
         /// Gets or sets the supplierPhone for this supplier.
+        /// </field>
+        /// <field name="SupplierFax" type="String">
+        /// Gets or sets the supplierFax for this supplier.
         /// </field>
         /// <field name="SupplierEmail" type="String">
         /// Gets or sets the supplierEmail for this supplier.
@@ -1309,9 +1296,6 @@ window.myapp = msls.application;
         /// <field name="ChangeOrders" type="msls.EntityCollection">
         /// Gets the changeOrders for this uOM.
         /// </field>
-        /// <field name="LineChangeOrders" type="msls.EntityCollection">
-        /// Gets the lineChangeOrders for this uOM.
-        /// </field>
         /// <field name="details" type="msls.application.UOM.Details">
         /// Gets the details for this uOM.
         /// </field>
@@ -1427,6 +1411,28 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="details" type="msls.application.Year.Details">
         /// Gets the details for this year.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function ProjectClassification(entitySet) {
+        /// <summary>
+        /// Represents the ProjectClassification entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this projectClassification.
+        /// </param>
+        /// <field name="ID" type="Number">
+        /// Gets or sets the iD for this projectClassification.
+        /// </field>
+        /// <field name="ProjectClassification1" type="String">
+        /// Gets or sets the projectClassification1 for this projectClassification.
+        /// </field>
+        /// <field name="Projects" type="msls.EntityCollection">
+        /// Gets the projects for this projectClassification.
+        /// </field>
+        /// <field name="details" type="msls.application.ProjectClassification.Details">
+        /// Gets the details for this projectClassification.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -1574,9 +1580,6 @@ window.myapp = msls.application;
         /// <field name="Expeditings" type="msls.EntitySet">
         /// Gets the Expeditings entity set.
         /// </field>
-        /// <field name="LineChangeOrders" type="msls.EntitySet">
-        /// Gets the LineChangeOrders entity set.
-        /// </field>
         /// <field name="Manufacturers" type="msls.EntitySet">
         /// Gets the Manufacturers entity set.
         /// </field>
@@ -1667,6 +1670,9 @@ window.myapp = msls.application;
         /// <field name="Years" type="msls.EntitySet">
         /// Gets the Years entity set.
         /// </field>
+        /// <field name="ProjectClassifications" type="msls.EntitySet">
+        /// Gets the ProjectClassifications entity set.
+        /// </field>
         /// <field name="details" type="msls.application.ProcurementData.Details">
         /// Gets the details for this data service.
         /// </field>
@@ -1719,7 +1725,9 @@ window.myapp = msls.application;
             { name: "Proposal1", kind: "reference", type: Proposal },
             { name: "RFQ_Line1", kind: "reference", type: RFQ_Line },
             { name: "RFQ_PItem1", kind: "reference", type: RFQ_PItem },
-            { name: "PO_Lines", kind: "collection", elementType: PO_Line }
+            { name: "OrderType", type: String },
+            { name: "PO_Lines", kind: "collection", elementType: PO_Line },
+            { name: "HasPO", type: Boolean }
         ]),
 
         BidList: $defineEntity(BidList, [
@@ -1743,9 +1751,8 @@ window.myapp = msls.application;
             { name: "CO_WBS", type: String },
             { name: "CO_Qty", type: Number },
             { name: "CO_CostPerUnit", type: Number },
-            { name: "PO", kind: "reference", type: PO },
-            { name: "LineChangeOrders", kind: "collection", elementType: LineChangeOrder },
             { name: "UOM1", kind: "reference", type: UOM },
+            { name: "PONum", type: Number },
             { name: "POLineID", type: Number }
         ]),
 
@@ -1778,18 +1785,7 @@ window.myapp = msls.application;
             { name: "Notes", type: String },
             { name: "Material_Status", kind: "reference", type: Material_Status },
             { name: "Shipment", kind: "reference", type: Shipment },
-            { name: "POLineID", type: Number }
-        ]),
-
-        LineChangeOrder: $defineEntity(LineChangeOrder, [
-            { name: "ID", type: Number },
-            { name: "CO_Description", type: String },
-            { name: "CO_WBS", type: String },
-            { name: "CO_Qty", type: Number },
-            { name: "CO_CostPerUnit", type: Number },
-            { name: "ChangeOrder", kind: "reference", type: ChangeOrder },
-            { name: "UOM1", kind: "reference", type: UOM },
-            { name: "POLineID", type: Number }
+            { name: "PO_Line1", kind: "reference", type: PO_Line }
         ]),
 
         Manufacturer: $defineEntity(Manufacturer, [
@@ -1816,18 +1812,19 @@ window.myapp = msls.application;
             { name: "PONumber", type: String },
             { name: "AwardDate", type: Date },
             { name: "Closed", type: Boolean },
-            { name: "ChangeOrders", kind: "collection", elementType: ChangeOrder },
             { name: "PO_Lines", kind: "collection", elementType: PO_Line },
-            { name: "Supplier1", kind: "reference", type: Supplier }
+            { name: "Supplier", kind: "reference", type: Supplier }
         ]),
 
         PO_Line: $defineEntity(PO_Line, [
-            { name: "id", type: Number },
             { name: "POLineRef", type: Number },
             { name: "PO", kind: "reference", type: PO },
-            { name: "PropLineSlctd", type: Number },
-            { name: "ProposalSelected", type: Number },
-            { name: "Award_Selected1", kind: "reference", type: Award_Selected }
+            { name: "id", type: Number },
+            { name: "Award_Selected1", kind: "reference", type: Award_Selected },
+            { name: "Description", type: String },
+            { name: "Expeditings", kind: "collection", elementType: Expediting },
+            { name: "Proposal1", kind: "reference", type: Proposal },
+            { name: "Proposal_Line1", kind: "reference", type: Proposal_Line }
         ]),
 
         Preference: $defineEntity(Preference, [
@@ -1844,7 +1841,8 @@ window.myapp = msls.application;
             { name: "Name", type: String },
             { name: "Client1", kind: "reference", type: Client },
             { name: "Phase1", kind: "reference", type: Phase },
-            { name: "Year1", kind: "reference", type: Year }
+            { name: "Year1", kind: "reference", type: Year },
+            { name: "ProjectClassification", kind: "reference", type: ProjectClassification }
         ]),
 
         Project_Stakeholder: $defineEntity(Project_Stakeholder, [
@@ -1863,14 +1861,19 @@ window.myapp = msls.application;
             { name: "RFQ_PItem", kind: "reference", type: RFQ_PItem },
             { name: "Proposal_Lines", kind: "collection", elementType: Proposal_Line },
             { name: "Supplier1", kind: "reference", type: Supplier },
-            { name: "Award_Selecteds", kind: "collection", elementType: Award_Selected }
+            { name: "Award_Selecteds", kind: "collection", elementType: Award_Selected },
+            { name: "TechCompliant", type: Boolean },
+            { name: "CommercialCompliant", type: Boolean },
+            { name: "PO_Lines", kind: "collection", elementType: PO_Line }
         ]),
 
         Proposal_Line: $defineEntity(Proposal_Line, [
             { name: "ID", type: Number },
+            { name: "ProposalLineNo", type: Number },
+            { name: "MeetSpecs", type: Boolean },
             { name: "RFQ_Line", kind: "reference", type: RFQ_Line },
             { name: "CostPerUnit", type: Number },
-            { name: "MeetSpecs", type: Boolean },
+            { name: "ManufacturingPoint", type: String },
             { name: "CountryOfOrigin", type: String },
             { name: "ShippingARO", type: Number },
             { name: "SubmittalsARO", type: Number },
@@ -1878,7 +1881,9 @@ window.myapp = msls.application;
             { name: "Notes", type: String },
             { name: "Shipments", kind: "collection", elementType: Shipment },
             { name: "Award_Selecteds", kind: "collection", elementType: Award_Selected },
-            { name: "Proposal1", kind: "reference", type: Proposal }
+            { name: "Proposal1", kind: "reference", type: Proposal },
+            { name: "AwardIt", type: Boolean },
+            { name: "PO_Lines", kind: "collection", elementType: PO_Line }
         ]),
 
         RFQ_Line: $defineEntity(RFQ_Line, [
@@ -1924,10 +1929,8 @@ window.myapp = msls.application;
             { name: "BidOpening", type: Date },
             { name: "ToEng", type: Date },
             { name: "EngApproval", type: Date },
-            { name: "TechComplaint", type: Boolean },
             { name: "Regret", type: Date },
             { name: "CommercialDone", type: Date },
-            { name: "CommercialComplaint", type: Boolean },
             { name: "Comments", type: String },
             { name: "CriticalPath", type: Boolean },
             { name: "BidLists", kind: "collection", elementType: BidList },
@@ -2042,8 +2045,8 @@ window.myapp = msls.application;
         Supplier: $defineEntity(Supplier, [
             { name: "id", type: Number },
             { name: "SupplierName", type: String },
-            { name: "SupplierFax", type: String },
             { name: "SupplierPhone", type: String },
+            { name: "SupplierFax", type: String },
             { name: "SupplierEmail", type: String },
             { name: "SupplierAddress1", type: String },
             { name: "SupplierAddress2", type: String },
@@ -2093,8 +2096,7 @@ window.myapp = msls.application;
             { name: "id", type: Number },
             { name: "UOM1", type: String },
             { name: "RFQ_Lines", kind: "collection", elementType: RFQ_Line },
-            { name: "ChangeOrders", kind: "collection", elementType: ChangeOrder },
-            { name: "LineChangeOrders", kind: "collection", elementType: LineChangeOrder }
+            { name: "ChangeOrders", kind: "collection", elementType: ChangeOrder }
         ]),
 
         Specialty: $defineEntity(Specialty, [
@@ -2125,6 +2127,12 @@ window.myapp = msls.application;
         Year: $defineEntity(Year, [
             { name: "Year1", type: String },
             { name: "ID", type: Number },
+            { name: "Projects", kind: "collection", elementType: Project }
+        ]),
+
+        ProjectClassification: $defineEntity(ProjectClassification, [
+            { name: "ID", type: Number },
+            { name: "ProjectClassification1", type: String },
             { name: "Projects", kind: "collection", elementType: Project }
         ]),
 
@@ -2173,7 +2181,6 @@ window.myapp = msls.application;
             { name: "Client_Approveds", elementType: Client_Approved },
             { name: "Clients", elementType: Client },
             { name: "Expeditings", elementType: Expediting },
-            { name: "LineChangeOrders", elementType: LineChangeOrder },
             { name: "Manufacturers", elementType: Manufacturer },
             { name: "Material_Status", elementType: Material_Status },
             { name: "Phases", elementType: Phase },
@@ -2203,7 +2210,8 @@ window.myapp = msls.application;
             { name: "Regions", elementType: Region },
             { name: "SupplierRegions", elementType: SupplierRegion },
             { name: "SourceStrategies", elementType: SourceStrategy },
-            { name: "Years", elementType: Year }
+            { name: "Years", elementType: Year },
+            { name: "ProjectClassifications", elementType: ProjectClassification }
         ], [
             {
                 name: "Award_Selecteds_SingleOrDefault", value: function (ID) {
@@ -2251,13 +2259,6 @@ window.myapp = msls.application;
                 name: "Expeditings_SingleOrDefault", value: function (ID) {
                     return new $DataServiceQuery({ _entitySet: this.Expeditings },
                         lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/Expeditings(" + "ID=" + $toODataString(ID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "LineChangeOrders_SingleOrDefault", value: function (ID) {
-                    return new $DataServiceQuery({ _entitySet: this.LineChangeOrders },
-                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/LineChangeOrders(" + "ID=" + $toODataString(ID, "Int32?") + ")"
                     );
                 }
             },
@@ -2484,6 +2485,68 @@ window.myapp = msls.application;
                     return new $DataServiceQuery({ _entitySet: this.Stakeholders },
                         lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/SortedStakeholders()",
                         {
+                        });
+                }
+            },
+            {
+                name: "FilterBYRfqnum", value: function (PkgNumberID) {
+                    return new $DataServiceQuery({ _entitySet: this.RFQ_Lines },
+                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/FilterBYRfqnum()",
+                        {
+                            PkgNumberID: $toODataString(PkgNumberID, "Int32?")
+                        });
+                }
+            },
+            {
+                name: "FilteredByRFQ", value: function (RFQFilter) {
+                    return new $DataServiceQuery({ _entitySet: this.Proposals },
+                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/FilteredByRFQ()",
+                        {
+                            RFQFilter: $toODataString(RFQFilter, "Int32?")
+                        });
+                }
+            },
+            {
+                name: "FilerByProposalNumber", value: function (ProposalNum) {
+                    return new $DataServiceQuery({ _entitySet: this.Proposal_Lines },
+                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/FilerByProposalNumber()",
+                        {
+                            ProposalNum: $toODataString(ProposalNum, "Int32?")
+                        });
+                }
+            },
+            {
+                name: "ProjectClassifications_SingleOrDefault", value: function (ID) {
+                    return new $DataServiceQuery({ _entitySet: this.ProjectClassifications },
+                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/ProjectClassifications(" + "ID=" + $toODataString(ID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
+                name: "AwardByrfqID", value: function (rfqid) {
+                    return new $DataServiceQuery({ _entitySet: this.Award_Selecteds },
+                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/AwardByrfqID()",
+                        {
+                            rfqid: $toODataString(rfqid, "Int32?")
+                        });
+                }
+            },
+            {
+                name: "FilterByAwardedSupplierID", value: function (SupplierID, RfqID) {
+                    return new $DataServiceQuery({ _entitySet: this.Award_Selecteds },
+                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/FilterByAwardedSupplierID()",
+                        {
+                            SupplierID: $toODataString(SupplierID, "Int32?"),
+                            RfqID: $toODataString(RfqID, "Int32?")
+                        });
+                }
+            },
+            {
+                name: "AwardsByProposalID", value: function (ProposalID) {
+                    return new $DataServiceQuery({ _entitySet: this.Award_Selecteds },
+                        lightSwitchApplication.rootUri + "/ProcurementData.svc" + "/AwardsByProposalID()",
+                        {
+                            ProposalID: $toODataString(ProposalID, "Int32?")
                         });
                 }
             }

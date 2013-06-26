@@ -24,5 +24,8 @@ namespace LightSwitchApplication
             this.Close(false);
             Application.Current.ShowDefaultScreen(this.POProperty);
         }
+
+        
+        
     }
 }

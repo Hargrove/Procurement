@@ -58,14 +58,6 @@
         created: [lightSwitchApplication.Expediting]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.LineChangeOrder, {
-        /// <field>
-        /// Called when a new lineChangeOrder is created.
-        /// <br/>created(msls.application.LineChangeOrder entity)
-        /// </field>
-        created: [lightSwitchApplication.LineChangeOrder]
-    });
-
     msls._addEntryPoints(lightSwitchApplication.Manufacturer, {
         /// <field>
         /// Called when a new manufacturer is created.
@@ -304,6 +296,14 @@
         /// <br/>created(msls.application.Year entity)
         /// </field>
         created: [lightSwitchApplication.Year]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.ProjectClassification, {
+        /// <field>
+        /// Called when a new projectClassification is created.
+        /// <br/>created(msls.application.ProjectClassification entity)
+        /// </field>
+        created: [lightSwitchApplication.ProjectClassification]
     });
 
     msls._addEntryPoints(lightSwitchApplication.CL, {

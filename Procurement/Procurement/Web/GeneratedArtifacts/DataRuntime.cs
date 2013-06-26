@@ -268,19 +268,6 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Gets the LineChangeOrders entity set.  The entity set provides members to access entities of a specific type.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.LineChangeOrder> LineChangeOrders
-        {
-            get
-            {
-                return global::LightSwitchApplication.ProcurementData.DetailsClass.GetValue(this, global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.LineChangeOrders);
-            }
-        }
-        
-        /// <summary>
         /// Gets the Manufacturers entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
@@ -670,6 +657,19 @@ namespace LightSwitchApplication
             }
         }
         
+        /// <summary>
+        /// Gets the ProjectClassifications entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ProjectClassification> ProjectClassifications
+        {
+            get
+            {
+                return global::LightSwitchApplication.ProcurementData.DetailsClass.GetValue(this, global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.ProjectClassifications);
+            }
+        }
+        
         #endregion
     
         #region Queries
@@ -826,28 +826,6 @@ namespace LightSwitchApplication
         public global::LightSwitchApplication.Expediting Expeditings_SingleOrDefault(global::System.Nullable<int> ID)
         {
             return this.Details.Methods.Expeditings_SingleOrDefault.CreateInvocation(ID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s).
-        /// </summary>
-        /// <param name="ID">
-        /// The value of the 'ID' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.LineChangeOrder LineChangeOrders_Single(global::System.Nullable<int> ID)
-        {
-            return this.Details.Methods.LineChangeOrders_Single.CreateInvocation(ID).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
-        /// </summary>
-        /// <param name="ID">
-        /// The value of the 'ID' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.LineChangeOrder LineChangeOrders_SingleOrDefault(global::System.Nullable<int> ID)
-        {
-            return this.Details.Methods.LineChangeOrders_SingleOrDefault.CreateInvocation(ID).Execute();
         }
         
         /// <summary>
@@ -1526,6 +1504,97 @@ namespace LightSwitchApplication
             return this.Details.Methods.SortedStakeholders.CreateInvocation().Execute();
         }
         
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="PkgNumberID">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.RFQ_Line> FilterBYRfqnum(global::System.Nullable<int> PkgNumberID)
+        {
+            return this.Details.Methods.FilterBYRfqnum.CreateInvocation(PkgNumberID).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="RFQFilter">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Proposal> FilteredByRFQ(global::System.Nullable<int> RFQFilter)
+        {
+            return this.Details.Methods.FilteredByRFQ.CreateInvocation(RFQFilter).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="ProposalNum">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Proposal_Line> FilerByProposalNumber(global::System.Nullable<int> ProposalNum)
+        {
+            return this.Details.Methods.FilerByProposalNumber.CreateInvocation(ProposalNum).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="ID">
+        /// The value of the 'ID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.ProjectClassification ProjectClassifications_Single(global::System.Nullable<int> ID)
+        {
+            return this.Details.Methods.ProjectClassifications_Single.CreateInvocation(ID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="ID">
+        /// The value of the 'ID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.ProjectClassification ProjectClassifications_SingleOrDefault(global::System.Nullable<int> ID)
+        {
+            return this.Details.Methods.ProjectClassifications_SingleOrDefault.CreateInvocation(ID).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="rfqid">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Award_Selected> AwardByrfqID(global::System.Nullable<int> rfqid)
+        {
+            return this.Details.Methods.AwardByrfqID.CreateInvocation(rfqid).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="SupplierID">
+        /// No Modeled Description Available
+        /// </param>
+        /// <param name="RfqID">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Award_Selected> FilterByAwardedSupplierID(global::System.Nullable<int> SupplierID, global::System.Nullable<int> RfqID)
+        {
+            return this.Details.Methods.FilterByAwardedSupplierID.CreateInvocation(SupplierID, RfqID).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="ProposalID">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Award_Selected> AwardsByProposalID(global::System.Nullable<int> ProposalID)
+        {
+            return this.Details.Methods.AwardsByProposalID.CreateInvocation(ProposalID).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -1683,22 +1752,6 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.Expeditings_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Expediting>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder> LineChangeOrders_Single
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.LineChangeOrders_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder> LineChangeOrders_SingleOrDefault
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.LineChangeOrders_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>;
                     }
                 }
                 
@@ -2198,6 +2251,70 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_Line> FilterBYRfqnum
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.FilterBYRfqnum) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_Line>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal> FilteredByRFQ
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.FilteredByRFQ) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal_Line> FilerByProposalNumber
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.FilerByProposalNumber) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal_Line>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification> ProjectClassifications_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.ProjectClassifications_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification> ProjectClassifications_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.ProjectClassifications_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected> AwardByrfqID
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.AwardByrfqID) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected> FilterByAwardedSupplierID
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.FilterByAwardedSupplierID) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected> AwardsByProposalID
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.AwardsByProposalID) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2264,14 +2381,6 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.Expeditings) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Expediting>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder> LineChangeOrders
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.LineChangeOrders) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>;
                     }
                 }
                 
@@ -2515,6 +2624,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification> ProjectClassifications
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.ProjectClassifications) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2661,26 +2778,6 @@ namespace LightSwitchApplication
                 private static void _Expeditings_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Expediting>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
                 {
                     c(d, ref d._Expeditings_SingleOrDefault, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Entry
-                    LineChangeOrders_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Entry(
-                        "LineChangeOrders_Single",
-                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._LineChangeOrders_Single_Stub);
-                private static void _LineChangeOrders_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._LineChangeOrders_Single, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Entry
-                    LineChangeOrders_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Entry(
-                        "LineChangeOrders_SingleOrDefault",
-                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._LineChangeOrders_SingleOrDefault_Stub);
-                private static void _LineChangeOrders_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._LineChangeOrders_SingleOrDefault, sf);
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -3303,6 +3400,86 @@ namespace LightSwitchApplication
                     c(d, ref d._SortedStakeholders, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_Line>.Entry
+                    FilterBYRfqnum = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_Line>.Entry(
+                        "FilterBYRfqnum",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._FilterBYRfqnum_Stub);
+                private static void _FilterBYRfqnum_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_Line>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._FilterBYRfqnum, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal>.Entry
+                    FilteredByRFQ = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal>.Entry(
+                        "FilteredByRFQ",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._FilteredByRFQ_Stub);
+                private static void _FilteredByRFQ_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._FilteredByRFQ, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal_Line>.Entry
+                    FilerByProposalNumber = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal_Line>.Entry(
+                        "FilerByProposalNumber",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._FilerByProposalNumber_Stub);
+                private static void _FilerByProposalNumber_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal_Line>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._FilerByProposalNumber, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Entry
+                    ProjectClassifications_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Entry(
+                        "ProjectClassifications_Single",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._ProjectClassifications_Single_Stub);
+                private static void _ProjectClassifications_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ProjectClassifications_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Entry
+                    ProjectClassifications_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Entry(
+                        "ProjectClassifications_SingleOrDefault",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._ProjectClassifications_SingleOrDefault_Stub);
+                private static void _ProjectClassifications_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ProjectClassifications_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry
+                    AwardByrfqID = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry(
+                        "AwardByrfqID",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._AwardByrfqID_Stub);
+                private static void _AwardByrfqID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._AwardByrfqID, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry
+                    FilterByAwardedSupplierID = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry(
+                        "FilterByAwardedSupplierID",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._FilterByAwardedSupplierID_Stub);
+                private static void _FilterByAwardedSupplierID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._FilterByAwardedSupplierID, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry
+                    AwardsByProposalID = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Entry(
+                        "AwardsByProposalID",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._AwardsByProposalID_Stub);
+                private static void _AwardsByProposalID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._AwardsByProposalID, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -3379,16 +3556,6 @@ namespace LightSwitchApplication
                 private static void _Expeditings_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Expediting>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
                 {
                     c(d, ref d._Expeditings, sf);
-                }
-     
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Entry
-                    LineChangeOrders = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Entry(
-                        "LineChangeOrders",
-                        global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties._LineChangeOrders_Stub);
-                private static void _LineChangeOrders_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._LineChangeOrders, sf);
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -3691,6 +3858,16 @@ namespace LightSwitchApplication
                     c(d, ref d._Years, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Entry
+                    ProjectClassifications = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Entry(
+                        "ProjectClassifications",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties._ProjectClassifications_Stub);
+                private static void _ProjectClassifications_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ProjectClassifications, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -3713,9 +3890,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Expediting>.Data _Expeditings;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Data _LineChangeOrders;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Manufacturer>.Data _Manufacturers;
@@ -3808,6 +3982,9 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Year>.Data _Years;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Data _ProjectClassifications;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _Award_Selecteds_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -3848,12 +4025,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Expediting>.Data _Expeditings_SingleOrDefault;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Data _LineChangeOrders_Single;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.LineChangeOrder>.Data _LineChangeOrders_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Manufacturer>.Data _Manufacturers_Single;
@@ -4040,6 +4211,30 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Stakeholder>.Data _SortedStakeholders;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_Line>.Data _FilterBYRfqnum;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal>.Data _FilteredByRFQ;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Proposal_Line>.Data _FilerByProposalNumber;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Data _ProjectClassifications_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Data _ProjectClassifications_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _AwardByrfqID;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _FilterByAwardedSupplierID;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _AwardsByProposalID;
             
         }
     

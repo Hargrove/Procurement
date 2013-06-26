@@ -271,6 +271,54 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string OrderType
+        {
+            get
+            {
+                return global::LightSwitchApplication.Award_Selected.DetailsClass.GetValue(this, global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties.OrderType);
+            }
+            set
+            {
+                global::LightSwitchApplication.Award_Selected.DetailsClass.SetValue(this, global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties.OrderType, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void OrderType_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void OrderType_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void OrderType_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public bool HasPO
+        {
+            get
+            {
+                return global::LightSwitchApplication.Award_Selected.DetailsClass.GetValue(this, global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties.HasPO);
+            }
+            set
+            {
+                global::LightSwitchApplication.Award_Selected.DetailsClass.SetValue(this, global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties.HasPO, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HasPO_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HasPO_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void HasPO_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.Proposal_Line Proposal_Line1
         {
             get
@@ -531,6 +579,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, string> OrderType
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties.OrderType) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, bool> HasPO
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties.HasPO) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, bool>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, global::LightSwitchApplication.Proposal_Line> Proposal_Line1
                 {
                     get
@@ -585,6 +649,8 @@ namespace LightSwitchApplication
                 new global::System.Nullable<global::System.DateTime> RequisitionSub { get; set; }
                 new global::System.Nullable<global::System.DateTime> RequisitionApp { get; set; }
                 new string Comment { get; set; }
+                new string OrderType { get; set; }
+                new bool HasPO { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Proposal_Line1 { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation Proposal1 { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation RFQ_Line1 { get; set; }
@@ -892,6 +958,80 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, string>.Entry
+                    OrderType = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, string>.Entry(
+                        "OrderType",
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._OrderType_Stub,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._OrderType_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._OrderType_Validate,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._OrderType_GetImplementationValue,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._OrderType_SetImplementationValue,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._OrderType_OnValueChanged);
+                private static void _OrderType_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Award_Selected.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, string>.Data> c, global::LightSwitchApplication.Award_Selected.DetailsClass d, object sf)
+                {
+                    c(d, ref d._OrderType, sf);
+                }
+                private static bool _OrderType_ComputeIsReadOnly(global::LightSwitchApplication.Award_Selected e)
+                {
+                    bool result = false;
+                    e.OrderType_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _OrderType_Validate(global::LightSwitchApplication.Award_Selected e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.OrderType_Validate(r);
+                }
+                private static string _OrderType_GetImplementationValue(global::LightSwitchApplication.Award_Selected.DetailsClass d)
+                {
+                    return d.ImplementationEntity.OrderType;
+                }
+                private static void _OrderType_SetImplementationValue(global::LightSwitchApplication.Award_Selected.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.OrderType = v;
+                }
+                private static void _OrderType_OnValueChanged(global::LightSwitchApplication.Award_Selected e)
+                {
+                    e.OrderType_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, bool>.Entry
+                    HasPO = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, bool>.Entry(
+                        "HasPO",
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._HasPO_Stub,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._HasPO_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._HasPO_Validate,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._HasPO_GetImplementationValue,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._HasPO_SetImplementationValue,
+                        global::LightSwitchApplication.Award_Selected.DetailsClass.PropertySetProperties._HasPO_OnValueChanged);
+                private static void _HasPO_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Award_Selected.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, bool>.Data> c, global::LightSwitchApplication.Award_Selected.DetailsClass d, object sf)
+                {
+                    c(d, ref d._HasPO, sf);
+                }
+                private static bool _HasPO_ComputeIsReadOnly(global::LightSwitchApplication.Award_Selected e)
+                {
+                    bool result = false;
+                    e.HasPO_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _HasPO_Validate(global::LightSwitchApplication.Award_Selected e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.HasPO_Validate(r);
+                }
+                private static bool _HasPO_GetImplementationValue(global::LightSwitchApplication.Award_Selected.DetailsClass d)
+                {
+                    return d.ImplementationEntity.HasPO;
+                }
+                private static void _HasPO_SetImplementationValue(global::LightSwitchApplication.Award_Selected.DetailsClass d, bool v)
+                {
+                    d.ImplementationEntity.HasPO = v;
+                }
+                private static void _HasPO_OnValueChanged(global::LightSwitchApplication.Award_Selected e)
+                {
+                    e.HasPO_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, global::LightSwitchApplication.Proposal_Line>.Entry
                     Proposal_Line1 = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, global::LightSwitchApplication.Proposal_Line>.Entry(
                         "Proposal_Line1",
@@ -1124,6 +1264,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, string>.Data _Comment;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, string>.Data _OrderType;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, bool>.Data _HasPO;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Award_Selected, global::LightSwitchApplication.Award_Selected.DetailsClass, global::LightSwitchApplication.Proposal_Line>.Data _Proposal_Line1;
