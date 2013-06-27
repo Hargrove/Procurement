@@ -995,11 +995,59 @@ namespace ProcurementData.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ChangeOrder.DetailsClass.IImplementation.PO1
+        {
+            get
+            {
+                return this.PO1;
+            }
+            set
+            {
+                this.PO1 = (global::ProcurementData.Implementation.PO)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("PO1");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ChangeOrder.DetailsClass.IImplementation.PO_Line1
+        {
+            get
+            {
+                return this.PO_Line1;
+            }
+            set
+            {
+                this.PO_Line1 = (global::ProcurementData.Implementation.PO_Line)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("PO_Line1");
+                }
+            }
+        }
+        
         partial void OnCO_UOMChanged()
         {
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("UOM1");
+            }
+        }
+        
+        partial void OnPONumChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("PO1");
+            }
+        }
+        
+        partial void OnPOLineIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("PO_Line1");
             }
         }
         
@@ -1466,6 +1514,14 @@ namespace ProcurementData.Implementation
             }
         }
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.ChangeOrders
+        {
+            get
+            {
+                return this.ChangeOrders;
+            }
+        }
+        
         partial void OnSupplierIDChanged()
         {
             if (this.__host != null)
@@ -1576,6 +1632,14 @@ namespace ProcurementData.Implementation
                 {
                     this.__host.RaisePropertyChanged("Proposal_Line1");
                 }
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PO_Line.DetailsClass.IImplementation.ChangeOrders
+        {
+            get
+            {
+                return this.ChangeOrders;
             }
         }
         

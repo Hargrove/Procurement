@@ -700,12 +700,13 @@
       </KeyProperty>
       <EntityProperty
         Name="ChangeOrderNum"
-        PropertyType=":Decimal?">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="0" />
+            Scale="2" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -772,20 +773,16 @@
             Value="UOM" />
         </NavigationProperty.Attributes>
       </NavigationProperty>
-      <EntityProperty
-        Name="PONum"
-        PropertyType=":Int32?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="POLineID"
-        PropertyType=":Int32?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+      <NavigationProperty
+        Name="PO1"
+        Association="FK_ChangeOrder_PO"
+        FromEnd="ChangeOrder"
+        ToEnd="PO" />
+      <NavigationProperty
+        Name="PO_Line1"
+        Association="FK_ChangeOrder_PO_Line"
+        FromEnd="ChangeOrder"
+        ToEnd="PO_Line" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1170,10 +1167,11 @@
       </KeyProperty>
       <EntityProperty
         Name="PONumber"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1203,6 +1201,11 @@
         Association="FK_PO_Suppliers"
         FromEnd="PO"
         ToEnd="Suppliers" />
+      <NavigationProperty
+        Name="ChangeOrders"
+        Association="FK_ChangeOrder_PO"
+        FromEnd="PO"
+        ToEnd="ChangeOrder" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1218,12 +1221,13 @@
     <EntityType.Properties>
       <EntityProperty
         Name="POLineRef"
-        PropertyType=":Decimal?">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="0" />
+            Scale="2" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -1268,6 +1272,11 @@
         Association="FK_PO_Line_Proposal_Line"
         FromEnd="PO_Line"
         ToEnd="Proposal_Line" />
+      <NavigationProperty
+        Name="ChangeOrders"
+        Association="FK_ChangeOrder_PO_Line"
+        FromEnd="PO_Line"
+        ToEnd="ChangeOrder" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1567,12 +1576,13 @@
       </KeyProperty>
       <EntityProperty
         Name="ProposalLineNo"
-        PropertyType=":Decimal?">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
             Precision="18"
-            Scale="0" />
+            Scale="2" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1710,12 +1720,13 @@
       </KeyProperty>
       <EntityProperty
         Name="RFQLineNo"
-        PropertyType=":Decimal?">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="0" />
+            Scale="2" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1856,17 +1867,19 @@
       </EntityProperty>
       <EntityProperty
         Name="PkgName"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="PkgDescription"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -6069,6 +6082,26 @@
         Name="PO_Line"
         EntitySet="PO_Lines" />
     </AssociationSet>
+    <AssociationSet
+      Name="FK_ChangeOrder_PO"
+      Association="FK_ChangeOrder_PO">
+      <AssociationSetEnd
+        Name="PO"
+        EntitySet="PO" />
+      <AssociationSetEnd
+        Name="ChangeOrder"
+        EntitySet="ChangeOrders" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_ChangeOrder_PO_Line"
+      Association="FK_ChangeOrder_PO_Line">
+      <AssociationSetEnd
+        Name="PO_Line"
+        EntitySet="PO_Lines" />
+      <AssociationSetEnd
+        Name="ChangeOrder"
+        EntitySet="ChangeOrders" />
+    </AssociationSet>
   </EntityContainer>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">
@@ -7645,7 +7678,7 @@
                       <ContentItem
                         Name="PkgName1"
                         Kind="Value"
-                        DataType=":String?">
+                        DataType=":String">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -7658,7 +7691,7 @@
                       <ContentItem
                         Name="PkgDescription1"
                         Kind="Value"
-                        DataType=":String?">
+                        DataType=":String">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -8006,7 +8039,7 @@
                     <ContentItem
                       Name="PkgName"
                       Kind="Value"
-                      DataType=":String?">
+                      DataType=":String">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -8019,7 +8052,7 @@
                     <ContentItem
                       Name="PkgDescription"
                       Kind="Value"
-                      DataType=":String?">
+                      DataType=":String">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -8695,7 +8728,7 @@
                       <ContentItem
                         Name="PkgName2"
                         Kind="Value"
-                        DataType=":String?">
+                        DataType=":String">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -8734,7 +8767,7 @@
                       <ContentItem
                         Name="PkgDescription2"
                         Kind="Value"
-                        DataType=":String?"
+                        DataType=":String"
                         View="PixataCustomControls:StylableTextBox">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
@@ -12221,7 +12254,7 @@
                 <ContentItem
                   Name="PkgName"
                   Kind="Value"
-                  DataType=":String?"
+                  DataType=":String"
                   View="PixataCustomControls:StylableLabel">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -12261,7 +12294,7 @@
                 <ContentItem
                   Name="PkgDescription"
                   Kind="Value"
-                  DataType=":String?"
+                  DataType=":String"
                   View="PixataCustomControls:StylableLabel">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -14544,7 +14577,7 @@
                   <ContentItem
                     Name="RFQLineNo"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -14567,7 +14600,7 @@
                     <ContentItem
                       Name="RFQLineNo1"
                       Kind="Value"
-                      DataType=":Decimal?">
+                      DataType=":Decimal">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -15119,7 +15152,7 @@
                 <ContentItem
                   Name="RFQ_Lines_SelectedItem_RFQLineNo"
                   Kind="Value"
-                  DataType=":Decimal?"
+                  DataType=":Decimal"
                   View="Microsoft.LightSwitch.RichClient:Label">
                   <ContentItem.Attributes>
                     <DisplayName
@@ -22659,7 +22692,7 @@
                 <ContentItem
                   Name="PkgName"
                   Kind="Value"
-                  DataType=":String?">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -23478,7 +23511,7 @@
             <ContentItem
               Name="PONumber"
               Kind="Value"
-              DataType=":String?">
+              DataType=":String">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -23675,7 +23708,7 @@
               <ContentItem
                 Name="RFQLineNo"
                 Kind="Value"
-                DataType=":Decimal?">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -24260,7 +24293,7 @@
               <ContentItem
                 Name="PONumber"
                 Kind="Value"
-                DataType=":String?">
+                DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -24375,7 +24408,7 @@
                   <ContentItem
                     Name="POLineRef1"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -24424,7 +24457,7 @@
                 <ContentItem
                   Name="POLineRef"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -24660,7 +24693,7 @@
               <ContentItem
                 Name="PONumber"
                 Kind="Value"
-                DataType=":String?">
+                DataType=":String">
                 <ContentItem.Attributes>
                   <ShowAsLinkSettings
                     Value="PODetail">
@@ -25288,7 +25321,7 @@
                   <ContentItem
                     Name="PONumber"
                     Kind="Value"
-                    DataType=":String?">
+                    DataType=":String">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -25583,7 +25616,7 @@
                   <ContentItem
                     Name="ProposalLineNo1"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -26009,7 +26042,7 @@
                 <ContentItem
                   Name="RFQLineNo"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -26142,7 +26175,7 @@
                 <ContentItem
                   Name="ProposalLineNo"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -26355,7 +26388,7 @@
                 <ContentItem
                   Name="POLineRef"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -26553,7 +26586,7 @@
                       <ContentItem
                         Name="RFQLineNo1"
                         Kind="Value"
-                        DataType=":Decimal?">
+                        DataType=":Decimal">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -27606,7 +27639,7 @@
                 <ContentItem
                   Name="ProposalLineNo"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -27771,15 +27804,17 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Proposal_Lines_DeleteSelected"
+                  Name="Proposal_LinesDeleteSelected"
                   Kind="Command">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Delete" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
-                        <MemberExpression
-                          Member="ProposalsListDetail/Properties[Proposal_Lines]" />
                         <CallExpression
-                          Target="DeleteSelected" />
+                          Target="ProposalsListDetail/Methods[Proposal_LinesDeleteSelected]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -27881,7 +27916,7 @@
               <ContentItem
                 Name="Proposal_Lines_SelectedItem_ProposalLineNo"
                 Kind="Value"
-                DataType=":Decimal?">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -27956,7 +27991,7 @@
                   <ContentItem
                     Name="RFQLineNo"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -28317,7 +28352,7 @@
                   <ContentItem
                     Name="ProposalLineNo1"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -28563,6 +28598,13 @@
         Name="ShowPORegistrar" />
       <ScreenMethod
         Name="Method" />
+      <ScreenMethod
+        Name="Proposal_LinesDeleteSelected">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="DeleteSelected" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -28845,5 +28887,35 @@
       Name="PO_Line"
       Multiplicity="Many"
       EntityType="PO_Line" />
+  </Association>
+  <Association
+    Name="FK_ChangeOrder_PO">
+    <AssociationEnd
+      Name="PO"
+      Multiplicity="One"
+      EntityType="PO">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ChangeOrder"
+      Multiplicity="Many"
+      EntityType="ChangeOrder" />
+  </Association>
+  <Association
+    Name="FK_ChangeOrder_PO_Line">
+    <AssociationEnd
+      Name="PO_Line"
+      Multiplicity="One"
+      EntityType="PO_Line">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ChangeOrder"
+      Multiplicity="Many"
+      EntityType="ChangeOrder" />
   </Association>
 </ModelFragment>

@@ -315,13 +315,14 @@
             {
               "id": "ChangeOrder/Properties[ChangeOrderNum]",
               "name": "ChangeOrderNum",
-              "propertyType": { "__id": ":Decimal?" },
+              "propertyType": { "__id": ":Decimal" },
               ":@DecimalConstraint":
               {
                 "precision": 18,
-                "scale": 0
+                "scale": 2
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "ChangeOrder/Properties[PCN]",
@@ -394,16 +395,22 @@
               "toEnd": { "__id": "FK_ChangeOrder_UOM/Ends[UOM]" }
             },
             {
-              "id": "ChangeOrder/Properties[PONum]",
-              "name": "PONum",
-              "propertyType": { "__id": ":Int32?" },
-              ":@NotSearchable": { }
+              "id": "ChangeOrder/Properties[PO1]",
+              "name": "PO1",
+              "association": { "__id": "FK_ChangeOrder_PO" },
+              "elementType": { "__id": "PO" },
+              "fromEnd": { "__id": "FK_ChangeOrder_PO/Ends[ChangeOrder]" },
+              "propertyType": { "__id": "PO" },
+              "toEnd": { "__id": "FK_ChangeOrder_PO/Ends[PO]" }
             },
             {
-              "id": "ChangeOrder/Properties[POLineID]",
-              "name": "POLineID",
-              "propertyType": { "__id": ":Int32?" },
-              ":@NotSearchable": { }
+              "id": "ChangeOrder/Properties[PO_Line1]",
+              "name": "PO_Line1",
+              "association": { "__id": "FK_ChangeOrder_PO_Line" },
+              "elementType": { "__id": "PO_Line" },
+              "fromEnd": { "__id": "FK_ChangeOrder_PO_Line/Ends[ChangeOrder]" },
+              "propertyType": { "__id": "PO_Line" },
+              "toEnd": { "__id": "FK_ChangeOrder_PO_Line/Ends[PO_Line]" }
             }
           ]
         },
@@ -837,11 +844,12 @@
             {
               "id": "PO/Properties[PONumber]",
               "name": "PONumber",
-              "propertyType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String" },
               ":@MaxLength":
               {
                 "value": 50
-              }
+              },
+              ":@Required": { }
             },
             {
               "id": "PO/Properties[AwardDate]",
@@ -878,6 +886,15 @@
               "fromEnd": { "__id": "FK_PO_Suppliers/Ends[PO]" },
               "propertyType": { "__id": "Supplier" },
               "toEnd": { "__id": "FK_PO_Suppliers/Ends[Suppliers]" }
+            },
+            {
+              "id": "PO/Properties[ChangeOrders]",
+              "name": "ChangeOrders",
+              "association": { "__id": "FK_ChangeOrder_PO" },
+              "elementType": { "__id": "ChangeOrder" },
+              "fromEnd": { "__id": "FK_ChangeOrder_PO/Ends[PO]" },
+              "propertyType": { "__id": "ChangeOrder*" },
+              "toEnd": { "__id": "FK_ChangeOrder_PO/Ends[ChangeOrder]" }
             }
           ]
         },
@@ -897,13 +914,14 @@
             {
               "id": "PO_Line/Properties[POLineRef]",
               "name": "POLineRef",
-              "propertyType": { "__id": ":Decimal?" },
+              "propertyType": { "__id": ":Decimal" },
               ":@DecimalConstraint":
               {
                 "precision": 18,
-                "scale": 0
+                "scale": 2
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "PO_Line/Properties[PO]",
@@ -967,6 +985,15 @@
               "fromEnd": { "__id": "FK_PO_Line_Proposal_Line/Ends[PO_Line]" },
               "propertyType": { "__id": "Proposal_Line" },
               "toEnd": { "__id": "FK_PO_Line_Proposal_Line/Ends[Proposal_Line]" }
+            },
+            {
+              "id": "PO_Line/Properties[ChangeOrders]",
+              "name": "ChangeOrders",
+              "association": { "__id": "FK_ChangeOrder_PO_Line" },
+              "elementType": { "__id": "ChangeOrder" },
+              "fromEnd": { "__id": "FK_ChangeOrder_PO_Line/Ends[PO_Line]" },
+              "propertyType": { "__id": "ChangeOrder*" },
+              "toEnd": { "__id": "FK_ChangeOrder_PO_Line/Ends[ChangeOrder]" }
             }
           ]
         },
@@ -1309,13 +1336,14 @@
             {
               "id": "Proposal_Line/Properties[ProposalLineNo]",
               "name": "ProposalLineNo",
-              "propertyType": { "__id": ":Decimal?" },
+              "propertyType": { "__id": ":Decimal" },
               ":@NotSearchable": { },
               ":@DecimalConstraint":
               {
                 "precision": 18,
-                "scale": 0
-              }
+                "scale": 2
+              },
+              ":@Required": { }
             },
             {
               "id": "Proposal_Line/Properties[MeetSpecs]",
@@ -1475,13 +1503,14 @@
             {
               "id": "RFQ_Line/Properties[RFQLineNo]",
               "name": "RFQLineNo",
-              "propertyType": { "__id": ":Decimal?" },
+              "propertyType": { "__id": ":Decimal" },
               ":@DecimalConstraint":
               {
                 "precision": 18,
-                "scale": 0
+                "scale": 2
               },
-              ":@NotSearchable": { }
+              ":@NotSearchable": { },
+              ":@Required": { }
             },
             {
               "id": "RFQ_Line/Properties[Description]",
@@ -1645,19 +1674,21 @@
             {
               "id": "RFQ_PItem/Properties[PkgName]",
               "name": "PkgName",
-              "propertyType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String" },
               ":@MaxLength":
               {
                 "value": 50
-              }
+              },
+              ":@Required": { }
             },
             {
               "id": "RFQ_PItem/Properties[PkgDescription]",
               "name": "PkgDescription",
-              "propertyType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String" },
               ":@MaxLength":
               {
-              }
+              },
+              ":@Required": { }
             },
             {
               "id": "RFQ_PItem/Properties[PkgWBS]",
@@ -4507,6 +4538,42 @@
                   "id": "ProcurementData/Members[FK_PO_Line_Proposal_Line]/Members[PO_Line]",
                   "name": "PO_Line",
                   "entitySet": { "__id": "ProcurementData/Members[PO_Lines]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_ChangeOrder_PO]",
+              "name": "FK_ChangeOrder_PO",
+              "association": { "__id": "FK_ChangeOrder_PO" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_ChangeOrder_PO]/Members[PO]",
+                  "name": "PO",
+                  "entitySet": { "__id": "ProcurementData/Members[PO]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_ChangeOrder_PO]/Members[ChangeOrder]",
+                  "name": "ChangeOrder",
+                  "entitySet": { "__id": "ProcurementData/Members[ChangeOrders]" }
+                }
+              ]
+            },
+            {
+              "id": "ProcurementData/Members[FK_ChangeOrder_PO_Line]",
+              "name": "FK_ChangeOrder_PO_Line",
+              "association": { "__id": "FK_ChangeOrder_PO_Line" },
+              "ends":
+              [
+                {
+                  "id": "ProcurementData/Members[FK_ChangeOrder_PO_Line]/Members[PO_Line]",
+                  "name": "PO_Line",
+                  "entitySet": { "__id": "ProcurementData/Members[PO_Lines]" }
+                },
+                {
+                  "id": "ProcurementData/Members[FK_ChangeOrder_PO_Line]/Members[ChangeOrder]",
+                  "name": "ChangeOrder",
+                  "entitySet": { "__id": "ProcurementData/Members[ChangeOrders]" }
                 }
               ]
             }
@@ -7750,6 +7817,46 @@
               "name": "PO_Line",
               "multiplicity": "Many",
               "entityType": { "__id": "PO_Line" }
+            }
+          ]
+        },
+        {
+          "id": "FK_ChangeOrder_PO",
+          "name": "FK_ChangeOrder_PO",
+          "ends":
+          [
+            {
+              "id": "FK_ChangeOrder_PO/Ends[PO]",
+              "name": "PO",
+              "multiplicity": "One",
+              "entityType": { "__id": "PO" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_ChangeOrder_PO/Ends[ChangeOrder]",
+              "name": "ChangeOrder",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ChangeOrder" }
+            }
+          ]
+        },
+        {
+          "id": "FK_ChangeOrder_PO_Line",
+          "name": "FK_ChangeOrder_PO_Line",
+          "ends":
+          [
+            {
+              "id": "FK_ChangeOrder_PO_Line/Ends[PO_Line]",
+              "name": "PO_Line",
+              "multiplicity": "One",
+              "entityType": { "__id": "PO_Line" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "FK_ChangeOrder_PO_Line/Ends[ChangeOrder]",
+              "name": "ChangeOrder",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ChangeOrder" }
             }
           ]
         },

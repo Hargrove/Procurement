@@ -2289,7 +2289,7 @@
                       <ContentItem
                         Name="PkgName1"
                         Kind="Value"
-                        DataType=":String?">
+                        DataType=":String">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -2302,7 +2302,7 @@
                       <ContentItem
                         Name="PkgDescription1"
                         Kind="Value"
-                        DataType=":String?">
+                        DataType=":String">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -2650,7 +2650,7 @@
                     <ContentItem
                       Name="PkgName"
                       Kind="Value"
-                      DataType=":String?">
+                      DataType=":String">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -2663,7 +2663,7 @@
                     <ContentItem
                       Name="PkgDescription"
                       Kind="Value"
-                      DataType=":String?">
+                      DataType=":String">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -3339,7 +3339,7 @@
                       <ContentItem
                         Name="PkgName2"
                         Kind="Value"
-                        DataType=":String?">
+                        DataType=":String">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -3378,7 +3378,7 @@
                       <ContentItem
                         Name="PkgDescription2"
                         Kind="Value"
-                        DataType=":String?"
+                        DataType=":String"
                         View="PixataCustomControls:StylableTextBox">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
@@ -6471,7 +6471,7 @@
                 <ContentItem
                   Name="PkgName"
                   Kind="Value"
-                  DataType=":String?"
+                  DataType=":String"
                   View="PixataCustomControls:StylableLabel">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -6511,7 +6511,7 @@
                 <ContentItem
                   Name="PkgDescription"
                   Kind="Value"
-                  DataType=":String?"
+                  DataType=":String"
                   View="PixataCustomControls:StylableLabel">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
@@ -8794,7 +8794,7 @@
                   <ContentItem
                     Name="RFQLineNo"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -8817,7 +8817,7 @@
                     <ContentItem
                       Name="RFQLineNo1"
                       Kind="Value"
-                      DataType=":Decimal?">
+                      DataType=":Decimal">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
@@ -9369,7 +9369,7 @@
                 <ContentItem
                   Name="RFQ_Lines_SelectedItem_RFQLineNo"
                   Kind="Value"
-                  DataType=":Decimal?"
+                  DataType=":Decimal"
                   View="Microsoft.LightSwitch.RichClient:Label">
                   <ContentItem.Attributes>
                     <DisplayName
@@ -16714,7 +16714,7 @@
                 <ContentItem
                   Name="PkgName"
                   Kind="Value"
-                  DataType=":String?">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -17462,7 +17462,7 @@
             <ContentItem
               Name="PONumber"
               Kind="Value"
-              DataType=":String?">
+              DataType=":String">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
@@ -17651,7 +17651,7 @@
               <ContentItem
                 Name="RFQLineNo"
                 Kind="Value"
-                DataType=":Decimal?">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -18236,7 +18236,7 @@
               <ContentItem
                 Name="PONumber"
                 Kind="Value"
-                DataType=":String?">
+                DataType=":String">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -18351,7 +18351,7 @@
                   <ContentItem
                     Name="POLineRef1"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -18400,7 +18400,7 @@
                 <ContentItem
                   Name="POLineRef"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -18636,7 +18636,7 @@
               <ContentItem
                 Name="PONumber"
                 Kind="Value"
-                DataType=":String?">
+                DataType=":String">
                 <ContentItem.Attributes>
                   <ShowAsLinkSettings
                     Value="PODetail">
@@ -19216,7 +19216,7 @@
                   <ContentItem
                     Name="PONumber"
                     Kind="Value"
-                    DataType=":String?">
+                    DataType=":String">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -19511,7 +19511,7 @@
                   <ContentItem
                     Name="ProposalLineNo1"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -19937,7 +19937,7 @@
                 <ContentItem
                   Name="RFQLineNo"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -20070,7 +20070,7 @@
                 <ContentItem
                   Name="ProposalLineNo"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -20283,7 +20283,7 @@
                 <ContentItem
                   Name="POLineRef"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -20481,7 +20481,7 @@
                       <ContentItem
                         Name="RFQLineNo1"
                         Kind="Value"
-                        DataType=":Decimal?">
+                        DataType=":Decimal">
                         <ContentItem.DataSource>
                           <ScreenExpressionTree>
                             <ChainExpression>
@@ -21534,7 +21534,7 @@
                 <ContentItem
                   Name="ProposalLineNo"
                   Kind="Value"
-                  DataType=":Decimal?">
+                  DataType=":Decimal">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -21699,15 +21699,17 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Proposal_Lines_DeleteSelected"
+                  Name="Proposal_LinesDeleteSelected"
                   Kind="Command">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Delete" />
+                  </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
-                        <MemberExpression
-                          Member="ProposalsListDetail/Properties[Proposal_Lines]" />
                         <CallExpression
-                          Target="DeleteSelected" />
+                          Target="ProposalsListDetail/Methods[Proposal_LinesDeleteSelected]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -21809,7 +21811,7 @@
               <ContentItem
                 Name="Proposal_Lines_SelectedItem_ProposalLineNo"
                 Kind="Value"
-                DataType=":Decimal?">
+                DataType=":Decimal">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>
@@ -21884,7 +21886,7 @@
                   <ContentItem
                     Name="RFQLineNo"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -22245,7 +22247,7 @@
                   <ContentItem
                     Name="ProposalLineNo1"
                     Kind="Value"
-                    DataType=":Decimal?">
+                    DataType=":Decimal">
                     <ContentItem.DataSource>
                       <ScreenExpressionTree>
                         <ChainExpression>
@@ -22491,6 +22493,13 @@
         Name="ShowPORegistrar" />
       <ScreenMethod
         Name="Method" />
+      <ScreenMethod
+        Name="Proposal_LinesDeleteSelected">
+        <ScreenMethod.Attributes>
+          <BuiltInMethodOverride
+            MethodName="DeleteSelected" />
+        </ScreenMethod.Attributes>
+      </ScreenMethod>
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
@@ -22746,6 +22755,18 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:FK_PO_Line_Proposal_Line" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_ChangeOrder_PO" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_ChangeOrder_PO_Line" />
     </Association.Attributes>
   </Association>
 </ModelFragment>

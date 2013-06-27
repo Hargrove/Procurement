@@ -398,6 +398,18 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("UOM1");
         }
         
+        partial void OnPONumChanged()
+        {
+            this.___OnPropertyChanged("PONum");
+            this.___OnPropertyChanged("PO1");
+        }
+        
+        partial void OnPOLineIDChanged()
+        {
+            this.___OnPropertyChanged("POLineID");
+            this.___OnPropertyChanged("PO_Line1");
+        }
+        
         partial void OnIDChanged()
         {
             this.___OnPropertyChanged("ID");
@@ -438,16 +450,6 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("CO_CostPerUnit");
         }
         
-        partial void OnPONumChanged()
-        {
-            this.___OnPropertyChanged("PONum");
-        }
-        
-        partial void OnPOLineIDChanged()
-        {
-            this.___OnPropertyChanged("POLineID");
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ChangeOrder.DetailsClass.IImplementation.UOM1
         {
             get
@@ -479,6 +481,70 @@ namespace LightSwitchApplication.Implementation
         }
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.UOM> ___UOM1;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ChangeOrder.DetailsClass.IImplementation.PO1
+        {
+            get
+            {
+                return this.PO1;
+            }
+            set
+            {
+                this.PO1 = (global::LightSwitchApplication.Implementation.PO)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO> __PO1
+        {
+            get
+            {
+                if (this.___PO1 == null)
+                {
+                    this.___PO1 = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO>(
+                        this,
+                        "PO1",
+                        new string[] { "PONum" },
+                        e => global::System.Object.Equals(e.ID, this.PONum),
+                        () => this._PO1,
+                        e => this._PO1 = e);
+                }
+                return this.___PO1;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO> ___PO1;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.ChangeOrder.DetailsClass.IImplementation.PO_Line1
+        {
+            get
+            {
+                return this.PO_Line1;
+            }
+            set
+            {
+                this.PO_Line1 = (global::LightSwitchApplication.Implementation.PO_Line)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO_Line> __PO_Line1
+        {
+            get
+            {
+                if (this.___PO_Line1 == null)
+                {
+                    this.___PO_Line1 = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO_Line>(
+                        this,
+                        "PO_Line1",
+                        new string[] { "POLineID" },
+                        e => global::System.Object.Equals(e.id, this.POLineID),
+                        () => this._PO_Line1,
+                        e => this._PO_Line1 = e);
+                }
+                return this.___PO_Line1;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO_Line> ___PO_Line1;
         
     }
     #endregion
@@ -1135,6 +1201,32 @@ namespace LightSwitchApplication.Implementation
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Supplier> ___Supplier;
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.ChangeOrders
+        {
+            get
+            {
+                return this.ChangeOrders;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ChangeOrder> __ChangeOrders
+        {
+            get
+            {
+                if (this.___ChangeOrders == null)
+                {
+                    this.___ChangeOrders = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ChangeOrder>(
+                        this,
+                        "ChangeOrders",
+                        () => this._ChangeOrders,
+                        e => global::System.Object.Equals(e.PONum, this.ID));
+                }
+                return this.___ChangeOrders;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ChangeOrder> ___ChangeOrders;
+        
     }
     #endregion
     
@@ -1337,6 +1429,32 @@ namespace LightSwitchApplication.Implementation
         }
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Proposal_Line> ___Proposal_Line1;
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PO_Line.DetailsClass.IImplementation.ChangeOrders
+        {
+            get
+            {
+                return this.ChangeOrders;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ChangeOrder> __ChangeOrders
+        {
+            get
+            {
+                if (this.___ChangeOrders == null)
+                {
+                    this.___ChangeOrders = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ChangeOrder>(
+                        this,
+                        "ChangeOrders",
+                        () => this._ChangeOrders,
+                        e => global::System.Object.Equals(e.POLineID, this.id));
+                }
+                return this.___ChangeOrders;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ChangeOrder> ___ChangeOrders;
         
     }
     #endregion

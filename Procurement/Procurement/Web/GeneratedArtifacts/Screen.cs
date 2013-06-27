@@ -15880,6 +15880,18 @@ namespace LightSwitchApplication
         partial void Method_CanExecute(ref bool result);
         partial void Method_Execute();
 
+        /// <summary>
+        /// Calls the Proposal_LinesDeleteSelected screen method.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public void Proposal_LinesDeleteSelected()
+        {
+            this.Details.Methods.Proposal_LinesDeleteSelected.CreateInvocation().Execute();
+        }
+        partial void Proposal_LinesDeleteSelected_CanExecute(ref bool result);
+        partial void Proposal_LinesDeleteSelected_Execute();
+
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16078,6 +16090,9 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Data _MethodCommand;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Data _Proposal_LinesDeleteSelectedCommand;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Data _AwardProposalLineMethod;
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -16094,6 +16109,9 @@ namespace LightSwitchApplication
 
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Data _MethodMethod;
+
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Data _Proposal_LinesDeleteSelectedMethod;
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
@@ -16239,6 +16257,14 @@ namespace LightSwitchApplication
                     }
                 }
 
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass> Proposal_LinesDeleteSelected
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>)base.GetItem(global::LightSwitchApplication.ProposalsListDetail.DetailsClass.CommandSetProperties.Proposal_LinesDeleteSelected);
+                    }
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -16293,6 +16319,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>)base.GetItem(global::LightSwitchApplication.ProposalsListDetail.DetailsClass.MethodSetProperties.Method);
+                    }
+                }
+
+                public global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass> Proposal_LinesDeleteSelected
+                {
+                    get
+                    {
+                        return (global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>)base.GetItem(global::LightSwitchApplication.ProposalsListDetail.DetailsClass.MethodSetProperties.Proposal_LinesDeleteSelected);
                     }
                 }
 
@@ -16652,6 +16686,20 @@ namespace LightSwitchApplication
                     return ((global::LightSwitchApplication.ProposalsListDetail.DetailsClass)d).Methods.Method.CreateInvocation();
                 }
 
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Entry
+                    Proposal_LinesDeleteSelected = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Entry(
+                        "Proposal_LinesDeleteSelected",
+                        global::LightSwitchApplication.ProposalsListDetail.DetailsClass.CommandSetProperties._Proposal_LinesDeleteSelected_Stub,
+                        global::LightSwitchApplication.ProposalsListDetail.DetailsClass.CommandSetProperties._Proposal_LinesDeleteSelected_CreateExecutableObject);
+                private static void _Proposal_LinesDeleteSelected_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProposalsListDetail.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenCommand<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Data> c, global::LightSwitchApplication.ProposalsListDetail.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Proposal_LinesDeleteSelectedCommand, sf);
+                }
+                private static global::Microsoft.LightSwitch.IExecutable _Proposal_LinesDeleteSelected_CreateExecutableObject(global::LightSwitchApplication.ProposalsListDetail.DetailsClass d)
+                {
+                    return ((global::LightSwitchApplication.ProposalsListDetail.DetailsClass)d).Methods.Proposal_LinesDeleteSelected.CreateInvocation();
+                }
+
             }
 
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -16784,6 +16832,27 @@ namespace LightSwitchApplication
                 private static void _Method_InvokeMethod(global::LightSwitchApplication.ProposalsListDetail.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
                 {
                     d.Screen.Method_Execute();
+                }
+
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Entry
+                    Proposal_LinesDeleteSelected = new global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Entry(
+                        "Proposal_LinesDeleteSelected",
+                        global::LightSwitchApplication.ProposalsListDetail.DetailsClass.MethodSetProperties._Proposal_LinesDeleteSelected_Stub,
+                        global::LightSwitchApplication.ProposalsListDetail.DetailsClass.MethodSetProperties._Proposal_LinesDeleteSelected_CanInvoke,
+                        global::LightSwitchApplication.ProposalsListDetail.DetailsClass.MethodSetProperties._Proposal_LinesDeleteSelected_InvokeMethod);
+                private static void _Proposal_LinesDeleteSelected_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProposalsListDetail.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.Client.ScreenMethod<global::LightSwitchApplication.ProposalsListDetail, global::LightSwitchApplication.ProposalsListDetail.DetailsClass>.Data> c, global::LightSwitchApplication.ProposalsListDetail.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Proposal_LinesDeleteSelectedMethod, sf);
+                }
+                private static global::System.Exception _Proposal_LinesDeleteSelected_CanInvoke(global::LightSwitchApplication.ProposalsListDetail.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args, global::System.Exception ex)
+                {
+                    bool result = true;
+                    d.Screen.Proposal_LinesDeleteSelected_CanExecute(ref result);
+                    return result ? null : ex;
+                }
+                private static void _Proposal_LinesDeleteSelected_InvokeMethod(global::LightSwitchApplication.ProposalsListDetail.DetailsClass d, global::System.Collections.ObjectModel.ReadOnlyCollection<object> args)
+                {
+                    d.Screen.Proposal_LinesDeleteSelected_Execute();
                 }
 
             }

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 6/26/2013 5:28:07 PM
+// Generation date: 6/27/2013 9:24:27 AM
 namespace LightSwitchApplication.Implementation
 {
     
@@ -1024,12 +1024,20 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         /// <param name="ID">Initial value of ID.</param>
         /// <param name="hasPO">Initial value of HasPO.</param>
+        /// <param name="propLineSlctd">Initial value of PropLineSlctd.</param>
+        /// <param name="proposalSelected">Initial value of ProposalSelected.</param>
+        /// <param name="rFQItem">Initial value of RFQItem.</param>
+        /// <param name="pkgNoID">Initial value of PkgNoID.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Award_Selected CreateAward_Selected(int ID, bool hasPO)
+        public static Award_Selected CreateAward_Selected(int ID, bool hasPO, int propLineSlctd, int proposalSelected, int rFQItem, int pkgNoID)
         {
             Award_Selected award_Selected = new Award_Selected();
             award_Selected.ID = ID;
             award_Selected.HasPO = hasPO;
+            award_Selected.PropLineSlctd = propLineSlctd;
+            award_Selected.ProposalSelected = proposalSelected;
+            award_Selected.RFQItem = rFQItem;
+            award_Selected.PkgNoID = pkgNoID;
             return award_Selected;
         }
         /// <summary>
@@ -1296,7 +1304,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property PropLineSlctd in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> PropLineSlctd
+        public int PropLineSlctd
         {
             get
             {
@@ -1315,14 +1323,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _PropLineSlctd;
-        partial void OnPropLineSlctdChanging(global::System.Nullable<int> value);
+        private int _PropLineSlctd;
+        partial void OnPropLineSlctdChanging(int value);
         partial void OnPropLineSlctdChanged();
         /// <summary>
         /// There are no comments for Property ProposalSelected in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> ProposalSelected
+        public int ProposalSelected
         {
             get
             {
@@ -1341,14 +1349,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _ProposalSelected;
-        partial void OnProposalSelectedChanging(global::System.Nullable<int> value);
+        private int _ProposalSelected;
+        partial void OnProposalSelectedChanging(int value);
         partial void OnProposalSelectedChanged();
         /// <summary>
         /// There are no comments for Property RFQItem in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> RFQItem
+        public int RFQItem
         {
             get
             {
@@ -1367,14 +1375,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _RFQItem;
-        partial void OnRFQItemChanging(global::System.Nullable<int> value);
+        private int _RFQItem;
+        partial void OnRFQItemChanging(int value);
         partial void OnRFQItemChanged();
         /// <summary>
         /// There are no comments for Property PkgNoID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> PkgNoID
+        public int PkgNoID
         {
             get
             {
@@ -1393,8 +1401,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _PkgNoID;
-        partial void OnPkgNoIDChanging(global::System.Nullable<int> value);
+        private int _PkgNoID;
+        partial void OnPkgNoIDChanging(int value);
         partial void OnPkgNoIDChanged();
         /// <summary>
         /// There are no comments for Proposal_Line1 in the schema.
@@ -1428,7 +1436,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.PropLineSlctd = default(global::System.Nullable<int>);
+                        this.PropLineSlctd = default(int);
                     }
                 }
                 this._Proposal_Line1 = value;
@@ -1475,7 +1483,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.ProposalSelected = default(global::System.Nullable<int>);
+                        this.ProposalSelected = default(int);
                     }
                 }
                 this._Proposal1 = value;
@@ -1522,7 +1530,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.RFQItem = default(global::System.Nullable<int>);
+                        this.RFQItem = default(int);
                     }
                 }
                 this._RFQ_Line1 = value;
@@ -1569,7 +1577,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.PkgNoID = default(global::System.Nullable<int>);
+                        this.PkgNoID = default(int);
                     }
                 }
                 this._RFQ_PItem1 = value;
@@ -1935,13 +1943,19 @@ namespace LightSwitchApplication.Implementation
         /// Create a new ChangeOrder object.
         /// </summary>
         /// <param name="ID">Initial value of ID.</param>
+        /// <param name="changeOrderNum">Initial value of ChangeOrderNum.</param>
         /// <param name="cO_Description">Initial value of CO_Description.</param>
+        /// <param name="pONum">Initial value of PONum.</param>
+        /// <param name="pOLineID">Initial value of POLineID.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static ChangeOrder CreateChangeOrder(int ID, string cO_Description)
+        public static ChangeOrder CreateChangeOrder(int ID, decimal changeOrderNum, string cO_Description, int pONum, int pOLineID)
         {
             ChangeOrder changeOrder = new ChangeOrder();
             changeOrder.ID = ID;
+            changeOrder.ChangeOrderNum = changeOrderNum;
             changeOrder.CO_Description = cO_Description;
+            changeOrder.PONum = pONum;
+            changeOrder.POLineID = pOLineID;
             return changeOrder;
         }
         /// <summary>
@@ -1974,7 +1988,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property ChangeOrderNum in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<decimal> ChangeOrderNum
+        public decimal ChangeOrderNum
         {
             get
             {
@@ -1993,8 +2007,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<decimal> _ChangeOrderNum;
-        partial void OnChangeOrderNumChanging(global::System.Nullable<decimal> value);
+        private decimal _ChangeOrderNum;
+        partial void OnChangeOrderNumChanging(decimal value);
         partial void OnChangeOrderNumChanged();
         /// <summary>
         /// There are no comments for Property PCN in the schema.
@@ -2153,58 +2167,6 @@ namespace LightSwitchApplication.Implementation
         partial void OnCO_CostPerUnitChanging(global::System.Nullable<decimal> value);
         partial void OnCO_CostPerUnitChanged();
         /// <summary>
-        /// There are no comments for Property PONum in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> PONum
-        {
-            get
-            {
-                return this._PONum;
-            }
-            set
-            {
-                this.OnPONumChanging(value);
-                if (object.Equals(this.PONum, value))
-                {
-                    return;
-                }
-                this._PONum = value;
-                this.OnPONumChanged();
-                this.OnPropertyChanged("PONum");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _PONum;
-        partial void OnPONumChanging(global::System.Nullable<int> value);
-        partial void OnPONumChanged();
-        /// <summary>
-        /// There are no comments for Property POLineID in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> POLineID
-        {
-            get
-            {
-                return this._POLineID;
-            }
-            set
-            {
-                this.OnPOLineIDChanging(value);
-                if (object.Equals(this.POLineID, value))
-                {
-                    return;
-                }
-                this._POLineID = value;
-                this.OnPOLineIDChanged();
-                this.OnPropertyChanged("POLineID");
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _POLineID;
-        partial void OnPOLineIDChanging(global::System.Nullable<int> value);
-        partial void OnPOLineIDChanged();
-        /// <summary>
         /// There are no comments for Property CO_UOM in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -2230,6 +2192,58 @@ namespace LightSwitchApplication.Implementation
         private global::System.Nullable<int> _CO_UOM;
         partial void OnCO_UOMChanging(global::System.Nullable<int> value);
         partial void OnCO_UOMChanged();
+        /// <summary>
+        /// There are no comments for Property PONum in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int PONum
+        {
+            get
+            {
+                return this._PONum;
+            }
+            set
+            {
+                this.OnPONumChanging(value);
+                if (object.Equals(this.PONum, value))
+                {
+                    return;
+                }
+                this._PONum = value;
+                this.OnPONumChanged();
+                this.OnPropertyChanged("PONum");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _PONum;
+        partial void OnPONumChanging(int value);
+        partial void OnPONumChanged();
+        /// <summary>
+        /// There are no comments for Property POLineID in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public int POLineID
+        {
+            get
+            {
+                return this._POLineID;
+            }
+            set
+            {
+                this.OnPOLineIDChanging(value);
+                if (object.Equals(this.POLineID, value))
+                {
+                    return;
+                }
+                this._POLineID = value;
+                this.OnPOLineIDChanged();
+                this.OnPropertyChanged("POLineID");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private int _POLineID;
+        partial void OnPOLineIDChanging(int value);
+        partial void OnPOLineIDChanged();
         /// <summary>
         /// There are no comments for UOM1 in the schema.
         /// </summary>
@@ -2277,6 +2291,100 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private UOM _UOM1;
+        /// <summary>
+        /// There are no comments for PO1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public PO PO1
+        {
+            get
+            {
+                this.@__PO1.EnsureValueInitialized();
+                return this._PO1;
+            }
+            set
+            {
+                PO previous = this.PO1;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._PO1 = null;
+                    this.@__PO1.OnValueSet();
+                    previous.ChangeOrders.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.PONum = value.ID;
+                    }
+                    else
+                    {
+                        this.PONum = default(int);
+                    }
+                }
+                this._PO1 = value;
+                this.@__PO1.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__ChangeOrders.Add(this);
+                }
+                this.___OnPropertyChanged("PO1");
+                this.OnPropertyChanged("PO1");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private PO _PO1;
+        /// <summary>
+        /// There are no comments for PO_Line1 in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public PO_Line PO_Line1
+        {
+            get
+            {
+                this.@__PO_Line1.EnsureValueInitialized();
+                return this._PO_Line1;
+            }
+            set
+            {
+                PO_Line previous = this.PO_Line1;
+                if ((previous == value))
+                {
+                    return;
+                }
+                if ((previous != null))
+                {
+                    this._PO_Line1 = null;
+                    this.@__PO_Line1.OnValueSet();
+                    previous.ChangeOrders.Remove(this);
+                }
+                if ((this.___Host != null))
+                {
+                    if ((value != null))
+                    {
+                        this.POLineID = value.id;
+                    }
+                    else
+                    {
+                        this.POLineID = default(int);
+                    }
+                }
+                this._PO_Line1 = value;
+                this.@__PO_Line1.OnValueSet();
+                if ((value != null))
+                {
+                    value.@__ChangeOrders.Add(this);
+                }
+                this.___OnPropertyChanged("PO_Line1");
+                this.OnPropertyChanged("PO_Line1");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private PO_Line _PO_Line1;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3650,11 +3758,15 @@ namespace LightSwitchApplication.Implementation
         /// Create a new PO object.
         /// </summary>
         /// <param name="ID">Initial value of ID.</param>
+        /// <param name="pONumber">Initial value of PONumber.</param>
+        /// <param name="supplierID">Initial value of SupplierID.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static PO CreatePO(int ID)
+        public static PO CreatePO(int ID, string pONumber, int supplierID)
         {
             PO pO = new PO();
             pO.ID = ID;
+            pO.PONumber = pONumber;
+            pO.SupplierID = supplierID;
             return pO;
         }
         /// <summary>
@@ -3765,7 +3877,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property SupplierID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> SupplierID
+        public int SupplierID
         {
             get
             {
@@ -3784,8 +3896,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _SupplierID;
-        partial void OnSupplierIDChanging(global::System.Nullable<int> value);
+        private int _SupplierID;
+        partial void OnSupplierIDChanging(int value);
         partial void OnSupplierIDChanged();
         /// <summary>
         /// There are no comments for PO_Lines in the schema.
@@ -3838,7 +3950,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.SupplierID = default(global::System.Nullable<int>);
+                        this.SupplierID = default(int);
                     }
                 }
                 this._Supplier = value;
@@ -3853,6 +3965,25 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private Supplier _Supplier;
+        /// <summary>
+        /// There are no comments for ChangeOrders in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<ChangeOrder> ChangeOrders
+        {
+            get
+            {
+                this.@__ChangeOrders.EnsureValueInitialized();
+                return this._ChangeOrders;
+            }
+            set
+            {
+                this._ChangeOrders = value;
+                this.OnPropertyChanged("ChangeOrders");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<ChangeOrder> _ChangeOrders = new global::System.Data.Services.Client.DataServiceCollection<ChangeOrder>(null, global::System.Data.Services.Client.TrackingMode.None);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -3877,15 +4008,19 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// Create a new PO_Line object.
         /// </summary>
+        /// <param name="pOLineRef">Initial value of POLineRef.</param>
         /// <param name="ID">Initial value of id.</param>
+        /// <param name="pOid">Initial value of POid.</param>
         /// <param name="award">Initial value of Award.</param>
         /// <param name="proposalSelected">Initial value of ProposalSelected.</param>
         /// <param name="propLineSlctd">Initial value of PropLineSlctd.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static PO_Line CreatePO_Line(int ID, int award, int proposalSelected, int propLineSlctd)
+        public static PO_Line CreatePO_Line(decimal pOLineRef, int ID, int pOid, int award, int proposalSelected, int propLineSlctd)
         {
             PO_Line pO_Line = new PO_Line();
+            pO_Line.POLineRef = pOLineRef;
             pO_Line.id = ID;
+            pO_Line.POid = pOid;
             pO_Line.Award = award;
             pO_Line.ProposalSelected = proposalSelected;
             pO_Line.PropLineSlctd = propLineSlctd;
@@ -3895,7 +4030,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property POLineRef in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<decimal> POLineRef
+        public decimal POLineRef
         {
             get
             {
@@ -3914,8 +4049,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<decimal> _POLineRef;
-        partial void OnPOLineRefChanging(global::System.Nullable<decimal> value);
+        private decimal _POLineRef;
+        partial void OnPOLineRefChanging(decimal value);
         partial void OnPOLineRefChanged();
         /// <summary>
         /// There are no comments for Property id in the schema.
@@ -3973,7 +4108,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property POid in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> POid
+        public int POid
         {
             get
             {
@@ -3992,8 +4127,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _POid;
-        partial void OnPOidChanging(global::System.Nullable<int> value);
+        private int _POid;
+        partial void OnPOidChanging(int value);
         partial void OnPOidChanged();
         /// <summary>
         /// There are no comments for Property Award in the schema.
@@ -4105,7 +4240,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.POid = default(global::System.Nullable<int>);
+                        this.POid = default(int);
                     }
                 }
                 this._PO = value;
@@ -4280,6 +4415,25 @@ namespace LightSwitchApplication.Implementation
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         private Proposal_Line _Proposal_Line1;
+        /// <summary>
+        /// There are no comments for ChangeOrders in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        public global::System.Data.Services.Client.DataServiceCollection<ChangeOrder> ChangeOrders
+        {
+            get
+            {
+                this.@__ChangeOrders.EnsureValueInitialized();
+                return this._ChangeOrders;
+            }
+            set
+            {
+                this._ChangeOrders = value;
+                this.OnPropertyChanged("ChangeOrders");
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
+        private global::System.Data.Services.Client.DataServiceCollection<ChangeOrder> _ChangeOrders = new global::System.Data.Services.Client.DataServiceCollection<ChangeOrder>(null, global::System.Data.Services.Client.TrackingMode.None);
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
         public event global::System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
@@ -5133,11 +5287,15 @@ namespace LightSwitchApplication.Implementation
         /// Create a new Proposal object.
         /// </summary>
         /// <param name="ID">Initial value of ID.</param>
+        /// <param name="pkgNoID">Initial value of PkgNoID.</param>
+        /// <param name="supplierID">Initial value of SupplierID.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Proposal CreateProposal(int ID)
+        public static Proposal CreateProposal(int ID, int pkgNoID, int supplierID)
         {
             Proposal proposal = new Proposal();
             proposal.ID = ID;
+            proposal.PkgNoID = pkgNoID;
+            proposal.SupplierID = supplierID;
             return proposal;
         }
         /// <summary>
@@ -5326,7 +5484,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property PkgNoID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> PkgNoID
+        public int PkgNoID
         {
             get
             {
@@ -5345,14 +5503,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _PkgNoID;
-        partial void OnPkgNoIDChanging(global::System.Nullable<int> value);
+        private int _PkgNoID;
+        partial void OnPkgNoIDChanging(int value);
         partial void OnPkgNoIDChanged();
         /// <summary>
         /// There are no comments for Property SupplierID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> SupplierID
+        public int SupplierID
         {
             get
             {
@@ -5371,8 +5529,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _SupplierID;
-        partial void OnSupplierIDChanging(global::System.Nullable<int> value);
+        private int _SupplierID;
+        partial void OnSupplierIDChanging(int value);
         partial void OnSupplierIDChanged();
         /// <summary>
         /// There are no comments for RFQ_PItem in the schema.
@@ -5406,7 +5564,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.PkgNoID = default(global::System.Nullable<int>);
+                        this.PkgNoID = default(int);
                     }
                 }
                 this._RFQ_PItem = value;
@@ -5472,7 +5630,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.SupplierID = default(global::System.Nullable<int>);
+                        this.SupplierID = default(int);
                     }
                 }
                 this._Supplier1 = value;
@@ -5550,15 +5708,21 @@ namespace LightSwitchApplication.Implementation
         /// Create a new Proposal_Line object.
         /// </summary>
         /// <param name="ID">Initial value of ID.</param>
+        /// <param name="proposalLineNo">Initial value of ProposalLineNo.</param>
         /// <param name="meetSpecs">Initial value of MeetSpecs.</param>
         /// <param name="awardIt">Initial value of AwardIt.</param>
+        /// <param name="rFQLineID">Initial value of RFQLineID.</param>
+        /// <param name="proposalID">Initial value of ProposalID.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static Proposal_Line CreateProposal_Line(int ID, bool meetSpecs, bool awardIt)
+        public static Proposal_Line CreateProposal_Line(int ID, decimal proposalLineNo, bool meetSpecs, bool awardIt, int rFQLineID, int proposalID)
         {
             Proposal_Line proposal_Line = new Proposal_Line();
             proposal_Line.ID = ID;
+            proposal_Line.ProposalLineNo = proposalLineNo;
             proposal_Line.MeetSpecs = meetSpecs;
             proposal_Line.AwardIt = awardIt;
+            proposal_Line.RFQLineID = rFQLineID;
+            proposal_Line.ProposalID = proposalID;
             return proposal_Line;
         }
         /// <summary>
@@ -5591,7 +5755,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property ProposalLineNo in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<decimal> ProposalLineNo
+        public decimal ProposalLineNo
         {
             get
             {
@@ -5610,8 +5774,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<decimal> _ProposalLineNo;
-        partial void OnProposalLineNoChanging(global::System.Nullable<decimal> value);
+        private decimal _ProposalLineNo;
+        partial void OnProposalLineNoChanging(decimal value);
         partial void OnProposalLineNoChanged();
         /// <summary>
         /// There are no comments for Property MeetSpecs in the schema.
@@ -5851,7 +6015,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property RFQLineID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> RFQLineID
+        public int RFQLineID
         {
             get
             {
@@ -5870,14 +6034,14 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _RFQLineID;
-        partial void OnRFQLineIDChanging(global::System.Nullable<int> value);
+        private int _RFQLineID;
+        partial void OnRFQLineIDChanging(int value);
         partial void OnRFQLineIDChanged();
         /// <summary>
         /// There are no comments for Property ProposalID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> ProposalID
+        public int ProposalID
         {
             get
             {
@@ -5896,8 +6060,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _ProposalID;
-        partial void OnProposalIDChanging(global::System.Nullable<int> value);
+        private int _ProposalID;
+        partial void OnProposalIDChanging(int value);
         partial void OnProposalIDChanged();
         /// <summary>
         /// There are no comments for RFQ_Line in the schema.
@@ -5931,7 +6095,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.RFQLineID = default(global::System.Nullable<int>);
+                        this.RFQLineID = default(int);
                     }
                 }
                 this._RFQ_Line = value;
@@ -6016,7 +6180,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.ProposalID = default(global::System.Nullable<int>);
+                        this.ProposalID = default(int);
                     }
                 }
                 this._Proposal1 = value;
@@ -6075,15 +6239,19 @@ namespace LightSwitchApplication.Implementation
         /// Create a new RFQ_Line object.
         /// </summary>
         /// <param name="ID">Initial value of id.</param>
+        /// <param name="rFQLineNo">Initial value of RFQLineNo.</param>
         /// <param name="testingReq">Initial value of TestingReq.</param>
         /// <param name="inspection">Initial value of Inspection.</param>
+        /// <param name="pkgNoID">Initial value of PkgNoID.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static RFQ_Line CreateRFQ_Line(int ID, bool testingReq, bool inspection)
+        public static RFQ_Line CreateRFQ_Line(int ID, decimal rFQLineNo, bool testingReq, bool inspection, int pkgNoID)
         {
             RFQ_Line rFQ_Line = new RFQ_Line();
             rFQ_Line.id = ID;
+            rFQ_Line.RFQLineNo = rFQLineNo;
             rFQ_Line.TestingReq = testingReq;
             rFQ_Line.Inspection = inspection;
+            rFQ_Line.PkgNoID = pkgNoID;
             return rFQ_Line;
         }
         /// <summary>
@@ -6116,7 +6284,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property RFQLineNo in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<decimal> RFQLineNo
+        public decimal RFQLineNo
         {
             get
             {
@@ -6135,8 +6303,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<decimal> _RFQLineNo;
-        partial void OnRFQLineNoChanging(global::System.Nullable<decimal> value);
+        private decimal _RFQLineNo;
+        partial void OnRFQLineNoChanging(decimal value);
         partial void OnRFQLineNoChanged();
         /// <summary>
         /// There are no comments for Property Description in the schema.
@@ -6376,7 +6544,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property PkgNoID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> PkgNoID
+        public int PkgNoID
         {
             get
             {
@@ -6395,8 +6563,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _PkgNoID;
-        partial void OnPkgNoIDChanging(global::System.Nullable<int> value);
+        private int _PkgNoID;
+        partial void OnPkgNoIDChanging(int value);
         partial void OnPkgNoIDChanged();
         /// <summary>
         /// There are no comments for Property UOM in the schema.
@@ -6475,7 +6643,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.PkgNoID = default(global::System.Nullable<int>);
+                        this.PkgNoID = default(int);
                     }
                 }
                 this._RFQ_PItem = value;
@@ -6601,18 +6769,24 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         /// <param name="ID">Initial value of ID.</param>
         /// <param name="pkgNo">Initial value of PkgNo.</param>
+        /// <param name="pkgName">Initial value of PkgName.</param>
+        /// <param name="pkgDescription">Initial value of PkgDescription.</param>
         /// <param name="preBidRequired">Initial value of PreBidRequired.</param>
         /// <param name="preAwardRequired">Initial value of PreAwardRequired.</param>
         /// <param name="criticalPath">Initial value of CriticalPath.</param>
+        /// <param name="projectNoID">Initial value of ProjectNoID.</param>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public static RFQ_PItem CreateRFQ_PItem(int ID, string pkgNo, bool preBidRequired, bool preAwardRequired, bool criticalPath)
+        public static RFQ_PItem CreateRFQ_PItem(int ID, string pkgNo, string pkgName, string pkgDescription, bool preBidRequired, bool preAwardRequired, bool criticalPath, int projectNoID)
         {
             RFQ_PItem rFQ_PItem = new RFQ_PItem();
             rFQ_PItem.ID = ID;
             rFQ_PItem.PkgNo = pkgNo;
+            rFQ_PItem.PkgName = pkgName;
+            rFQ_PItem.PkgDescription = pkgDescription;
             rFQ_PItem.PreBidRequired = preBidRequired;
             rFQ_PItem.PreAwardRequired = preAwardRequired;
             rFQ_PItem.CriticalPath = criticalPath;
+            rFQ_PItem.ProjectNoID = projectNoID;
             return rFQ_PItem;
         }
         /// <summary>
@@ -7321,7 +7495,7 @@ namespace LightSwitchApplication.Implementation
         /// There are no comments for Property ProjectNoID in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        public global::System.Nullable<int> ProjectNoID
+        public int ProjectNoID
         {
             get
             {
@@ -7340,8 +7514,8 @@ namespace LightSwitchApplication.Implementation
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Services.Design", "1.0.0")]
-        private global::System.Nullable<int> _ProjectNoID;
-        partial void OnProjectNoIDChanging(global::System.Nullable<int> value);
+        private int _ProjectNoID;
+        partial void OnProjectNoIDChanging(int value);
         partial void OnProjectNoIDChanged();
         /// <summary>
         /// There are no comments for Property SourceStrategyID in the schema.
@@ -7458,7 +7632,7 @@ namespace LightSwitchApplication.Implementation
                     }
                     else
                     {
-                        this.ProjectNoID = default(global::System.Nullable<int>);
+                        this.ProjectNoID = default(int);
                     }
                 }
                 this._Project = value;

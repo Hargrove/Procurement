@@ -112,7 +112,13 @@ namespace LightSwitchApplication
         {
             Proposal_Line pLine = this.Proposal_Lines.AddNew();
             this.Proposal_Lines.SelectedItem = pLine;
-            pLine.ProposalLineNo = this.Proposal_Lines.Count;
+            int lineCnt = 1;
+            IDataServiceQueryable<Proposal_Line> pl = (from x in DataWorkspace.ProcurementData.Proposal_Lines where x.Proposal1.ID == pLine.Proposal1.ID select x);
+            foreach (Proposal_Line prL in pl)
+            {
+                lineCnt++;
+            }
+            pLine.ProposalLineNo = lineCnt;
             this.OpenModalWindow("modalPLine");
 
 
@@ -128,6 +134,29 @@ namespace LightSwitchApplication
         {
             int rfqid = this.Proposals.SelectedItem.RFQ_PItem.ID;
             this.Application.ShowPOListDetail(rfqid, this.Proposals.SelectedItem.RFQ_PItem.PkgNo, this.Proposals.SelectedItem.RFQ_PItem.PkgDescription, this.Proposals.SelectedItem.Supplier1.id);
+
+        }
+
+        partial void Proposal_LinesDeleteSelected_CanExecute(ref bool result)
+        {
+            
+        }
+
+        partial void Proposal_LinesDeleteSelected_Execute()
+        {
+            if (SelectedPLs.Count != 0)
+            {
+                foreach (Proposal_Line p in SelectedPLs)
+                {
+                    p.Delete();
+                }
+                this.SelectedPLs.Clear();
+                this.Save();
+                
+
+
+            }
+            else { this.ShowMessageBox("No Rows were checked for deletion!"); }
 
         }
 

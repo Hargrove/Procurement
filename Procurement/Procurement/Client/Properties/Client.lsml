@@ -591,4 +591,16 @@
         Target="ServiceInterface:FK_PO_Line_Proposal_Line" />
     </Association.Attributes>
   </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_ChangeOrder_PO" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:FK_ChangeOrder_PO_Line" />
+    </Association.Attributes>
+  </Association>
 </ModelFragment>

@@ -231,6 +231,14 @@
       <End Role="Proposal_Line" EntitySet="Proposal_Lines" />
       <End Role="PO_Line" EntitySet="PO_Lines" />
     </AssociationSet>
+    <AssociationSet Name="FK_ChangeOrder_PO" Association="ProcurementDataStore.FK_ChangeOrder_PO">
+      <End Role="PO" EntitySet="PO" />
+      <End Role="ChangeOrder" EntitySet="ChangeOrders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChangeOrder_PO_Line" Association="ProcurementDataStore.FK_ChangeOrder_PO_Line">
+      <End Role="PO_Line" EntitySet="PO_Lines" />
+      <End Role="ChangeOrder" EntitySet="ChangeOrders" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Award_Selected">
     <Key>
@@ -246,10 +254,10 @@
     <Property Name="Comment" Type="nvarchar(max)" />
     <Property Name="OrderType" Type="nvarchar" MaxLength="50" />
     <Property Name="HasPO" Type="bit" Nullable="false" />
-    <Property Name="PropLineSlctd" Type="int" />
-    <Property Name="ProposalSelected" Type="int" />
-    <Property Name="RFQItem" Type="int" />
-    <Property Name="PkgNoID" Type="int" />
+    <Property Name="PropLineSlctd" Type="int" Nullable="false" />
+    <Property Name="ProposalSelected" Type="int" Nullable="false" />
+    <Property Name="RFQItem" Type="int" Nullable="false" />
+    <Property Name="PkgNoID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="BidList">
     <Key>
@@ -271,16 +279,16 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ChangeOrderNum" Type="numeric" />
+    <Property Name="ChangeOrderNum" Type="numeric" Nullable="false" />
     <Property Name="PCN" Type="nvarchar" MaxLength="50" />
     <Property Name="COAward" Type="date" />
     <Property Name="CO_Description" Type="nvarchar(max)" Nullable="false" />
     <Property Name="CO_WBS" Type="nvarchar" MaxLength="50" />
     <Property Name="CO_Qty" Type="numeric" />
     <Property Name="CO_CostPerUnit" Type="money" />
-    <Property Name="PONum" Type="int" />
-    <Property Name="POLineID" Type="int" />
     <Property Name="CO_UOM" Type="int" />
+    <Property Name="PONum" Type="int" Nullable="false" />
+    <Property Name="POLineID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Client_Approved">
     <Key>
@@ -345,19 +353,19 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="PONumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="PONumber" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="AwardDate" Type="date" />
     <Property Name="Closed" Type="bit" />
-    <Property Name="SupplierID" Type="int" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PO_Line">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="POLineRef" Type="numeric" />
+    <Property Name="POLineRef" Type="numeric" Nullable="false" />
     <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="POid" Type="int" />
+    <Property Name="POid" Type="int" Nullable="false" />
     <Property Name="Award" Type="int" Nullable="false" />
     <Property Name="ProposalSelected" Type="int" Nullable="false" />
     <Property Name="PropLineSlctd" Type="int" Nullable="false" />
@@ -401,15 +409,15 @@
     <Property Name="Comment" Type="nvarchar(max)" />
     <Property Name="TechCompliant" Type="bit" />
     <Property Name="CommercialCompliant" Type="bit" />
-    <Property Name="PkgNoID" Type="int" />
-    <Property Name="SupplierID" Type="int" />
+    <Property Name="PkgNoID" Type="int" Nullable="false" />
+    <Property Name="SupplierID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Proposal_Line">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ProposalLineNo" Type="numeric" />
+    <Property Name="ProposalLineNo" Type="numeric" Nullable="false" />
     <Property Name="MeetSpecs" Type="bit" Nullable="false" />
     <Property Name="CostPerUnit" Type="money" />
     <Property Name="ManufacturingPoint" Type="nvarchar" MaxLength="50" />
@@ -419,15 +427,15 @@
     <Property Name="NegotiatedFinalCost" Type="money" />
     <Property Name="Notes" Type="nvarchar(max)" />
     <Property Name="AwardIt" Type="bit" Nullable="false" />
-    <Property Name="RFQLineID" Type="int" />
-    <Property Name="ProposalID" Type="int" />
+    <Property Name="RFQLineID" Type="int" Nullable="false" />
+    <Property Name="ProposalID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="RFQ_Line">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="RFQLineNo" Type="numeric" />
+    <Property Name="RFQLineNo" Type="numeric" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="Qty" Type="numeric" />
     <Property Name="TestingReq" Type="bit" Nullable="false" />
@@ -437,7 +445,7 @@
     <Property Name="TagNo" Type="nvarchar" MaxLength="50" />
     <Property Name="RecievedQty" Type="numeric" />
     <Property Name="Notes" Type="nvarchar(max)" />
-    <Property Name="PkgNoID" Type="int" />
+    <Property Name="PkgNoID" Type="int" Nullable="false" />
     <Property Name="UOM" Type="int" />
   </EntityType>
   <EntityType Name="RFQ_PItem">
@@ -446,8 +454,8 @@
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="PkgNo" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="PkgName" Type="nvarchar" MaxLength="50" />
-    <Property Name="PkgDescription" Type="nvarchar(max)" />
+    <Property Name="PkgName" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PkgDescription" Type="nvarchar(max)" Nullable="false" />
     <Property Name="PkgWBS" Type="nvarchar" MaxLength="50" />
     <Property Name="BudgetValue" Type="money" />
     <Property Name="ReqdOnSite" Type="date" />
@@ -471,7 +479,7 @@
     <Property Name="CommercialDone" Type="date" />
     <Property Name="Comments" Type="nvarchar(max)" />
     <Property Name="CriticalPath" Type="bit" Nullable="false" />
-    <Property Name="ProjectNoID" Type="int" />
+    <Property Name="ProjectNoID" Type="int" Nullable="false" />
     <Property Name="SourceStrategyID" Type="int" />
   </EntityType>
   <EntityType Name="Safety_Record">
@@ -1271,6 +1279,30 @@
       </Principal>
       <Dependent Role="PO_Line">
         <PropertyRef Name="PropLineSlctd" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangeOrder_PO">
+    <End Role="PO" Type="ProcurementDataStore.PO" Multiplicity="1" />
+    <End Role="ChangeOrder" Type="ProcurementDataStore.ChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChangeOrder">
+        <PropertyRef Name="PONum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChangeOrder_PO_Line">
+    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="1" />
+    <End Role="ChangeOrder" Type="ProcurementDataStore.ChangeOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO_Line">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ChangeOrder">
+        <PropertyRef Name="POLineID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

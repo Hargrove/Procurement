@@ -149,11 +149,11 @@ window.myapp = msls.application;
         /// <field name="UOM1" type="msls.application.UOM">
         /// Gets or sets the uOM1 for this changeOrder.
         /// </field>
-        /// <field name="PONum" type="Number">
-        /// Gets or sets the pONum for this changeOrder.
+        /// <field name="PO1" type="msls.application.PO">
+        /// Gets or sets the pO1 for this changeOrder.
         /// </field>
-        /// <field name="POLineID" type="Number">
-        /// Gets or sets the pOLineID for this changeOrder.
+        /// <field name="PO_Line1" type="msls.application.PO_Line">
+        /// Gets or sets the pO_Line1 for this changeOrder.
         /// </field>
         /// <field name="details" type="msls.application.ChangeOrder.Details">
         /// Gets the details for this changeOrder.
@@ -363,6 +363,9 @@ window.myapp = msls.application;
         /// <field name="Supplier" type="msls.application.Supplier">
         /// Gets or sets the supplier for this pO.
         /// </field>
+        /// <field name="ChangeOrders" type="msls.EntityCollection">
+        /// Gets the changeOrders for this pO.
+        /// </field>
         /// <field name="details" type="msls.application.PO.Details">
         /// Gets the details for this pO.
         /// </field>
@@ -399,6 +402,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="Proposal_Line1" type="msls.application.Proposal_Line">
         /// Gets or sets the proposal_Line1 for this pO_Line.
+        /// </field>
+        /// <field name="ChangeOrders" type="msls.EntityCollection">
+        /// Gets the changeOrders for this pO_Line.
         /// </field>
         /// <field name="details" type="msls.application.PO_Line.Details">
         /// Gets the details for this pO_Line.
@@ -1752,8 +1758,8 @@ window.myapp = msls.application;
             { name: "CO_Qty", type: Number },
             { name: "CO_CostPerUnit", type: Number },
             { name: "UOM1", kind: "reference", type: UOM },
-            { name: "PONum", type: Number },
-            { name: "POLineID", type: Number }
+            { name: "PO1", kind: "reference", type: PO },
+            { name: "PO_Line1", kind: "reference", type: PO_Line }
         ]),
 
         Client_Approved: $defineEntity(Client_Approved, [
@@ -1813,7 +1819,8 @@ window.myapp = msls.application;
             { name: "AwardDate", type: Date },
             { name: "Closed", type: Boolean },
             { name: "PO_Lines", kind: "collection", elementType: PO_Line },
-            { name: "Supplier", kind: "reference", type: Supplier }
+            { name: "Supplier", kind: "reference", type: Supplier },
+            { name: "ChangeOrders", kind: "collection", elementType: ChangeOrder }
         ]),
 
         PO_Line: $defineEntity(PO_Line, [
@@ -1824,7 +1831,8 @@ window.myapp = msls.application;
             { name: "Description", type: String },
             { name: "Expeditings", kind: "collection", elementType: Expediting },
             { name: "Proposal1", kind: "reference", type: Proposal },
-            { name: "Proposal_Line1", kind: "reference", type: Proposal_Line }
+            { name: "Proposal_Line1", kind: "reference", type: Proposal_Line },
+            { name: "ChangeOrders", kind: "collection", elementType: ChangeOrder }
         ]),
 
         Preference: $defineEntity(Preference, [

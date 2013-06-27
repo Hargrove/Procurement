@@ -276,12 +276,13 @@
       </KeyProperty>
       <EntityProperty
         Name="ChangeOrderNum"
-        PropertyType=":Decimal?">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="0" />
+            Scale="2" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -348,20 +349,16 @@
             Value="UOM" />
         </NavigationProperty.Attributes>
       </NavigationProperty>
-      <EntityProperty
-        Name="PONum"
-        PropertyType=":Int32?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="POLineID"
-        PropertyType=":Int32?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+      <NavigationProperty
+        Name="PO1"
+        Association="FK_ChangeOrder_PO"
+        FromEnd="ChangeOrder"
+        ToEnd="PO" />
+      <NavigationProperty
+        Name="PO_Line1"
+        Association="FK_ChangeOrder_PO_Line"
+        FromEnd="ChangeOrder"
+        ToEnd="PO_Line" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -726,10 +723,11 @@
       </KeyProperty>
       <EntityProperty
         Name="PONumber"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -759,6 +757,11 @@
         Association="FK_PO_Suppliers"
         FromEnd="PO"
         ToEnd="Suppliers" />
+      <NavigationProperty
+        Name="ChangeOrders"
+        Association="FK_ChangeOrder_PO"
+        FromEnd="PO"
+        ToEnd="ChangeOrder" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -774,12 +777,13 @@
     <EntityType.Properties>
       <EntityProperty
         Name="POLineRef"
-        PropertyType=":Decimal?">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="0" />
+            Scale="2" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -824,6 +828,11 @@
         Association="FK_PO_Line_Proposal_Line"
         FromEnd="PO_Line"
         ToEnd="Proposal_Line" />
+      <NavigationProperty
+        Name="ChangeOrders"
+        Association="FK_ChangeOrder_PO_Line"
+        FromEnd="PO_Line"
+        ToEnd="ChangeOrder" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1115,12 +1124,13 @@
       </KeyProperty>
       <EntityProperty
         Name="ProposalLineNo"
-        PropertyType=":Decimal?">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
             Precision="18"
-            Scale="0" />
+            Scale="2" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1258,12 +1268,13 @@
       </KeyProperty>
       <EntityProperty
         Name="RFQLineNo"
-        PropertyType=":Decimal?">
+        PropertyType=":Decimal">
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="0" />
+            Scale="2" />
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1404,17 +1415,19 @@
       </EntityProperty>
       <EntityProperty
         Name="PkgName"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="PkgDescription"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
           <MaxLength />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -7089,6 +7102,26 @@
         Name="PO_Line"
         EntitySet="PO_Lines" />
     </AssociationSet>
+    <AssociationSet
+      Name="FK_ChangeOrder_PO"
+      Association="FK_ChangeOrder_PO">
+      <AssociationSetEnd
+        Name="PO"
+        EntitySet="PO" />
+      <AssociationSetEnd
+        Name="ChangeOrder"
+        EntitySet="ChangeOrders" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_ChangeOrder_PO_Line"
+      Association="FK_ChangeOrder_PO_Line">
+      <AssociationSetEnd
+        Name="PO_Line"
+        EntitySet="PO_Lines" />
+      <AssociationSetEnd
+        Name="ChangeOrder"
+        EntitySet="ChangeOrders" />
+    </AssociationSet>
   </EntityContainer>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">
@@ -8406,6 +8439,36 @@
       Multiplicity="Many"
       EntityType="PO_Line" />
   </Association>
+  <Association
+    Name="FK_ChangeOrder_PO">
+    <AssociationEnd
+      Name="PO"
+      Multiplicity="One"
+      EntityType="PO">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ChangeOrder"
+      Multiplicity="Many"
+      EntityType="ChangeOrder" />
+  </Association>
+  <Association
+    Name="FK_ChangeOrder_PO_Line">
+    <AssociationEnd
+      Name="PO_Line"
+      Multiplicity="One"
+      EntityType="PO_Line">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="ChangeOrder"
+      Multiplicity="Many"
+      EntityType="ChangeOrder" />
+  </Association>
   <DataService
     Name="ProcurementDataDataService"
     DataProvider="EntityFrameworkDataProvider"
@@ -8489,22 +8552,22 @@
           Property="Award_Selected/Properties[HasPO]" />
         <SsdlForeignKeyProperty
           Name="ProposalSelected"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="ProposalSelected" />
         <SsdlForeignKeyProperty
           Name="PropLineSlctd"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="PropLineSlctd" />
         <SsdlForeignKeyProperty
           Name="RFQItem"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="RFQItem" />
         <SsdlForeignKeyProperty
           Name="PkgNoID"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="PkgNoID" />
       </EntitySetMapping.Attributes>
@@ -8567,14 +8630,9 @@
           Property="ChangeOrder/Properties[ID]" />
         <SsdlProperty
           Name="ChangeOrderNum"
-          Nullable="True"
+          Nullable="False"
           Type="numeric"
           Property="ChangeOrder/Properties[ChangeOrderNum]" />
-        <SsdlProperty
-          Name="POLineID"
-          Nullable="True"
-          Type="int"
-          Property="ChangeOrder/Properties[POLineID]" />
         <SsdlProperty
           MaxLength="50"
           Name="PCN"
@@ -8586,11 +8644,6 @@
           Nullable="True"
           Type="date"
           Property="ChangeOrder/Properties[COAward]" />
-        <SsdlProperty
-          Name="PONum"
-          Nullable="True"
-          Type="int"
-          Property="ChangeOrder/Properties[PONum]" />
         <SsdlProperty
           Name="CO_Description"
           Nullable="False"
@@ -8612,6 +8665,16 @@
           Nullable="True"
           Type="money"
           Property="ChangeOrder/Properties[CO_CostPerUnit]" />
+        <SsdlForeignKeyProperty
+          Name="PONum"
+          Nullable="False"
+          Type="int"
+          PropertyName="PONum" />
+        <SsdlForeignKeyProperty
+          Name="POLineID"
+          Nullable="False"
+          Type="int"
+          PropertyName="POLineID" />
         <SsdlForeignKeyProperty
           Name="CO_UOM"
           Nullable="True"
@@ -8837,7 +8900,7 @@
         <SsdlProperty
           MaxLength="50"
           Name="PONumber"
-          Nullable="True"
+          Nullable="False"
           Type="nvarchar"
           Property="PO/Properties[PONumber]" />
         <SsdlProperty
@@ -8852,7 +8915,7 @@
           Property="PO/Properties[Closed]" />
         <SsdlForeignKeyProperty
           Name="SupplierID"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="SupplierID" />
       </EntitySetMapping.Attributes>
@@ -8871,7 +8934,7 @@
           Property="PO_Line/Properties[id]" />
         <SsdlProperty
           Name="POLineRef"
-          Nullable="True"
+          Nullable="False"
           Type="numeric"
           Property="PO_Line/Properties[POLineRef]" />
         <SsdlProperty
@@ -8886,7 +8949,7 @@
           PropertyName="Award" />
         <SsdlForeignKeyProperty
           Name="POid"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="POid" />
         <SsdlForeignKeyProperty
@@ -9061,12 +9124,12 @@
           Property="Proposal/Properties[CommercialCompliant]" />
         <SsdlForeignKeyProperty
           Name="PkgNoID"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="PkgNoID" />
         <SsdlForeignKeyProperty
           Name="SupplierID"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="SupplierID" />
       </EntitySetMapping.Attributes>
@@ -9085,7 +9148,7 @@
           Property="Proposal_Line/Properties[ID]" />
         <SsdlProperty
           Name="ProposalLineNo"
-          Nullable="True"
+          Nullable="False"
           Type="numeric"
           Property="Proposal_Line/Properties[ProposalLineNo]" />
         <SsdlProperty
@@ -9137,12 +9200,12 @@
           Property="Proposal_Line/Properties[AwardIt]" />
         <SsdlForeignKeyProperty
           Name="ProposalID"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="ProposalID" />
         <SsdlForeignKeyProperty
           Name="RFQLineID"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="RFQLineID" />
       </EntitySetMapping.Attributes>
@@ -9181,7 +9244,7 @@
           Property="RFQ_Line/Properties[id]" />
         <SsdlProperty
           Name="RFQLineNo"
-          Nullable="True"
+          Nullable="False"
           Type="numeric"
           Property="RFQ_Line/Properties[RFQLineNo]" />
         <SsdlProperty
@@ -9234,7 +9297,7 @@
           Property="RFQ_Line/Properties[Notes]" />
         <SsdlForeignKeyProperty
           Name="PkgNoID"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="PkgNoID" />
         <SsdlForeignKeyProperty
@@ -9265,12 +9328,12 @@
         <SsdlProperty
           MaxLength="50"
           Name="PkgName"
-          Nullable="True"
+          Nullable="False"
           Type="nvarchar"
           Property="RFQ_PItem/Properties[PkgName]" />
         <SsdlProperty
           Name="PkgDescription"
-          Nullable="True"
+          Nullable="False"
           Type="nvarchar(max)"
           Property="RFQ_PItem/Properties[PkgDescription]" />
         <SsdlProperty
@@ -9394,7 +9457,7 @@
           Property="RFQ_PItem/Properties[CriticalPath]" />
         <SsdlForeignKeyProperty
           Name="ProjectNoID"
-          Nullable="True"
+          Nullable="False"
           Type="int"
           PropertyName="ProjectNoID" />
         <SsdlForeignKeyProperty
@@ -10288,6 +10351,48 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="SupplierID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_ChangeOrder_PO">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_ChangeOrder_PO" />
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_ChangeOrder_PO]/Members[PO]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_ChangeOrder_PO]/Members[ChangeOrder]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PONum" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_ChangeOrder_PO_Line">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_ChangeOrder_PO_Line" />
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_ChangeOrder_PO_Line]/Members[PO_Line]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="id" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_ChangeOrder_PO_Line]/Members[ChangeOrder]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="POLineID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

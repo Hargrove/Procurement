@@ -103,7 +103,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<decimal> ProposalLineNo
+        public decimal ProposalLineNo
         {
             get
             {
@@ -545,11 +545,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<decimal>> ProposalLineNo
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, decimal> ProposalLineNo
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties.ProposalLineNo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<decimal>>;
+                        return base.GetItem(global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties.ProposalLineNo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, decimal>;
                     }
                 }
                 
@@ -672,7 +672,7 @@ namespace LightSwitchApplication
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
                 new int ID { get; }
-                new global::System.Nullable<decimal> ProposalLineNo { get; set; }
+                new decimal ProposalLineNo { get; set; }
                 new bool MeetSpecs { get; set; }
                 new global::System.Nullable<decimal> CostPerUnit { get; set; }
                 new string ManufacturingPoint { get; set; }
@@ -730,8 +730,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<decimal>>.Entry
-                    ProposalLineNo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<decimal>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, decimal>.Entry
+                    ProposalLineNo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, decimal>.Entry(
                         "ProposalLineNo",
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._ProposalLineNo_Stub,
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._ProposalLineNo_ComputeIsReadOnly,
@@ -739,7 +739,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._ProposalLineNo_GetImplementationValue,
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._ProposalLineNo_SetImplementationValue,
                         global::LightSwitchApplication.Proposal_Line.DetailsClass.PropertySetProperties._ProposalLineNo_OnValueChanged);
-                private static void _ProposalLineNo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Proposal_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<decimal>>.Data> c, global::LightSwitchApplication.Proposal_Line.DetailsClass d, object sf)
+                private static void _ProposalLineNo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Proposal_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.Proposal_Line.DetailsClass d, object sf)
                 {
                     c(d, ref d._ProposalLineNo, sf);
                 }
@@ -753,11 +753,11 @@ namespace LightSwitchApplication
                 {
                     e.ProposalLineNo_Validate(r);
                 }
-                private static global::System.Nullable<decimal> _ProposalLineNo_GetImplementationValue(global::LightSwitchApplication.Proposal_Line.DetailsClass d)
+                private static decimal _ProposalLineNo_GetImplementationValue(global::LightSwitchApplication.Proposal_Line.DetailsClass d)
                 {
                     return d.ImplementationEntity.ProposalLineNo;
                 }
-                private static void _ProposalLineNo_SetImplementationValue(global::LightSwitchApplication.Proposal_Line.DetailsClass d, global::System.Nullable<decimal> v)
+                private static void _ProposalLineNo_SetImplementationValue(global::LightSwitchApplication.Proposal_Line.DetailsClass d, decimal v)
                 {
                     d.ImplementationEntity.ProposalLineNo = v;
                 }
@@ -1259,7 +1259,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, int>.Data _ID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, global::System.Nullable<decimal>>.Data _ProposalLineNo;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, decimal>.Data _ProposalLineNo;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Proposal_Line, global::LightSwitchApplication.Proposal_Line.DetailsClass, bool>.Data _MeetSpecs;
@@ -1398,7 +1398,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.Nullable<decimal> RFQLineNo
+        public decimal RFQLineNo
         {
             get
             {
@@ -1840,11 +1840,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<decimal>> RFQLineNo
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, decimal> RFQLineNo
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties.RFQLineNo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<decimal>>;
+                        return base.GetItem(global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties.RFQLineNo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, decimal>;
                     }
                 }
                 
@@ -1967,7 +1967,7 @@ namespace LightSwitchApplication
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
                 new int id { get; }
-                new global::System.Nullable<decimal> RFQLineNo { get; set; }
+                new decimal RFQLineNo { get; set; }
                 new string Description { get; set; }
                 new global::System.Nullable<decimal> Qty { get; set; }
                 new bool TestingReq { get; set; }
@@ -2025,8 +2025,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<decimal>>.Entry
-                    RFQLineNo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<decimal>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, decimal>.Entry
+                    RFQLineNo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, decimal>.Entry(
                         "RFQLineNo",
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._RFQLineNo_Stub,
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._RFQLineNo_ComputeIsReadOnly,
@@ -2034,7 +2034,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._RFQLineNo_GetImplementationValue,
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._RFQLineNo_SetImplementationValue,
                         global::LightSwitchApplication.RFQ_Line.DetailsClass.PropertySetProperties._RFQLineNo_OnValueChanged);
-                private static void _RFQLineNo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<decimal>>.Data> c, global::LightSwitchApplication.RFQ_Line.DetailsClass d, object sf)
+                private static void _RFQLineNo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RFQ_Line.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, decimal>.Data> c, global::LightSwitchApplication.RFQ_Line.DetailsClass d, object sf)
                 {
                     c(d, ref d._RFQLineNo, sf);
                 }
@@ -2048,11 +2048,11 @@ namespace LightSwitchApplication
                 {
                     e.RFQLineNo_Validate(r);
                 }
-                private static global::System.Nullable<decimal> _RFQLineNo_GetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d)
+                private static decimal _RFQLineNo_GetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d)
                 {
                     return d.ImplementationEntity.RFQLineNo;
                 }
-                private static void _RFQLineNo_SetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d, global::System.Nullable<decimal> v)
+                private static void _RFQLineNo_SetImplementationValue(global::LightSwitchApplication.RFQ_Line.DetailsClass d, decimal v)
                 {
                     d.ImplementationEntity.RFQLineNo = v;
                 }
@@ -2554,7 +2554,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, int>.Data _id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, global::System.Nullable<decimal>>.Data _RFQLineNo;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, decimal>.Data _RFQLineNo;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RFQ_Line, global::LightSwitchApplication.RFQ_Line.DetailsClass, string>.Data _Description;
