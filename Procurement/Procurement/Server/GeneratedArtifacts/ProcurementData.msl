@@ -91,6 +91,7 @@
           <ScalarProperty Name="MaterialStatus" ColumnName="MaterialStatus" />
           <ScalarProperty Name="ShippmentRefId" ColumnName="ShippmentRefId" />
           <ScalarProperty Name="POLineID" ColumnName="POLineID" />
+          <ScalarProperty Name="POID" ColumnName="POID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -124,9 +125,10 @@
         <MappingFragment StoreEntitySet="PO">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="RFQID" ColumnName="RFQID" />
           <ScalarProperty Name="AwardDate" ColumnName="AwardDate" />
           <ScalarProperty Name="Closed" ColumnName="Closed" />
-          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -158,9 +160,12 @@
           <ScalarProperty Name="ProjectNo" ColumnName="ProjectNo" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
           <ScalarProperty Name="PhaseID" ColumnName="PhaseID" />
           <ScalarProperty Name="Year" ColumnName="Year" />
           <ScalarProperty Name="ClassificationID" ColumnName="ClassificationID" />
+          <ScalarProperty Name="ProfitCenterID" ColumnName="ProfitCenterID" />
+          <ScalarProperty Name="Site" ColumnName="Site" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -195,7 +200,6 @@
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ProposalLineNo" ColumnName="ProposalLineNo" />
           <ScalarProperty Name="MeetSpecs" ColumnName="MeetSpecs" />
-          <ScalarProperty Name="RFQLineID" ColumnName="RFQLineID" />
           <ScalarProperty Name="CostPerUnit" ColumnName="CostPerUnit" />
           <ScalarProperty Name="ManufacturingPoint" ColumnName="ManufacturingPoint" />
           <ScalarProperty Name="CountryOfOrigin" ColumnName="CountryOfOrigin" />
@@ -205,6 +209,7 @@
           <ScalarProperty Name="Notes" ColumnName="Notes" />
           <ScalarProperty Name="ProposalID" ColumnName="ProposalID" />
           <ScalarProperty Name="AwardIt" ColumnName="AwardIt" />
+          <ScalarProperty Name="RFQLineID" ColumnName="RFQLineID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -390,6 +395,7 @@
         <MappingFragment StoreEntitySet="Suppliers">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierContact" ColumnName="SupplierContact" />
           <ScalarProperty Name="SupplierPhone" ColumnName="SupplierPhone" />
           <ScalarProperty Name="SupplierFax" ColumnName="SupplierFax" />
           <ScalarProperty Name="SupplierEmail" ColumnName="SupplierEmail" />
@@ -488,6 +494,22 @@
         <MappingFragment StoreEntitySet="ProjectClassifications">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ProjectClassification1" ColumnName="ProjectClassification" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Industries">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Industry)">
+        <MappingFragment StoreEntitySet="Industries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IndusttryType" ColumnName="IndusttryType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profitcenters">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Profitcenter)">
+        <MappingFragment StoreEntitySet="Profitcenters">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProfitCenter1" ColumnName="ProfitCenter" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

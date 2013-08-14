@@ -306,6 +306,22 @@
         created: [lightSwitchApplication.ProjectClassification]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.Industry, {
+        /// <field>
+        /// Called when a new industry is created.
+        /// <br/>created(msls.application.Industry entity)
+        /// </field>
+        created: [lightSwitchApplication.Industry]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Profitcenter, {
+        /// <field>
+        /// Called when a new profitcenter is created.
+        /// <br/>created(msls.application.Profitcenter entity)
+        /// </field>
+        created: [lightSwitchApplication.Profitcenter]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.CL, {
         /// <field>
         /// Called when a new cL is created.

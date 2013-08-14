@@ -790,6 +790,12 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("PO_Line1");
         }
         
+        partial void OnPOIDChanged()
+        {
+            this.___OnPropertyChanged("POID");
+            this.___OnPropertyChanged("PO1");
+        }
+        
         partial void OnIDChanged()
         {
             this.___OnPropertyChanged("ID");
@@ -930,6 +936,38 @@ namespace LightSwitchApplication.Implementation
         }
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO_Line> ___PO_Line1;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Expediting.DetailsClass.IImplementation.PO1
+        {
+            get
+            {
+                return this.PO1;
+            }
+            set
+            {
+                this.PO1 = (global::LightSwitchApplication.Implementation.PO)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO> __PO1
+        {
+            get
+            {
+                if (this.___PO1 == null)
+                {
+                    this.___PO1 = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO>(
+                        this,
+                        "PO1",
+                        new string[] { "POID" },
+                        e => global::System.Object.Equals(e.ID, this.POID),
+                        () => this._PO1,
+                        e => this._PO1 = e);
+                }
+                return this.___PO1;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.PO> ___PO1;
         
     }
     #endregion
@@ -1123,6 +1161,12 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Supplier");
         }
         
+        partial void OnRFQIDChanged()
+        {
+            this.___OnPropertyChanged("RFQID");
+            this.___OnPropertyChanged("RFQ");
+        }
+        
         partial void OnIDChanged()
         {
             this.___OnPropertyChanged("ID");
@@ -1142,32 +1186,6 @@ namespace LightSwitchApplication.Implementation
         {
             this.___OnPropertyChanged("Closed");
         }
-        
-        global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.PO_Lines
-        {
-            get
-            {
-                return this.PO_Lines;
-            }
-        }
-        
-        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO_Line> __PO_Lines
-        {
-            get
-            {
-                if (this.___PO_Lines == null)
-                {
-                    this.___PO_Lines = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO_Line>(
-                        this,
-                        "PO_Lines",
-                        () => this._PO_Lines,
-                        e => global::System.Object.Equals(e.POid, this.ID));
-                }
-                return this.___PO_Lines;
-            }
-        }
-        
-        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO_Line> ___PO_Lines;
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PO.DetailsClass.IImplementation.Supplier
         {
@@ -1201,6 +1219,64 @@ namespace LightSwitchApplication.Implementation
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Supplier> ___Supplier;
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PO.DetailsClass.IImplementation.RFQ
+        {
+            get
+            {
+                return this.RFQ;
+            }
+            set
+            {
+                this.RFQ = (global::LightSwitchApplication.Implementation.RFQ_PItem)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.RFQ_PItem> __RFQ
+        {
+            get
+            {
+                if (this.___RFQ == null)
+                {
+                    this.___RFQ = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.RFQ_PItem>(
+                        this,
+                        "RFQ",
+                        new string[] { "RFQID" },
+                        e => global::System.Object.Equals(e.ID, this.RFQID),
+                        () => this._RFQ,
+                        e => this._RFQ = e);
+                }
+                return this.___RFQ;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.RFQ_PItem> ___RFQ;
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.PO_Lines
+        {
+            get
+            {
+                return this.PO_Lines;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO_Line> __PO_Lines
+        {
+            get
+            {
+                if (this.___PO_Lines == null)
+                {
+                    this.___PO_Lines = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO_Line>(
+                        this,
+                        "PO_Lines",
+                        () => this._PO_Lines,
+                        e => global::System.Object.Equals(e.POid, this.ID));
+                }
+                return this.___PO_Lines;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO_Line> ___PO_Lines;
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.ChangeOrders
         {
             get
@@ -1226,6 +1302,32 @@ namespace LightSwitchApplication.Implementation
         }
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.ChangeOrder> ___ChangeOrders;
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.Expeditings
+        {
+            get
+            {
+                return this.Expeditings;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Expediting> __Expeditings
+        {
+            get
+            {
+                if (this.___Expeditings == null)
+                {
+                    this.___Expeditings = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Expediting>(
+                        this,
+                        "Expeditings",
+                        () => this._Expeditings,
+                        e => global::System.Object.Equals(e.POID, this.ID));
+                }
+                return this.___Expeditings;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Expediting> ___Expeditings;
         
     }
     #endregion
@@ -1518,6 +1620,12 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("Client1");
         }
         
+        partial void OnIndustryChanged()
+        {
+            this.___OnPropertyChanged("Industry");
+            this.___OnPropertyChanged("Industry1");
+        }
+        
         partial void OnPhaseIDChanged()
         {
             this.___OnPropertyChanged("PhaseID");
@@ -1536,6 +1644,12 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("ProjectClassification");
         }
         
+        partial void OnProfitCenterIDChanged()
+        {
+            this.___OnPropertyChanged("ProfitCenterID");
+            this.___OnPropertyChanged("Profitcenter1");
+        }
+        
         partial void OnIDChanged()
         {
             this.___OnPropertyChanged("ID");
@@ -1549,6 +1663,11 @@ namespace LightSwitchApplication.Implementation
         partial void OnNameChanged()
         {
             this.___OnPropertyChanged("Name");
+        }
+        
+        partial void OnSiteChanged()
+        {
+            this.___OnPropertyChanged("Site");
         }
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.Project.DetailsClass.IImplementation.Project_Stakeholders
@@ -1634,6 +1753,38 @@ namespace LightSwitchApplication.Implementation
         }
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Client> ___Client1;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.Industry1
+        {
+            get
+            {
+                return this.Industry1;
+            }
+            set
+            {
+                this.Industry1 = (global::LightSwitchApplication.Implementation.Industry)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Industry> __Industry1
+        {
+            get
+            {
+                if (this.___Industry1 == null)
+                {
+                    this.___Industry1 = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Industry>(
+                        this,
+                        "Industry1",
+                        new string[] { "Industry" },
+                        e => global::System.Object.Equals(e.ID, this.Industry),
+                        () => this._Industry1,
+                        e => this._Industry1 = e);
+                }
+                return this.___Industry1;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Industry> ___Industry1;
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.Phase1
         {
@@ -1730,6 +1881,38 @@ namespace LightSwitchApplication.Implementation
         }
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.ProjectClassification> ___ProjectClassification;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.Profitcenter1
+        {
+            get
+            {
+                return this.Profitcenter1;
+            }
+            set
+            {
+                this.Profitcenter1 = (global::LightSwitchApplication.Implementation.Profitcenter)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Profitcenter> __Profitcenter1
+        {
+            get
+            {
+                if (this.___Profitcenter1 == null)
+                {
+                    this.___Profitcenter1 = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Profitcenter>(
+                        this,
+                        "Profitcenter1",
+                        new string[] { "ProfitCenterID" },
+                        e => global::System.Object.Equals(e.ID, this.ProfitCenterID),
+                        () => this._Profitcenter1,
+                        e => this._Profitcenter1 = e);
+                }
+                return this.___Profitcenter1;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.Profitcenter> ___Profitcenter1;
         
     }
     #endregion
@@ -2069,16 +2252,16 @@ namespace LightSwitchApplication.Implementation
     public partial class Proposal_Line :
         global::LightSwitchApplication.Proposal_Line.DetailsClass.IImplementation
     {
-        partial void OnRFQLineIDChanged()
-        {
-            this.___OnPropertyChanged("RFQLineID");
-            this.___OnPropertyChanged("RFQ_Line");
-        }
-        
         partial void OnProposalIDChanged()
         {
             this.___OnPropertyChanged("ProposalID");
             this.___OnPropertyChanged("Proposal1");
+        }
+        
+        partial void OnRFQLineIDChanged()
+        {
+            this.___OnPropertyChanged("RFQLineID");
+            this.___OnPropertyChanged("RFQ_Line1");
         }
         
         partial void OnIDChanged()
@@ -2135,38 +2318,6 @@ namespace LightSwitchApplication.Implementation
         {
             this.___OnPropertyChanged("AwardIt");
         }
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Proposal_Line.DetailsClass.IImplementation.RFQ_Line
-        {
-            get
-            {
-                return this.RFQ_Line;
-            }
-            set
-            {
-                this.RFQ_Line = (global::LightSwitchApplication.Implementation.RFQ_Line)value;
-            }
-        }
-        
-        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.RFQ_Line> __RFQ_Line
-        {
-            get
-            {
-                if (this.___RFQ_Line == null)
-                {
-                    this.___RFQ_Line = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.RFQ_Line>(
-                        this,
-                        "RFQ_Line",
-                        new string[] { "RFQLineID" },
-                        e => global::System.Object.Equals(e.id, this.RFQLineID),
-                        () => this._RFQ_Line,
-                        e => this._RFQ_Line = e);
-                }
-                return this.___RFQ_Line;
-            }
-        }
-        
-        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.RFQ_Line> ___RFQ_Line;
         
         global::System.Collections.IEnumerable global::LightSwitchApplication.Proposal_Line.DetailsClass.IImplementation.Shipments
         {
@@ -2278,6 +2429,38 @@ namespace LightSwitchApplication.Implementation
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO_Line> ___PO_Lines;
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Proposal_Line.DetailsClass.IImplementation.RFQ_Line1
+        {
+            get
+            {
+                return this.RFQ_Line1;
+            }
+            set
+            {
+                this.RFQ_Line1 = (global::LightSwitchApplication.Implementation.RFQ_Line)value;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.RFQ_Line> __RFQ_Line1
+        {
+            get
+            {
+                if (this.___RFQ_Line1 == null)
+                {
+                    this.___RFQ_Line1 = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.RFQ_Line>(
+                        this,
+                        "RFQ_Line1",
+                        new string[] { "RFQLineID" },
+                        e => global::System.Object.Equals(e.id, this.RFQLineID),
+                        () => this._RFQ_Line1,
+                        e => this._RFQ_Line1 = e);
+                }
+                return this.___RFQ_Line1;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRef<global::LightSwitchApplication.Implementation.RFQ_Line> ___RFQ_Line1;
+        
     }
     #endregion
     
@@ -2354,32 +2537,6 @@ namespace LightSwitchApplication.Implementation
         {
             this.___OnPropertyChanged("Notes");
         }
-        
-        global::System.Collections.IEnumerable global::LightSwitchApplication.RFQ_Line.DetailsClass.IImplementation.Proposal_Lines
-        {
-            get
-            {
-                return this.Proposal_Lines;
-            }
-        }
-        
-        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Proposal_Line> __Proposal_Lines
-        {
-            get
-            {
-                if (this.___Proposal_Lines == null)
-                {
-                    this.___Proposal_Lines = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Proposal_Line>(
-                        this,
-                        "Proposal_Lines",
-                        () => this._Proposal_Lines,
-                        e => global::System.Object.Equals(e.RFQLineID, this.id));
-                }
-                return this.___Proposal_Lines;
-            }
-        }
-        
-        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Proposal_Line> ___Proposal_Lines;
         
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.RFQ_Line.DetailsClass.IImplementation.RFQ_PItem
         {
@@ -2496,6 +2653,32 @@ namespace LightSwitchApplication.Implementation
         }
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Award_Selected> ___Award_Selecteds;
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.RFQ_Line.DetailsClass.IImplementation.Proposal_Lines
+        {
+            get
+            {
+                return this.Proposal_Lines;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Proposal_Line> __Proposal_Lines
+        {
+            get
+            {
+                if (this.___Proposal_Lines == null)
+                {
+                    this.___Proposal_Lines = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Proposal_Line>(
+                        this,
+                        "Proposal_Lines",
+                        () => this._Proposal_Lines,
+                        e => global::System.Object.Equals(e.RFQLineID, this.id));
+                }
+                return this.___Proposal_Lines;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Proposal_Line> ___Proposal_Lines;
         
     }
     #endregion
@@ -2821,6 +3004,32 @@ namespace LightSwitchApplication.Implementation
         }
         
         private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Award_Selected> ___Award_Selecteds;
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.RFQ_PItem.DetailsClass.IImplementation.POes
+        {
+            get
+            {
+                return this.POes;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO> __POes
+        {
+            get
+            {
+                if (this.___POes == null)
+                {
+                    this.___POes = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO>(
+                        this,
+                        "POes",
+                        () => this._POes,
+                        e => global::System.Object.Equals(e.RFQID, this.ID));
+                }
+                return this.___POes;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.PO> ___POes;
         
     }
     #endregion
@@ -3776,6 +3985,11 @@ namespace LightSwitchApplication.Implementation
             this.___OnPropertyChanged("SupplierName");
         }
         
+        partial void OnSupplierContactChanged()
+        {
+            this.___OnPropertyChanged("SupplierContact");
+        }
+        
         partial void OnSupplierPhoneChanged()
         {
             this.___OnPropertyChanged("SupplierPhone");
@@ -4650,6 +4864,98 @@ namespace LightSwitchApplication.Implementation
     }
     #endregion
     
+    #region Industry
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/ProcurementData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Industry :
+        global::LightSwitchApplication.Industry.DetailsClass.IImplementation
+    {
+        partial void OnIDChanged()
+        {
+            this.___OnPropertyChanged("ID");
+        }
+        
+        partial void OnIndusttryTypeChanged()
+        {
+            this.___OnPropertyChanged("IndusttryType");
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Industry.DetailsClass.IImplementation.Projects
+        {
+            get
+            {
+                return this.Projects;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Project> __Projects
+        {
+            get
+            {
+                if (this.___Projects == null)
+                {
+                    this.___Projects = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Project>(
+                        this,
+                        "Projects",
+                        () => this._Projects,
+                        e => global::System.Object.Equals(e.Industry, this.ID));
+                }
+                return this.___Projects;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Project> ___Projects;
+        
+    }
+    #endregion
+    
+    #region Profitcenter
+    [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/ProcurementData.Implementation")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Profitcenter :
+        global::LightSwitchApplication.Profitcenter.DetailsClass.IImplementation
+    {
+        partial void OnIDChanged()
+        {
+            this.___OnPropertyChanged("ID");
+        }
+        
+        partial void OnProfitCenter1Changed()
+        {
+            this.___OnPropertyChanged("ProfitCenter1");
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Profitcenter.DetailsClass.IImplementation.Projects
+        {
+            get
+            {
+                return this.Projects;
+            }
+        }
+        
+        internal global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Project> __Projects
+        {
+            get
+            {
+                if (this.___Projects == null)
+                {
+                    this.___Projects = new global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Project>(
+                        this,
+                        "Projects",
+                        () => this._Projects,
+                        e => global::System.Object.Equals(e.ProfitCenterID, this.ID));
+                }
+                return this.___Projects;
+            }
+        }
+        
+        private global::Microsoft.LightSwitch.ClientGenerated.Implementation.EntityRefCollection<global::LightSwitchApplication.Implementation.Project> ___Projects;
+        
+    }
+    #endregion
+    
     #region CL
     [global::System.Runtime.Serialization.DataContract(Namespace = "http://schemas.datacontract.org/2004/07/Hargrove_VisionDBData.Implementation")]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
@@ -4989,6 +5295,14 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.ProjectClassification();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Industry))
+            {
+                return new global::LightSwitchApplication.Implementation.Industry();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Profitcenter))
+            {
+                return new global::LightSwitchApplication.Implementation.Profitcenter();
+            }
             return null;
         }
     }
@@ -5207,6 +5521,14 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.ProjectClassification) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.ProjectClassification);
+            }
+            if (typeof(global::LightSwitchApplication.Industry) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.Industry);
+            }
+            if (typeof(global::LightSwitchApplication.Profitcenter) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.Profitcenter);
             }
             if (typeof(global::LightSwitchApplication.CL) == definitionType)
             {

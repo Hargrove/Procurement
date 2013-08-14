@@ -280,7 +280,7 @@
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="2" />
+            Scale="0" />
           <NotSearchable />
           <Required />
         </EntityProperty.Attributes>
@@ -578,6 +578,11 @@
         Association="FK_Expediting_PO_Line"
         FromEnd="Expediting"
         ToEnd="PO_Line" />
+      <NavigationProperty
+        Name="PO1"
+        Association="FK_Expediting_PO"
+        FromEnd="Expediting"
+        ToEnd="PO" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -723,13 +728,22 @@
       </KeyProperty>
       <EntityProperty
         Name="PONumber"
-        PropertyType=":String">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="Supplier"
+        Association="FK_PO_Suppliers"
+        FromEnd="PO"
+        ToEnd="Suppliers" />
+      <NavigationProperty
+        Name="RFQ"
+        Association="FK_PO_RFQ_P"
+        FromEnd="PO"
+        ToEnd="RFQ_P" />
       <EntityProperty
         Name="AwardDate"
         PropertyType=":Date?">
@@ -742,9 +756,10 @@
       </EntityProperty>
       <EntityProperty
         Name="Closed"
-        PropertyType=":Boolean?">
+        PropertyType=":Boolean">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -753,19 +768,22 @@
         FromEnd="PO"
         ToEnd="PO_Line" />
       <NavigationProperty
-        Name="Supplier"
-        Association="FK_PO_Suppliers"
-        FromEnd="PO"
-        ToEnd="Suppliers" />
-      <NavigationProperty
         Name="ChangeOrders"
         Association="FK_ChangeOrder_PO"
         FromEnd="PO"
         ToEnd="ChangeOrder" />
+      <NavigationProperty
+        Name="Expeditings"
+        Association="FK_Expediting_PO"
+        FromEnd="PO"
+        ToEnd="Expediting" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
     Name="PO_Line">
+    <EntityType.Attributes>
+      <NotSearchable />
+    </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -777,13 +795,12 @@
     <EntityType.Properties>
       <EntityProperty
         Name="POLineRef"
-        PropertyType=":Decimal">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="2" />
+            Scale="0" />
           <NotSearchable />
-          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -932,6 +949,16 @@
         </NavigationProperty.Attributes>
       </NavigationProperty>
       <NavigationProperty
+        Name="Industry1"
+        Association="FK_Project_Industry"
+        FromEnd="Project"
+        ToEnd="Industry">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Industry" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <NavigationProperty
         Name="Phase1"
         Association="FK_Project_Phase"
         FromEnd="Project"
@@ -956,6 +983,24 @@
         Association="FK_Project_ProjectClassification"
         FromEnd="Project"
         ToEnd="ProjectClassification" />
+      <NavigationProperty
+        Name="Profitcenter1"
+        Association="FK_Project_Profitcenters"
+        FromEnd="Project"
+        ToEnd="Profitcenters">
+        <NavigationProperty.Attributes>
+          <DisplayName
+            Value="Profit Center" />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
+      <EntityProperty
+        Name="Site"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1082,16 +1127,18 @@
         ToEnd="Award_Selected" />
       <EntityProperty
         Name="TechCompliant"
-        PropertyType=":Boolean?">
+        PropertyType=":Boolean">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="CommercialCompliant"
-        PropertyType=":Boolean?">
+        PropertyType=":Boolean">
         <EntityProperty.Attributes>
           <NotSearchable />
+          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
@@ -1124,13 +1171,12 @@
       </KeyProperty>
       <EntityProperty
         Name="ProposalLineNo"
-        PropertyType=":Decimal">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <NotSearchable />
           <DecimalConstraint
             Precision="18"
-            Scale="2" />
-          <Required />
+            Scale="0" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1141,11 +1187,6 @@
           <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <NavigationProperty
-        Name="RFQ_Line"
-        Association="FK_Proposal_Line_RFQ_Line"
-        FromEnd="Proposal_Line"
-        ToEnd="RFQ_Line" />
       <EntityProperty
         Name="CostPerUnit"
         PropertyType="Microsoft.LightSwitch.Extensions:Money?">
@@ -1243,6 +1284,11 @@
         Association="FK_PO_Line_Proposal_Line"
         FromEnd="Proposal_Line"
         ToEnd="PO_Line" />
+      <NavigationProperty
+        Name="RFQ_Line1"
+        Association="FK_Proposal_Line_RFQ_Line"
+        FromEnd="Proposal_Line"
+        ToEnd="RFQ_Line" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -1268,13 +1314,12 @@
       </KeyProperty>
       <EntityProperty
         Name="RFQLineNo"
-        PropertyType=":Decimal">
+        PropertyType=":Decimal?">
         <EntityProperty.Attributes>
           <DecimalConstraint
             Precision="18"
-            Scale="2" />
+            Scale="0" />
           <NotSearchable />
-          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1352,11 +1397,6 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <NavigationProperty
-        Name="Proposal_Lines"
-        Association="FK_Proposal_Line_RFQ_Line"
-        FromEnd="RFQ_Line"
-        ToEnd="Proposal_Line" />
-      <NavigationProperty
         Name="RFQ_PItem"
         Association="FK_RFQ_Line_RFQ_P"
         FromEnd="RFQ_Line"
@@ -1381,10 +1421,19 @@
         Association="FK_Award_Selected_RFQ_Line"
         FromEnd="RFQ_Line"
         ToEnd="Award_Selected" />
+      <NavigationProperty
+        Name="Proposal_Lines"
+        Association="FK_Proposal_Line_RFQ_Line"
+        FromEnd="RFQ_Line"
+        ToEnd="Proposal_Line" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
     Name="RFQ_PItem">
+    <EntityType.Attributes>
+      <DisplayName
+        Value="RFQ Item" />
+    </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
         Name="Delete">
@@ -1406,28 +1455,25 @@
       </KeyProperty>
       <EntityProperty
         Name="PkgNo"
-        PropertyType=":String">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
-          <Required />
           <MaxLength
             Value="50" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="PkgName"
-        PropertyType=":String">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength
             Value="50" />
-          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
         Name="PkgDescription"
-        PropertyType=":String">
+        PropertyType=":String?">
         <EntityProperty.Attributes>
           <MaxLength />
-          <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1506,6 +1552,8 @@
             Precision="0"
             PreserveSeconds="True" />
           <NotSearchable />
+          <DisplayName
+            Value="ERW Issued" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1616,6 +1664,8 @@
             Precision="0"
             PreserveSeconds="True" />
           <NotSearchable />
+          <DisplayName
+            Value="Regret Sent" />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
@@ -1673,6 +1723,11 @@
         Association="FK_Award_Selected_RFQ_P"
         FromEnd="RFQ_P"
         ToEnd="Award_Selected" />
+      <NavigationProperty
+        Name="POes"
+        Association="FK_PO_RFQ_P"
+        FromEnd="RFQ_P"
+        ToEnd="PO" />
     </EntityType.Properties>
   </EntityType>
   <EntityType
@@ -2422,6 +2477,14 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
+        Name="SupplierContact"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
         Name="SupplierPhone"
         PropertyType=":String?">
         <EntityProperty.Attributes>
@@ -2851,21 +2914,6 @@
       Name="Project_Stakeholders"
       Multiplicity="Many"
       EntityType="Project_Stakeholder" />
-  </Association>
-  <Association
-    Name="FK_Proposal_Line_RFQ_Line">
-    <AssociationEnd
-      Name="RFQ_Line"
-      EntityType="RFQ_Line">
-      <AssociationEnd.Attributes>
-        <DeleteRule
-          Action="Cascade" />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="Proposal_Line"
-      Multiplicity="Many"
-      EntityType="Proposal_Line" />
   </Association>
   <Association
     Name="FK_Proposal_RFQ_P">
@@ -3318,16 +3366,6 @@
       <AssociationSetEnd
         Name="Project_Stakeholders"
         EntitySet="Project_Stakeholders" />
-    </AssociationSet>
-    <AssociationSet
-      Name="FK_Proposal_Line_RFQ_Line"
-      Association="FK_Proposal_Line_RFQ_Line">
-      <AssociationSetEnd
-        Name="RFQ_Line"
-        EntitySet="RFQ_Lines" />
-      <AssociationSetEnd
-        Name="Proposal_Line"
-        EntitySet="Proposal_Lines" />
     </AssociationSet>
     <AssociationSet
       Name="FK_Proposal_RFQ_P"
@@ -7122,6 +7160,290 @@
         Name="ChangeOrder"
         EntitySet="ChangeOrders" />
     </AssociationSet>
+    <AssociationSet
+      Name="FK_Proposal_Line_RFQ_Line"
+      Association="FK_Proposal_Line_RFQ_Line">
+      <AssociationSetEnd
+        Name="RFQ_Line"
+        EntitySet="RFQ_Lines" />
+      <AssociationSetEnd
+        Name="Proposal_Line"
+        EntitySet="Proposal_Lines" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_PO_RFQ_P"
+      Association="FK_PO_RFQ_P">
+      <AssociationSetEnd
+        Name="RFQ_P"
+        EntitySet="RFQ_P" />
+      <AssociationSetEnd
+        Name="PO"
+        EntitySet="PO" />
+    </AssociationSet>
+    <QueryOperation
+      Name="RFQbyRfqNumber"
+      ReturnType="RFQ_PItem*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="PkgNo" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="RFQnumber" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="RFQ_P" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="RFQnumber"
+        ParameterType=":String?" />
+    </QueryOperation>
+    <AssociationSet
+      Name="FK_Expediting_PO"
+      Association="FK_Expediting_PO">
+      <AssociationSetEnd
+        Name="PO"
+        EntitySet="PO" />
+      <AssociationSetEnd
+        Name="Expediting"
+        EntitySet="Expeditings" />
+    </AssociationSet>
+    <QueryOperation
+      Name="POlineByPOid"
+      ReturnType="PO_Line*">
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="PO" />
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="poid" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="PO_Lines" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="poid"
+        ParameterType=":Int32?" />
+    </QueryOperation>
+    <EntitySet
+      Name="Industries"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Industry" />
+    <QueryOperation
+      Name="Industries_Single"
+      ReturnType="Industry">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Industries" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Industries_SingleOrDefault"
+      ReturnType="Industry">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Industries" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="FK_Project_Industry"
+      Association="FK_Project_Industry">
+      <AssociationSetEnd
+        Name="Industry"
+        EntitySet="Industries" />
+      <AssociationSetEnd
+        Name="Project"
+        EntitySet="Projects" />
+    </AssociationSet>
+    <EntitySet
+      Name="Profitcenters"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Profitcenter" />
+    <QueryOperation
+      Name="Profitcenters_Single"
+      ReturnType="Profitcenter">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Profitcenters" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Profitcenters_SingleOrDefault"
+      ReturnType="Profitcenter">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="ID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="ID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Profitcenters" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="ID"
+        ParameterType=":Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'ID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <AssociationSet
+      Name="FK_Project_Profitcenters"
+      Association="FK_Project_Profitcenters">
+      <AssociationSetEnd
+        Name="Profitcenters"
+        EntitySet="Profitcenters" />
+      <AssociationSetEnd
+        Name="Project"
+        EntitySet="Projects" />
+    </AssociationSet>
   </EntityContainer>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">
@@ -8401,7 +8723,8 @@
       Name="PO_Line"
       EntityType="PO_Line">
       <AssociationEnd.Attributes>
-        <DeleteRule />
+        <DeleteRule
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
@@ -8461,13 +8784,178 @@
       Multiplicity="One"
       EntityType="PO_Line">
       <AssociationEnd.Attributes>
-        <DeleteRule />
+        <DeleteRule
+          Action="Cascade" />
       </AssociationEnd.Attributes>
     </AssociationEnd>
     <AssociationEnd
       Name="ChangeOrder"
       Multiplicity="Many"
       EntityType="ChangeOrder" />
+  </Association>
+  <Association
+    Name="FK_Proposal_Line_RFQ_Line">
+    <AssociationEnd
+      Name="RFQ_Line"
+      Multiplicity="One"
+      EntityType="RFQ_Line">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Proposal_Line"
+      Multiplicity="Many"
+      EntityType="Proposal_Line" />
+  </Association>
+  <Association
+    Name="FK_PO_RFQ_P">
+    <AssociationEnd
+      Name="RFQ_P"
+      Multiplicity="One"
+      EntityType="RFQ_PItem">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="PO"
+      Multiplicity="Many"
+      EntityType="PO" />
+  </Association>
+  <Association
+    Name="FK_Expediting_PO">
+    <AssociationEnd
+      Name="PO"
+      EntityType="PO">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Expediting"
+      Multiplicity="Many"
+      EntityType="Expediting" />
+  </Association>
+  <EntityType
+    Name="Industry">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="IndusttryType"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength />
+          <DisplayName
+            Value="Industry Type" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Projects"
+        Association="FK_Project_Industry"
+        FromEnd="Industry"
+        ToEnd="Project" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_Project_Industry">
+    <AssociationEnd
+      Name="Industry"
+      EntityType="Industry">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Project"
+      Multiplicity="Many"
+      EntityType="Project" />
+  </Association>
+  <Permission
+    Name="CanAccessIndustriesScreen">
+    <Permission.Attributes>
+      <DisplayName
+        Value="Can access industries lookup screen" />
+      <Description
+        Value="Provides the ability to access and modify Industry Types." />
+    </Permission.Attributes>
+  </Permission>
+  <Permission
+    Name="CanDeleteProject">
+    <Permission.Attributes>
+      <DisplayName
+        Value="Can Delete an entire project and all of its child records" />
+      <Description
+        Value="Provides admin delete access to be able to delete an entire project." />
+    </Permission.Attributes>
+  </Permission>
+  <EntityType
+    Name="Profitcenter">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="ID"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="ProfitCenter1"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Projects"
+        Association="FK_Project_Profitcenters"
+        FromEnd="Profitcenters"
+        ToEnd="Project" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_Project_Profitcenters">
+    <AssociationEnd
+      Name="Profitcenters"
+      EntityType="Profitcenter">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Project"
+      Multiplicity="Many"
+      EntityType="Project" />
   </Association>
   <DataService
     Name="ProcurementDataDataService"
@@ -8552,22 +9040,22 @@
           Property="Award_Selected/Properties[HasPO]" />
         <SsdlForeignKeyProperty
           Name="ProposalSelected"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="ProposalSelected" />
         <SsdlForeignKeyProperty
           Name="PropLineSlctd"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="PropLineSlctd" />
         <SsdlForeignKeyProperty
           Name="RFQItem"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="RFQItem" />
         <SsdlForeignKeyProperty
           Name="PkgNoID"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="PkgNoID" />
       </EntitySetMapping.Attributes>
@@ -8809,6 +9297,11 @@
           Type="int"
           PropertyName="MaterialStatus" />
         <SsdlForeignKeyProperty
+          Name="POID"
+          Nullable="True"
+          Type="int"
+          PropertyName="POID" />
+        <SsdlForeignKeyProperty
           Name="POLineID"
           Nullable="True"
           Type="int"
@@ -8818,6 +9311,25 @@
           Nullable="True"
           Type="int"
           PropertyName="ShippmentRefId" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
+      EntitySet="Industries">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Industry" />
+        <SsdlProperty
+          Name="ID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Industry/Properties[ID]" />
+        <SsdlProperty
+          Name="IndusttryType"
+          Nullable="False"
+          Type="nvarchar(max)"
+          Property="Industry/Properties[IndusttryType]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
@@ -8900,7 +9412,7 @@
         <SsdlProperty
           MaxLength="50"
           Name="PONumber"
-          Nullable="False"
+          Nullable="True"
           Type="nvarchar"
           Property="PO/Properties[PONumber]" />
         <SsdlProperty
@@ -8910,12 +9422,17 @@
           Property="PO/Properties[AwardDate]" />
         <SsdlProperty
           Name="Closed"
-          Nullable="True"
+          Nullable="False"
           Type="bit"
           Property="PO/Properties[Closed]" />
         <SsdlForeignKeyProperty
-          Name="SupplierID"
+          Name="RFQID"
           Nullable="False"
+          Type="int"
+          PropertyName="RFQID" />
+        <SsdlForeignKeyProperty
+          Name="SupplierID"
+          Nullable="True"
           Type="int"
           PropertyName="SupplierID" />
       </EntitySetMapping.Attributes>
@@ -8934,7 +9451,7 @@
           Property="PO_Line/Properties[id]" />
         <SsdlProperty
           Name="POLineRef"
-          Nullable="False"
+          Nullable="True"
           Type="numeric"
           Property="PO_Line/Properties[POLineRef]" />
         <SsdlProperty
@@ -8949,7 +9466,7 @@
           PropertyName="Award" />
         <SsdlForeignKeyProperty
           Name="POid"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="POid" />
         <SsdlForeignKeyProperty
@@ -8985,6 +9502,26 @@
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <EntitySetMapping
+      EntitySet="Profitcenters">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="Profitcenters" />
+        <SsdlProperty
+          Name="ID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="Profitcenter/Properties[ID]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="ProfitCenter"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Profitcenter/Properties[ProfitCenter1]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <EntitySetMapping
       EntitySet="Projects">
       <EntitySetMapping.Attributes>
         <SsdlEntitySet
@@ -9007,16 +9544,32 @@
           Nullable="True"
           Type="nvarchar(max)"
           Property="Project/Properties[Name]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="Site"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Project/Properties[Site]" />
         <SsdlForeignKeyProperty
           Name="Client"
           Nullable="True"
           Type="int"
           PropertyName="Client" />
         <SsdlForeignKeyProperty
+          Name="Industry"
+          Nullable="True"
+          Type="int"
+          PropertyName="Industry" />
+        <SsdlForeignKeyProperty
           Name="PhaseID"
           Nullable="True"
           Type="int"
           PropertyName="PhaseID" />
+        <SsdlForeignKeyProperty
+          Name="ProfitCenterID"
+          Nullable="True"
+          Type="int"
+          PropertyName="ProfitCenterID" />
         <SsdlForeignKeyProperty
           Name="ClassificationID"
           Nullable="True"
@@ -9114,22 +9667,22 @@
           Property="Proposal/Properties[ProposalNumber]" />
         <SsdlProperty
           Name="TechCompliant"
-          Nullable="True"
+          Nullable="False"
           Type="bit"
           Property="Proposal/Properties[TechCompliant]" />
         <SsdlProperty
           Name="CommercialCompliant"
-          Nullable="True"
+          Nullable="False"
           Type="bit"
           Property="Proposal/Properties[CommercialCompliant]" />
         <SsdlForeignKeyProperty
           Name="PkgNoID"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="PkgNoID" />
         <SsdlForeignKeyProperty
           Name="SupplierID"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="SupplierID" />
       </EntitySetMapping.Attributes>
@@ -9148,7 +9701,7 @@
           Property="Proposal_Line/Properties[ID]" />
         <SsdlProperty
           Name="ProposalLineNo"
-          Nullable="False"
+          Nullable="True"
           Type="numeric"
           Property="Proposal_Line/Properties[ProposalLineNo]" />
         <SsdlProperty
@@ -9200,7 +9753,7 @@
           Property="Proposal_Line/Properties[AwardIt]" />
         <SsdlForeignKeyProperty
           Name="ProposalID"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="ProposalID" />
         <SsdlForeignKeyProperty
@@ -9244,7 +9797,7 @@
           Property="RFQ_Line/Properties[id]" />
         <SsdlProperty
           Name="RFQLineNo"
-          Nullable="False"
+          Nullable="True"
           Type="numeric"
           Property="RFQ_Line/Properties[RFQLineNo]" />
         <SsdlProperty
@@ -9297,7 +9850,7 @@
           Property="RFQ_Line/Properties[Notes]" />
         <SsdlForeignKeyProperty
           Name="PkgNoID"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="PkgNoID" />
         <SsdlForeignKeyProperty
@@ -9322,18 +9875,18 @@
         <SsdlProperty
           MaxLength="50"
           Name="PkgNo"
-          Nullable="False"
+          Nullable="True"
           Type="nvarchar"
           Property="RFQ_PItem/Properties[PkgNo]" />
         <SsdlProperty
           MaxLength="50"
           Name="PkgName"
-          Nullable="False"
+          Nullable="True"
           Type="nvarchar"
           Property="RFQ_PItem/Properties[PkgName]" />
         <SsdlProperty
           Name="PkgDescription"
-          Nullable="False"
+          Nullable="True"
           Type="nvarchar(max)"
           Property="RFQ_PItem/Properties[PkgDescription]" />
         <SsdlProperty
@@ -9457,7 +10010,7 @@
           Property="RFQ_PItem/Properties[CriticalPath]" />
         <SsdlForeignKeyProperty
           Name="ProjectNoID"
-          Nullable="False"
+          Nullable="True"
           Type="int"
           PropertyName="ProjectNoID" />
         <SsdlForeignKeyProperty
@@ -10029,6 +10582,12 @@
           Type="nvarchar"
           Property="Supplier/Properties[SupplierName]" />
         <SsdlProperty
+          MaxLength="150"
+          Name="SupplierContact"
+          Nullable="True"
+          Type="nvarchar"
+          Property="Supplier/Properties[SupplierContact]" />
+        <SsdlProperty
           MaxLength="50"
           Name="SupplierFax"
           Nullable="True"
@@ -10503,6 +11062,27 @@
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
+      AssociationSet="FK_Expediting_PO">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Expediting_PO" />
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Expediting_PO]/Members[PO]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Expediting_PO]/Members[Expediting]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="POID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
       AssociationSet="FK_Expediting_PO_Line">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
@@ -10650,6 +11230,27 @@
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
+      AssociationSet="FK_PO_RFQ_P">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_PO_RFQ_P" />
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_PO_RFQ_P]/Members[RFQ_P]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_PO_RFQ_P]/Members[PO]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="RFQID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
       AssociationSet="FK_PO_Suppliers">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
@@ -10692,6 +11293,27 @@
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
+      AssociationSet="FK_Project_Industry">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Project_Industry" />
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Project_Industry]/Members[Industry]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Project_Industry]/Members[Project]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="Industry" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
       AssociationSet="FK_Project_Phase">
       <AssociationSetMapping.Attributes>
         <SsdlAssociationSet
@@ -10708,6 +11330,27 @@
           <SsdlAssociationSetEnd.Attributes>
             <SsdlPropertyRef
               Name="PhaseID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_Project_Profitcenters">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_Project_Profitcenters" />
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Project_Profitcenters]/Members[Profitcenters]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="ProcurementData/Members[FK_Project_Profitcenters]/Members[Project]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="ProfitCenterID" />
           </SsdlAssociationSetEnd.Attributes>
         </SsdlAssociationSetEnd>
       </AssociationSetMapping.Attributes>

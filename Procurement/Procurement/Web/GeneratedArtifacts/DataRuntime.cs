@@ -670,6 +670,32 @@ namespace LightSwitchApplication
             }
         }
         
+        /// <summary>
+        /// Gets the Industries entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Industry> Industries
+        {
+            get
+            {
+                return global::LightSwitchApplication.ProcurementData.DetailsClass.GetValue(this, global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.Industries);
+            }
+        }
+        
+        /// <summary>
+        /// Gets the Profitcenters entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Profitcenter> Profitcenters
+        {
+            get
+            {
+                return global::LightSwitchApplication.ProcurementData.DetailsClass.GetValue(this, global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.Profitcenters);
+            }
+        }
+        
         #endregion
     
         #region Queries
@@ -1595,6 +1621,72 @@ namespace LightSwitchApplication
             return this.Details.Methods.AwardsByProposalID.CreateInvocation(ProposalID).Execute();
         }
         
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="RFQnumber">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.RFQ_PItem> RFQbyRfqNumber(string RFQnumber)
+        {
+            return this.Details.Methods.RFQbyRfqNumber.CreateInvocation(RFQnumber).Execute();
+        }
+        
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        /// <param name="poid">
+        /// No Modeled Description Available
+        /// </param>
+        public global::Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.PO_Line> POlineByPOid(global::System.Nullable<int> poid)
+        {
+            return this.Details.Methods.POlineByPOid.CreateInvocation(poid).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="ID">
+        /// The value of the 'ID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Industry Industries_Single(global::System.Nullable<int> ID)
+        {
+            return this.Details.Methods.Industries_Single.CreateInvocation(ID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="ID">
+        /// The value of the 'ID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Industry Industries_SingleOrDefault(global::System.Nullable<int> ID)
+        {
+            return this.Details.Methods.Industries_SingleOrDefault.CreateInvocation(ID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="ID">
+        /// The value of the 'ID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Profitcenter Profitcenters_Single(global::System.Nullable<int> ID)
+        {
+            return this.Details.Methods.Profitcenters_Single.CreateInvocation(ID).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="ID">
+        /// The value of the 'ID' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Profitcenter Profitcenters_SingleOrDefault(global::System.Nullable<int> ID)
+        {
+            return this.Details.Methods.Profitcenters_SingleOrDefault.CreateInvocation(ID).Execute();
+        }
+        
         #endregion
     
         #region Details Class
@@ -2315,6 +2407,54 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_PItem> RFQbyRfqNumber
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.RFQbyRfqNumber) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_PItem>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO_Line> POlineByPOid
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.POlineByPOid) as global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO_Line>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry> Industries_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.Industries_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry> Industries_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.Industries_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter> Profitcenters_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.Profitcenters_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter> Profitcenters_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties.Profitcenters_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2629,6 +2769,22 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.ProjectClassifications) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry> Industries
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.Industries) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter> Profitcenters
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties.Profitcenters) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>;
                     }
                 }
                 
@@ -3480,6 +3636,66 @@ namespace LightSwitchApplication
                     c(d, ref d._AwardsByProposalID, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_PItem>.Entry
+                    RFQbyRfqNumber = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_PItem>.Entry(
+                        "RFQbyRfqNumber",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._RFQbyRfqNumber_Stub);
+                private static void _RFQbyRfqNumber_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_PItem>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._RFQbyRfqNumber, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO_Line>.Entry
+                    POlineByPOid = new global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO_Line>.Entry(
+                        "POlineByPOid",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._POlineByPOid_Stub);
+                private static void _POlineByPOid_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO_Line>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._POlineByPOid, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Entry
+                    Industries_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Entry(
+                        "Industries_Single",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._Industries_Single_Stub);
+                private static void _Industries_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Industries_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Entry
+                    Industries_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Entry(
+                        "Industries_SingleOrDefault",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._Industries_SingleOrDefault_Stub);
+                private static void _Industries_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Industries_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Entry
+                    Profitcenters_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Entry(
+                        "Profitcenters_Single",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._Profitcenters_Single_Stub);
+                private static void _Profitcenters_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Profitcenters_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Entry
+                    Profitcenters_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Entry(
+                        "Profitcenters_SingleOrDefault",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.MethodSetProperties._Profitcenters_SingleOrDefault_Stub);
+                private static void _Profitcenters_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Profitcenters_SingleOrDefault, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -3868,6 +4084,26 @@ namespace LightSwitchApplication
                     c(d, ref d._ProjectClassifications, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Entry
+                    Industries = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Entry(
+                        "Industries",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties._Industries_Stub);
+                private static void _Industries_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Industries, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Entry
+                    Profitcenters = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Entry(
+                        "Profitcenters",
+                        global::LightSwitchApplication.ProcurementData.DetailsClass.PropertySetProperties._Profitcenters_Stub);
+                private static void _Profitcenters_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.ProcurementData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Data> c, global::LightSwitchApplication.ProcurementData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Profitcenters, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -3983,6 +4219,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.ProjectClassification>.Data _ProjectClassifications;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Data _Industries;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Data _Profitcenters;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _Award_Selecteds_Single;
@@ -4235,6 +4477,24 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Award_Selected>.Data _AwardsByProposalID;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.RFQ_PItem>.Data _RFQbyRfqNumber;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.PO_Line>.Data _POlineByPOid;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Data _Industries_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Industry>.Data _Industries_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Data _Profitcenters_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.ProcurementData, global::LightSwitchApplication.ProcurementData.DetailsClass, global::LightSwitchApplication.Profitcenter>.Data _Profitcenters_SingleOrDefault;
             
         }
     

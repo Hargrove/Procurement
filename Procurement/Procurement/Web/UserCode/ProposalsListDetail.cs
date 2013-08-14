@@ -18,37 +18,42 @@ namespace LightSwitchApplication
         ObservableCollection<Award_Selected> SelectedAwards = new ObservableCollection<Award_Selected>();
         partial void AwardProposalLine_Execute()
         {
-            
-            foreach (Proposal_Line pLine in SelectedPLs)
+            try
             {
-                //if (pLine. != null)
-                //{
+                foreach (Proposal_Line pLine in SelectedPLs)
+                {
+                    //if (pLine. != null)
+                    //{
                     //if (SelectedProposalLine == true && pLine.AwardIt == false)
                     //{ 
-                        //Check Exist
-                        if (ProposalExist(pLine.Proposal1.ID, pLine.ID) == false)
-                        {
-                            Award_Selected aws = DataWorkspace.ProcurementData.Award_Selecteds.AddNew();
-                            //Proposal_Line propL = pLine;
-                            aws.Proposal_Line1 = pLine;
-                            aws.Proposal1 = pLine.Proposal1;
-                            aws.RFQ_PItem1 = pLine.RFQ_Line.RFQ_PItem;
-                            aws.RFQ_Line1 = pLine.RFQ_Line;
+                    //Check Exist
+                    if (ProposalExist(pLine.Proposal1.ID, pLine.ID) == false)
+                    {
+                        Award_Selected aws = DataWorkspace.ProcurementData.Award_Selecteds.AddNew();
+                        //Proposal_Line propL = pLine;
+                        aws.Proposal_Line1 = pLine;
+                        aws.Proposal1 = pLine.Proposal1;
+                        aws.RFQ_PItem1 = pLine.RFQ_Line1.RFQ_PItem;
+                        aws.RFQ_Line1 = pLine.RFQ_Line1;
+                        aws.OrderType = "Purchase Order";
+                        pLine.AwardIt = true;
 
-                            pLine.AwardIt = true;
-                            
-                        }
+                    }
 
                     //}
-                //}
-            }
-            this.SelectedPLs.Clear();
-            
-            this.Save();
+                    //}
+                }
+                this.SelectedPLs.Clear();
 
-            this.Proposal_Lines.Refresh();
-            //this.AwardsByProposalID.Refresh();
-            
+                this.Save();
+
+                this.Proposal_Lines.Refresh();
+                //this.AwardsByProposalID.Refresh();
+            }
+            catch (Exception e)
+            {
+                this.ShowMessageBox(this.Details.Methods.AwardProposalLine.Name + "-" + e.ToString());
+            }
 
         }
 
@@ -56,50 +61,60 @@ namespace LightSwitchApplication
         {
            
             //IDataServiceQueryable<Award_Selected> aw = (from x in DataWorkspace.ProcurementData.Award_Selecteds where x.Proposal1.ID == propID && x.Proposal_Line1.ID == plineid select x); 
-            var query = DataWorkspace.ProcurementData.Award_Selecteds.Where(x => x.Proposal1.ID == propID && x.Proposal_Line1.ID == plineid).FirstOrDefault();
-            if (query == null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            
+                var query = DataWorkspace.ProcurementData.Award_Selecteds.Where(x => x.Proposal1.ID == propID && x.Proposal_Line1.ID == plineid).FirstOrDefault();
+                if (query == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            
+           
         }
 
         partial void RemoveFromAward_Execute()
         {
-            foreach (Award_Selected aws in SelectedAwards)
+            try
             {
-                //if (RemoveSelectedAward == true)
-                //{
+                foreach (Award_Selected aws in SelectedAwards)
+                {
+                    //if (RemoveSelectedAward == true)
+                    //{
                     aws.Delete();
                     IDataServiceQueryable<Proposal_Line> pl = (from x in DataWorkspace.ProcurementData.Proposal_Lines where x.ID == aws.Proposal_Line1.ID && x.Proposal1.ID == aws.Proposal1.ID select x);
                     foreach (Proposal_Line prL in pl)
                     {
                         prL.AwardIt = false;
                     }
-                //}
+                    //}
+                }
+                this.SelectedAwards.Clear();
+                this.Save();
+                this.AwardsByProposalID.Refresh();
+                this.Proposal_Lines.Refresh();
             }
-            this.SelectedAwards.Clear();
-            this.Save();
-            this.AwardsByProposalID.Refresh();
-            this.Proposal_Lines.Refresh();
+            catch (Exception e)
+            {
+                this.ShowMessageBox(this.Details.Methods.RemoveFromAward.Name + "-" + e.ToString());
+            }
         }
 
-        partial void ProposalsListDetail_Created()
-        {
-            //SelectedProposalLine = false;
-            //RemoveSelectedAward= false;
-            //this.FindControl("Proposal_Lines").AddCheckBoxColumnForMultiSelection<Proposal_Line>(SelectedPLs);
-            //this.FindControl("AwardsByProposalID").AddCheckBoxColumnForMultiSelection<Proposal_Line>(SelectedPLs);
-        }
+       
 
         partial void ProposalsListDetail_InitializeDataWorkspace(List<IDataService> saveChangesTo)
         {
-            this.FindControl("Proposal_Lines").AddCheckBoxColumnForMultiSelection<Proposal_Line>(SelectedPLs);
-            this.FindControl("AwardsByProposalID").AddCheckBoxColumnForMultiSelection<Award_Selected>(SelectedAwards);
-
+            //try
+            //{
+            //    this.FindControl("Proposal_Lines").AddCheckBoxColumnForMultiSelection<Proposal_Line>(SelectedPLs);
+            //    this.FindControl("AwardsByProposalID").AddCheckBoxColumnForMultiSelection<Award_Selected>(SelectedAwards);
+            //}
+            //catch (Exception e)
+            //{
+            //    this.ShowMessageBox(e.ToString());
+            //}
         }
 
         partial void Proposal_LinesAddAndEditNew_CanExecute(ref bool result)
@@ -157,6 +172,26 @@ namespace LightSwitchApplication
 
             }
             else { this.ShowMessageBox("No Rows were checked for deletion!"); }
+
+        }
+
+        partial void ShowShipping_Execute()
+        {
+            this.Application.ShowProposalShipping(this.RFQNum);
+
+        }
+
+        partial void ProposalsListDetail_Created()
+        {
+            try
+            {
+                this.FindControl("Proposal_Lines").AddCheckBoxColumnForMultiSelection<Proposal_Line>(SelectedPLs);
+                this.FindControl("AwardsByProposalID").AddCheckBoxColumnForMultiSelection<Award_Selected>(SelectedAwards);
+            }
+            catch (Exception e)
+            {
+                this.ShowMessageBox(e.ToString());
+            }
 
         }
 

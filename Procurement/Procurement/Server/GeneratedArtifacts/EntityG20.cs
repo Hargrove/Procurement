@@ -17,6 +17,368 @@ namespace LightSwitchApplication
     /// No Modeled Description Available
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    public sealed partial class Profitcenter : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass>
+    {
+        #region Constructors
+    
+        /// <summary>
+        /// Initializes a new instance of the Profitcenter entity.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Profitcenter()
+            : this(null)
+        {
+        }
+    
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Profitcenter(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Profitcenter> entitySet)
+            : base(entitySet)
+        {
+            global::LightSwitchApplication.Profitcenter.DetailsClass.Initialize(this);
+        }
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Profitcenter_Created();
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Profitcenter_AllowSaveWithErrors(ref bool result);
+    
+        #endregion
+    
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::Microsoft.LightSwitch.IApplication<global::LightSwitchApplication.DataWorkspace> Application
+        {
+            get
+            {
+                return (global::Microsoft.LightSwitch.IApplication<global::LightSwitchApplication.DataWorkspace>)global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)this.Details.EntitySet.Details.DataService.Details.DataWorkspace;
+            }
+        }
+        
+        #endregion
+    
+        #region Public Properties
+    
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int ID
+        {
+            get
+            {
+                return global::LightSwitchApplication.Profitcenter.DetailsClass.GetValue(this, global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.ID);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ID_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ID_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string ProfitCenter1
+        {
+            get
+            {
+                return global::LightSwitchApplication.Profitcenter.DetailsClass.GetValue(this, global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.ProfitCenter1);
+            }
+            set
+            {
+                global::LightSwitchApplication.Profitcenter.DetailsClass.SetValue(this, global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.ProfitCenter1, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProfitCenter1_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProfitCenter1_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ProfitCenter1_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Project> Projects
+        {
+            get
+            {
+                return global::LightSwitchApplication.Profitcenter.DetailsClass.GetValue(this, global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.Projects);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Project> ProjectsQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Profitcenter.DetailsClass.GetQuery(this, global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.Projects);
+            }
+        }
+
+        #endregion
+    
+        #region Details Class
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
+                global::LightSwitchApplication.Profitcenter,
+                global::LightSwitchApplication.Profitcenter.DetailsClass,
+                global::LightSwitchApplication.Profitcenter.DetailsClass.IImplementation,
+                global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass>>
+        {
+    
+            static DetailsClass()
+            {
+                var initializeEntry = global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.ID;
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass>.Entry
+                __ProfitcenterEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass>.Entry(
+                    global::LightSwitchApplication.Profitcenter.DetailsClass.__Profitcenter_CreateNew,
+                    global::LightSwitchApplication.Profitcenter.DetailsClass.__Profitcenter_Created,
+                    global::LightSwitchApplication.Profitcenter.DetailsClass.__Profitcenter_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.Profitcenter __Profitcenter_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Profitcenter> es)
+            {
+                return new global::LightSwitchApplication.Profitcenter(es);
+            }
+            private static void __Profitcenter_Created(global::LightSwitchApplication.Profitcenter e)
+            {
+                e.Profitcenter_Created();
+            }
+            private static bool __Profitcenter_AllowSaveWithErrors(global::LightSwitchApplication.Profitcenter e)
+            {
+                bool result = false;
+                e.Profitcenter_AllowSaveWithErrors(ref result);
+                return result;
+            }
+    
+            public DetailsClass() : base()
+            {
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass> Commands
+            {
+                get
+                {
+                    return base.Commands;
+                }
+            }
+    
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass> Methods
+            {
+                get
+                {
+                    return base.Methods;
+                }
+            }
+    
+            public new global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySet Properties
+            {
+                get
+                {
+                    return base.Properties;
+                }
+            }
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass>
+            {
+    
+                public PropertySet() : base()
+                {
+                }
+    
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, int> ID
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.ID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, int>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, string> ProfitCenter1
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.ProfitCenter1) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, global::LightSwitchApplication.Project> Projects
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.Projects) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, global::LightSwitchApplication.Project>;
+                    }
+                }
+                
+            }
+    
+            #pragma warning disable 109
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+            public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
+            {
+                new int ID { get; }
+                new string ProfitCenter1 { get; set; }
+                new global::System.Collections.IEnumerable Projects { get; }
+            }
+            #pragma warning restore 109
+    
+            [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            internal class PropertySetProperties
+            {
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, int>.Entry
+                    ID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, int>.Entry(
+                        "ID",
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ID_Stub,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ID_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ID_Validate,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ID_GetImplementationValue,
+                        null,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ID_OnValueChanged);
+                private static void _ID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Profitcenter.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, int>.Data> c, global::LightSwitchApplication.Profitcenter.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ID, sf);
+                }
+                private static bool _ID_ComputeIsReadOnly(global::LightSwitchApplication.Profitcenter e)
+                {
+                    bool result = false;
+                    e.ID_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ID_Validate(global::LightSwitchApplication.Profitcenter e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ID_Validate(r);
+                }
+                private static int _ID_GetImplementationValue(global::LightSwitchApplication.Profitcenter.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ID;
+                }
+                private static void _ID_OnValueChanged(global::LightSwitchApplication.Profitcenter e)
+                {
+                    e.ID_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, string>.Entry
+                    ProfitCenter1 = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, string>.Entry(
+                        "ProfitCenter1",
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ProfitCenter1_Stub,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ProfitCenter1_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ProfitCenter1_Validate,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ProfitCenter1_GetImplementationValue,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ProfitCenter1_SetImplementationValue,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._ProfitCenter1_OnValueChanged);
+                private static void _ProfitCenter1_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Profitcenter.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, string>.Data> c, global::LightSwitchApplication.Profitcenter.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ProfitCenter1, sf);
+                }
+                private static bool _ProfitCenter1_ComputeIsReadOnly(global::LightSwitchApplication.Profitcenter e)
+                {
+                    bool result = false;
+                    e.ProfitCenter1_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ProfitCenter1_Validate(global::LightSwitchApplication.Profitcenter e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ProfitCenter1_Validate(r);
+                }
+                private static string _ProfitCenter1_GetImplementationValue(global::LightSwitchApplication.Profitcenter.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ProfitCenter1;
+                }
+                private static void _ProfitCenter1_SetImplementationValue(global::LightSwitchApplication.Profitcenter.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.ProfitCenter1 = v;
+                }
+                private static void _ProfitCenter1_OnValueChanged(global::LightSwitchApplication.Profitcenter e)
+                {
+                    e.ProfitCenter1_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, global::LightSwitchApplication.Project>.Entry
+                    Projects = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, global::LightSwitchApplication.Project>.Entry(
+                        "Projects",
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._Projects_Stub,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._Projects_GetReferencedEntities,
+                        global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties._Projects_GetEntityCollection);
+                private static void _Projects_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Profitcenter.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, global::LightSwitchApplication.Project>.Data> c, global::LightSwitchApplication.Profitcenter.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Projects, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Project> _Projects_GetReferencedEntities(global::LightSwitchApplication.Profitcenter.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Project, global::LightSwitchApplication.Project.DetailsClass>(global::LightSwitchApplication.Profitcenter.DetailsClass.PropertySetProperties.Projects, ref d._Projects);
+                }
+                private static global::System.Collections.IEnumerable _Projects_GetEntityCollection(global::LightSwitchApplication.Profitcenter.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Projects;
+                }
+    
+            }
+    
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, int>.Data _ID;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, string>.Data _ProfitCenter1;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Profitcenter, global::LightSwitchApplication.Profitcenter.DetailsClass, global::LightSwitchApplication.Project>.Data _Projects;
+            
+        }
+    
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Modeled Description Available
+    /// </summary>
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
     public sealed partial class CL : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.CL, global::LightSwitchApplication.CL.DetailsClass>
     {
         #region Constructors

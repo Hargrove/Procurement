@@ -194,6 +194,7 @@
     <Compile Include="Infrastructure\MultiSelectGridExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserCode\AddProjectStakeholder.cs" />
+    <Compile Include="UserCode\Application.cs" />
     <Compile Include="UserCode\CreateNewPO.cs" />
     <Compile Include="UserCode\CreateNewProposal.cs">
       <SubType>Code</SubType>
@@ -206,8 +207,11 @@
     <Compile Include="UserCode\PODetail.cs" />
     <Compile Include="UserCode\POListDetail.cs" />
     <Compile Include="UserCode\ProjectDetails.cs" />
+    <Compile Include="UserCode\Proposals.cs" />
+    <Compile Include="UserCode\ProposalShipping.cs" />
     <Compile Include="UserCode\ProposalsListDetail.cs" />
     <Compile Include="UserCode\RFQ_PItemDetail.cs" />
+    <Compile Include="UserCode\ShipmentDetail.cs" />
     <Compile Include="UserCode\SupplierDetail.cs" />
     <Compile Include="UserCode\SuppliersListDetail.cs" />
   </ItemGroup>
@@ -256,6 +260,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\AddTo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ChangeOrder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Expidite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Shipping.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\awards.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v3.0\Microsoft.LightSwitch.Build.Tasks.targets" />

@@ -111,6 +111,24 @@ namespace LightSwitchApplication.Implementation
             return query;
         }
     
+        public global::System.Linq.IQueryable<global::ProcurementData.Implementation.RFQ_PItem> RFQbyRfqNumber(string RFQnumber)
+        {
+            global::System.Linq.IQueryable<global::ProcurementData.Implementation.RFQ_PItem> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::ProcurementData.Implementation.RFQ_PItem>("RFQ_P"),
+                (r) => (r.PkgNo.CompareTo(RFQnumber) == 0));
+            return query;
+        }
+    
+        public global::System.Linq.IQueryable<global::ProcurementData.Implementation.PO_Line> POlineByPOid(global::System.Nullable<int> poid)
+        {
+            global::System.Linq.IQueryable<global::ProcurementData.Implementation.PO_Line> query;
+            query = global::System.Linq.Queryable.Where(
+                this.GetQuery<global::ProcurementData.Implementation.PO_Line>("PO_Lines"),
+                (p) => (poid.HasValue && (p.PO.ID == poid)));
+            return query;
+        }
+    
     #endregion
 
     #region Protected Methods
@@ -267,6 +285,14 @@ namespace LightSwitchApplication.Implementation
             if (type == typeof(global::ProcurementData.Implementation.ProjectClassification))
             {
                 return new global::ProcurementData.Implementation.ProjectClassification();
+            }
+            if (type == typeof(global::ProcurementData.Implementation.Industry))
+            {
+                return new global::ProcurementData.Implementation.Industry();
+            }
+            if (type == typeof(global::ProcurementData.Implementation.Profitcenter))
+            {
+                return new global::ProcurementData.Implementation.Profitcenter();
             }
     
             return base.CreateObject(type);
@@ -435,6 +461,14 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.ProjectClassification))
             {
                 return new global::ProcurementData.Implementation.ProjectClassification();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Industry))
+            {
+                return new global::ProcurementData.Implementation.Industry();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Profitcenter))
+            {
+                return new global::ProcurementData.Implementation.Profitcenter();
             }
             return null;
         }
@@ -701,6 +735,14 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.ProjectClassification) == definitionType)
             {
                 return typeof(global::ProcurementData.Implementation.ProjectClassification);
+            }
+            if (typeof(global::LightSwitchApplication.Industry) == definitionType)
+            {
+                return typeof(global::ProcurementData.Implementation.Industry);
+            }
+            if (typeof(global::LightSwitchApplication.Profitcenter) == definitionType)
+            {
+                return typeof(global::ProcurementData.Implementation.Profitcenter);
             }
             if (typeof(global::LightSwitchApplication.CL) == definitionType)
             {
@@ -1286,6 +1328,22 @@ namespace ProcurementData.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Expediting.DetailsClass.IImplementation.PO1
+        {
+            get
+            {
+                return this.PO1;
+            }
+            set
+            {
+                this.PO1 = (global::ProcurementData.Implementation.PO)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("PO1");
+                }
+            }
+        }
+        
         partial void OnMaterialStatusChanged()
         {
             if (this.__host != null)
@@ -1307,6 +1365,14 @@ namespace ProcurementData.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("PO_Line1");
+            }
+        }
+        
+        partial void OnPOIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("PO1");
             }
         }
         
@@ -1490,14 +1556,6 @@ namespace ProcurementData.Implementation
         global::LightSwitchApplication.PO.DetailsClass.IImplementation
     {
     
-        global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.PO_Lines
-        {
-            get
-            {
-                return this.PO_Lines;
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PO.DetailsClass.IImplementation.Supplier
         {
             get
@@ -1514,6 +1572,30 @@ namespace ProcurementData.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.PO.DetailsClass.IImplementation.RFQ
+        {
+            get
+            {
+                return this.RFQ;
+            }
+            set
+            {
+                this.RFQ = (global::ProcurementData.Implementation.RFQ_PItem)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("RFQ");
+                }
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.PO_Lines
+        {
+            get
+            {
+                return this.PO_Lines;
+            }
+        }
+        
         global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.ChangeOrders
         {
             get
@@ -1522,11 +1604,27 @@ namespace ProcurementData.Implementation
             }
         }
         
+        global::System.Collections.IEnumerable global::LightSwitchApplication.PO.DetailsClass.IImplementation.Expeditings
+        {
+            get
+            {
+                return this.Expeditings;
+            }
+        }
+        
         partial void OnSupplierIDChanged()
         {
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("Supplier");
+            }
+        }
+        
+        partial void OnRFQIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("RFQ");
             }
         }
         
@@ -1781,6 +1879,22 @@ namespace ProcurementData.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.Industry1
+        {
+            get
+            {
+                return this.Industry1;
+            }
+            set
+            {
+                this.Industry1 = (global::ProcurementData.Implementation.Industry)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Industry1");
+                }
+            }
+        }
+        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.Phase1
         {
             get
@@ -1829,11 +1943,35 @@ namespace ProcurementData.Implementation
             }
         }
         
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Project.DetailsClass.IImplementation.Profitcenter1
+        {
+            get
+            {
+                return this.Profitcenter1;
+            }
+            set
+            {
+                this.Profitcenter1 = (global::ProcurementData.Implementation.Profitcenter)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("Profitcenter1");
+                }
+            }
+        }
+        
         partial void OnClientChanged()
         {
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("Client1");
+            }
+        }
+        
+        partial void OnIndustryChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Industry1");
             }
         }
         
@@ -1858,6 +1996,14 @@ namespace ProcurementData.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("ProjectClassification");
+            }
+        }
+        
+        partial void OnProfitCenterIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("Profitcenter1");
             }
         }
         
@@ -2104,22 +2250,6 @@ namespace ProcurementData.Implementation
         global::LightSwitchApplication.Proposal_Line.DetailsClass.IImplementation
     {
     
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Proposal_Line.DetailsClass.IImplementation.RFQ_Line
-        {
-            get
-            {
-                return this.RFQ_Line;
-            }
-            set
-            {
-                this.RFQ_Line = (global::ProcurementData.Implementation.RFQ_Line)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("RFQ_Line");
-                }
-            }
-        }
-        
         global::System.Collections.IEnumerable global::LightSwitchApplication.Proposal_Line.DetailsClass.IImplementation.Shipments
         {
             get
@@ -2160,11 +2290,19 @@ namespace ProcurementData.Implementation
             }
         }
         
-        partial void OnRFQLineIDChanged()
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.Proposal_Line.DetailsClass.IImplementation.RFQ_Line1
         {
-            if (this.__host != null)
+            get
             {
-                this.__host.RaisePropertyChanged("RFQ_Line");
+                return this.RFQ_Line1;
+            }
+            set
+            {
+                this.RFQ_Line1 = (global::ProcurementData.Implementation.RFQ_Line)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("RFQ_Line1");
+                }
             }
         }
         
@@ -2173,6 +2311,14 @@ namespace ProcurementData.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("Proposal1");
+            }
+        }
+        
+        partial void OnRFQLineIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("RFQ_Line1");
             }
         }
         
@@ -2209,14 +2355,6 @@ namespace ProcurementData.Implementation
         global::LightSwitchApplication.RFQ_Line.DetailsClass.IImplementation
     {
     
-        global::System.Collections.IEnumerable global::LightSwitchApplication.RFQ_Line.DetailsClass.IImplementation.Proposal_Lines
-        {
-            get
-            {
-                return this.Proposal_Lines;
-            }
-        }
-        
         global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.RFQ_Line.DetailsClass.IImplementation.RFQ_PItem
         {
             get
@@ -2262,6 +2400,14 @@ namespace ProcurementData.Implementation
             get
             {
                 return this.Award_Selecteds;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.RFQ_Line.DetailsClass.IImplementation.Proposal_Lines
+        {
+            get
+            {
+                return this.Proposal_Lines;
             }
         }
         
@@ -2375,6 +2521,14 @@ namespace ProcurementData.Implementation
             get
             {
                 return this.Award_Selecteds;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.RFQ_PItem.DetailsClass.IImplementation.POes
+        {
+            get
+            {
+                return this.POes;
             }
         }
         
@@ -3534,6 +3688,88 @@ namespace ProcurementData.Implementation
     {
     
         global::System.Collections.IEnumerable global::LightSwitchApplication.ProjectClassification.DetailsClass.IImplementation.Projects
+        {
+            get
+            {
+                return this.Projects;
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Industry :
+        global::LightSwitchApplication.Industry.DetailsClass.IImplementation
+    {
+    
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Industry.DetailsClass.IImplementation.Projects
+        {
+            get
+            {
+                return this.Projects;
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "11.3.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Profitcenter :
+        global::LightSwitchApplication.Profitcenter.DetailsClass.IImplementation
+    {
+    
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Profitcenter.DetailsClass.IImplementation.Projects
         {
             get
             {

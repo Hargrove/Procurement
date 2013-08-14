@@ -87,6 +87,44 @@ namespace LightSwitchApplication
             }
         }
 
+        partial void ChangeOrders_Execute()
+        {
+            Application.ShowPOChangeOrders(this.RFQID, this.RFQ_Number, this.RFQ_Description);
+
+        }
+
+        partial void AddNewPO_Execute()
+        {
+            
+            this.Save();
+            this.CloseModalWindow("modalPO");
+
+
+        }
+
+       
+
+        partial void POListAddAndEditNew_CanExecute(ref bool result)
+        {
+            result = this.PO.CanAddNew;
+
+        }
+
+        partial void POListAddAndEditNew_Execute()
+        {
+
+            PO p = this.PO.AddNew();
+            this.PO.SelectedItem = p; 
+            this.OpenModalWindow("modalPO");
+
+        }
+
+        partial void Showexpeditine_Execute()
+        {
+            this.Application.ShowPOListDetail1(null, this.RFQID);// Write your code here.
+
+        }
+
 
     }
 }

@@ -20,23 +20,23 @@
     <BaseIntermediateOutputPath>bin</BaseIntermediateOutputPath>
     <ApplicationClientType>Browser</ApplicationClientType>
     <ApplicationServerType>IIS</ApplicationServerType>
-    <AuthenticationType>None</AuthenticationType>
+    <AuthenticationType>Windows</AuthenticationType>
     <ApplicationName>Procurement</ApplicationName>
-    <AssemblyVersion>1.0.55.0</AssemblyVersion>
+    <AssemblyVersion>1.0.94.0</AssemblyVersion>
     <ServiceDefinitionFile>ServiceDefinition.csdef</ServiceDefinitionFile>
     <ServiceConfigurationFile>ServiceConfiguration.cscfg</ServiceConfigurationFile>
     <SqlExpressInstanceName>(LocalDB)\v11.0</SqlExpressInstanceName>
     <AdministratorFullName />
-    <AdministratorUserName />
+    <AdministratorUserName>hai\scurenton</AdministratorUserName>
     <AllowUntrustedCertificate>False</AllowUntrustedCertificate>
-    <DeployDatabase>True</DeployDatabase>
-    <AddAdministrator>True</AddAdministrator>
+    <DeployDatabase>False</DeployDatabase>
+    <AddAdministrator>False</AddAdministrator>
     <BootstrapperComponentsUrl />
     <DefaultInstallLocation>Procurement</DefaultInstallLocation>
     <DeploySchema>True</DeploySchema>
     <PublishNewDatabase>True</PublishNewDatabase>
     <PublishUrl>http://haimobsql005</PublishUrl>
-    <PublishSite>DEVAPPS/ProcurementTest</PublishSite>
+    <PublishSite>DEVAPPS/Procurement</PublishSite>
     <RemotePublish>True</RemotePublish>
     <UseLightSwitchWebDeploymentProvider>True</UseLightSwitchWebDeploymentProvider>
     <AzureAllowUpgrade>True</AzureAllowUpgrade>
@@ -51,6 +51,7 @@
     <PublishServiceOnly>False</PublishServiceOnly>
     <AzureCredentials />
     <RequireSecureConnection>False</RequireSecureConnection>
+    <AllowAllWindowsUsers>true</AllowAllWindowsUsers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>

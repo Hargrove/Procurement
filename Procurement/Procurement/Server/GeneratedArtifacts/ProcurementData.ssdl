@@ -39,6 +39,8 @@
     <EntitySet Name="SourceStrategies" EntityType="ProcurementDataStore.SourceStrategy" store:Type="Tables" Schema="dbo" Table="SourceStrategy" />
     <EntitySet Name="Years" EntityType="ProcurementDataStore.Year" store:Type="Tables" Schema="dbo" Table="Year" />
     <EntitySet Name="ProjectClassifications" EntityType="ProcurementDataStore.ProjectClassification" store:Type="Tables" Schema="dbo" Table="ProjectClassification" />
+    <EntitySet Name="Industries" EntityType="ProcurementDataStore.Industry" store:Type="Tables" Schema="dbo" Table="Industry" />
+    <EntitySet Name="Profitcenters" EntityType="ProcurementDataStore.Profitcenter" store:Type="Tables" Schema="dbo" Table="Profitcenters" />
     <AssociationSet Name="FK_BidList_RFQ_P1" Association="ProcurementDataStore.FK_BidList_RFQ_P1">
       <End Role="RFQ_P" EntitySet="RFQ_P" />
       <End Role="BidList" EntitySet="BidLists" />
@@ -78,10 +80,6 @@
     <AssociationSet Name="FK_Project_Stakeholders_Stakeholders" Association="ProcurementDataStore.FK_Project_Stakeholders_Stakeholders">
       <End Role="Stakeholders" EntitySet="Stakeholders" />
       <End Role="Project_Stakeholders" EntitySet="Project_Stakeholders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Proposal_Line_RFQ_Line" Association="ProcurementDataStore.FK_Proposal_Line_RFQ_Line">
-      <End Role="RFQ_Line" EntitySet="RFQ_Lines" />
-      <End Role="Proposal_Line" EntitySet="Proposal_Lines" />
     </AssociationSet>
     <AssociationSet Name="FK_Proposal_RFQ_P" Association="ProcurementDataStore.FK_Proposal_RFQ_P">
       <End Role="RFQ_P" EntitySet="RFQ_P" />
@@ -239,6 +237,26 @@
       <End Role="PO_Line" EntitySet="PO_Lines" />
       <End Role="ChangeOrder" EntitySet="ChangeOrders" />
     </AssociationSet>
+    <AssociationSet Name="FK_Proposal_Line_RFQ_Line" Association="ProcurementDataStore.FK_Proposal_Line_RFQ_Line">
+      <End Role="RFQ_Line" EntitySet="RFQ_Lines" />
+      <End Role="Proposal_Line" EntitySet="Proposal_Lines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PO_RFQ_P" Association="ProcurementDataStore.FK_PO_RFQ_P">
+      <End Role="RFQ_P" EntitySet="RFQ_P" />
+      <End Role="PO" EntitySet="PO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expediting_PO" Association="ProcurementDataStore.FK_Expediting_PO">
+      <End Role="PO" EntitySet="PO" />
+      <End Role="Expediting" EntitySet="Expeditings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Industry" Association="ProcurementDataStore.FK_Project_Industry">
+      <End Role="Industry" EntitySet="Industries" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Project_Profitcenters" Association="ProcurementDataStore.FK_Project_Profitcenters">
+      <End Role="Profitcenters" EntitySet="Profitcenters" />
+      <End Role="Project" EntitySet="Projects" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Award_Selected">
     <Key>
@@ -254,10 +272,10 @@
     <Property Name="Comment" Type="nvarchar(max)" />
     <Property Name="OrderType" Type="nvarchar" MaxLength="50" />
     <Property Name="HasPO" Type="bit" Nullable="false" />
-    <Property Name="PropLineSlctd" Type="int" Nullable="false" />
-    <Property Name="ProposalSelected" Type="int" Nullable="false" />
-    <Property Name="RFQItem" Type="int" Nullable="false" />
-    <Property Name="PkgNoID" Type="int" Nullable="false" />
+    <Property Name="PropLineSlctd" Type="int" />
+    <Property Name="ProposalSelected" Type="int" />
+    <Property Name="RFQItem" Type="int" />
+    <Property Name="PkgNoID" Type="int" />
   </EntityType>
   <EntityType Name="BidList">
     <Key>
@@ -325,6 +343,7 @@
     <Property Name="MaterialStatus" Type="int" />
     <Property Name="ShippmentRefId" Type="int" />
     <Property Name="POLineID" Type="int" />
+    <Property Name="POID" Type="int" />
   </EntityType>
   <EntityType Name="Manufacturer">
     <Key>
@@ -353,19 +372,20 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="PONumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="PONumber" Type="nvarchar" MaxLength="50" />
     <Property Name="AwardDate" Type="date" />
-    <Property Name="Closed" Type="bit" />
-    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="Closed" Type="bit" Nullable="false" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="RFQID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PO_Line">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="POLineRef" Type="numeric" Nullable="false" />
+    <Property Name="POLineRef" Type="numeric" />
     <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="POid" Type="int" Nullable="false" />
+    <Property Name="POid" Type="int" />
     <Property Name="Award" Type="int" Nullable="false" />
     <Property Name="ProposalSelected" Type="int" Nullable="false" />
     <Property Name="PropLineSlctd" Type="int" Nullable="false" />
@@ -384,10 +404,13 @@
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ProjectNo" Type="nvarchar" Nullable="false" MaxLength="50" />
     <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Site" Type="nvarchar" MaxLength="150" />
     <Property Name="Client" Type="int" />
     <Property Name="PhaseID" Type="int" />
     <Property Name="Year" Type="int" />
     <Property Name="ClassificationID" Type="int" />
+    <Property Name="Industry" Type="int" />
+    <Property Name="ProfitCenterID" Type="int" />
   </EntityType>
   <EntityType Name="Project_Stakeholder">
     <Key>
@@ -407,17 +430,17 @@
     <Property Name="ShippingRefNo" Type="nvarchar" MaxLength="50" />
     <Property Name="BidRecieved" Type="date" />
     <Property Name="Comment" Type="nvarchar(max)" />
-    <Property Name="TechCompliant" Type="bit" />
-    <Property Name="CommercialCompliant" Type="bit" />
-    <Property Name="PkgNoID" Type="int" Nullable="false" />
-    <Property Name="SupplierID" Type="int" Nullable="false" />
+    <Property Name="TechCompliant" Type="bit" Nullable="false" />
+    <Property Name="CommercialCompliant" Type="bit" Nullable="false" />
+    <Property Name="PkgNoID" Type="int" />
+    <Property Name="SupplierID" Type="int" />
   </EntityType>
   <EntityType Name="Proposal_Line">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ProposalLineNo" Type="numeric" Nullable="false" />
+    <Property Name="ProposalLineNo" Type="numeric" />
     <Property Name="MeetSpecs" Type="bit" Nullable="false" />
     <Property Name="CostPerUnit" Type="money" />
     <Property Name="ManufacturingPoint" Type="nvarchar" MaxLength="50" />
@@ -427,15 +450,15 @@
     <Property Name="NegotiatedFinalCost" Type="money" />
     <Property Name="Notes" Type="nvarchar(max)" />
     <Property Name="AwardIt" Type="bit" Nullable="false" />
+    <Property Name="ProposalID" Type="int" />
     <Property Name="RFQLineID" Type="int" Nullable="false" />
-    <Property Name="ProposalID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="RFQ_Line">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="RFQLineNo" Type="numeric" Nullable="false" />
+    <Property Name="RFQLineNo" Type="numeric" />
     <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="Qty" Type="numeric" />
     <Property Name="TestingReq" Type="bit" Nullable="false" />
@@ -445,7 +468,7 @@
     <Property Name="TagNo" Type="nvarchar" MaxLength="50" />
     <Property Name="RecievedQty" Type="numeric" />
     <Property Name="Notes" Type="nvarchar(max)" />
-    <Property Name="PkgNoID" Type="int" Nullable="false" />
+    <Property Name="PkgNoID" Type="int" />
     <Property Name="UOM" Type="int" />
   </EntityType>
   <EntityType Name="RFQ_PItem">
@@ -453,9 +476,9 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="PkgNo" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="PkgName" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="PkgDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PkgNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PkgName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PkgDescription" Type="nvarchar(max)" />
     <Property Name="PkgWBS" Type="nvarchar" MaxLength="50" />
     <Property Name="BudgetValue" Type="money" />
     <Property Name="ReqdOnSite" Type="date" />
@@ -479,7 +502,7 @@
     <Property Name="CommercialDone" Type="date" />
     <Property Name="Comments" Type="nvarchar(max)" />
     <Property Name="CriticalPath" Type="bit" Nullable="false" />
-    <Property Name="ProjectNoID" Type="int" Nullable="false" />
+    <Property Name="ProjectNoID" Type="int" />
     <Property Name="SourceStrategyID" Type="int" />
   </EntityType>
   <EntityType Name="Safety_Record">
@@ -602,6 +625,7 @@
     </Key>
     <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="SupplierName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierContact" Type="nvarchar" MaxLength="150" />
     <Property Name="SupplierPhone" Type="nvarchar" MaxLength="50" />
     <Property Name="SupplierFax" Type="nvarchar" MaxLength="50" />
     <Property Name="SupplierEmail" Type="nvarchar" MaxLength="50" />
@@ -691,6 +715,20 @@
     </Key>
     <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ProjectClassification" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Industry">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IndusttryType" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Profitcenter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProfitCenter" Type="nvarchar" MaxLength="150" />
   </EntityType>
   <Association Name="FK_BidList_RFQ_P1">
     <End Role="RFQ_P" Type="ProcurementDataStore.RFQ_PItem" Multiplicity="0..1" />
@@ -809,20 +847,6 @@
       </Principal>
       <Dependent Role="Project_Stakeholders">
         <PropertyRef Name="StakeHolder" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Proposal_Line_RFQ_Line">
-    <End Role="RFQ_Line" Type="ProcurementDataStore.RFQ_Line" Multiplicity="0..1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="Proposal_Line" Type="ProcurementDataStore.Proposal_Line" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="RFQ_Line">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="Proposal_Line">
-        <PropertyRef Name="RFQLineID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1247,7 +1271,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Expediting_PO_Line">
-    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="0..1" />
+    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="Expediting" Type="ProcurementDataStore.Expediting" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PO_Line">
@@ -1295,7 +1321,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_ChangeOrder_PO_Line">
-    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="1" />
+    <End Role="PO_Line" Type="ProcurementDataStore.PO_Line" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="ChangeOrder" Type="ProcurementDataStore.ChangeOrder" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="PO_Line">
@@ -1303,6 +1331,66 @@
       </Principal>
       <Dependent Role="ChangeOrder">
         <PropertyRef Name="POLineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Proposal_Line_RFQ_Line">
+    <End Role="RFQ_Line" Type="ProcurementDataStore.RFQ_Line" Multiplicity="1" />
+    <End Role="Proposal_Line" Type="ProcurementDataStore.Proposal_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ_Line">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Proposal_Line">
+        <PropertyRef Name="RFQLineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PO_RFQ_P">
+    <End Role="RFQ_P" Type="ProcurementDataStore.RFQ_PItem" Multiplicity="1" />
+    <End Role="PO" Type="ProcurementDataStore.PO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ_P">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PO">
+        <PropertyRef Name="RFQID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expediting_PO">
+    <End Role="PO" Type="ProcurementDataStore.PO" Multiplicity="0..1" />
+    <End Role="Expediting" Type="ProcurementDataStore.Expediting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Expediting">
+        <PropertyRef Name="POID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Industry">
+    <End Role="Industry" Type="ProcurementDataStore.Industry" Multiplicity="0..1" />
+    <End Role="Project" Type="ProcurementDataStore.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Industry">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="Industry" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Project_Profitcenters">
+    <End Role="Profitcenters" Type="ProcurementDataStore.Profitcenter" Multiplicity="0..1" />
+    <End Role="Project" Type="ProcurementDataStore.Project" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profitcenters">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Project">
+        <PropertyRef Name="ProfitCenterID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -230,9 +230,29 @@ namespace LightSwitchApplication
 
         partial void CreateProposals_Execute()
         {
-            this.Application.ShowProposalsListDetail(this.RFQ_PItem.PkgNo, this.RFQ_PItem.PkgDescription);
+            this.Application.ShowProposalsListDetail(this.RFQ_PItem.PkgNo);
 
         }
+
+        partial void ViewProposals_Execute()
+        {
+            this.Application.ShowProposals(this.RFQ_PItem.PkgNo);// Write your code here.
+
+        }
+
+        partial void ShowCO_Execute()
+        {
+            this.Application.ShowPOChangeOrders(this.RFQID, this.RFQ_PItem.PkgNo, this.RFQ_PItem.PkgDescription);
+
+        }
+
+        partial void ShowExpediting_Execute()
+        {
+            this.Application.ShowPOListDetail1(null, RFQID);
+
+        }
+
+        
 
        
 

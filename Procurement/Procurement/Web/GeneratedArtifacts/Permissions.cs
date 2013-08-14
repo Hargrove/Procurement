@@ -20,6 +20,14 @@ namespace LightSwitchApplication
         /// Provides the ability to manage security for the application.
         /// </summary>
         public const string SecurityAdministration = global::Microsoft.LightSwitch.Security.ApplicationPermissions.SecurityAdministration;
+        /// <summary>
+        /// Provides the ability to access and modify Industry Types.
+        /// </summary>
+        public const string CanAccessIndustriesScreen = "LightSwitchApplication:CanAccessIndustriesScreen";
+        /// <summary>
+        /// Provides admin delete access to be able to delete an entire project.
+        /// </summary>
+        public const string CanDeleteProject = "LightSwitchApplication:CanDeleteProject";
 
         /// <summary>
         /// Gets all permissions defined for the application.  This includes system and user-defined permissions.
